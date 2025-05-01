@@ -2,6 +2,26 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
 
+## Set up environment
+### Your environment must meet with below environment
+To check node version:
+```bash
+node -v
+```
+Node version: v21.6.2
+
+To check npm  version:
+```bash
+npm -v
+```
+npm version: 10.2.4
+
+To check angular cli version:
+```bash
+ng  version
+```
+ng version: Angular CLI: 19.2.8
+
 ## Development server
 
 To start a local development server, run:

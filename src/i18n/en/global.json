@@ -1,0 +1,27 @@
+{
+  "global": {
+    "header": {
+      "homePage": "Home Page",
+      "findJob": "Find Job",
+      "hiring": "Hiring",
+      "candidate": "Candidate",
+      "package": "Subscription",
+      "customerService": "Customer Service"
+    },
+    "languages": {
+      "vn": "Vietnamese",
+      "en": "English"
+    },
+    "nations": {
+      "vn": "Vietnam",
+      "uk": "United Kingdom"
+    },
+    "searchBar": {
+      "placeholder": "Jobs, companies, locations"
+    },
+    "button": {
+      "signIn": "Sign In",
+      "postJob": "Post a Job Listing"
+    }
+  }
+}

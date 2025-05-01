@@ -1,0 +1,27 @@
+{
+  "global": {
+    "header": {
+      "homePage": "Trang Chủ",
+      "findJob": "Tìm Việc",
+      "hiring": "Tuyển Dụng",
+      "candidate": "Ứng Viên",
+      "package": "Gói Dịch Vụ",
+      "customerService": "Chăm Sóc Khách Hàng"
+    },
+    "languages": {
+      "vn": "Tiếng Việt",
+      "en": "Tiếng Anh"
+    },
+    "nations": {
+      "vn": "Việt Nam",
+      "uk": "Vương Quốc Anh"
+    },
+    "searchBar": {
+      "placeholder": "Công việc, công ty, địa điểm"
+    },
+    "button": {
+      "signIn": "Đăng Nhập",
+      "postJob": "Đăng Tin Tuyển Dụng"
+    }
+  }
+}
