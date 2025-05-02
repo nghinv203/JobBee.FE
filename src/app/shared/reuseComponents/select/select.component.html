@@ -1,23 +1,22 @@
 <nz-select
+  [nzMode]="selectMode"
   [(ngModel)]="selectedItems"
   [nzBorderless]="borderLess"
   [nzSuffixIcon]="icon"
   [style]="style"
-  [nzCustomTemplate]="selectedItemTemp"
-  (ngModelChange)="onSelectItem.emit($event)"
+  [nzCustomTemplate]="selectedItemTemplate"
+  (ngModelChange)="selectedItemsChange.emit($event)"
 >
   @for(option of options; track $index) {
     <nz-option
-      [nzDisabled]="false"
-      [nzLabel]="option.label | translate"
+      [nzLabel]="itemTemplate ? null : (option.label | translate)"
       [nzKey]="option.value"
-      [nzValue]="option.value"
+      [nzValue]="option"
       nzCustomContent>
-      <ng-container *ngTemplateOutlet="itemTemp; context: { $implicit: option }"></ng-container>
+      <ng-container *ngTemplateOutlet="itemTemplate; context: { $implicit: option }"></ng-container>
     </nz-option>
   }
 </nz-select>
-
 <ng-template #icon>
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="fi:chevron-down">

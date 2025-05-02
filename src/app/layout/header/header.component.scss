@@ -14,14 +14,13 @@
   }
 
   .nav-item {
-    padding: 14px 0;
     font-size: 14px;
     border-bottom: 3px solid transparent;
     transition: border-bottom-color 1s ease;
+    height: 100%;
     .nav-link {
-      padding: 0;
+      padding: 14px 0;
       transition: color 1s ease;
-
       &::before {
         content: attr(data-text);
         display: block;
@@ -45,13 +44,21 @@
   }
 }
 
-.border-bottom {
-
-}
-
 .custom-option {
   img {
     width: 24px;
     height: 16px;
+  }
+}
+
+.bottom-header {
+  background-color: #FFFFFF;
+  border-bottom: 2px solid #E4E5E8;
+  padding: 20px 0;
+
+  .logo {
+    width: 90px;
+    height: 60px;
+    background-image: url("/assets/images/MyLogo.svg");
   }
 }

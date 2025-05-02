@@ -1,0 +1,14 @@
+<nz-input-group
+  [nzPrefix]="icon"
+>
+  <input type="text"
+         [nzBorderless]="borderLess"
+         nz-input
+         [placeholder]="placeHolder | translate"
+         [style]="style"
+  />
+</nz-input-group>
+
+<ng-template #icon>
+  <img src="assets/images/fi_search.svg" alt="search">
+</ng-template>

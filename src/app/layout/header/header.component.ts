@@ -1,57 +1,37 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 import {SelectComponent} from '../../shared/reuseComponents/select/select.component';
+import {JsonPipe} from '@angular/common';
+import {options, selectedItems} from './header.constanst';
+import {SearchComponent} from '../../shared/reuseComponents/search/search.component';
+import {ButtonComponent} from '../../shared/reuseComponents/button/button.component';
 
 @Component({
   selector: 'app-header',
   imports: [
     TranslatePipe,
-    SelectComponent
+    SelectComponent,
+    SearchComponent,
+    ButtonComponent,
   ],
   templateUrl: './header.component.html',
   standalone: true,
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  selectedItems: {
-    label: string,
-    value: string,
-    img: string
-  }[] = [
-    {
-      label: 'global.languages.en',
-      value: 'en',
-      img: 'https://flagcdn.com/w40/us.png'
-    }
-  ];
-
-  options: {
-    label: string,
-    value: string,
-    img: string
-  }[] = [
-    {
-      label: 'global.languages.vn',
-      value: 'vn',
-      img: 'https://flagcdn.com/w40/vn.png'
-    },
-    {
-      label: 'global.languages.en',
-      value: 'en',
-      img: 'https://flagcdn.com/w40/us.png'
-    },
-  ]
-
+  selectedItems = selectedItems;
+  options = options;
   constructor(private translateService: TranslateService) {
+    const browserLanguage = translateService.getBrowserLang();
+    console.log(browserLanguage)
+    if(browserLanguage === 'vi') {
+      this.selectedItems = options[0]
+    } else if(browserLanguage === 'en') {
+      this.selectedItems = options[1]
+    }
   }
 
-  handleChangeLanguage(event:  any): any  {
-    this.options.forEach((option) => {
-      if(option.value === event) {
-        this.selectedItems.pop();
-        this.selectedItems.push(option)
-      }
-    })
-    this.translateService.use(`${event}/global`);
+  handleChangeLanguage(event: any): void {
+    this.translateService.use(`${event.value}/global`);
   }
 }

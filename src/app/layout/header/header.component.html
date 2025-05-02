@@ -25,7 +25,7 @@
             </div>
           </nav>
         </div>
-        <div class="col-lg-3 d-flex justify-content-evenly align-items-center">
+        <div class="col-lg-3 d-flex justify-content-end align-items-center p-0">
           <div>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -41,38 +41,59 @@
             <span class="fw-bold phone">+84 364920299</span>
           </div>
           <div>
-            <app-select
-              [selectedItems]="selectedItems"
-              [borderLess]="true"
-              [itemTemp]="itemTemp"
-              [options]="options"
-              [selectedItemTemp]="selectedItemTemp"
-              (onSelectItem)="handleChangeLanguage($event)"
-              [style]="'width: 150px;'"
-            ></app-select>
+            <app-select [(selectedItems)]="selectedItems"
+                        [options]="options"
+                        [borderLess]="true"
+                        (selectedItemsChange)="handleChangeLanguage($event)"
+                        [style]="'width: 140px;'">
+              <ng-template #itemTemp let-option>
+                <div class="custom-option d-flex align-items-center gap-2">
+                  <img [src]="option.img" alt="flag" class="flag" />
+                  <span>{{ option.label | translate }}</span>
+                </div>
+              </ng-template>
+
+              <ng-template #selectedItemTemp let-selected>
+                <div class="custom-option d-flex align-items-center gap-2">
+                  <img [src]="selected.nzValue.img" alt="flag" class="flag" />
+                  <span>{{ selected.nzValue.label | translate }}</span>
+                </div>
+              </ng-template>
+            </app-select>
+
           </div>
         </div>
       </div>
     </div>
   </div>
-
   <div class="bottom-header">
     <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-lg-8 row align-items-center justify-content-between">
+          <div class="logo col-lg-2"></div>
+          <div class="col-lg-10 search-bar">
+            <app-search [placeHolder]="'global.searchBar.placeholder'"
+                        [borderLess]="true"
+                        [style]="'padding: 9px 0;'"
+            ></app-search>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex justify-content-end gap-3" style="height: 100%;">
+          <div>
+            <app-button [size]="'large'"
+                        [style]="'border: 2px solid #CEE0F5;color: #0A65CC; padding: 12px 24px; height: 100%; border-radius: 3px; font-weight: 600'"
+                        [content]="'global.button.signIn'">
+            </app-button>
+          </div>
+          <div>
+            <app-button [size]="'large'"
+                        [style]="'background: #0A65CC; color: #FFFFFF; padding: 12px 24px; height: 100%; border-radius: 3px; font-weight: 600'"
+                        [content]="'global.button.postJob'">
+            </app-button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
 </header>
 
-<ng-template #itemTemp let-option>
-  <div class="custom-option d-flex align-items-center gap-2">
-    <img [src]="option.img" alt="flag" class="flag" />
-    <span>{{ option.label | translate }}</span>
-  </div>
-</ng-template>
-
-<ng-template #selectedItemTemp>
-  <div class="custom-option d-flex align-items-center gap-2">
-    <img [src]="selectedItems[0].img" alt="flag" class="flag" />
-    <span>{{ selectedItems[0].label | translate }}</span>
-  </div>
-</ng-template>
