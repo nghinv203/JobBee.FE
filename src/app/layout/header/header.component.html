@@ -75,7 +75,30 @@
             <app-search [placeHolder]="'global.searchBar.placeholder'"
                         [borderLess]="true"
                         [style]="'padding: 9px 0;'"
-            ></app-search>
+                        [addOnBefore]="addOnBefore"
+            >
+              <ng-template #addOnBefore>
+                <app-select [(selectedItems)]="selectedItems"
+                            [options]="options"
+                            [borderLess]="true"
+                            (selectedItemsChange)="handleChangeLanguage($event)"
+                            [style]="'width: 140px;'">
+                  <ng-template #itemTemp let-option>
+                    <div class="custom-option d-flex align-items-center gap-2">
+                      <img [src]="option.img" alt="flag" class="flag" />
+                      <span>{{ option.label | translate }}</span>
+                    </div>
+                  </ng-template>
+
+                  <ng-template #selectedItemTemp let-selected>
+                    <div class="custom-option d-flex align-items-center gap-2">
+                      <img [src]="selected.nzValue.img" alt="flag" class="flag" />
+                      <span>{{ selected.nzValue.label | translate }}</span>
+                    </div>
+                  </ng-template>
+                </app-select>
+              </ng-template>
+            </app-search>
           </div>
         </div>
         <div class="col-lg-4 d-flex justify-content-end gap-3" style="height: 100%;">

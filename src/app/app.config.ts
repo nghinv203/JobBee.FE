@@ -8,6 +8,8 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {routes} from './app.routes';
+import {provideRouter} from '@angular/router';
 
 registerLocaleData(en);
 
@@ -16,6 +18,7 @@ const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: Http
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideRouter(routes),
     provideZoneChangeDetection({eventCoalescing: true}),
     provideHttpClient(),
     importProvidersFrom([TranslateModule.forRoot({

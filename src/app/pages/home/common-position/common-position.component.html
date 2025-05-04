@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="title">
+    <h2>{{ 'global.commonPosition.title' | translate }}</h2>
+  </div>
+  <div class="common-position">
+    @for(position of testData; track position.id) {
+      <div class="position">
+        <div class="text-bold">{{position.name}}</div>
+        <div class="text-thin">{{position.amount | number}}</div>
+      </div>
+    }
+  </div>
+</div>

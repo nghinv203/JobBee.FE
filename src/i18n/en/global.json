@@ -22,6 +22,42 @@
     "button": {
       "signIn": "Sign In",
       "postJob": "Post a Job Listing"
+    },
+    "jobBanner": {
+      "intro": "Find a job that matches your interests and skills.",
+      "subIntro": "We provide you with suitable jobs and candidates.",
+      "suggestion": {
+        "suggest": "Suggest: ",
+        "jobs": "Server, Cyber Café Staff, Cashier, Edit Video, Receptionist"
+      },
+      "funFact": {
+        "job": "Jobs",
+        "company": "Companies",
+        "candidate": "Candidates",
+        "newJob": "New Jobs"
+      }
+    },
+    "commonPosition": {
+      "title": "Most Popular Job Positions."
+    },
+    "workProcess": {
+      "title": "How JobBee Works",
+      "createAccount": {
+        "title": "Create an Account",
+        "description": "Register an account to get started."
+      },
+      "uploadCV": {
+        "title": "Upload CV",
+        "description": "Upload your CV."
+      },
+      "findJob": {
+        "title": "Find a Job",
+        "description": "Search for suitable jobs."
+      },
+      "apply": {
+        "title": "Apply",
+        "description": "Submit your application and wait for feedback."
+      }
     }
   }
 }

@@ -1,0 +1,76 @@
+.job-banner {
+  background: rgba(241, 242, 244, 0.60);
+
+  .container {
+    padding-bottom: 100px;
+    padding-top: 100px;
+
+    .intro {
+      color: var(--Gray-900, #18191C);
+      font-size: 56px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 64px;
+    }
+
+    .sub-intro {
+      color: var(--Gray-600, #5E6670);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px;
+    }
+
+    .suggestion {
+      color: var(--Gray-400, #9199A3);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 142.857% */
+    }
+
+    .job-image {
+      background-image: url("/assets/images/Illustration.svg");
+      width: 492px;
+      height: 382px;
+      flex-shrink: 0;
+    }
+
+    .fun-fact {
+      border-radius: 8px;
+      background: var(--Gray-White, #FFF);
+      padding: 20px;
+      box-sizing: border-box;
+      width: 272px;
+
+      .img {
+        padding: 16px;
+        border-radius: 4px;
+      }
+
+      .number {
+        color: var(--Gray-900, #18191C);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px;
+      }
+
+      .number-description {
+        color: var(--Gray-500, #767F8C);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+
+      .normal {
+        background: #E7F0FA;
+      }
+
+      .primary {
+        background: #0A65CC;
+      }
+    }
+  }
+}

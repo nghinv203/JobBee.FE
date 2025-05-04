@@ -22,6 +22,42 @@
     "button": {
       "signIn": "Đăng Nhập",
       "postJob": "Đăng Tin Tuyển Dụng"
+    },
+    "jobBanner": {
+      "intro": "Tìm công việc phù hợp với sở thích và kỹ năng của bạn.",
+      "subIntro": "Chúng tôi đem đến cho bạn các việc làm và những ứng viên phù hợp.",
+      "suggestion": {
+        "suggest": "Gợi ý: ",
+        "jobs": "Nhân viên phục vụ, Nhân viên quán internet, Thu ngân, Chỉnh sửa video, Lễ tân"
+      },
+      "funFact": {
+        "job": "Công việc",
+        "company": "Công ty",
+        "candidate": "Ứng viên",
+        "newJob": "Công việc mới"
+      }
+    },
+    "commonPosition": {
+      "title": "Vị trí tuyển dụng phổ biến nhất."
+    },
+    "workProcess": {
+      "title": "JobBee làm việc như thế nào",
+      "createAccount": {
+        "title": "Tạo Tài Khoản",
+        "description": "Đăng ký tài khoản để bắt đầu."
+      },
+      "uploadCV": {
+        "title": "Tải Hồ Sơ",
+        "description": "Upload CV của bạn."
+      },
+      "findJob": {
+        "title": "Tìm Việc",
+        "description": "Tìm công việc phù hợp."
+      },
+      "apply": {
+        "title": "Ứng Tuyển",
+        "description": "Nộp hồ sơ và chờ phản hồi."
+      }
     }
   }
 }
