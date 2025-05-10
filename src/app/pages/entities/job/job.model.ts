@@ -1,12 +1,12 @@
 export enum JobType {
-  FULL_TIME = '',
-  PART_TIME = '',
-  INTERNSHIP = '',
-  SEASONAL = '',
-  REMOTE = '',
-  HYBRID = '',
-  CONTRACT_BASE = '',
-  FREELANCE = ''
+  FULL_TIME = 'global.jobType.FULL_TIME',
+  PART_TIME = 'global.jobType.PART_TIME',
+  INTERNSHIP = 'global.jobType.INTERNSHIP',
+  SEASONAL = 'global.jobType.SEASONAL',
+  REMOTE = 'global.jobType.REMOTE',
+  HYBRID = 'global.jobType.HYBRID',
+  CONTRACT_BASE = 'global.jobType.CONTRACT_BASE',
+  FREELANCE = 'global.jobType.FREELANCE'
 }
 
 export interface IJob {
