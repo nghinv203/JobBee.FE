@@ -63,6 +63,9 @@
       "title": "Popular Jobs",
       "amount": "Open Jobs"
     },
-    "viewAll": "View All"
+    "viewAll": "View All",
+    "featureJobs": {
+      "title": "Feature Jobs"
+    }
   }
 }

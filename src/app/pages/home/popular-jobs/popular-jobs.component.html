@@ -3,7 +3,11 @@
     <div class="d-flex justify-content-between title">
       <h3 class="title">{{ 'global.popularJobs.title' | translate }}</h3>
       <div>
-        <app-button></app-button>
+        <app-button [style]="'display:flex;justify-content:center;color: var(--primary);width:173px;align-content:center'"
+          [content]="'global.viewAll'"
+        >
+          <img id="icon" src="assets/images/fi_arrow-right.svg" alt="" style="margin-left: 12px">
+        </app-button>
       </div>
     </div>
     <div class="job-category">

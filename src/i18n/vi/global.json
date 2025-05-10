@@ -63,6 +63,9 @@
       "title": "Ngành Nghề Phổ Biến",
       "amount": "VỊ Trí Mở"
     },
-    "viewAll": "Xem Tất Cả"
+    "viewAll": "Xem Tất Cả",
+    "featureJobs": {
+      "title": "Việc Làm Nổi Bật"
+    }
   }
 }
