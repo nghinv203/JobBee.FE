@@ -1,5 +1,5 @@
 .top-header {
-  background: #F1F2F4;
+  background: var(--gray-background);
 
   .navigations {
     height: 100%;
@@ -31,10 +31,10 @@
     }
 
     &:hover {
-      border-bottom: #0A65CC solid !important;
+      border-bottom: var(--primary) solid !important;
 
       .nav-link {
-        color: #0A65CC !important;
+        color: var(--primary) !important;
       }
     }
   }
@@ -52,8 +52,8 @@
 }
 
 .bottom-header {
-  background-color: #FFFFFF;
-  border-bottom: 2px solid #E4E5E8;
+  background-color: var(--white);
+  border-bottom: 2px solid var(--border);
   padding: 20px 0;
 
   .logo {
@@ -61,4 +61,9 @@
     height: 60px;
     background-image: url("/assets/images/MyLogo.svg");
   }
+}
+
+.before-search {
+  display: flex;
+  align-items: center;
 }

@@ -1,12 +1,11 @@
 .job-banner {
-  background: rgba(241, 242, 244, 0.60);
-
+  background: var(--gray-background);
   .container {
     padding-bottom: 100px;
     padding-top: 100px;
 
     .intro {
-      color: var(--Gray-900, #18191C);
+      color: var(--black);
       font-size: 56px;
       font-style: normal;
       font-weight: 500;
@@ -14,7 +13,7 @@
     }
 
     .sub-intro {
-      color: var(--Gray-600, #5E6670);
+      color: var(--gray);
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
@@ -22,7 +21,7 @@
     }
 
     .suggestion {
-      color: var(--Gray-400, #9199A3);
+      color: var(--gray);
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -38,7 +37,7 @@
 
     .fun-fact {
       border-radius: 8px;
-      background: var(--Gray-White, #FFF);
+      background: var(--white);
       padding: 20px;
       box-sizing: border-box;
       width: 272px;
@@ -49,7 +48,7 @@
       }
 
       .number {
-        color: var(--Gray-900, #18191C);
+        color: var(--black);
         font-size: 24px;
         font-style: normal;
         font-weight: 500;
@@ -57,7 +56,7 @@
       }
 
       .number-description {
-        color: var(--Gray-500, #767F8C);
+        color: var(--gray);
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -65,11 +64,11 @@
       }
 
       .normal {
-        background: #E7F0FA;
+        background: var(--white);
       }
 
       .primary {
-        background: #0A65CC;
+        background: var(--primary);
       }
     }
   }

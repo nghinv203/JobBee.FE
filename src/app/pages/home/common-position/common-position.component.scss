@@ -3,7 +3,7 @@
   padding-bottom: 100px;
 
   .title {
-    color: var(--Gray-900, #18191C);
+    color: var(--black);
     font-size: 40px;
     font-style: normal;
     font-weight: 500;
@@ -19,9 +19,10 @@
 
     .position {
       margin-bottom: 32px;
+      width: fit-content;
 
       .text-bold {
-        color: var(--Gray-900, #18191C);
+        color: var(--black);
         font-size: 18px;
         font-style: normal;
         font-weight: 500;
@@ -29,7 +30,7 @@
       }
 
       .text-thin {
-        color: var(--Gray-500, #767F8C);
+        color: var(--gray);
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -38,7 +39,7 @@
 
       &:hover {
         .text-bold {
-          color: var(--Primary-500, #0A65CC) !important;
+          color: var(--primary) !important;
           text-decoration-line: underline;
           cursor: pointer;
         }

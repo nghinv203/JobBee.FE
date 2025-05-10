@@ -75,9 +75,8 @@
             <app-search [placeHolder]="'global.searchBar.placeholder'"
                         [borderLess]="true"
                         [style]="'padding: 9px 0;'"
-                        [addOnBefore]="addOnBefore"
             >
-              <ng-template #addOnBefore>
+              <div class="before-search">
                 <app-select [(selectedItems)]="selectedItems"
                             [options]="options"
                             [borderLess]="true"
@@ -97,7 +96,8 @@
                     </div>
                   </ng-template>
                 </app-select>
-              </ng-template>
+                <div class="vertical"></div>
+              </div>
             </app-search>
           </div>
         </div>

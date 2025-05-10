@@ -1,15 +1,13 @@
-<nz-input-group
-  [nzPrefix]="icon"
-  [nzAddOnBefore]="addOnBefore"
->
-  <input type="text"
-         nz-input
-         [nzBorderless]="borderLess"
-         [placeholder]="placeHolder | translate"
-         [style]="style"
-  />
-</nz-input-group>
-
-<ng-template #icon>
-  <img src="assets/images/fi_search.svg" alt="search">
-</ng-template>
+<div class="search-bar">
+  <div class="search-content">
+    <ng-content select=".before-search"></ng-content>
+    <img src="assets/images/fi_search.svg" alt="search">
+    <input type="text"
+           nz-input
+           [nzBorderless]="borderLess"
+           [placeholder]="placeHolder | translate"
+           [style]="style"
+    />
+    <ng-content select=".after-search"></ng-content>
+  </div>
+</div>
