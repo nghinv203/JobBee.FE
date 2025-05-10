@@ -2,60 +2,28 @@
   background: var(--gray-background);
 
   .container {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-
-    @media (min-width: 768px) {
-      padding-top: 80px;
-      padding-bottom: 80px;
-    }
-
-    @media (min-width: 992px) {
-      padding-top: 100px;
-      padding-bottom: 100px;
-    }
+    padding-top: 100px;
+    padding-bottom: 100px;
 
     h2 {
-      margin-bottom: 30px;
-      text-align: center;
-
-      @media (min-width: 768px) {
-        margin-bottom: 50px;
-      }
+      margin-bottom: 50px;
     }
 
     .process {
       display: flex;
-      flex-direction: column;
       position: relative;
-
-      @media (min-width: 768px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      @media (min-width: 992px) {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-      }
-
+      //justify-content: space-between;
       .action {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 24px;
-        position: relative;
 
         .action-image {
           background: var(--white);
           padding: 20px;
           border-radius: 50%;
           margin-bottom: 24px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
         }
 
         .primary {
@@ -69,52 +37,31 @@
             font-size: 18px;
             font-weight: 500;
             margin-bottom: 12px;
-            width: 100%;
-            max-width: 264px;
+            width: 264px;
           }
 
           .action-description {
             color: var(--gray);
             font-size: 14px;
-            max-width: 264px;
-            margin: 0 auto;
           }
         }
       }
 
       .arrow-action {
-        display: none;
-
-        @media (min-width: 992px) {
-          display: block;
-          position: absolute;
-        }
+        position: absolute;
       }
 
       .first-arrow {
-        @media (min-width: 992px) {
-          left: calc(25% - 120px);
-        }
+        left: 205px;
       }
 
       .second-arrow {
-        @media (min-width: 992px) {
-          left: calc(50% - 105px);
-          top: calc(45% - 5px);
-        }
+        left: 515px;
+        top: 80px;
       }
 
       .third-arrow {
-        @media (min-width: 992px) {
-          left: calc(75% - 95px);
-        }
-      }
-    }
-
-    @media (min-width: 1200px) {
-      .process {
-        max-width: 1100px;
-        margin: 0 auto;
+        left: 835px;
       }
     }
   }
