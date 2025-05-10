@@ -58,6 +58,11 @@
         "title": "Ứng Tuyển",
         "description": "Nộp hồ sơ và chờ phản hồi."
       }
-    }
+    },
+    "popularJobs": {
+      "title": "Ngành Nghề Phổ Biến",
+      "amount": "VỊ Trí Mở"
+    },
+    "viewAll": "Xem Tất Cả"
   }
 }

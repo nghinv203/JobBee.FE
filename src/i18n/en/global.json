@@ -58,6 +58,11 @@
         "title": "Apply",
         "description": "Submit your application and await feedback."
       }
-    }
+    },
+    "popularJobs": {
+      "title": "Popular Jobs",
+      "amount": "Open Jobs"
+    },
+    "viewAll": "View All"
   }
 }
