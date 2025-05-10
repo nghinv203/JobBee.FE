@@ -66,6 +66,16 @@
     "viewAll": "View All",
     "featureJobs": {
       "title": "Feature Jobs"
+    },
+    "jobType": {
+      "FULL_TIME": "Full-time",
+      "PART_TIME": "Part-time",
+      "INTERNSHIP": "Internship",
+      "SEASONAL": "Seasonal",
+      "REMOTE": "Remote",
+      "HYBRID": "Hybrid",
+      "CONTRACT_BASE": "Contract-based",
+      "FREELANCE": "Freelance"
     }
   }
 }

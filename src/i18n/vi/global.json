@@ -66,6 +66,16 @@
     "viewAll": "Xem Tất Cả",
     "featureJobs": {
       "title": "Việc Làm Nổi Bật"
+    },
+    "jobType": {
+      "FULL_TIME": "Toàn thời gian",
+      "PART_TIME": "Bán thời gian",
+      "INTERNSHIP": "Thực tập",
+      "SEASONAL": "Thời vụ",
+      "REMOTE": "Làm từ xa",
+      "HYBRID": "Linh hoạt",
+      "CONTRACT_BASE": "Theo hợp đồng",
+      "FREELANCE": "Tự do"
     }
   }
 }

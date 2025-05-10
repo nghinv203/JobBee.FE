@@ -1,0 +1,34 @@
+<div class="job">
+  <div>
+    <div class="job-img">
+      <img [src]="data.img" [alt]="data.name">
+    </div>
+    <div>
+      <div>
+        <h4>{{data.name | translate}}</h4>
+        <span>{{data.jobType | translate}}</span>
+      </div>
+      <div class="d-flex">
+        <span>
+          <img src="assets/images/fi_map-pin.svg" alt="">
+        </span>
+        <span>
+          <img src="assets/images/currency-dollar%201.svg" alt="">
+        </span>
+        <span>
+          <img src="assets/images/calendar-blank%20(1)%201.svg" alt="">
+        </span>
+      </div>
+    </div>
+  </div> <-- information -->
+  <div>
+    <img src="assets/images/fi_bookmark.svg" alt="">
+  </div> <-- save -->
+  <div>
+    <app-button [style]="'display:flex;justify-content:center;color: var(--primary);width:190px;align-content:center'"
+                [content]="'global.viewAll'"
+    >
+      <img id="icon" src="assets/images/fi_arrow-right.svg" alt="" style="margin-left: 12px">
+    </app-button>
+  </div> <-- apply -->
+</div>
