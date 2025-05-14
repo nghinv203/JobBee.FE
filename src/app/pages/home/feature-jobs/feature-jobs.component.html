@@ -10,6 +10,10 @@
         </app-button>
       </div>
     </div>
-
+    <div>
+      @for(job of jobs; track job.id) {
+        <app-job-long [data]="job"></app-job-long>
+      }
+    </div>
   </div>
 </div>

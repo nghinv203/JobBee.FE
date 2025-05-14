@@ -64,6 +64,7 @@
       "amount": "VỊ Trí Mở"
     },
     "viewAll": "Xem Tất Cả",
+    "applyNow": "Ứng Tuyển Ngay",
     "featureJobs": {
       "title": "Việc Làm Nổi Bật"
     },
@@ -76,6 +77,12 @@
       "HYBRID": "Linh hoạt",
       "CONTRACT_BASE": "Theo hợp đồng",
       "FREELANCE": "Tự do"
+    },
+    "job": {
+      "expired": "Đã hết hạn",
+      "dueToday": "Hạn cuối là hôm nay",
+      "daysLeft": "Còn {{count}} ngày",
+      "undefined": "Chưa xác định"
     }
   }
 }

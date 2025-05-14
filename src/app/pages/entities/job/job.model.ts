@@ -11,10 +11,10 @@ export enum JobType {
 
 export interface IJob {
   id?: string;
-  name: string;
+  name?: string;
   jobType: JobType;
-  salary?: string;
-  dueTime?: string;
+  floorSalary?: number;
+  cellingSalary?: number
+  dueTime?: number;
   location?: string;
-  img?: string;
 }

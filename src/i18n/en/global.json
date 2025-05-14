@@ -64,6 +64,7 @@
       "amount": "Open Jobs"
     },
     "viewAll": "View All",
+    "applyNow": "Apply Now",
     "featureJobs": {
       "title": "Feature Jobs"
     },
@@ -76,6 +77,12 @@
       "HYBRID": "Hybrid",
       "CONTRACT_BASE": "Contract-based",
       "FREELANCE": "Freelance"
+    },
+    "job": {
+      "expired": "Expired",
+      "dueToday": "Due today",
+      "daysLeft": "{{count}} days left",
+      "undefined": "Undefined"
     }
   }
 }

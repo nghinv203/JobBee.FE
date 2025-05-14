@@ -1,18 +1,22 @@
 import {Component, Input} from '@angular/core';
 import {IJob} from '../job.model';
-import {TranslatePipe} from '@ngx-translate/core';
 import {ButtonComponent} from '../../../../shared/reuseComponents/button/button.component';
+import {TranslatePipe} from '@ngx-translate/core';
+import {CurrencyPipe} from '@angular/common';
+import {DueDatePipe} from '../../../../shared/pipes/dueDate/due-date.pipe';
 
 @Component({
   selector: 'app-job-long',
   imports: [
+    ButtonComponent,
     TranslatePipe,
-    ButtonComponent
+    CurrencyPipe,
+    DueDatePipe,
   ],
   standalone: true,
   templateUrl: './job-long.component.html',
   styleUrl: './job-long.component.scss'
 })
 export class JobLongComponent {
-  @Input() data: IJob;
+  @Input() data!: IJob;
 }

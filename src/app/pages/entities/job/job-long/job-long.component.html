@@ -1,34 +1,37 @@
 <div class="job">
   <div>
     <div class="job-img">
-      <img [src]="data.img" [alt]="data.name">
+      <img src="assets/images/EmployersLogo.png" [alt]="data.name">
     </div>
     <div>
       <div>
-        <h4>{{data.name | translate}}</h4>
+        <h4>{{data.name}}</h4>
         <span>{{data.jobType | translate}}</span>
       </div>
       <div class="d-flex">
         <span>
           <img src="assets/images/fi_map-pin.svg" alt="">
+          <span>{{data.location}}</span>
         </span>
         <span>
           <img src="assets/images/currency-dollar%201.svg" alt="">
+          <span>{{(data.floorSalary | currency:'VND':'symbol':'1.0-0') + '-' + (data.cellingSalary | currency:'VND':'symbol':'1.0-0')}}</span>
         </span>
         <span>
           <img src="assets/images/calendar-blank%20(1)%201.svg" alt="">
+          <span>{{data.dueTime | dueDate | translate}}</span>
         </span>
       </div>
     </div>
-  </div> <-- information -->
+  </div>
   <div>
     <img src="assets/images/fi_bookmark.svg" alt="">
-  </div> <-- save -->
+  </div>
   <div>
     <app-button [style]="'display:flex;justify-content:center;color: var(--primary);width:190px;align-content:center'"
-                [content]="'global.viewAll'"
+                [content]="'global.applyNow'"
     >
       <img id="icon" src="assets/images/fi_arrow-right.svg" alt="" style="margin-left: 12px">
     </app-button>
-  </div> <-- apply -->
+  </div>
 </div>
