@@ -1,0 +1,23 @@
+.job {
+  border: 1px solid var(--border);
+  padding: 32px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 1s;
+
+  &:hover {
+    box-shadow: 5px 10px 18px var(--primary);
+  }
+
+  span {
+    font-size: 14px;
+  }
+
+  .job-type {
+    color: var(--primary);
+    background: var(--primary-background);
+    padding: 3px 12px;
+    border-radius: 52px;
+  }
+}

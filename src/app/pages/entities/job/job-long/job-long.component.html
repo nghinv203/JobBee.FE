@@ -1,37 +1,40 @@
-<div class="job">
-  <div>
-    <div class="job-img">
+<div class="job d-flex justify-content-between align-items-center">
+  <div class="d-flex align-items-center">
+    <div class="job-img me-4">
       <img src="assets/images/EmployersLogo.png" [alt]="data.name">
     </div>
     <div>
-      <div>
-        <h4>{{data.name}}</h4>
-        <span>{{data.jobType | translate}}</span>
+      <div class="d-flex align-items-center">
+        <h4 class="me-3">{{data.name}}</h4>
+        <span class="job-type">{{data.jobType | translate}}</span>
       </div>
-      <div class="d-flex">
-        <span>
+      <div class="d-flex align-items-center">
+        <span class="me-3">
           <img src="assets/images/fi_map-pin.svg" alt="">
           <span>{{data.location}}</span>
         </span>
-        <span>
+        <span class="me-3">
           <img src="assets/images/currency-dollar%201.svg" alt="">
           <span>{{(data.floorSalary | currency:'VND':'symbol':'1.0-0') + '-' + (data.cellingSalary | currency:'VND':'symbol':'1.0-0')}}</span>
         </span>
-        <span>
+        <span class="me-3">
           <img src="assets/images/calendar-blank%20(1)%201.svg" alt="">
           <span>{{data.dueTime | dueDate | translate}}</span>
         </span>
       </div>
     </div>
   </div>
-  <div>
-    <img src="assets/images/fi_bookmark.svg" alt="">
-  </div>
-  <div>
-    <app-button [style]="'display:flex;justify-content:center;color: var(--primary);width:190px;align-content:center'"
-                [content]="'global.applyNow'"
-    >
-      <img id="icon" src="assets/images/fi_arrow-right.svg" alt="" style="margin-left: 12px">
-    </app-button>
+  <div class="d-flex align-items-center">
+    <div class="me-4">
+      <img src="assets/images/fi_bookmark.svg" alt="">
+    </div>
+    <div>
+      <app-button
+        [style]="'display:flex;justify-content:center;color: var(--primary);background-color: var(--primary-background);width:190px;align-content:center;border: unset;border-radius:3px;'"
+                  [content]="'global.applyNow'"
+      >
+        <img id="icon" src="assets/images/fi_arrow-right.svg" alt="" style="margin-left: 12px">
+      </app-button>
+    </div>
   </div>
 </div>
