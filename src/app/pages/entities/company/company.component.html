@@ -1,0 +1,17 @@
+@if (company) {
+  <div class="company box-shadow">
+    <div class="d-flex align-items-center">
+      <div class="company-image">
+        <img [src]="company.image" alt="">
+      </div>
+      <div class="company-info">
+        <div>{{ company.name }}</div>
+        <div class="location">
+          <img src="assets/images/fi_map-pin.svg">
+          {{ company.location }}
+        </div>
+      </div>
+    </div>
+    <app-button [content]="'global.topCompany.openPosition'" [style]="'color: var(--primary); border: none;background-color: var(--light-primary);width:100%;border-radius:3px'"></app-button>
+  </div>
+}

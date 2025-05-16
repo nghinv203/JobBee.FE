@@ -17,4 +17,5 @@ export interface IJob {
   cellingSalary?: number
   dueTime?: number;
   location?: string;
+  isFeature?: boolean;
 }

@@ -24,7 +24,8 @@ export class FeatureJobsComponent {
       floorSalary: 20_000_000,
       cellingSalary: 30_000_000,
       dueTime: new Date('2025-06-30').getTime(), // 1751577600000
-      location: 'Hà Nội'
+      location: 'Hà Nội',
+      isFeature: true
     },
     {
       id: '2',

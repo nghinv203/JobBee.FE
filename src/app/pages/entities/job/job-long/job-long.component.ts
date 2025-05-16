@@ -4,6 +4,7 @@ import {ButtonComponent} from '../../../../shared/reuseComponents/button/button.
 import {TranslatePipe} from '@ngx-translate/core';
 import {CurrencyPipe} from '@angular/common';
 import {DueDatePipe} from '../../../../shared/pipes/dueDate/due-date.pipe';
+import {FeatureJobDirective} from '../feature-job.directive';
 
 @Component({
   selector: 'app-job-long',
@@ -12,6 +13,7 @@ import {DueDatePipe} from '../../../../shared/pipes/dueDate/due-date.pipe';
     TranslatePipe,
     CurrencyPipe,
     DueDatePipe,
+    FeatureJobDirective,
   ],
   standalone: true,
   templateUrl: './job-long.component.html',

@@ -1,0 +1,19 @@
+.company {
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: 1s;
+  .d-flex {
+    margin-bottom: 32px;
+  }
+
+  .company-info {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    .location {
+      font-size: 14px;
+      color: var(--gray);
+    }
+  }
+}

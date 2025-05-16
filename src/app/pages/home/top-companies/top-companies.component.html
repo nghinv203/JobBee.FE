@@ -1,0 +1,22 @@
+<div class="companies">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between">
+      <h4>{{ 'global.topCompany.title' | translate }}</h4>
+      <div class="d-flex align-items-center">
+        <app-button [content]="''" [style]="'color: var(--primary); display:flex; align-items: center;background-color: var(--primary-background);border:none'">
+          <img src="assets/images/fi_arrow-left.svg" alt="">
+        </app-button>
+        <app-button class="ms-3" [content]="''" [style]="'color: var(--primary); display:flex; align-items: center;background-color: var(--primary-background);border:none'">
+          <img src="assets/images/fi_arrow-right.svg" alt="">
+        </app-button>
+      </div>
+    </div>
+    <div class="company">
+      @for(company of companies; track company) {
+        <div class="single-company">
+          <app-company [company]="company"></app-company>
+        </div>
+      }
+    </div>
+  </div>
+</div>

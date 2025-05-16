@@ -4,6 +4,7 @@ import {CommonPositionComponent} from './common-position/common-position.compone
 import {WorkflowComponent} from './workflow/workflow.component';
 import {PopularJobsComponent} from './popular-jobs/popular-jobs.component';
 import {FeatureJobsComponent} from './feature-jobs/feature-jobs.component';
+import {TopCompaniesComponent} from './top-companies/top-companies.component';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,8 @@ import {FeatureJobsComponent} from './feature-jobs/feature-jobs.component';
     CommonPositionComponent,
     WorkflowComponent,
     PopularJobsComponent,
-    FeatureJobsComponent
+    FeatureJobsComponent,
+    TopCompaniesComponent
   ],
   standalone: true,
   templateUrl: './home.component.html',

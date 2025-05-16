@@ -83,6 +83,10 @@
       "dueToday": "Hạn cuối là hôm nay",
       "daysLeft": "Còn {{count}} ngày",
       "undefined": "Chưa xác định"
+    },
+    "topCompany": {
+      "title": "Công ty hàng đầu",
+      "openPosition": "Vị trí đang tuyển"
     }
   }
 }

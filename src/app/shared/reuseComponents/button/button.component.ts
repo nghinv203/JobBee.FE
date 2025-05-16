@@ -1,11 +1,10 @@
 import {Component, Input} from '@angular/core';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import {TranslatePipe} from '@ngx-translate/core';
-import {NgClass} from '@angular/common';
 
 @Component({
   selector: 'app-button',
-  imports: [NzButtonModule, TranslatePipe, NgClass],
+  imports: [NzButtonModule, TranslatePipe],
   standalone: true,
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss'

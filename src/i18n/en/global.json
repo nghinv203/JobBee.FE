@@ -83,6 +83,10 @@
       "dueToday": "Due today",
       "daysLeft": "{{count}} days left",
       "undefined": "Undefined"
+    },
+    "topCompany": {
+      "title": "Top Companies",
+      "openPosition": "Open positions"
     }
   }
 }
