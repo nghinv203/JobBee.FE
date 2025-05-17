@@ -3,10 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import {HeaderComponent} from './layout/header/header.component';
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
 import {window} from 'rxjs';
+import {FooterComponent} from './layout/footer/footer.component';
+import {MainComponent} from './layout/main/main.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, TranslateModule],
+  imports: [RouterOutlet, HeaderComponent, TranslateModule, FooterComponent, MainComponent],
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -26,21 +28,5 @@ export class AppComponent implements OnInit{
     this.translate.addLangs(['vi', 'en']);
     this.translate.setDefaultLang(`${language}`);
     this.translate.use(`${language}`);
-  }
-
-  isHeaderHidden = false;
-  private lastScrollTop = 0;
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const currentScroll = document.documentElement.scrollTop;
-
-    if (currentScroll > this.lastScrollTop && currentScroll > 100) {
-      // scroll down
-      this.isHeaderHidden = true;
-    } else {
-      // scroll up
-      this.isHeaderHidden = false;
-    }
-    this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   }
 }
