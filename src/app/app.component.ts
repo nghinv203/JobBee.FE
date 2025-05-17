@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
-import {MainComponent} from './layout/main/main.component';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [TranslateModule, MainComponent],
+  imports: [TranslateModule, RouterOutlet],
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
