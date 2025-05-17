@@ -99,6 +99,38 @@
         "description": "Tạo tài khoản để đăng tin tuyển dụng và tìm kiếm những ứng viên tiềm năng."
       },
       "btn": "Đăng ký ngay"
+    },
+    "contact": {
+      "callNow": "Gọi ngay",
+      "phone": "+84 364920299",
+      "address": "Giang Văn Minh, Ba Đình, Hà Nội"
+    },
+    "quickLink": {
+      "title": "Liên kết nhanh",
+      "about": "Giới thiệu",
+      "contact": "Liên hệ",
+      "Pricing": "Bảng giá",
+      "Blog": "Blog"
+    },
+    "candidate": {
+      "title": "Ứng viên",
+      "browseJob": "Tìm kiếm việc làm",
+      "browseEmployer": "Xem nhà tuyển dụng",
+      "candidateDashboard": "Trang cá nhân",
+      "saveJob": "Việc làm đã lưu"
+    },
+    "employer": {
+      "title": "Nhà tuyển dụng",
+      "postJob": "Đăng tin tuyển dụng",
+      "browseCandidate": "Xem ứng viên",
+      "employerDashboard": "Trang quản lý",
+      "application": "Hồ sơ ứng tuyển"
+    },
+    "support": {
+      "title": "Hỗ trợ",
+      "faq": "Câu hỏi thường gặp",
+      "policy": "Chính sách bảo mật",
+      "term": "Điều khoản & điều kiện"
     }
   }
 }

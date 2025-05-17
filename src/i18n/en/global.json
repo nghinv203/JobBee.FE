@@ -99,6 +99,38 @@
         "description": "Create an account to post job listings and discover potential candidates."
       },
       "btn": "Register Now"
+    },
+    "contact": {
+      "callNow": "Call Now",
+      "phone": "+84 364920299",
+      "address": "Giang Van Minh, Ba Dinh, Ha Noi"
+    },
+    "quickLink": {
+      "title": "Quick Link",
+      "about": "About",
+      "contact": "Contact",
+      "Pricing": "Pricing",
+      "Blog": "Blog"
+    },
+    "candidate": {
+      "title": "Candidate",
+      "browseJob": "Browse Jobs",
+      "browseEmployer": "Browse Employers",
+      "candidateDashboard": "Candidate Dashboard",
+      "saveJob": "Saved Jobs"
+    },
+    "employer": {
+      "title": "Employers",
+      "postJob": "Post a Job",
+      "browseCandidate": "Browse Candidates",
+      "employerDashboard": "Employer Dashboard",
+      "application": "Application"
+    },
+    "support": {
+      "title": "Support",
+      "faq": "Faqs",
+      "policy": "Privacy Policy",
+      "term": "Term & Conditions"
     }
   }
 }
