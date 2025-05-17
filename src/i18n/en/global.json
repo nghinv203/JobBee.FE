@@ -87,6 +87,18 @@
     "topCompany": {
       "title": "Top Companies",
       "openPosition": "Open positions"
+    },
+    "userReview": "User Reviews",
+    "callRegister": {
+      "becomeCandidate": {
+        "title": "Becoming candidate",
+        "description": "Register to find job opportunities that match your skills and interests."
+      },
+      "becomeEmployer": {
+        "title": "Becoming employer",
+        "description": "Create an account to post job listings and discover potential candidates."
+      },
+      "btn": "Register Now"
     }
   }
 }

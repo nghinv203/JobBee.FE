@@ -5,6 +5,8 @@ import {WorkflowComponent} from './workflow/workflow.component';
 import {PopularJobsComponent} from './popular-jobs/popular-jobs.component';
 import {FeatureJobsComponent} from './feature-jobs/feature-jobs.component';
 import {TopCompaniesComponent} from './top-companies/top-companies.component';
+import {UserReviewsComponent} from './user-reviews/user-reviews.component';
+import {CallRegisterComponent} from './call-register/call-register.component';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +16,9 @@ import {TopCompaniesComponent} from './top-companies/top-companies.component';
     WorkflowComponent,
     PopularJobsComponent,
     FeatureJobsComponent,
-    TopCompaniesComponent
+    TopCompaniesComponent,
+    UserReviewsComponent,
+    CallRegisterComponent
   ],
   standalone: true,
   templateUrl: './home.component.html',

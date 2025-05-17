@@ -87,6 +87,18 @@
     "topCompany": {
       "title": "Công ty hàng đầu",
       "openPosition": "Vị trí đang tuyển"
+    },
+    "userReview": "Đánh giá của người dùng",
+    "callRegister": {
+      "becomeCandidate": {
+        "title": "Trở thành ứng viên",
+        "description": "Đăng ký để tìm kiếm cơ hội việc làm phù hợp với kỹ năng và sở thích của bạn."
+      },
+      "becomeEmployer": {
+        "title": "Trở thành nhà tuyển dụng",
+        "description": "Tạo tài khoản để đăng tin tuyển dụng và tìm kiếm những ứng viên tiềm năng."
+      },
+      "btn": "Đăng ký ngay"
     }
   }
 }

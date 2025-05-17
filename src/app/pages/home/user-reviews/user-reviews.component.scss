@@ -1,0 +1,41 @@
+.review-area {
+  background-color: var(--gray-background);
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  h4 {
+    margin-bottom: 50px;
+    font-size: 40px;
+  }
+
+  .reviews {
+    overflow: hidden;
+    gap: 24px;
+    max-width: 1200px;
+    //margin-left: 24px;
+  }
+
+  .action {
+    button {
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      width: 48px;
+      height: 48px;
+      border: none;
+
+
+    }
+  }
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-200);
+  border-radius: 50%;
+}
+
+.active {
+  background-color: var(--primary);
+}

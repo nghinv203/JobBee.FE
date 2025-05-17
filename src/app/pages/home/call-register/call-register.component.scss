@@ -1,0 +1,27 @@
+.container {
+  gap: 24px;
+  padding: 100px 0;
+
+  .register {
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+    border-radius: 12px;
+  }
+
+  .primary-bg {
+    background: var(--primary);
+    color: var(--white);
+  }
+
+  .normal-bg {
+    background: var(--gray-background);
+  }
+
+  button {
+    font-weight: bold;
+    color: var(--primary);
+  }
+}

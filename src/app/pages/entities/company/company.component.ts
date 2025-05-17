@@ -1,13 +1,11 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {ICompany} from './company.model';
 import {ButtonComponent} from '../../../shared/reuseComponents/button/button.component';
-import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-company',
   imports: [
     ButtonComponent,
-    TranslatePipe
   ],
   standalone: true,
   templateUrl: './company.component.html',

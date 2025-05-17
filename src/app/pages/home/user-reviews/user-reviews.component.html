@@ -1,0 +1,39 @@
+<div class="review-area">
+  <div class="container position-relative">
+    <h4 class="text-center">{{ 'global.userReview' | translate }}</h4>
+    <div class="d-flex align-items-center flex-column">
+      <div class="reviews d-flex">
+        @if(visibleReviews) {
+          @for(review of visibleReviews; track review) {
+            <app-review [review]="review"></app-review>
+          }
+        }
+      </div>
+      <div class="position-absolute top-50 w-100 btn-slide">
+        <div class="d-flex align-items-center justify-content-between action" >
+          <button nz-button [nzSize]="'large'" (click)="prevSlide()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="fi:arrow-right">
+                <path id="Vector" d="M19 12H5" stroke="#0A65CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="Vector_2" d="M12 5L5 12L12 19" stroke="#0A65CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+            </svg>
+          </button>
+          <button nz-button [nzSize]="'large'" (click)="nextSlide()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="fi:arrow-right">
+                <path id="Vector" d="M5 12H19" stroke="#0A65CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="Vector_2" d="M12 5L19 12L12 19" stroke="#0A65CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="tracker d-flex align-items-center justify-content-between mt-3 gap-2">
+        @for(dot of dotArray; track $index) {
+          <div class="dot" [class.active]="dot === currentIndex / itemsPerSlide"></div>
+        }
+      </div>
+    </div>
+  </div>
+</div>
