@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
 import {TranslatePipe, TranslateService} from '@ngx-translate/core';
-import {SelectComponent} from '../../shared/reuseComponents/select/select.component';
+import {SelectComponent} from '../../../shared/reuseComponents/select/select.component';
 import {options, selectedItems} from './header.constanst';
-import {SearchComponent} from '../../shared/reuseComponents/search/search.component';
-import {ButtonComponent} from '../../shared/reuseComponents/button/button.component';
+import {SearchComponent} from '../../../shared/reuseComponents/search/search.component';
+import {ButtonComponent} from '../../../shared/reuseComponents/button/button.component';
 
 @Component({
   selector: 'app-header',
