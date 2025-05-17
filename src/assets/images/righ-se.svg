@@ -1,0 +1,14 @@
+<svg width="1000" height="1080" viewBox="0 0 1000 1080" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M51.5 0H999.5V1080H0L51.5 0Z" fill="url(#pattern0_2294_16413)"/>
+<path d="M51.5 0H999.5V1080H0L51.5 0Z" fill="url(#paint0_linear_2294_16413)" fill-opacity="0.9"/>
+<defs>
+<pattern id="pattern0_2294_16413" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_2294_16413" transform="matrix(0.0168834 0 0 0.015625 -0.0402701 0)"/>
+</pattern>
+<linearGradient id="paint0_linear_2294_16413" x1="499.75" y1="0" x2="499.75" y2="1080" gradientUnits="userSpaceOnUse">
+<stop stop-color="#041A3C" stop-opacity="0.5"/>
+<stop offset="1" stop-color="#041A3C"/>
+</linearGradient>
+<image id="image0_2294_16413" width="64" height="64" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAONJREFUeF7t20EOhEAIRFG4/6F7DvEnYeFzryQIv6pBd2behOu9dPvsbog+k+NLgArQAqmJcw9iAAhSgZKB3IJkkAySQTJ4CiE+gA8oBeg0mH3Ai084P89HhqwEqIA209ICsQdjAeaZIgaAYKxBDMCAYy8fXwAIgiAIcoJpJEYGI4VjB3YrbC9gL2AvkCB43cM5PgZgAAZgQFnNZAhdGykQBEEQBEEQDBmgAm2glM/z+QUYisYUGoldO7kY32IEAzCg6RgIRgjFAsw+AgRBMNYgBmCAT2TCYfoPPz/HCqQCX1eBHzHnv7C7WhBSAAAAAElFTkSuQmCC"/>
+</defs>
+</svg>

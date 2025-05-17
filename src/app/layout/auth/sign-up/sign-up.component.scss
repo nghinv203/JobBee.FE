@@ -1,0 +1,55 @@
+.form {
+  width: 80%;
+  h3 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+  }
+
+  .already-account {
+    color: var(--gray);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+
+    p {
+      cursor: pointer;
+      color: var(--primary);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+
+  nz-select {
+    width: 150px;
+  }
+
+  .fields {
+    gap: 20px;
+
+    button {
+      background-color: var(--primary);
+    }
+  }
+
+  .name {
+    input {
+      width: 258px;
+    }
+  }
+
+  .padding {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .border-radius {
+    border-radius: 6px;
+  }
+}
+
+

@@ -1,0 +1,40 @@
+<app-base-sign>
+  <div class="form">
+    <form>
+      <div class="d-flex align-items-center justify-content-between">
+        <div>
+          <h3>{{'auth.signUp.title' | translate}}</h3>
+          <div class="d-flex already-account">
+            {{'auth.signUp.alreadyAccount.info' | translate}}
+            <p class="ms-2">{{'auth.signUp.alreadyAccount.signIn' | translate}}</p>
+          </div>
+        </div>
+        <div>
+          <nz-select class="border-radius" nzSize="large" [nzPlaceHolder]="'auth.signUp.roles.placeHolder' | translate">
+            <nz-option [nzValue]="''" [nzLabel]="'auth.signUp.roles.candidate' | translate"></nz-option>
+            <nz-option nzValue="lucy" [nzLabel]="'auth.signUp.roles.employer' | translate"></nz-option>
+          </nz-select>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between flex-column fields">
+        <div class="d-flex align-items-center justify-content-between name">
+          <input class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.lastName' | translate" type="text"/>
+          <input class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.firstName' | translate" type="text"/>
+        </div>
+        <input class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.email' | translate" type="email"/>
+        <input class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.password' | translate" type="password"/>
+        <input class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.cfPassword' | translate" type="password"/>
+        <label nz-checkbox>
+          {{'auth.signUp.form.term' | translate}} <a href="">{{'auth.signUp.form.termLink' | translate}}</a>
+        </label>
+        <button nz-button nzType="primary" nzSize="large">
+          {{'auth.signUp.form.submit' | translate}}
+          <svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+            <path d="M5.5 12H19.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.5 5L19.5 12L12.5 19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </form>
+  </div>
+</app-base-sign>
