@@ -25,7 +25,7 @@
           <label nz-checkbox>
             {{'auth.signIn.form.rememberMe' | translate}}
           </label>
-          <a>{{'auth.signIn.form.forget' | translate}}</a>
+          <a [routerLink]="'../forget-password'">{{'auth.signIn.form.forget' | translate}}</a>
         </div>
       </div>
       <button nz-button nzType="primary" nzSize="large" class="sign-in">

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {BaseSignComponent} from '../base-sign/base-sign.component';
 import {TranslatePipe} from '@ngx-translate/core';
-import {NzInputDirective, NzInputGroupComponent} from 'ng-zorro-antd/input';
+import {NzInputDirective} from 'ng-zorro-antd/input';
 import {NzIconDirective} from 'ng-zorro-antd/icon';
 import {NzCheckboxComponent} from 'ng-zorro-antd/checkbox';
 import {NzButtonComponent} from 'ng-zorro-antd/button';
@@ -15,7 +15,6 @@ import {FormsModule} from '@angular/forms';
     TranslatePipe,
     NzInputDirective,
     NzIconDirective,
-    NzInputGroupComponent,
     NzCheckboxComponent,
     NzButtonComponent,
     RouterLink,
