@@ -1,0 +1,23 @@
+<div class="mt-2 logo d-flex flex-column align-items-center" [routerLink]="''">
+  <img src="/assets/images/MyLogo.svg" alt="JobBee Logo">
+</div>
+<div class="d-flex flex-column align-items-center position-relative top-50 translate-middle-y h-50 verify">
+  <div class="form d-flex align-items-center flex-column gap-3 h-100">
+    <h3>{{'auth.emailVerify.title' | translate}}</h3>
+    <p>{{ ('auth.emailVerify.p1' | translate) + email + ('auth.emailVerify.p2' | translate) }}</p>
+    <form ngForm="emailVerificationForm" class="d-flex align-items-center flex-column gap-3 w-100">
+      <input class="border-radius" nz-input [placeholder]="'auth.emailVerify.form.placeHolder' | translate" type="email"/>
+      <button nz-button nzType="primary" nzSize="large" class="sign-in">
+        {{'auth.emailVerify.form.submit' | translate}}
+        <svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+          <path d="M5.5 12H19.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.5 5L19.5 12L12.5 19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div>
+        {{ 'auth.emailVerify.form.info' | translate }}
+        <a (click)="clickDisabled ? null : handleSend()" #resend>{{ 'auth.emailVerify.form.resend' | translate }}</a>
+      </div>
+    </form>
+  </div>
+</div>

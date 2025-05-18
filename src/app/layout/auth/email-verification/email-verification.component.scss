@@ -1,0 +1,43 @@
+.verify {
+  .logo {
+    cursor: pointer;
+  }
+
+  .form {
+    width: 536px;
+
+    h3, p, div {
+      text-align: center;
+    }
+
+    p {
+      color: var(--gray);
+
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    button {
+      width: 100%;
+      background: var(--primary);
+    }
+
+    div {
+      color: var(--gray);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    a {
+      color: var(--primary);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+}

@@ -4,6 +4,7 @@ import {NzButtonComponent} from 'ng-zorro-antd/button';
 import {TranslatePipe} from '@ngx-translate/core';
 import {RouterLink} from '@angular/router';
 import {NzInputDirective} from 'ng-zorro-antd/input';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-forget-password',
@@ -12,7 +13,8 @@ import {NzInputDirective} from 'ng-zorro-antd/input';
     NzButtonComponent,
     TranslatePipe,
     RouterLink,
-    NzInputDirective
+    NzInputDirective,
+    FormsModule
   ],
   standalone: true,
   templateUrl: './forget-password.component.html',
