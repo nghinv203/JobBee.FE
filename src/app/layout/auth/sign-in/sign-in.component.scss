@@ -1,0 +1,33 @@
+.input-gr {
+  width: calc(100vw - 1000px);
+  position: relative;
+
+  input {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 5px !important;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.wrap-btn {
+  display: flex;
+  align-items: center;
+  width: calc(33vw - 258px);
+  gap: 10px;
+}
+
+.sign-in {
+  background-color: var(--primary);
+}
+
+a {
+  color: var(--primary) !important;
+  text-decoration: none;
+}

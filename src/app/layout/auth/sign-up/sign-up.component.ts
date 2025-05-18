@@ -5,6 +5,8 @@ import {NzOptionComponent, NzSelectComponent} from 'ng-zorro-antd/select';
 import {NzCheckboxComponent} from 'ng-zorro-antd/checkbox';
 import {NzInputDirective} from 'ng-zorro-antd/input';
 import {NzButtonComponent} from 'ng-zorro-antd/button';
+import {FormsModule} from '@angular/forms';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -15,7 +17,9 @@ import {NzButtonComponent} from 'ng-zorro-antd/button';
     NzOptionComponent,
     NzCheckboxComponent,
     NzInputDirective,
-    NzButtonComponent
+    NzButtonComponent,
+    FormsModule,
+    RouterLink
   ],
   standalone: true,
   templateUrl: './sign-up.component.html',

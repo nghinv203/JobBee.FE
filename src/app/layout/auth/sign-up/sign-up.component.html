@@ -1,12 +1,12 @@
 <app-base-sign>
   <div class="form">
-    <form>
+    <form ngForm="signUpForm" class="d-flex flex-column gap-3">
       <div class="d-flex align-items-center justify-content-between">
         <div>
           <h3>{{'auth.signUp.title' | translate}}</h3>
           <div class="d-flex already-account">
             {{'auth.signUp.alreadyAccount.info' | translate}}
-            <p class="ms-2">{{'auth.signUp.alreadyAccount.signIn' | translate}}</p>
+            <a [routerLink]="'../sign-in'" class="ms-2">{{'auth.signUp.alreadyAccount.signIn' | translate}}</a>
           </div>
         </div>
         <div>

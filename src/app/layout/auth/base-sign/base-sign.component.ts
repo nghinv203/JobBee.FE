@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {TranslatePipe} from '@ngx-translate/core';
 import {RouterLink} from '@angular/router';
 
@@ -13,5 +13,9 @@ import {RouterLink} from '@angular/router';
   styleUrl: './base-sign.component.scss'
 })
 export class BaseSignComponent {
-
+  @Input() data: { openJob: number, company: number, newJob: number } = {
+    openJob: 0,
+    company: 0,
+    newJob: 0
+  }
 }

@@ -1,1 +1,71 @@
-<p>sign-in works!</p>
+<app-base-sign>
+  <div class="form d-flex flex-column gap-4">
+    <form ngForm="signInForm" class="d-flex flex-column gap-4">
+      <div>
+        <h3>{{ 'auth.signIn.title' | translate }}</h3>
+        <div>
+          {{ 'auth.signIn.notHaveAccount.info' | translate }}
+          <a [routerLink]="'../sign-up'">{{ 'auth.signIn.notHaveAccount.signUp' | translate }}</a>
+        </div>
+      </div>
+      <div class="d-flex flex-column gap-3">
+        <div class="input-gr">
+          <input class="border-radius" nz-input [placeholder]="'auth.signIn.form.email' | translate" type="email"/>
+        </div>
+
+        <div class="input-gr">
+          <input class="border-radius" nz-input [placeholder]="'auth.signIn.form.password' | translate" [type]="passwordVisible ? 'text' : 'password'"/>
+          <nz-icon
+            class="ant-input-password-icon icon"
+            [nzType]="passwordVisible ? 'eye-invisible' : 'eye'"
+            (click)="passwordVisible = !passwordVisible"
+          />
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <label nz-checkbox>
+            {{'auth.signIn.form.rememberMe' | translate}}
+          </label>
+          <a>{{'auth.signIn.form.forget' | translate}}</a>
+        </div>
+      </div>
+      <button nz-button nzType="primary" nzSize="large" class="sign-in">
+        {{'auth.signIn.form.submit' | translate}}
+        <svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+          <path d="M5.5 12H19.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.5 5L19.5 12L12.5 19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </form>
+    <div class="d-flex flex-column gap-2">
+      <div class="text-center">{{'auth.signInVia.or' | translate}}</div>
+      <div class="d-flex justify-content-between align-items-center">
+        <button nz-button nzType="default" nzSize="large" class="wrap-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M11.6666 20H7.70126V10.1414H5V6.9316H7.70116V4.64762C7.70116 1.9411 8.89588 0 12.8505 0C13.6869 0 15 0.168134 15 0.168134V3.14858H13.6208C12.2155 3.14858 11.6668 3.5749 11.6668 4.75352V6.9316H14.9474L14.6553 10.1414H11.6667L11.6666 20Z" fill="#0A65CC"/>
+          </svg>
+          {{'auth.signInVia.fb' | translate}}
+        </button>
+        <button nz-button nzType="default" nzSize="large" class="wrap-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <g clip-path="url(#clip0_2581_11122)">
+              <path d="M4.43242 12.0863L3.73625 14.6852L1.19176 14.739C0.431328 13.3286 0 11.7149 0 10C0 8.34179 0.403281 6.77804 1.11812 5.40112H1.11867L3.38398 5.81644L4.37633 8.06815C4.16863 8.67366 4.05543 9.32366 4.05543 10C4.05551 10.7341 4.18848 11.4374 4.43242 12.0863Z" fill="#FBBB00"/>
+              <path d="M19.8252 8.1319C19.94 8.73682 19.9999 9.36155 19.9999 10C19.9999 10.716 19.9246 11.4143 19.7812 12.088C19.2944 14.3803 18.0224 16.3819 16.2604 17.7984L16.2598 17.7978L13.4065 17.6522L13.0027 15.1314C14.1719 14.4456 15.0857 13.3726 15.567 12.088H10.2197V8.1319H15.645H19.8252Z" fill="#518EF8"/>
+              <path d="M16.26 17.7978L16.2606 17.7983C14.5469 19.1758 12.3699 20 10.0001 20C6.19189 20 2.88092 17.8714 1.19189 14.739L4.43256 12.0862C5.27705 14.3401 7.45123 15.9445 10.0001 15.9445C11.0957 15.9445 12.1221 15.6483 13.0029 15.1313L16.26 17.7978Z" fill="#28B446"/>
+              <path d="M16.383 2.30219L13.1434 4.95437C12.2319 4.38461 11.1544 4.05547 10 4.05547C7.39344 4.05547 5.17859 5.73348 4.37641 8.06812L1.11871 5.40109H1.11816C2.78246 2.1923 6.13519 0 10 0C12.4264 0 14.6511 0.864297 16.383 2.30219Z" fill="#F14336"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_2581_11122">
+                <rect width="20" height="20" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+          {{'auth.signInVia.gg' | translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</app-base-sign>
+
+<ng-template #suffixTemplate>
+
+</ng-template>
