@@ -72,9 +72,7 @@
         <div class="col-lg-8 row align-items-center justify-content-between">
           <div class="logo col-lg-2"></div>
           <div class="col-lg-10 search-bar">
-            <app-search [placeHolder]="'global.searchBar.placeholder'"
-                        [borderLess]="true"
-                        [style]="'padding: 9px 0;'"
+            <app-search [searchConfigs]="searchBarConfig" (searchChange)="hanldeSearch($event)" [isLiveSearch]="false"
             >
               <div class="before-search">
                 <app-select [(selectedItems)]="selectedItems"
@@ -103,16 +101,14 @@
         </div>
         <div class="col-lg-4 d-flex justify-content-end gap-3" style="height: 100%;">
           <div>
-            <app-button [size]="'large'"
-                        [style]="'border: 2px solid #CEE0F5;color: #0A65CC; padding: 12px 24px; height: 100%; border-radius: 3px; font-weight: 600'"
-                        [content]="'global.button.signIn'">
-            </app-button>
+            <button nz-button nzSize="large" class="login-btn" routerLink="/auth/sign-in">
+              {{ 'global.button.signIn' | translate }}
+            </button>
           </div>
           <div>
-            <app-button [size]="'large'"
-                        [style]="'background: #0A65CC; color: #FFFFFF; padding: 12px 24px; height: 100%; border-radius: 3px; font-weight: 600'"
-                        [content]="'global.button.postJob'">
-            </app-button>
+            <button nz-button nzSize="large" class="postJob-btn">
+              {{ 'global.button.postJob' | translate }}
+            </button>
           </div>
         </div>
       </div>

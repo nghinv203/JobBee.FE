@@ -3,11 +3,10 @@
     <div class="d-flex justify-content-between">
       <h3 class="title">{{ 'global.featureJobs.title' | translate }}</h3>
       <div>
-        <app-button [style]="'display:flex;justify-content:center;color: var(--primary);width:173px;align-content:center'"
-                    [content]="'global.viewAll'"
-        >
+        <button nz-button nzSize="large" class="login-btn" routerLink="/jobs">
+          {{ 'global.viewAll' | translate }}
           <img id="icon" src="assets/images/fi_arrow-right.svg" alt="" style="margin-left: 12px">
-        </app-button>
+        </button>
       </div>
     </div>
     <div>

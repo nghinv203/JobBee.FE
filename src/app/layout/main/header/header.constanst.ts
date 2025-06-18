@@ -1,4 +1,5 @@
 import {ILanguageOption} from './header.model';
+import {ISearchConfig} from '../../../shared/reuseComponents/search/search.model';
 
 export const options: ILanguageOption[] = [
   {
@@ -13,8 +14,17 @@ export const options: ILanguageOption[] = [
   },
 ];
 
-export  const selectedItems: ILanguageOption = {
+export const selectedItems: ILanguageOption = {
   label: 'global.languages.en',
   value: 'en',
   img: 'https://flagcdn.com/w40/us.png'
 };
+
+export const searchBarConfig: ISearchConfig[] = [
+  {
+    controlName: 'search',
+    controlType: 'input',
+    placeHolder: ['global.searchBar.placeholder'],
+    defaultValue: ''
+  }
+]

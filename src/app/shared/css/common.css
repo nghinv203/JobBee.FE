@@ -8,6 +8,7 @@
   --light-primary: #E7F0FA;
   --primary-background: #E8F1FF;
   --primary-200: #99C2FF;
+  --red: red;
 }
 
 .vertical {
@@ -21,4 +22,9 @@
 
 .box-shadow:hover {
   box-shadow: 5px 10px 18px var(--primary);
+}
+
+.error-msg {
+  color: var(--red);
+  font-size: 12px;
 }

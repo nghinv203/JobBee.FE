@@ -1,6 +1,6 @@
 <app-base-sign>
   <div class="form">
-    <form ngForm="signUpForm" class="d-flex flex-column gap-3">
+    <form [formGroup]="signUpForm" class="d-flex flex-column gap-3" (ngSubmit)="onSubmit()">
       <div class="d-flex align-items-center justify-content-between">
         <div>
           <h3>{{'auth.signUp.title' | translate}}</h3>
@@ -10,21 +10,42 @@
           </div>
         </div>
         <div>
-          <nz-select class="border-radius" nzSize="large" [nzPlaceHolder]="'auth.signUp.roles.placeHolder' | translate">
-            <nz-option [nzValue]="''" [nzLabel]="'auth.signUp.roles.candidate' | translate"></nz-option>
-            <nz-option nzValue="lucy" [nzLabel]="'auth.signUp.roles.employer' | translate"></nz-option>
+          <nz-select formControlName="role" class="border-radius" nzSize="large" [nzPlaceHolder]="'auth.signUp.roles.placeHolder' | translate">
+            <nz-option [nzValue]="'candidate'" [nzLabel]="'auth.signUp.roles.candidate' | translate"></nz-option>
+            <nz-option [nzValue]="'employer'" [nzLabel]="'auth.signUp.roles.employer' | translate"></nz-option>
           </nz-select>
+          @if(signUpForm.get('role')?.invalid && signUpForm.get('role')?.touched) {
+            <div class="error-msg">Role is required</div>
+          }
         </div>
       </div>
       <div class="d-flex justify-content-between flex-column fields">
         <div class="d-flex align-items-center justify-content-between name">
-          <input class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.lastName' | translate" type="text"/>
-          <input class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.firstName' | translate" type="text"/>
+          <div>
+            <input formControlName="lastName" class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.lastName' | translate" type="text"/>
+            @if(signUpForm.get('lastName')?.invalid && signUpForm.get('lastName')?.touched) {
+              <div class="error-msg">Last Name is required</div>
+            }
+          </div>
+          <div>
+            <input formControlName="firstName" class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.firstName' | translate" type="text"/>
+            @if(signUpForm.get('firstName')?.invalid && signUpForm.get('firstName')?.touched) {
+              <div class="error-msg">First Name is required</div>
+            }
+          </div>
         </div>
-        <input class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.email' | translate" type="email"/>
-        <input class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.password' | translate" type="password"/>
-        <input class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.cfPassword' | translate" type="password"/>
-        <label nz-checkbox>
+        <div>
+          <input formControlName="email" class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.email' | translate" type="email"/>
+          @if(signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched) {
+            <div class="error-msg">Email is required</div>
+          }
+          @if(signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched) {
+            <div class="error-msg">Email is not valid</div>
+          }
+        </div>
+        <input formControlName="password" class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.password' | translate" type="password"/>
+        <input formControlName="cfPassword" class="border-radius padding" nz-input [placeholder]="'auth.signUp.form.cfPassword' | translate" type="password"/>
+        <label nz-checkbox formControlName="term">
           {{'auth.signUp.form.term' | translate}} <a href="">{{'auth.signUp.form.termLink' | translate}}</a>
         </label>
         <button nz-button nzType="primary" nzSize="large">

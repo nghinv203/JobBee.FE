@@ -1,6 +1,6 @@
 <app-base-sign>
   <div class="form d-flex flex-column gap-4">
-    <form ngForm="signInForm" class="d-flex flex-column gap-4">
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="d-flex flex-column gap-4">
       <div>
         <h3>{{ 'auth.signIn.title' | translate }}</h3>
         <div>
@@ -9,17 +9,26 @@
         </div>
       </div>
       <div class="d-flex flex-column gap-3">
-        <div class="input-gr">
-          <input class="border-radius" nz-input [placeholder]="'auth.signIn.form.email' | translate" type="email"/>
+        <div>
+          <div class="input-gr">
+            <input formControlName="email" class="border-radius" nz-input [placeholder]="'auth.signIn.form.email' | translate" type="email"/>
+          </div>
+          @if(signInForm.get('email')?.invalid && signInForm.get('email')?.touched) {
+            <div class="error-msg">Email is required</div>
+          }
         </div>
-
-        <div class="input-gr">
-          <input class="border-radius" nz-input [placeholder]="'auth.signIn.form.password' | translate" [type]="passwordVisible ? 'text' : 'password'"/>
-          <nz-icon
-            class="ant-input-password-icon icon"
-            [nzType]="passwordVisible ? 'eye-invisible' : 'eye'"
-            (click)="passwordVisible = !passwordVisible"
-          />
+        <div>
+          <div class="input-gr">
+            <input formControlName="password" class="border-radius" nz-input [placeholder]="'auth.signIn.form.password' | translate" [type]="passwordVisible ? 'text' : 'password'"/>
+            <nz-icon
+              class="ant-input-password-icon icon"
+              [nzType]="passwordVisible ? 'eye-invisible' : 'eye'"
+              (click)="passwordVisible = !passwordVisible"
+            />
+          </div>
+          @if(signInForm.get('password')?.invalid && signInForm.get('password')?.touched) {
+            <div class="error-msg">Password is required</div>
+          }
         </div>
         <div class="d-flex justify-content-between align-items-center">
           <label nz-checkbox>

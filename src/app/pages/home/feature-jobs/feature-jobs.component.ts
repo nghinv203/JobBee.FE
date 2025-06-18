@@ -3,14 +3,18 @@ import {ButtonComponent} from '../../../shared/reuseComponents/button/button.com
 import {TranslatePipe} from '@ngx-translate/core';
 import {IJob, JobType} from '../../entities/job/job.model';
 import {JobLongComponent} from '../../entities/job/job-long/job-long.component';
+import {NzButtonComponent} from "ng-zorro-antd/button";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-feature-jobs',
-  imports: [
-    ButtonComponent,
-    TranslatePipe,
-    JobLongComponent
-  ],
+    imports: [
+        ButtonComponent,
+        TranslatePipe,
+        JobLongComponent,
+        NzButtonComponent,
+        RouterLink
+    ],
   standalone: true,
   templateUrl: './feature-jobs.component.html',
   styleUrl: './feature-jobs.component.scss'

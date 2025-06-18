@@ -1,13 +1,232 @@
-<div class="search-bar">
-  <div class="search-content">
-    <ng-content select=".before-search"></ng-content>
-    <img src="assets/images/fi_search.svg" alt="search">
-    <input type="text"
-           nz-input
-           [nzBorderless]="borderLess"
-           [placeholder]="placeHolder | translate"
-           [style]="style"
-    />
-    <ng-content select=".after-search"></ng-content>
-  </div>
+<div class="searchbar">
+  <form [formGroup]="searchForm">
+    <div class="search-content d-flex justify-content-between align-items-center">
+      @for(control of searchConfigs; track control) {
+        @switch (control.controlType) {
+          @case ('input') {
+            <div class="search-input">
+              <svg
+                (click)="handleSearch()"
+                class="search" height="24px" width="24px">
+                <use href="assets/images/fi_search.svg"></use>
+              </svg>
+              <input type="text"
+                     nz-input
+                     (keydown.enter)="handleSearch()"
+                     [id]="control.controlName"
+                     [name]="control.controlName"
+                     [formControlName]="control.controlName"
+                     [nzBorderless]="true"
+                     [placeholder]="control.placeHolder[0] | translate"
+              />
+              @if(searchForm.get(control.controlName)?.value) {
+                <div class="clear-text">
+                  <svg
+                    (click)="handleClear(control.controlName)"
+                    height="24px"
+                    width="24px">
+                    <use href="assets/images/X.svg"></use>
+                  </svg>
+                </div>
+
+              }
+            </div>
+          }
+          @case ('location') {
+            <ng-select
+              [style]="control.styles"
+              [id]="control.controlName"
+              [formControlName]="control.controlName"
+              [items]="control.selectItems ?? []"
+              [clearable]="true"
+              [searchable]="!control.disableSearch"
+              [placeholder]="control.placeHolder[0] | translate"
+              [multiple]="control.multiple"
+              bindLabel="name"
+            >
+              @if(control.maxSelectItems) {
+                <ng-template ng-multi-label-tmp let-items="items" let-clear=clear>
+                  @for(item of items | slice: 0 : control.maxSelectItems; track item) {
+                    <ng-container *ngTemplateOutlet="labelTemplate; context: { $implicit: item, clearFn: clear }"></ng-container>
+                  }
+                  @if(items.length > control.maxSelectItems) {
+                    <div
+                      [class.multi-item-select]="control.maxSelectItems"
+                      [nzTooltipTitle]="control.placeHolder[0] | translate"
+                      [nzTooltipOverlayClassName]="'colorTooltip font-weight-bold'"
+                      [nzTooltipColor]="'white'"
+                      [nzTooltipPlacement]="['bottom']"
+                      [nz-tooltip]="tooltipItems"
+                    >
+                      <span>+{{items.length - control.maxSelectItems}}</span>
+                    </div>
+                  }
+                  <ng-template #tooltipItems>
+                    @for(item of items | slice: control.maxSelectItems : items.length; track item) {
+                      @if(isSelectItem(item)) {
+                        <div>{{ item.name }}</div>
+                      }
+                    }
+                  </ng-template>
+                </ng-template>
+              } @else {
+                <ng-template ng-label-tmp let-item="item" let-clear="clear">
+                  <ng-container *ngTemplateOutlet="labelTemplate; context: { $implicit: item, clearFn: clear }"></ng-container>
+                </ng-template>
+              }
+              <ng-template #labelTemplate let-item let-clearFn="clearFn">
+                <div
+                  [class.multi-item-select]="control.maxSelectItems"
+                  class="item-select"
+                  [nzTooltipTitle]="item.name"
+                  [nzTooltipOverlayClassName]="'colorTooltip font-weight-bold'"
+                  [nzTooltipColor]="'white'"
+                  [nzTooltipPlacement]="['bottom']"
+                  nz-tooltip
+                >
+                  <span class="text-ellipsis">{{ (item.name) | truncate: 7 }}</span>
+                  @if(!item?.disabled) {
+                    <span class="ng-value-icon left" (click)="clearFn(item)"></span>
+                  }
+                </div>
+              </ng-template>
+              <ng-template ng-option-tmp let-item=item>
+                <span>{{ (item.name) }}</span>
+              </ng-template>
+            </ng-select>
+          }
+          @case('select') {
+            <ng-select
+              [style]="control.styles"
+              [id]="control.controlName"
+              [formControlName]="control.controlName"
+              [items]="control.selectItems ?? []"
+              [clearable]="true"
+              [searchable]="!control.disableSearch"
+              [placeholder]="control.placeHolder[0] | translate"
+              [multiple]="control.multiple"
+              bindLabel="name"
+            >
+              @if(control.maxSelectItems) {
+                <ng-template ng-multi-label-tmp let-items="items" let-clear=clear>
+                  @for(item of items | slice: 0 : control.maxSelectItems; track item) {
+                    <ng-container *ngTemplateOutlet="labelTemplate; context: { $implicit: item, clearFn: clear }"></ng-container>
+                  }
+                  @if(items.length > control.maxSelectItems) {
+                    <div
+                      [class.multi-item-select]="control.maxSelectItems"
+                      [nzTooltipTitle]="control.placeHolder[0] | translate"
+                      [nzTooltipOverlayClassName]="'colorTooltip font-weight-bold'"
+                      [nzTooltipColor]="'white'"
+                      [nzTooltipPlacement]="['bottom']"
+                      [nz-tooltip]="tooltipItems"
+                    >
+                      <span>+{{items.length - control.maxSelectItems}}</span>
+                    </div>
+                  }
+                  <ng-template #tooltipItems>
+                    @for(item of items | slice: control.maxSelectItems : items.length; track item) {
+                      @if(isSelectItem(item)) {
+                        <div>{{ item.name | translate }}</div>
+                      }
+                    }
+                  </ng-template>
+                </ng-template>
+              } @else {
+                <ng-template ng-label-tmp let-item="item" let-clear="clear">
+                  <ng-container *ngTemplateOutlet="labelTemplate; context: { $implicit: item, clearFn: clear }"></ng-container>
+                </ng-template>
+              }
+              <ng-template #labelTemplate let-item let-clearFn="clearFn">
+                <div
+                  [class.multi-item-select]="control.maxSelectItems"
+                  class="item-select"
+                  [nzTooltipTitle]="item.name | translate"
+                  [nzTooltipOverlayClassName]="'colorTooltip font-weight-bold'"
+                  [nzTooltipColor]="'white'"
+                  [nzTooltipPlacement]="['bottom']"
+                  nz-tooltip
+                >
+                  <span class="text-ellipsis">{{ (item.name | translate) | truncate: 7 }}</span>
+                  @if(!item?.disabled) {
+                    <span class="ng-value-icon left" (click)="clearFn(item)"></span>
+                  }
+                </div>
+              </ng-template>
+              <ng-template ng-option-tmp let-item=item>
+                <span>{{ (item.name | translate) }}</span>
+              </ng-template>
+            </ng-select>
+          }
+
+          @case ('presetRange') {
+            <ng-select
+              [style]="control.styles"
+              [id]="control.controlName"
+              [formControlName]="control.controlName"
+              [items]="control.selectItems ?? []"
+              [clearable]="true"
+              [searchable]="!control.disableSearch"
+              bindLabel="name"
+              [placeholder]="control.placeHolder[0] | translate"
+            >
+              @if(control.maxSelectItems) {
+                <ng-template ng-multi-label-tmp let-items="items" let-clear=clear>
+                  @for(item of items | slice: 0 : control.maxSelectItems; track item) {
+                    <ng-container *ngTemplateOutlet="labelTemplate; context: { $implicit: item, clearFn: clear }"></ng-container>
+                  }
+                  @if(items.length > control.maxSelectItems) {
+                    <div
+                      [class.multi-item-select]="control.maxSelectItems"
+                      [nzTooltipTitle]="control.placeHolder[0] | translate"
+                      [nzTooltipOverlayClassName]="'colorTooltip font-weight-bold'"
+                      [nzTooltipColor]="'white'"
+                      [nzTooltipPlacement]="['bottom']"
+                      [nz-tooltip]="tooltipItems"
+                    >
+                      <span>+{{items.length - control.maxSelectItems}}</span>
+                    </div>
+                  }
+                  <ng-template #tooltipItems>
+                    @for(item of items | slice: control.maxSelectItems : items.length; track item) {
+                      @if(isSelectItem(item)) {
+                        <div>{{ (item.name | translate) | truncate: 7 }}</div>
+                      }
+                    }
+                  </ng-template>
+                </ng-template>
+              } @else {
+                <ng-template ng-label-tmp let-item="item" let-clear="clear">
+                  <ng-container *ngTemplateOutlet="labelTemplate; context: { $implicit: item, clearFn: clear }"></ng-container>
+                </ng-template>
+              }
+
+              <ng-template #labelTemplate let-item let-clearFn="clearFn">
+                <div
+                  [class.multi-item-select]="control.maxSelectItems"
+                  class="item-select"
+                  [nzTooltipTitle]="'' | translate"
+                  [nzTooltipOverlayClassName]="'colorTooltip font-weight-bold'"
+                  [nzTooltipColor]="'white'"
+                  [nzTooltipPlacement]="['bottom']"
+                  nz-tooltip
+                >
+                  <span >{{ (item.name | translate) | truncate: 10 }}</span>
+                  @if(!item?.disabled) {
+                    <span class="ng-value-icon left" (click)="clearFn(item)"></span>
+                  }
+                </div>
+              </ng-template>
+              <ng-template ng-option-tmp let-item=item>
+                <span>{{ (item.name | translate) | truncate: 7 }}</span>
+              </ng-template>
+            </ng-select>
+          }
+        }
+      }
+      <ng-content select=".btn">
+
+      </ng-content>
+    </div>
+  </form>
 </div>

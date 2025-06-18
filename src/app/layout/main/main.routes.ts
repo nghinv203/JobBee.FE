@@ -4,6 +4,7 @@ import {HomeComponent} from '../../pages/home/home.component';
 export const mainRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    data: { breadcrumb: 'breadcrumb.home' }
   }
 ];

@@ -1,17 +1,20 @@
 import {Component} from '@angular/core';
 import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 import {SelectComponent} from '../../../shared/reuseComponents/select/select.component';
-import {options, selectedItems} from './header.constanst';
+import {options, searchBarConfig, selectedItems} from './header.constanst';
 import {SearchComponent} from '../../../shared/reuseComponents/search/search.component';
 import {ButtonComponent} from '../../../shared/reuseComponents/button/button.component';
+import {NzButtonComponent} from 'ng-zorro-antd/button';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-header',
   imports: [
     SelectComponent,
     SearchComponent,
-    ButtonComponent,
     TranslatePipe,
+    NzButtonComponent,
+    RouterLink,
   ],
   templateUrl: './header.component.html',
   standalone: true,
@@ -20,6 +23,7 @@ import {ButtonComponent} from '../../../shared/reuseComponents/button/button.com
 export class HeaderComponent {
   selectedItems = selectedItems;
   options = options;
+  searchBarConfig = searchBarConfig;
   constructor(private translateService: TranslateService) {
     const browserLanguage = localStorage.getItem('language') || 'vi';
     if(browserLanguage === 'vi') {
@@ -27,6 +31,10 @@ export class HeaderComponent {
     } else if(browserLanguage === 'en') {
       this.selectedItems = options[1]
     }
+  }
+
+  hanldeSearch(event: any) {
+    console.log(event);
   }
 
   handleChangeLanguage(event: any): void {

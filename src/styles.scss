@@ -1,5 +1,5 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
+@import "node_modules/@ng-select/ng-select/themes/default.theme.css";
 /* Document
    ========================================================================== */
 
@@ -346,4 +346,8 @@ template {
 
 [hidden] {
   display: none;
+}
+
+.colorTooltip .ant-tooltip-inner {
+  color: var(--black) !important;
 }

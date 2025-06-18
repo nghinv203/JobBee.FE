@@ -5,7 +5,7 @@ import {NzOptionComponent, NzSelectComponent} from 'ng-zorro-antd/select';
 import {NzCheckboxComponent} from 'ng-zorro-antd/checkbox';
 import {NzInputDirective} from 'ng-zorro-antd/input';
 import {NzButtonComponent} from 'ng-zorro-antd/button';
-import {FormsModule} from '@angular/forms';
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {RouterLink} from '@angular/router';
 
 @Component({
@@ -19,12 +19,28 @@ import {RouterLink} from '@angular/router';
     NzInputDirective,
     NzButtonComponent,
     FormsModule,
-    RouterLink
+    RouterLink,
+    ReactiveFormsModule
   ],
   standalone: true,
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss'
 })
 export class SignUpComponent {
+  signUpForm!: FormGroup;
 
+  constructor(private formBuilder: FormBuilder) {
+    this.signUpForm = this.formBuilder.group({
+      role: ['', [Validators.required]],
+      lastName: ['', [Validators.required]],
+      firstName: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.required]],
+      cfPassword: ['', Validators.required],
+      term: ['', Validators.required]
+    });
+  }
+
+  onSubmit() {
+
+  }
 }
