@@ -1,14 +1,19 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { catchError, throwError } from 'rxjs';
-import {AuthService} from '../../../shared/services/auth.service';
+import { AuthService } from '../../../shared/services/auth.service';
 
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const authService = inject(AuthService);
   const authToken = authService.getToken();
 
+  // list api do not need token
+  const publicEndpoints = ['/api/login', '/api/register'];
+
+  const isPublicEndpoint = publicEndpoints.some(endpoint => req.url.includes(endpoint));
+
   let authReq = req;
-  if (authToken) {
+  if (authToken && !isPublicEndpoint) {
     authReq = req.clone({
       setHeaders: {
         Authorization: `Bearer ${authToken}`
