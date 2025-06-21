@@ -15,10 +15,12 @@ import {
 } from '@ng-select/ng-select';
 import {NgTemplateOutlet, SlicePipe} from '@angular/common';
 import {TruncatePipe} from '../../pipes/truncate/truncate.pipe';
+import {DynamicComponent} from '../dynamic/dynamic.component';
+import {DefaultComponent} from '../default/default.component';
 
 @Component({
   selector: 'app-search',
-  imports: [NzInputModule, TranslatePipe, NzTooltipDirective, ReactiveFormsModule, NgSelectComponent, FormsModule, NgMultiLabelTemplateDirective, SlicePipe, NgTemplateOutlet, NgOptionTemplateDirective, NgLabelTemplateDirective, TruncatePipe, NgHeaderTemplateDirective],
+  imports: [NzInputModule, TranslatePipe, NzTooltipDirective, ReactiveFormsModule, NgSelectComponent, FormsModule, NgMultiLabelTemplateDirective, SlicePipe, NgTemplateOutlet, NgOptionTemplateDirective, NgLabelTemplateDirective, TruncatePipe, NgHeaderTemplateDirective, DynamicComponent],
   standalone: true,
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss',
@@ -92,7 +94,7 @@ export class SearchComponent implements OnInit, OnChanges {
   }
 
   toggleItem(item: any, event: any) {
-    const controlName = 'locationSearch'; // Điều chỉnh nếu có nhiều control
+    const controlName = 'locationSearch';
     const currentValue = this.searchForm.get(controlName)?.value || [];
     if (event.target.checked) {
       this.searchForm.get(controlName)?.setValue([...currentValue, item]);
@@ -109,4 +111,11 @@ export class SearchComponent implements OnInit, OnChanges {
     const selected = this.searchForm.get(controlName)?.value || [];
     console.log('Applied locations:', selected);
   }
+
+  getHiddenLocation(items: any): string {
+    let result = '';
+    return items;
+  }
+
+  protected readonly DefaultComponent = DefaultComponent;
 }

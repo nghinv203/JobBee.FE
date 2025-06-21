@@ -25,20 +25,9 @@ export class JobSearchComponent implements OnInit{
 
   ngOnInit(): void {
     this.locationService.fetchProvines()
-      .pipe(
-        map((res: any[]) => {
-          const mappedData = res.map(p => ({
-            id: p.code,
-            name: p.name
-          }));
-          return {
-            code: 200,
-            data: mappedData,
-            msg: 'Success'
-          };
-        })
-      )
+      .pipe()
       .subscribe(res => {
+        console.log(res.data)
         this.searchBarConfig[1].selectItems = res.data;
       });
   }

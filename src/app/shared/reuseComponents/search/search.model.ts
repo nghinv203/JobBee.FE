@@ -1,3 +1,5 @@
+import {Type} from '@angular/core';
+
 export interface ISearchConfig {
   placeHolder: string[];
   controlName: string;
@@ -8,9 +10,10 @@ export interface ISearchConfig {
   multiple?: boolean;
   maxSelectItems?: number;
   disableSearch?: boolean;
+  componentType?: Type<any>;
 }
 
-export type ControlType = 'input' | 'select' | 'timeRange' | 'presetRange' | 'checkbox' | 'radio' | 'chipInput' | 'dateType' | 'location';
+export type ControlType = 'input' | 'select' | 'timeRange' | 'presetRange' | 'checkbox' | 'radio' | 'chipInput' | 'dateType' | 'location' | 'dynamic';
 
 export interface ISelectItem {
   id: string | number;

@@ -1,6 +1,9 @@
 {
   "searchBar": {
     "clearTooltip": "Clear text",
-    "search": "Search"
+    "search": "Search",
+    "location": "Choose location",
+    "category": "Category",
+    "btn": "Search Jobs"
   }
 }

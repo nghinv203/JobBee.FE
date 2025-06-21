@@ -15,7 +15,7 @@ export class JobListService {
   baseUrl: string = '';
 
   constructor(private http: HttpClient, private env: AppEnvironmentService) {
-    this.baseUrl = this.env.host_jobs_OS;
+    this.baseUrl = this.env.HOST_OS;
   }
 
   getJobs(params: any): Observable<IResponse<IJob[]>> {
