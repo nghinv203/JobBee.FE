@@ -1,11 +1,12 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 import {SelectComponent} from '../../../shared/reuseComponents/select/select.component';
-import {options, searchBarConfig, selectedItems} from './header.constanst';
+import {options, selectedItems} from './header.constanst';
 import {SearchComponent} from '../../../shared/reuseComponents/search/search.component';
-import {ButtonComponent} from '../../../shared/reuseComponents/button/button.component';
 import {NzButtonComponent} from 'ng-zorro-antd/button';
-import {RouterLink} from '@angular/router';
+import {ActivatedRoute, Route, Router, RouterLink} from '@angular/router';
+import {NzInputDirective} from 'ng-zorro-antd/input';
+import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -15,16 +16,22 @@ import {RouterLink} from '@angular/router';
     TranslatePipe,
     NzButtonComponent,
     RouterLink,
+    NzInputDirective,
+    ReactiveFormsModule,
   ],
   templateUrl: './header.component.html',
   standalone: true,
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
   selectedItems = selectedItems;
   options = options;
-  searchBarConfig = searchBarConfig;
-  constructor(private translateService: TranslateService) {
+  searchForm!: FormGroup;
+
+  constructor(private translateService: TranslateService,
+              private fb: FormBuilder,
+              private router: Router,
+              private route: ActivatedRoute) {
     const browserLanguage = localStorage.getItem('language') || 'vi';
     if(browserLanguage === 'vi') {
       this.selectedItems = options[0]
@@ -33,8 +40,18 @@ export class HeaderComponent {
     }
   }
 
-  hanldeSearch(event: any) {
-    console.log(event);
+  ngOnInit(): void {
+    this.searchForm = this.fb.group({
+      keyword: [null]
+    });
+    this.route.queryParams.subscribe(params => {
+      const query = params['keyword'];
+      this.searchForm.get('keyword')?.patchValue(query);
+    });
+  }
+
+  handleSearch() {
+    this.router.navigate(['/jobs'], {queryParams: {keyword: this.searchForm.get('keyword')?.value}});
   }
 
   handleChangeLanguage(event: any): void {

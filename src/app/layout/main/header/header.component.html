@@ -71,32 +71,32 @@
       <div class="row align-items-center justify-content-between">
         <div class="col-lg-8 row align-items-center justify-content-between">
           <div class="logo col-lg-2"></div>
-          <div class="col-lg-10 search-bar">
-            <app-search [searchConfigs]="searchBarConfig" (searchChange)="hanldeSearch($event)" [isLiveSearch]="false"
-            >
-              <div class="before-search">
-                <app-select [(selectedItems)]="selectedItems"
-                            [options]="options"
-                            [borderLess]="true"
-                            (selectedItemsChange)="handleChangeLanguage($event)"
-                            [style]="'width: 140px;'">
-                  <ng-template #itemTemp let-option>
-                    <div class="custom-option d-flex align-items-center gap-2">
-                      <img [src]="option.img" alt="flag" class="flag" />
-                      <span>{{ option.label | translate }}</span>
-                    </div>
-                  </ng-template>
+          <div class="col-lg-10 search-bar d-flex justify-content-between align-items-center">
+            <div class="before-search">
+              <app-select [(selectedItems)]="selectedItems"
+                          [options]="options"
+                          [borderLess]="true"
+                          (selectedItemsChange)="handleChangeLanguage($event)"
+                          [style]="'width: 140px;'">
+                <ng-template #itemTemp let-option>
+                  <div class="custom-option d-flex align-items-center gap-2">
+                    <img [src]="option.img" alt="flag" class="flag" />
+                    <span>{{ option.label | translate }}</span>
+                  </div>
+                </ng-template>
 
-                  <ng-template #selectedItemTemp let-selected>
-                    <div class="custom-option d-flex align-items-center gap-2">
-                      <img [src]="selected.nzValue.img" alt="flag" class="flag" />
-                      <span>{{ selected.nzValue.label | translate }}</span>
-                    </div>
-                  </ng-template>
-                </app-select>
-                <div class="vertical"></div>
-              </div>
-            </app-search>
+                <ng-template #selectedItemTemp let-selected>
+                  <div class="custom-option d-flex align-items-center gap-2">
+                    <img [src]="selected.nzValue.img" alt="flag" class="flag" />
+                    <span>{{ selected.nzValue.label | translate }}</span>
+                  </div>
+                </ng-template>
+              </app-select>
+              <div class="vertical"></div>
+            </div>
+            <form [formGroup]="searchForm" (ngSubmit)="handleSearch()">
+              <input formControlName="keyword" nz-input [nzBorderless]="true" [placeholder]="'global.searchBar.placeholder' | translate"/>
+            </form>
           </div>
         </div>
         <div class="col-lg-4 d-flex justify-content-end gap-3" style="height: 100%;">

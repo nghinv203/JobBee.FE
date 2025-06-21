@@ -17,6 +17,7 @@ import {NgTemplateOutlet, SlicePipe} from '@angular/common';
 import {TruncatePipe} from '../../pipes/truncate/truncate.pipe';
 import {DynamicComponent} from '../dynamic/dynamic.component';
 import {DefaultComponent} from '../default/default.component';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -37,11 +38,17 @@ export class SearchComponent implements OnInit, OnChanges {
 
   private searchFormSubcription: Subscription | undefined;
 
-  constructor(private fb: FormBuilder, private destroyService: DestroyService) {
+  constructor(private fb: FormBuilder,
+              private route: ActivatedRoute,
+              private destroyService: DestroyService) {
   }
 
   ngOnInit(): void {
     this.generateForm();
+    this.route.queryParams.subscribe(params => {
+      const keyword = params['keyword'];
+      this.searchForm.get(this.dataTypeControl?.controlName ?? 'keyword')?.patchValue(keyword);
+    });
   }
 
   ngOnChanges(changes: SimpleChanges): void {

@@ -75,3 +75,16 @@
 .postJob-btn {
   background: #0A65CC; color: #FFFFFF; padding: 12px 24px; height: 100%; border-radius: 3px; font-weight: 600;
 }
+
+.search-bar {
+  border-radius: 5px;
+  border: 1px solid var(--border);
+
+  form {
+    width: 100%;
+    input {
+      padding: 9px 0;
+      height: 50px;
+    }
+  }
+}
