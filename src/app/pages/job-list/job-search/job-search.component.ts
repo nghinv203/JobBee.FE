@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {BreadcrumbComponent} from '../../../shared/reuseComponents/breadcrumb/breadcrumb.component';
 import {TranslatePipe} from '@ngx-translate/core';
 import {SearchComponent} from '../../../shared/reuseComponents/search/search.component';
 import {searchBarConfig} from '../job-list.constant';
 import {LocationService} from '../../../shared/services/location.service';
 import {map} from 'rxjs';
+import {IJobSearch} from '../job-list.model';
 
 @Component({
   selector: 'app-job-search',
@@ -18,6 +19,8 @@ import {map} from 'rxjs';
   styleUrl: './job-search.component.scss'
 })
 export class JobSearchComponent implements OnInit{
+
+  @Output() searchChange: EventEmitter<IJobSearch> = new EventEmitter<IJobSearch>();
   searchBarConfig = searchBarConfig;
 
   constructor(private locationService: LocationService) {
@@ -27,8 +30,11 @@ export class JobSearchComponent implements OnInit{
     this.locationService.fetchProvines()
       .pipe()
       .subscribe(res => {
-        console.log(res.data)
         this.searchBarConfig[1].selectItems = res.data;
       });
+  }
+
+  handleSearch(event: any) {
+    this.searchChange.emit(event);
   }
 }

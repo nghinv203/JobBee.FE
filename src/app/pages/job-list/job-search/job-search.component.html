@@ -5,7 +5,7 @@
       <app-breadcrumb></app-breadcrumb>
     </div>
     <div class="search-bar">
-      <app-search [searchConfigs]="searchBarConfig"></app-search>
+      <app-search [searchConfigs]="searchBarConfig" (searchChange)="handleSearch($event)"></app-search>
     </div>
   </div>
 </div>

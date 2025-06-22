@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {IJobSearch} from './job-list.model';
 import {Observable} from 'rxjs';
 import {IResponse} from '../../shared/models/response';
 import {IJob} from '../entities/job/job.model';
-import * as http from 'http';
 import {AppEnvironmentService} from '../../app.environment.service';
 
 @Injectable({
@@ -12,7 +10,7 @@ import {AppEnvironmentService} from '../../app.environment.service';
 })
 export class JobListService {
 
-  baseUrl: string = '';
+  baseUrl!: string;
 
   constructor(private http: HttpClient, private env: AppEnvironmentService) {
     this.baseUrl = this.env.HOST_OS;

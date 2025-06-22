@@ -1,25 +1,25 @@
-<div class="job d-flex justify-content-between align-items-center" appFeatureJob [isFeature]="data.isFeature">
+<div class="job d-flex justify-content-between align-items-center" appFeatureJob [isFeature]="data.is_featured">
   <div class="d-flex align-items-center">
     <div class="job-img me-4">
-      <img src="assets/images/EmployersLogo.png" [alt]="data.name">
+      <img src="assets/images/EmployersLogo.png" [alt]="data.title">
     </div>
     <div>
       <div class="d-flex align-items-center">
-        <h4 class="me-3">{{data.name}}</h4>
-        <span class="job-type">{{data.jobType | translate}}</span>
+        <h4 class="me-3">{{data.title}}</h4>
+        <span class="job-type">{{data.job_type  ?? '' | translate}}</span>
       </div>
       <div class="d-flex align-items-center">
         <span class="me-3">
           <img src="assets/images/fi_map-pin.svg" alt="">
-          <span>{{data.location}}</span>
+          <span>{{data.location_city}}</span>
         </span>
         <span class="me-3">
           <img src="assets/images/currency-dollar%201.svg" alt="">
-          <span>{{(data.floorSalary | currency:'VND':'symbol':'1.0-0') + '-' + (data.cellingSalary | currency:'VND':'symbol':'1.0-0')}}</span>
+          <span>{{(data.min_salary | currency:'VND':'symbol':'1.0-0') + '-' + (data.max_salary | currency:'VND':'symbol':'1.0-0')}}</span>
         </span>
         <span class="me-3">
           <img src="assets/images/calendar-blank%20(1)%201.svg" alt="">
-          <span>{{data.dueTime | dueDate | translate}}</span>
+          <span>{{data.application_deadline}}</span>
         </span>
       </div>
     </div>
