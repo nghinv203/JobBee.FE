@@ -7,6 +7,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
 const environment = require('./environment');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = (config, options, targetOptions) => {
   // Webpack Cache Configuration
