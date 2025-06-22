@@ -72,6 +72,15 @@ module.exports = (config, options, targetOptions) => {
     })
   );
 
+  // index.html
+  config.plugins.push(
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, '../src/index.html'),
+      inject: true,
+      scriptLoading: 'blocking'
+    })
+  );
+
   // i18n JSON Merging (Custom Implementation)
   config.plugins.push({
     apply: (compiler) => {
