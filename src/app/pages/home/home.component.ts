@@ -28,7 +28,9 @@ import {IJobSearch} from '../job-list/job-list.model';
 })
 export class HomeComponent implements OnInit{
 
-  params: IJobSearch = {};
+  params: IJobSearch = {
+    keyword: 'Giáo viên'
+  };
 
   constructor(private jobService: JobListService) {
   }
