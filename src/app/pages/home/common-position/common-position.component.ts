@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TranslatePipe} from '@ngx-translate/core';
 import {ICommonPosition} from './common-position.model';
 import {DecimalPipe} from '@angular/common';
+import {JobListService} from '../../../core/services/job-list/job-list.service';
+import {IJobSearch} from '../../job-list/job-list.model';
 
 @Component({
   selector: 'app-common-position',

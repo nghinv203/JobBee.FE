@@ -1,4 +1,7 @@
+import {Injectable} from '@angular/core';
+
+@Injectable({ providedIn: 'root' })
 export class AppEnvironmentService {
-  HOST_OS = 'https://127.0.0.1:5001';
+  HOST_OS = 'http://54.175.186.165:5000/api';
   HOST_PRODUCTION = ''; // use when deploying
 }
