@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {NgClass} from '@angular/common';
 
 @Component({
@@ -11,5 +11,32 @@ import {NgClass} from '@angular/common';
   styleUrl: './candidate-sidebar.component.scss'
 })
 export class CandidateSidebarComponent {
+  @Output() sendMessage = new EventEmitter<string>();
 
+  message: string = 'Overview';
+
+  emitMessageOverview() {
+    this.message = 'Overview';
+    this.sendMessage.emit(this.message);
+  }
+
+  emitMessageApplied() {
+    this.message = 'Applied';
+    this.sendMessage.emit(this.message);
+  }
+
+  emitMessageFavourite() {
+    this.message = 'Favourite';
+    this.sendMessage.emit(this.message);
+  }
+
+  emitMessageAlert() {
+    this.message = 'Alert';
+    this.sendMessage.emit(this.message);
+  }
+
+  emitMessageSetting() {
+    this.message = 'Setting';
+    this.sendMessage.emit(this.message);
+  }
 }

@@ -1,5 +1,9 @@
 <app-header></app-header>
 <div class="app-container">
-  <app-candidate-sidebar></app-candidate-sidebar>
-  <app-dashboard-content></app-dashboard-content>
+  <app-candidate-sidebar (sendMessage)="handleMessage($event)"></app-candidate-sidebar>
+  <app-dashboard-content *ngIf="receivedMessage === 'Overview'" ></app-dashboard-content>
+  <app-apllied-job *ngIf="receivedMessage === 'Applied'"></app-apllied-job>
+  <app-favorite-job *ngIf="receivedMessage === 'Favourite'"></app-favorite-job>
+  <app-alert-job *ngIf="receivedMessage === 'Alert'"></app-alert-job>
+  <app-candidate-setting *ngIf="receivedMessage === 'Setting'"></app-candidate-setting>
 </div>
