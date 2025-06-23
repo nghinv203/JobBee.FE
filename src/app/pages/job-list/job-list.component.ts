@@ -2,8 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {TranslatePipe} from '@ngx-translate/core';
 import {BreadcrumbComponent} from '../../shared/reuseComponents/breadcrumb/breadcrumb.component';
 import {JobSearchComponent} from './job-search/job-search.component';
-import {JobListService} from "./job-list.service";
+import {JobListService} from "../../core/services/job-list/job-list.service";
 import {IJob} from "../entities/job/job.model";
+import {IJobSearch} from './job-list.model';
 
 @Component({
   selector: 'app-job-list',
@@ -19,12 +20,15 @@ import {IJob} from "../entities/job/job.model";
 export class JobListComponent implements OnInit{
 
   jobs: IJob[] = [];
+  searchParams: IJobSearch = {
+    keyword: ''
+  };
 
   constructor(private jobListService: JobListService) {
   }
 
   ngOnInit(): void {
-    this.jobListService.getJobs('').subscribe(res => {
+    this.jobListService.getJobs(this.searchParams).subscribe(res => {
       this.jobs = res.data ?? [];
     });
   }

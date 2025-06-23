@@ -1,7 +1,7 @@
 export interface IJobSearch {
   keyword?: string;
   location?: string;
-  category?: string;
+  category?: string[];
   experience?: string;
   minSalary?: number;
   maxSalary?: number;
