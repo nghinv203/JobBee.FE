@@ -1,1 +1,130 @@
-<p>my-job works!</p>
+<div class="container">
+  <div class="jobs-section">
+    <div class="jobs-header">
+      <h3>My Jobs (532)</h3>
+    </div>
+
+    <div class="table-header">
+      <span>Jobs</span>
+      <span>Status</span>
+      <span>Applications</span>
+      <span>Actions</span>
+    </div>
+
+    <div class="job-row">
+      <div class="job-info">
+        <h4>UI/UX Designer</h4>
+        <div class="job-details">Full Time • 27 days remaining</div>
+      </div>
+      <div class="status">
+        <div class="status-icon">
+          <i class="fas fa-circle-check"></i>
+        </div>
+        <span>Active</span>
+      </div>
+      <div class="applications">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+        </svg>
+        798 Applications
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button class="btn btn-primary">View Applications</button>
+        <button class="more-btn" onclick="toggleMenu(event, 'menu1')">⋯</button>
+      </div>
+    </div>
+
+    <div class="job-row">
+      <div class="job-info">
+        <h4>Senior UX Designer</h4>
+        <div class="job-details">Internship • 8 days remaining</div>
+      </div>
+      <div class="status">
+        <div class="status-icon">
+          <i class="fas fa-circle-check"></i>
+        </div>
+        <span>Active</span>
+      </div>
+      <div class="applications">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+        </svg>
+        185 Applications
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button class="btn btn-primary">View Applications</button>
+        <button class="more-btn" onclick="toggleMenu(event, 'menu2')">⋯</button>
+      </div>
+    </div>
+
+    <div class="job-row">
+      <div class="job-info">
+        <h4>Junior Graphic Designer</h4>
+        <div class="job-details">Full Time • 24 days remaining</div>
+      </div>
+      <div class="status">
+        <div class="status-icon">
+          <i class="fas fa-circle-check"></i>
+        </div>
+        <span>Active</span>
+      </div>
+      <div class="applications">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+        </svg>
+        583 Applications
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button class="btn btn-primary">View Applications</button>
+        <button class="more-btn" onclick="toggleMenu(event, 'menu4')">⋯</button>
+      </div>
+    </div>
+
+    <div class="job-row">
+      <div class="job-info">
+        <h4>Front End Developer</h4>
+        <div class="job-details">Full Time • Dec 7, 2019</div>
+      </div>
+      <div class="status">
+        <div class="status-icon expired">
+          <i class="fas fa-circle-xmark"></i>
+        </div>
+        <span>Expired</span>
+      </div>
+      <div class="applications">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+        </svg>
+        740 Applications
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button class="btn btn-primary">View Applications</button>
+        <button class="more-btn" onclick="toggleMenu(event, 'menu5')">⋯</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="pagination" id="pagination">
+  <button class="pagination-arrow" id="prevBtn">
+    <svg class="arrow-icon" viewBox="0 0 24 24">
+      <path d="m15 18-6-6 6-6"/>
+    </svg>
+  </button>
+
+  <a href="#" class="pagination-item active" data-page="1">01</a>
+  <a href="#" class="pagination-item" data-page="2">02</a>
+  <a href="#" class="pagination-item" data-page="3">03</a>
+  <a href="#" class="pagination-item" data-page="4">04</a>
+  <a href="#" class="pagination-item" data-page="5">05</a>
+
+  <button class="pagination-arrow" id="nextBtn">
+    <svg class="arrow-icon" viewBox="0 0 24 24">
+      <path d="m9 18 6-6-6-6"/>
+    </svg>
+  </button>
+</nav>

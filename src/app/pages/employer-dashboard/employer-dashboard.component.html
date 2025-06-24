@@ -1,1 +1,8 @@
-<p>employer-dashboard works!</p>
+<app-header></app-header>
+<div class="app-container">
+  <app-employer-sidebar (sendMessage)="handleMessage($event)"></app-employer-sidebar>
+  <app-dashboard-content *ngIf="receivedMessage === 'Overview'"></app-dashboard-content>
+  <app-post-job *ngIf="receivedMessage === 'PostAJob'"></app-post-job>
+  <app-my-job *ngIf="receivedMessage === 'MyJobs'"></app-my-job>
+</div>
+<app-footer></app-footer>

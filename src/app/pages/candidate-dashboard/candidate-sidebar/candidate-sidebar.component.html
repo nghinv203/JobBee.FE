@@ -8,28 +8,28 @@
     <ul>
       <li class="nav-item" [ngClass]="{ 'active': message === 'Overview' }">
         <a (click)="emitMessageOverview()" class="nav-link">
-          <i class="icon-overview"></i>
+          <i class="fas fa-chart-line"></i>
           <span>Overview</span>
         </a>
       </li>
 
       <li class="nav-item" [ngClass]="{ 'active': message === 'Applied' }">
         <a (click)="emitMessageApplied()" class="nav-link">
-          <i class="icon-jobs"></i>
+          <i class="fas fa-briefcase"></i>
           <span>Applied Jobs</span>
         </a>
       </li>
 
       <li class="nav-item" [ngClass]="{ 'active': message === 'Favourite' }">
         <a (click)="emitMessageFavourite()" class="nav-link">
-          <i class="icon-favorite"></i>
+          <i class="fas fa-star"></i>
           <span>Favorite Jobs</span>
         </a>
       </li>
 
       <li class="nav-item" [ngClass]="{ 'active': message === 'Alert' }">
         <a (click)="emitMessageAlert()" class="nav-link">
-          <i class="icon-alert"></i>
+          <i class="fas fa-bell"></i>
           <span>Job Alert</span>
           <span class="badge">09</span>
         </a>
@@ -37,7 +37,7 @@
 
       <li class="nav-item" [ngClass]="{ 'active': message === 'Setting' }">
         <a (click)="emitMessageSetting()" class="nav-link">
-          <i class="icon-settings"></i>
+          <i class="fas fa-cog"></i>
           <span>Settings</span>
         </a>
       </li>
@@ -46,8 +46,9 @@
 
   <div class="sidebar-footer">
     <a href="#" class="logout-link">
-      <i class="icon-logout"></i>
+      <i class="fas fa-sign-out-alt"></i>
       <span>Log-out</span>
     </a>
   </div>
+
 </div>

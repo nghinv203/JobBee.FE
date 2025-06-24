@@ -7,6 +7,7 @@ import {PrimaryComponent} from './layout/primary/primary.component';
 import {primaryRoutes} from './layout/primary/primary.routes';
 import {CandidateDashboardComponent} from './pages/candidate-dashboard/candidate-dashboard.component';
 import {EmployerSetupComponent} from './pages/employer-setup/employer-setup.component';
+import {EmployerDashboardComponent} from './pages/employer-dashboard/employer-dashboard.component';
 
 export const routes: Routes = [
   {
@@ -32,5 +33,9 @@ export const routes: Routes = [
   {
     path: 'employer-setup',
     component: EmployerSetupComponent
+  },
+  {
+    path: 'employer-dashboard',
+    component: EmployerDashboardComponent,
   }
 ];

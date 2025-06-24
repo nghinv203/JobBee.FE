@@ -1,1 +1,60 @@
-<p>employer-sidebar works!</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h3>CANDIDATE DASHBOARD</h3>
+  </div>
+
+  <nav class="sidebar-nav">
+    <ul>
+      <li class="nav-item" [ngClass]="{ 'active': message === 'Overview' }">
+        <a (click)="emitMessageOverview()" class="nav-link">
+          <i class="fas fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+      </li>
+
+      <li class="nav-item" [ngClass]="{ 'active': message === 'PostAJob' }">
+        <a (click)="emitMessagePostAJob()" class="nav-link">
+          <i class="fas fa-briefcase"></i>
+          <span>Post a Job</span>
+        </a>
+      </li>
+
+      <li class="nav-item" [ngClass]="{ 'active': message === 'MyJobs' }">
+        <a (click)="emitMessageMyJobs()" class="nav-link">
+          <i class="fas fa-clipboard-list"></i>
+          <span>My Jobs</span>
+        </a>
+      </li>
+
+      <li class="nav-item" [ngClass]="{ 'active': message === 'SavedCandidate' }">
+        <a (click)="emitMessageSavedCandidate()" class="nav-link">
+          <i class="fas fa-user-check"></i>
+          <span>Saved Candidate</span>
+        </a>
+      </li>
+
+      <li class="nav-item" [ngClass]="{ 'active': message === 'PlansBilling' }">
+        <a (click)="emitMessagePlansBilling()" class="nav-link">
+          <i class="fas fa-credit-card"></i>
+          <span>Plans & Billing</span>
+        </a>
+      </li>
+
+      <li class="nav-item" [ngClass]="{ 'active': message === 'Settings' }">
+        <a (click)="emitMessageSetting()" class="nav-link">
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-footer">
+    <a href="#" class="logout-link">
+      <i class="fas fa-sign-out-alt"></i>
+      <span>Log-out</span>
+    </a>
+  </div>
+
+</div>
