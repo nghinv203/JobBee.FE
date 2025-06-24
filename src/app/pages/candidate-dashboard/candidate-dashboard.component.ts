@@ -7,6 +7,7 @@ import {NgIf} from '@angular/common';
 import {FavoriteJobComponent} from './favorite-job/favorite-job.component';
 import {AlertJobComponent} from './alert-job/alert-job.component';
 import {CandidateSettingComponent} from './candidate-setting/candidate-setting.component';
+import {FooterComponent} from '../../layout/main/footer/footer.component';
 
 @Component({
   selector: 'app-candidate-dashboard',
@@ -18,7 +19,8 @@ import {CandidateSettingComponent} from './candidate-setting/candidate-setting.c
     NgIf,
     FavoriteJobComponent,
     AlertJobComponent,
-    CandidateSettingComponent],
+    CandidateSettingComponent,
+    FooterComponent],
   templateUrl: './candidate-dashboard.component.html',
   styleUrl: './candidate-dashboard.component.scss'
 })

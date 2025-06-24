@@ -1,0 +1,105 @@
+<div class="container">
+  <form id="companyForm">
+    <!-- First row: Organization Type, Industry Types, Team Size -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="organization-type">Organization Type</label>
+        <select id="organization-type" name="organization-type">
+          <option value="">Select...</option>
+          <option value="startup">Startup</option>
+          <option value="small-business">Small Business</option>
+          <option value="corporation">Corporation</option>
+          <option value="non-profit">Non-Profit</option>
+          <option value="government">Government</option>
+          <option value="freelance">Freelance</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="industry-types">Industry Types</label>
+        <select id="industry-types" name="industry-types">
+          <option value="">Select...</option>
+          <option value="technology">Technology</option>
+          <option value="healthcare">Healthcare</option>
+          <option value="finance">Finance</option>
+          <option value="education">Education</option>
+          <option value="retail">Retail</option>
+          <option value="manufacturing">Manufacturing</option>
+          <option value="consulting">Consulting</option>
+          <option value="media">Media & Entertainment</option>
+          <option value="real-estate">Real Estate</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="team-size">Team Size</label>
+        <select id="team-size" name="team-size">
+          <option value="">Select...</option>
+          <option value="1-10">1-10 employees</option>
+          <option value="11-50">11-50 employees</option>
+          <option value="51-200">51-200 employees</option>
+          <option value="201-500">201-500 employees</option>
+          <option value="501-1000">501-1000 employees</option>
+          <option value="1000+">1000+ employees</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Second row: Year of Establishment, Company Website -->
+    <div class="form-row two-columns">
+      <div class="form-group">
+        <label for="establishment-year">Year of Establishment</label>
+        <div class="date-input">
+          <input type="date" id="establishment-year" name="establishment-year" placeholder="dd/mm/yyyy">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="company-website">Company Website</label>
+        <div class="website-input">
+          <input type="url" id="company-website" name="company-website" placeholder="Website url...">
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Company Vision -->
+    <div class="form-row single-column">
+      <div class="form-group">
+        <label for="company-vision">Company Vision</label>
+        <div class="textarea-container">
+          <textarea id="company-vision" name="company-vision" placeholder="Tell us about your company vision..."></textarea>
+          <div class="editor-toolbar">
+            <button class="editor-btn" type="button" data-format="bold" title="Bold">
+              <strong>B</strong>
+            </button>
+            <button class="editor-btn" type="button" data-format="italic" title="Italic">
+              <em>I</em>
+            </button>
+            <button class="editor-btn" type="button" data-format="underline" title="Underline">
+              <u>U</u>
+            </button>
+            <button class="editor-btn" type="button" data-format="strikethrough" title="Strikethrough">
+              <s>S</s>
+            </button>
+            <button class="editor-btn" type="button" data-format="link" title="Insert Link">
+              🔗
+            </button>
+            <button class="editor-btn" type="button" data-format="bullet" title="Bullet List">
+              • •
+            </button>
+            <button class="editor-btn" type="button" data-format="number" title="Numbered List">
+              1. 2.
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="button-container">
+      <button (click)="emitMessagePrevious()" type="button" class="btn btn-secondary">Previous</button>
+      <button (click)="emitMessageNext()" type="button" class="btn btn-primary">Save & Next</button>
+    </div>
+  </form>
+</div>

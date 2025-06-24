@@ -1,0 +1,61 @@
+<div class="info-company">
+  <div class="form-section">
+    <div class="upload-section">
+      <h2 class="section-title">Logo & Banner Image</h2>
+      <div class="upload-grid">
+        <div class="upload-item">
+          <h3>Upload document</h3>
+          <div class="upload-box" onclick="document.getElementById('logo-upload').click()">
+            <div class="upload-icon">📤</div>
+            <div class="upload-text">
+              <strong>Browse photo</strong> or drag here
+            </div>
+            <div class="upload-hint">
+              A photo larger than 400 pixels<br>
+              work best. Max photo size 5 MB.
+            </div>
+          </div>
+          <input type="file" id="logo-upload" style="display: none;" accept="image/*">
+        </div>
+
+        <div class="upload-item">
+          <h3>Banner Image</h3>
+          <div class="upload-box" onclick="document.getElementById('banner-upload').click()">
+            <div class="upload-icon">📤</div>
+            <div class="upload-text">
+              <strong>Browse photo</strong> or drag here
+            </div>
+            <div class="upload-hint">
+              Banner images optimal dimensions 1520×400. Supported<br>
+              format JPEG, PNG. Max photo size 5 MB.
+            </div>
+          </div>
+          <input type="file" id="banner-upload" style="display: none;" accept="image/*">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="company-name">Company name</label>
+      <input type="text" id="company-name" name="company-name">
+    </div>
+
+    <div class="form-group">
+      <label for="about-us">About Us</label>
+      <div class="textarea-container">
+        <textarea id="about-us" name="about-us" placeholder="Write down about your company here. Let the candidate know who we are..."></textarea>
+        <div class="editor-toolbar">
+          <button class="editor-btn" type="button"><strong>B</strong></button>
+          <button class="editor-btn" type="button"><em>I</em></button>
+          <button class="editor-btn" type="button"><u>U</u></button>
+          <button class="editor-btn" type="button"><s>S</s></button>
+          <button class="editor-btn" type="button">🔗</button>
+          <button class="editor-btn" type="button">• •</button>
+          <button class="editor-btn" type="button">1. 2.</button>
+        </div>
+      </div>
+    </div>
+
+    <button (click)="emitMessage()" class="save-btn" type="submit">Save & Next</button>
+  </div>
+</div>

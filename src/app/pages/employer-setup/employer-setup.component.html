@@ -1,0 +1,22 @@
+<div class="app-container">
+  <app-setup-header [message]="recievedMessage"></app-setup-header>
+  <app-company-info (sendMessage)="handleMessage($event)"
+                    *ngIf="recievedMessage === 'company-info'">
+  </app-company-info>
+  <app-founding-info
+    (sendMessagePrevious)="handleMessage($event)"
+    (sendMessageNext)="handleMessage($event)"
+    *ngIf="recievedMessage === 'founding-info'">
+  </app-founding-info>
+  <app-social-info
+    (sendMessagePrevious)="handleMessage($event)"
+    (sendMessageNext)="handleMessage($event)"
+    *ngIf="recievedMessage === 'social-info'">
+  </app-social-info>
+  <app-contact-info
+    (sendMessagePrevious)="handleMessage($event)"
+    (sendMessageNext)="handleMessage($event)"
+    *ngIf="recievedMessage === 'contact-info'"></app-contact-info>
+  <app-complete-setup *ngIf="recievedMessage === 'complete-setup'"></app-complete-setup>
+</div>
+<app-footer></app-footer>
