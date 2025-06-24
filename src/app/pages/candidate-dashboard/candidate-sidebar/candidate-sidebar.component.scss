@@ -64,12 +64,12 @@
   background-size: contain;
 }
 
-.icon-overview::before { content: "📊"; }
-.icon-jobs::before { content: "💼"; }
-.icon-favorite::before { content: "⭐"; }
-.icon-alert::before { content: "🔔"; }
-.icon-settings::before { content: "⚙️"; }
-.icon-logout::before { content: "🚪"; }
+.icon-overview::before { content: "\f080"; font-family: "Font Awesome 6 Free"; font-weight: 900; }  /* chart-bar */
+.icon-jobs::before     { content: "\f0b1"; font-family: "Font Awesome 6 Free"; font-weight: 900; }  /* briefcase */
+.icon-favorite::before { content: "\f005"; font-family: "Font Awesome 6 Free"; font-weight: 900; }  /* star */
+.icon-alert::before    { content: "\f0f3"; font-family: "Font Awesome 6 Free"; font-weight: 900; }  /* bell */
+.icon-settings::before { content: "\f013"; font-family: "Font Awesome 6 Free"; font-weight: 900; }  /* cog */
+.icon-logout::before   { content: "\f2f5"; font-family: "Font Awesome 6 Free"; font-weight: 900; }  /* sign-out-alt */
 
 .badge {
   background-color: #dc3545;
@@ -103,4 +103,8 @@
   width: 16px;
   height: 16px;
   margin-right: 8px;
+}
+
+.money-margin{
+  margin-left: 20px;
 }

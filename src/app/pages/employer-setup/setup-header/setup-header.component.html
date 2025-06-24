@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 <div class="header">
   <div style="display: flex; justify-content: space-between; align-items: center;">
     <div class="logo-section">
@@ -60,23 +62,25 @@
 
 <div class="tabs">
   <a class="tab" [ngClass]="{ 'active': message === 'company-info' }">
-    <div class="tab-icon"></div>
+    <div class="tab-icon icon-blue"><i class="fas fa-building"></i></div>
     Company Info
   </a>
   <a class="tab" [ngClass]="{ 'active': message === 'founding-info' }">
-    <div class="tab-icon"></div>
+    <div class="tab-icon icon-green"><i class="fas fa-seedling"></i></div>
     Founding Info
   </a>
   <a class="tab" [ngClass]="{ 'active': message === 'social-info' }">
-    <div class="tab-icon"></div>
-    Social Media Profile
+    <div class="tab-icon icon-purple"><i class="fas fa-share-alt"></i></div>
+    Social Media
   </a>
   <a class="tab" [ngClass]="{ 'active': message === 'contact-info' }">
-    <div class="tab-icon"></div>
+    <div class="tab-icon icon-orange"><i class="fas fa-phone-alt"></i></div>
     Contact
   </a>
   <a class="tab" [ngClass]="{ 'active': message === 'complete-setup' }">
-    <div class="tab-icon"></div>
+    <div class="tab-icon icon-success"><i class="fas fa-circle-check"></i></div>
     Complete
   </a>
 </div>
+
+
