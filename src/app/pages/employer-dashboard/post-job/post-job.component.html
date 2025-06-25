@@ -1,0 +1,205 @@
+<div class="container">
+  <div class="header">
+    <h1>Post a job</h1>
+  </div>
+
+  <div class="form-content">
+    <form id="jobForm">
+      <!-- Job Title -->
+      <div class="form-group">
+        <label for="jobTitle">Job Title</label>
+        <input type="text" id="jobTitle" placeholder="Add job title, role, vacancies etc.">
+      </div>
+
+      <!-- Tags and Job Role -->
+      <div class="form-row">
+        <div>
+          <label for="tags">Tags</label>
+          <input type="text" id="tags" placeholder="Job keyword, tags etc.">
+        </div>
+        <div>
+          <label for="jobRole">Job Role</label>
+          <select id="jobRole">
+            <option value="">Select...</option>
+            <option value="designer">Designer</option>
+            <option value="developer">Developer</option>
+            <option value="manager">Manager</option>
+            <option value="analyst">Analyst</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Salary Section -->
+      <div class="form-group">
+        <h3 class="section-title">Salary</h3>
+        <div class="salary-row">
+          <div>
+            <label for="minSalary">Min Salary</label>
+            <input type="number" id="minSalary" placeholder="Minimum salary...">
+          </div>
+          <div>
+            <select class="currency-select">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+            </select>
+          </div>
+          <div>
+            <label for="maxSalary">Max Salary</label>
+            <input type="number" id="maxSalary" placeholder="Maximum salary...">
+          </div>
+          <div>
+            <select class="currency-select">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+            </select>
+          </div>
+          <div>
+            <label for="salaryType">Salary Type</label>
+            <select id="salaryType">
+              <option value="">Select...</option>
+              <option value="hourly">Hourly</option>
+              <option value="monthly">Monthly</option>
+              <option value="yearly">Yearly</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advanced Information -->
+      <div class="form-group">
+        <h3 class="section-title">Advance Information</h3>
+
+        <!-- Education, Experience, Job Type -->
+        <div class="form-row three-col">
+          <div>
+            <label for="education">Education</label>
+            <select id="education">
+              <option value="">Select...</option>
+              <option value="high-school">High School</option>
+              <option value="bachelor">Bachelor's Degree</option>
+              <option value="master">Master's Degree</option>
+              <option value="phd">PhD</option>
+            </select>
+          </div>
+          <div>
+            <label for="experience">Experience</label>
+            <select id="experience">
+              <option value="">Select...</option>
+              <option value="entry">Entry Level</option>
+              <option value="mid">Mid Level</option>
+              <option value="senior">Senior Level</option>
+            </select>
+          </div>
+          <div>
+            <label for="jobType">Job Type</label>
+            <select id="jobType">
+              <option value="">Select...</option>
+              <option value="full-time">Full Time</option>
+              <option value="part-time">Part Time</option>
+              <option value="contract">Contract</option>
+              <option value="internship">Internship</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Vacancies, Expiration Date, Job Level -->
+        <div class="form-row three-col">
+          <div>
+            <label for="vacancies">Vacancies</label>
+            <select id="vacancies">
+              <option value="">Select...</option>
+              <option value="1">1</option>
+              <option value="2-5">2-5</option>
+              <option value="5-10">5-10</option>
+              <option value="10+">10+</option>
+            </select>
+          </div>
+          <div>
+            <label for="expirationDate">Expiration Date</label>
+            <input type="date" id="expirationDate" placeholder="DD/MM/YYYY">
+          </div>
+          <div>
+            <label for="jobLevel">Job Level</label>
+            <select id="jobLevel">
+              <option value="">Select...</option>
+              <option value="entry">Entry Level</option>
+              <option value="mid">Mid Level</option>
+              <option value="senior">Senior Level</option>
+              <option value="executive">Executive</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Apply Job On -->
+      <div class="form-group">
+        <h3 class="section-title">Apply Job on:</h3>
+        <div class="radio-group">
+          <div class="radio-option selected" onclick="selectRadio(this, 'jobaplied')">
+            <input type="radio" name="applyMethod" value="jobaplied" checked>
+            <div class="radio-title">On Jobaplied</div>
+            <div class="radio-description">Candidates will apply via using jobaplied on our application flow</div>
+          </div>
+          <div class="radio-option" onclick="selectRadio(this, 'external')">
+            <input type="radio" name="applyMethod" value="external">
+            <div class="radio-title">External Platform</div>
+            <div class="radio-description">Candidates apply via your website, all applications will redirect to your website</div>
+          </div>
+          <div class="radio-option" onclick="selectRadio(this, 'email')">
+            <input type="radio" name="applyMethod" value="email">
+            <div class="radio-title">On Your Email</div>
+            <div class="radio-description">Candidates apply via your email. Candidates can send application on your email</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Description & Responsibility -->
+      <div class="form-group">
+        <h3 class="section-title">Description & Responsibility</h3>
+
+        <div style="margin-bottom: 16px;">
+          <label for="description">Description</label>
+          <div class="text-editor">
+            <div class="editor-toolbar">
+              <button type="button" class="editor-btn" onclick="formatText('bold')"><strong>B</strong></button>
+              <button type="button" class="editor-btn" onclick="formatText('italic')"><em>I</em></button>
+              <button type="button" class="editor-btn" onclick="formatText('underline')"><u>U</u></button>
+              <button type="button" class="editor-btn" onclick="formatText('strikethrough')"><s>S</s></button>
+              <button type="button" class="editor-btn" onclick="formatText('link')">🔗</button>
+              <button type="button" class="editor-btn" onclick="formatText('unorderedList')">• ≡</button>
+              <button type="button" class="editor-btn" onclick="formatText('orderedList')">1. ≡</button>
+            </div>
+            <textarea id="description" class="editor-textarea" placeholder="Add your job description..."></textarea>
+          </div>
+        </div>
+
+        <div>
+          <label for="responsibilities">Responsibilities</label>
+          <div class="text-editor">
+            <div class="editor-toolbar">
+              <button type="button" class="editor-btn" onclick="formatText('bold')"><strong>B</strong></button>
+              <button type="button" class="editor-btn" onclick="formatText('italic')"><em>I</em></button>
+              <button type="button" class="editor-btn" onclick="formatText('underline')"><u>U</u></button>
+              <button type="button" class="editor-btn" onclick="formatText('strikethrough')"><s>S</s></button>
+              <button type="button" class="editor-btn" onclick="formatText('link')">🔗</button>
+              <button type="button" class="editor-btn" onclick="formatText('unorderedList')">• ≡</button>
+              <button type="button" class="editor-btn" onclick="formatText('orderedList')">1. ≡</button>
+            </div>
+            <textarea id="responsibilities" class="editor-textarea" placeholder="Add your job responsibilities..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">
+        Post Job
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12,5 19,12 12,19"></polyline>
+        </svg>
+      </button>
+    </form>
+  </div>
+</div>

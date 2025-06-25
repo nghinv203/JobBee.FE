@@ -5,6 +5,9 @@ import {MainComponent} from './layout/main/main.component';
 import {mainRoutes} from './layout/main/main.routes';
 import {PrimaryComponent} from './layout/primary/primary.component';
 import {primaryRoutes} from './layout/primary/primary.routes';
+import {CandidateDashboardComponent} from './pages/candidate-dashboard/candidate-dashboard.component';
+import {EmployerSetupComponent} from './pages/employer-setup/employer-setup.component';
+import {EmployerDashboardComponent} from './pages/employer-dashboard/employer-dashboard.component';
 
 export const routes: Routes = [
   {
@@ -22,5 +25,17 @@ export const routes: Routes = [
     path: 'jobs',
     component: PrimaryComponent,
     children: primaryRoutes
+  },
+  {
+    path: 'candidate-dashboard',
+    component: CandidateDashboardComponent,
+  },
+  {
+    path: 'employer-setup',
+    component: EmployerSetupComponent
+  },
+  {
+    path: 'employer-dashboard',
+    component: EmployerDashboardComponent,
   }
 ];

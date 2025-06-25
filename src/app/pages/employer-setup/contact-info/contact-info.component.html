@@ -1,0 +1,35 @@
+<div class="form-container">
+  <div class="form-content">
+    <div class="form-group">
+      <label class="form-label">Map Location</label>
+      <div class="phone-container">
+        <input type="text" class="phone-input" placeholder="Map Location ...">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Phone</label>
+      <div class="phone-container">
+        <div class="country-code">
+          <div class="flag"></div>
+          +89
+        </div>
+        <input type="tel" class="phone-input" placeholder="Phone number...">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Email</label>
+      <div class="email-container">
+        <div class="email-icon"></div>
+        <input type="email" class="email-input" placeholder="Email address">
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="button-container">
+      <button (click)="emitMessagePrevious()" type="button" class="btn btn-secondary">Previous</button>
+      <button (click)="emitMessageNext()" type="button" class="btn btn-primary">Finish Editing</button>
+    </div>
+  </div>
+</div>

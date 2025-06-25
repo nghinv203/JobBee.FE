@@ -1,0 +1,116 @@
+<div class="container">
+  <form id="socialLinksForm">
+    <div id="socialLinksContainer">
+      <!-- Social Link 1 - Facebook -->
+      <div class="social-link-item">
+        <label class="social-link-label">Social Link 1</label>
+        <div class="social-link-row">
+          <div class="social-platform-select">
+            <select data-platform="facebook">
+              <option value="facebook" data-icon="📘">Facebook</option>
+              <option value="twitter" data-icon="🐦">Twitter</option>
+              <option value="instagram" data-icon="📷">Instagram</option>
+              <option value="youtube" data-icon="📺">YouTube</option>
+              <option value="linkedin" data-icon="💼">LinkedIn</option>
+              <option value="tiktok" data-icon="🎵">TikTok</option>
+              <option value="snapchat" data-icon="👻">Snapchat</option>
+              <option value="pinterest" data-icon="📌">Pinterest</option>
+            </select>
+          </div>
+          <div class="url-input">
+            <input type="url" placeholder="Profile link/url..." name="social-url-1">
+          </div>
+          <button type="button" class="remove-btn" onclick="removeSocialLink(this)">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Social Link 2 - Twitter -->
+      <div class="social-link-item">
+        <label class="social-link-label">Social Link 2</label>
+        <div class="social-link-row">
+          <div class="social-platform-select">
+            <select data-platform="twitter">
+              <option value="facebook" data-icon="📘">Facebook</option>
+              <option value="twitter" data-icon="🐦" selected>Twitter</option>
+              <option value="instagram" data-icon="📷">Instagram</option>
+              <option value="youtube" data-icon="📺">YouTube</option>
+              <option value="linkedin" data-icon="💼">LinkedIn</option>
+              <option value="tiktok" data-icon="🎵">TikTok</option>
+              <option value="snapchat" data-icon="👻">Snapchat</option>
+              <option value="pinterest" data-icon="📌">Pinterest</option>
+            </select>
+          </div>
+          <div class="url-input">
+            <input type="url" placeholder="Profile link/url..." name="social-url-2">
+          </div>
+          <button type="button" class="remove-btn" onclick="removeSocialLink(this)">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Social Link 3 - Instagram -->
+      <div class="social-link-item">
+        <label class="social-link-label">Social Link 2</label>
+        <div class="social-link-row">
+          <div class="social-platform-select">
+            <select data-platform="instagram">
+              <option value="facebook" data-icon="📘">Facebook</option>
+              <option value="twitter" data-icon="🐦">Twitter</option>
+              <option value="instagram" data-icon="📷" selected>Instagram</option>
+              <option value="youtube" data-icon="📺">YouTube</option>
+              <option value="linkedin" data-icon="💼">LinkedIn</option>
+              <option value="tiktok" data-icon="🎵">TikTok</option>
+              <option value="snapchat" data-icon="👻">Snapchat</option>
+              <option value="pinterest" data-icon="📌">Pinterest</option>
+            </select>
+          </div>
+          <div class="url-input">
+            <input type="url" placeholder="Profile link/url..." name="social-url-3">
+          </div>
+          <button type="button" class="remove-btn" onclick="removeSocialLink(this)">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Social Link 4 - YouTube -->
+      <div class="social-link-item">
+        <label class="social-link-label">Social Link 3</label>
+        <div class="social-link-row">
+          <div class="social-platform-select">
+            <select data-platform="youtube">
+              <option value="facebook" data-icon="📘">Facebook</option>
+              <option value="twitter" data-icon="🐦">Twitter</option>
+              <option value="instagram" data-icon="📷">Instagram</option>
+              <option value="youtube" data-icon="📺" selected>YouTube</option>
+              <option value="linkedin" data-icon="💼">LinkedIn</option>
+              <option value="tiktok" data-icon="🎵">TikTok</option>
+              <option value="snapchat" data-icon="👻">Snapchat</option>
+              <option value="pinterest" data-icon="📌">Pinterest</option>
+            </select>
+          </div>
+          <div class="url-input">
+            <input type="url" placeholder="Profile link/url..." name="social-url-4">
+          </div>
+          <button type="button" class="remove-btn" onclick="removeSocialLink(this)">
+            ✕
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add New Social Link Button -->
+    <button type="button" class="add-social-btn" onclick="addNewSocialLink()">
+      <div class="add-icon">+</div>
+      Add New Social Link
+    </button>
+
+    <!-- Navigation Buttons -->
+    <div class="button-container">
+      <button type="button" class="btn btn-primary">Save Change</button>
+    </div>
+  </form>
+</div>

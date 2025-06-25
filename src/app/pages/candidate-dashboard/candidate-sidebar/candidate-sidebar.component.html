@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h3>CANDIDATE DASHBOARD</h3>
+  </div>
+
+  <nav class="sidebar-nav">
+    <ul>
+      <li class="nav-item" [ngClass]="{ 'active': message === 'Overview' }">
+        <a (click)="emitMessageOverview()" class="nav-link">
+          <i class="fas fa-chart-line"></i>
+          <span>Overview</span>
+        </a>
+      </li>
+
+      <li class="nav-item" [ngClass]="{ 'active': message === 'Applied' }">
+        <a (click)="emitMessageApplied()" class="nav-link">
+          <i class="fas fa-briefcase"></i>
+          <span>Applied Jobs</span>
+        </a>
+      </li>
+
+      <li class="nav-item" [ngClass]="{ 'active': message === 'Favourite' }">
+        <a (click)="emitMessageFavourite()" class="nav-link">
+          <i class="fas fa-star"></i>
+          <span>Favorite Jobs</span>
+        </a>
+      </li>
+
+      <li class="nav-item" [ngClass]="{ 'active': message === 'Alert' }">
+        <a (click)="emitMessageAlert()" class="nav-link">
+          <i class="fas fa-bell"></i>
+          <span>Job Alert</span>
+          <span class="badge">09</span>
+        </a>
+      </li>
+
+      <li class="nav-item" [ngClass]="{ 'active': message === 'Setting' }">
+        <a (click)="emitMessageSetting()" class="nav-link">
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-footer">
+    <a href="#" class="logout-link">
+      <i class="fas fa-sign-out-alt"></i>
+      <span>Log-out</span>
+    </a>
+  </div>
+
+</div>

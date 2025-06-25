@@ -1,0 +1,7 @@
+<div class="app-container">
+  <app-setting-topbar (sendMessage)="handleMessage($event)"></app-setting-topbar>
+  <app-setting-company *ngIf="receivedMessage === 'Company'"></app-setting-company>
+  <app-setting-founding *ngIf="receivedMessage === 'Founding'"></app-setting-founding>
+  <app-setting-social *ngIf="receivedMessage === 'Social'"></app-setting-social>
+  <app-setting-account *ngIf="receivedMessage === 'Account'"></app-setting-account>
+</div>
