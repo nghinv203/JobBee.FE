@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {TranslateModule, TranslateService} from "@ngx-translate/core";
 import {RouterOutlet} from '@angular/router';
+import { Analytics } from "@vercel/analytics/next"
 
 @Component({
   selector: 'app-root',
