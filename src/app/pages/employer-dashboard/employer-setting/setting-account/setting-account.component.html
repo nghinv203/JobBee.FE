@@ -1,0 +1,91 @@
+<div class="container">
+  <!-- Contact Information Section -->
+  <div class="section">
+    <h2 class="section-title">Contact Information</h2>
+
+    <div class="form-group">
+      <label for="location">Map Location</label>
+      <input type="text" id="location" placeholder="Enter location">
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <div class="phone-wrapper">
+        <div class="country-code">
+          <div class="flag"></div>
+          +89
+        </div>
+        <input type="text" id="phone" placeholder="Phone number...">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <div class="email-wrapper">
+    <span class="email-icon">
+      <i class="fas fa-envelope"></i>
+    </span>
+        <input type="email" id="email" placeholder="Email address">
+      </div>
+    </div>
+
+    <button class="btn btn-primary">Save Changes</button>
+  </div>
+
+  <!-- Change Password Section -->
+  <div class="section">
+    <h2 class="section-title">Change Password</h2>
+
+    <div class="password-grid">
+      <div class="form-group">
+        <label for="current-password">Current Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="current-password" placeholder="Password">
+          <button type="button" class="password-toggle" onclick="togglePassword('current-password')">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="new-password">New Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="new-password" placeholder="Password">
+          <button type="button" class="password-toggle" onclick="togglePassword('new-password')">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="confirm-password" placeholder="Password">
+          <button type="button" class="password-toggle" onclick="togglePassword('confirm-password')">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary">Change Password</button>
+  </div>
+
+  <!-- Delete Account Section -->
+  <div class="section delete-section">
+    <h2 class="section-title">Delete Your Company</h2>
+
+    <div class="delete-warning">
+      If you delete your Jobpilot account, you will no longer be able to get information about the matched jobs,
+      following employers, and job alert, shortlisted jobs and more. You will be abandoned from all the services of
+      Jobpilot.com
+    </div>
+
+    <button class="close-account-btn">
+      <span class="close-icon">
+        <i class="fas fa-user-slash"></i>
+      </span>
+      Close Account
+    </button>
+  </div>
+</div>

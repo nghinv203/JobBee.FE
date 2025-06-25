@@ -6,6 +6,8 @@ import {DashboardContentComponent} from './dashboard-content/dashboard-content.c
 import {PostJobComponent} from './post-job/post-job.component';
 import {NgIf} from '@angular/common';
 import {MyJobComponent} from './my-job/my-job.component';
+import {SavedCandidateComponent} from './saved-candidate/saved-candidate.component';
+import {EmployerSettingComponent} from './employer-setting/employer-setting.component';
 
 @Component({
   selector: 'app-employer-dashboard',
@@ -16,7 +18,9 @@ import {MyJobComponent} from './my-job/my-job.component';
     DashboardContentComponent,
     PostJobComponent,
     NgIf,
-    MyJobComponent],
+    MyJobComponent,
+    SavedCandidateComponent,
+    EmployerSettingComponent],
   templateUrl: './employer-dashboard.component.html',
   styleUrl: './employer-dashboard.component.scss'
 })

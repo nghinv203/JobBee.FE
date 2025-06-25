@@ -4,5 +4,7 @@
   <app-dashboard-content *ngIf="receivedMessage === 'Overview'"></app-dashboard-content>
   <app-post-job *ngIf="receivedMessage === 'PostAJob'"></app-post-job>
   <app-my-job *ngIf="receivedMessage === 'MyJobs'"></app-my-job>
+  <app-saved-candidate *ngIf="receivedMessage === 'SavedCandidate'"></app-saved-candidate>
+  <app-employer-setting *ngIf="receivedMessage === 'Settings'"></app-employer-setting>
 </div>
 <app-footer></app-footer>

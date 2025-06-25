@@ -21,7 +21,7 @@ export class EmployerSidebarComponent {
   }
 
   emitMessageSetting() {
-    this.message = 'Setting';
+    this.message = 'Settings';
     this.sendMessage.emit(this.message);
   }
 
