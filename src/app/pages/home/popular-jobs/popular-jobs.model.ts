@@ -1,6 +1,6 @@
 export interface IPopularJob {
   id?: string;
-  name?: string;
+  categoryName?: string;
   icon?: string;
-  amount?: number;
+  openPosition?: number;
 }

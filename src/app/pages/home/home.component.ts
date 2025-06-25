@@ -7,7 +7,7 @@ import {FeatureJobsComponent} from './feature-jobs/feature-jobs.component';
 import {TopCompaniesComponent} from './top-companies/top-companies.component';
 import {UserReviewsComponent} from './user-reviews/user-reviews.component';
 import {CallRegisterComponent} from './call-register/call-register.component';
-import {JobListService} from '../../core/services/job-list/job-list.service';
+import {JobsService} from '../../core/services/jobs/jobs.service';
 import {IJobSearch} from '../job-list/job-list.model';
 
 @Component({
@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit{
     keyword: 'Giáo viên'
   };
 
-  constructor(private jobService: JobListService) {
+  constructor(private jobService: JobsService) {
   }
 
   ngOnInit(): void {

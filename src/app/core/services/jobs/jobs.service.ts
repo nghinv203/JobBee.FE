@@ -4,11 +4,12 @@ import {Observable} from 'rxjs';
 import {IResponse} from '../../../shared/models/response';
 import {IJob} from '../../../pages/entities/job/job.model';
 import {AppEnvironmentService} from '../../../app.environment.service';
+import {ICommonPosition} from '../../../pages/home/common-position/common-position.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class JobListService {
+export class JobsService {
 
   baseUrl!: string;
 
@@ -18,5 +19,9 @@ export class JobListService {
 
   getJobs(params: any): Observable<IResponse<IJob[]>> {
     return this.http.post<IResponse<IJob[]>>(`${this.baseUrl}/search`, {params});
+  }
+
+  getCommonJobs(params: any) {
+    return this.http.get<IResponse<ICommonPosition[]>>(`${this.baseUrl}/common-jobs`, { params });
   }
 }
