@@ -1,40 +1,5 @@
 <div class="info-company">
   <div class="form-section">
-    <div class="upload-section">
-      <h2 class="section-title">Logo & Banner Image</h2>
-      <div class="upload-grid">
-        <div class="upload-item">
-          <h3>Upload document</h3>
-          <div class="upload-box" onclick="document.getElementById('logo-upload').click()">
-            <div class="upload-icon">📤</div>
-            <div class="upload-text">
-              <strong>Browse photo</strong> or drag here
-            </div>
-            <div class="upload-hint">
-              A photo larger than 400 pixels<br>
-              work best. Max photo size 5 MB.
-            </div>
-          </div>
-          <input type="file" id="logo-upload" style="display: none;" accept="image/*">
-        </div>
-
-        <div class="upload-item">
-          <h3>Banner Image</h3>
-          <div class="upload-box" onclick="document.getElementById('banner-upload').click()">
-            <div class="upload-icon">📤</div>
-            <div class="upload-text">
-              <strong>Browse photo</strong> or drag here
-            </div>
-            <div class="upload-hint">
-              Banner images optimal dimensions 1520×400. Supported<br>
-              format JPEG, PNG. Max photo size 5 MB.
-            </div>
-          </div>
-          <input type="file" id="banner-upload" style="display: none;" accept="image/*">
-        </div>
-      </div>
-    </div>
-
     <div class="form-group">
       <label for="company-name">Company name</label>
       <input type="text" id="company-name" name="company-name">
@@ -43,7 +8,8 @@
     <div class="form-group">
       <label for="about-us">About Us</label>
       <div class="textarea-container">
-        <textarea id="about-us" name="about-us" placeholder="Write down about your company here. Let the candidate know who we are..."></textarea>
+        <textarea id="about-us" name="about-us"
+                  placeholder="Write down about your company here. Let the candidate know who we are..."></textarea>
         <div class="editor-toolbar">
           <button class="editor-btn" type="button"><strong>B</strong></button>
           <button class="editor-btn" type="button"><em>I</em></button>
@@ -56,9 +22,169 @@
       </div>
     </div>
 
-    <!-- Buttons -->
-    <div class="button-container">
-      <button (click)="emitMessage()" type="button" class="btn btn-primary">Save & Next</button>
+    <!--    founding info-->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="industry-types">Industry Types</label>
+        <select id="industry-types" name="industry-types">
+          <option value="">Select...</option>
+          <option value="technology">Technology</option>
+          <option value="healthcare">Healthcare</option>
+          <option value="finance">Finance</option>
+          <option value="education">Education</option>
+          <option value="retail">Retail</option>
+          <option value="manufacturing">Manufacturing</option>
+          <option value="consulting">Consulting</option>
+          <option value="media">Media & Entertainment</option>
+          <option value="real-estate">Real Estate</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="team-size">Team Size</label>
+        <select id="team-size" name="team-size">
+          <option value="">Select...</option>
+          <option value="1-10">1-10 employees</option>
+          <option value="11-50">11-50 employees</option>
+          <option value="51-200">51-200 employees</option>
+          <option value="201-500">201-500 employees</option>
+          <option value="501-1000">501-1000 employees</option>
+          <option value="1000+">1000+ employees</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Second row: Year of Establishment, Company Website -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="establishment-year">Year of Establishment</label>
+        <div class="date-input">
+          <input type="date" id="establishment-year" name="establishment-year" placeholder="dd/mm/yyyy">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="company-website">Company Website</label>
+        <div class="website-input">
+          <input type="url" id="company-website" name="company-website" placeholder="Website url...">
+        </div>
+      </div>
+    </div>
+
+    <!--    Social Media-->
+    <div id="socialLinksContainer">
+      <!-- Social Link 1 - Facebook -->
+      <div class="social-link-item">
+        <label class="social-link-label">Social Link</label>
+        <div class="social-link-row">
+          <div class="social-platform-select">
+            <select data-platform="facebook">
+              <option value="facebook" data-icon="📘">Facebook</option>
+              <option value="twitter" data-icon="🐦">Twitter</option>
+              <option value="instagram" data-icon="📷">Instagram</option>
+              <option value="youtube" data-icon="📺">YouTube</option>
+              <option value="linkedin" data-icon="💼">LinkedIn</option>
+              <option value="tiktok" data-icon="🎵">TikTok</option>
+              <option value="snapchat" data-icon="👻">Snapchat</option>
+              <option value="pinterest" data-icon="📌">Pinterest</option>
+            </select>
+          </div>
+          <div class="url-input">
+            <input type="url" placeholder="Profile link/url..." name="social-url-1">
+          </div>
+        </div>
+      </div>
+
+      <!--    Contact-->
+
+      <div class="form-row three-columns">
+        <div class="form-group">
+          <label for="city">City</label>
+          <select id="city" name="industry-types">
+            <option value="">Select...</option>
+            <option value="technology">Technology</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="finance">Finance</option>
+            <option value="education">Education</option>
+            <option value="retail">Retail</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="consulting">Consulting</option>
+            <option value="media">Media & Entertainment</option>
+            <option value="real-estate">Real Estate</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="district">District</label>
+          <select id="district" name="team-size">
+            <option value="">Select...</option>
+            <option value="1-10">1-10 employees</option>
+            <option value="11-50">11-50 employees</option>
+            <option value="51-200">51-200 employees</option>
+            <option value="201-500">201-500 employees</option>
+            <option value="501-1000">501-1000 employees</option>
+            <option value="1000+">1000+ employees</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Commune">Commune</label>
+          <select id="Commune" name="industry-types">
+            <option value="">Select...</option>
+            <option value="technology">Technology</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="finance">Finance</option>
+            <option value="education">Education</option>
+            <option value="retail">Retail</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="consulting">Consulting</option>
+            <option value="media">Media & Entertainment</option>
+            <option value="real-estate">Real Estate</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-content">
+        <div class="form-group">
+          <label class="form-label">Map Location</label>
+          <div class="phone-container">
+            <input type="text" class="phone-input" placeholder="Map Location ...">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Contact Person</label>
+          <div class="phone-container">
+            <input type="text" class="phone-input" placeholder="Contact Person ...">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Phone</label>
+          <div class="phone-container">
+            <div class="country-code">
+              <div class="flag"></div>
+              +89
+            </div>
+            <input type="tel" class="phone-input" placeholder="Phone number...">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <div class="email-container">
+            <input type="email" class="email-input" placeholder="Email address">
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-container">
+          <button (click)="emitMessage()" type="button" class="btn btn-primary">Save & Next</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

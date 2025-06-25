@@ -17,7 +17,7 @@ export class FoundingInfoComponent {
   }
 
   emitMessageNext() {
-    const message = 'social-info';
+    const message = 'complete-setup';
     this.sendMessageNext.emit(message);
   }
 }
