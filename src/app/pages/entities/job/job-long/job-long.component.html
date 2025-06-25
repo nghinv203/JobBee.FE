@@ -19,7 +19,7 @@
         </span>
         <span class="me-3">
           <img src="assets/images/calendar-blank%20(1)%201.svg" alt="">
-          <span>{{data.application_deadline}}</span>
+          <span>{{data.application_deadline ?? '' | dueDate | async}}</span>
         </span>
       </div>
     </div>

@@ -81,7 +81,7 @@
     "job": {
       "expired": "Đã hết hạn",
       "dueToday": "Hạn cuối là hôm nay",
-      "daysLeft": "Còn {{count}} ngày",
+      "daysLeft": "Còn {{days}} ngày",
       "undefined": "Chưa xác định"
     },
     "topCompany": {

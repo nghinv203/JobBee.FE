@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {IJob} from '../job.model';
 import {ButtonComponent} from '../../../../shared/reuseComponents/button/button.component';
 import {TranslatePipe} from '@ngx-translate/core';
-import {CurrencyPipe} from '@angular/common';
+import {AsyncPipe, CurrencyPipe} from '@angular/common';
 import {DueDatePipe} from '../../../../shared/pipes/dueDate/due-date.pipe';
 import {FeatureJobDirective} from '../feature-job.directive';
 
@@ -13,7 +13,9 @@ import {FeatureJobDirective} from '../feature-job.directive';
     TranslatePipe,
     CurrencyPipe,
     DueDatePipe,
+    TranslatePipe,
     FeatureJobDirective,
+    AsyncPipe,
   ],
   standalone: true,
   templateUrl: './job-long.component.html',
