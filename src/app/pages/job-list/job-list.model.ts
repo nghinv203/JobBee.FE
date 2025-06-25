@@ -8,4 +8,5 @@ export interface IJobSearch {
   jobTypes?: string[];
   educationLevel?: string[];
   level?: string;
+  is_featured?: boolean;
 }

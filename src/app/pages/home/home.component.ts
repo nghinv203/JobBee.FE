@@ -26,19 +26,6 @@ import {IJobSearch} from '../job-list/job-list.model';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit{
-
-  params: IJobSearch = {
-    keyword: 'Giáo viên'
-  };
-
-  constructor(private jobService: JobsService) {
-  }
-
-  ngOnInit(): void {
-    this.jobService.getJobs(this.params).subscribe(res => {
-
-    });
-  }
+export class HomeComponent {
 
 }
