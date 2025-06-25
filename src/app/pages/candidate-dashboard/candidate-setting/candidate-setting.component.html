@@ -1,4 +1,5 @@
 <div class="app-container">
-  <app-setting-topbar></app-setting-topbar>
-  <app-setting-personal></app-setting-personal>
+  <app-setting-topbar (sendMessage)="handleMessage($event)"></app-setting-topbar>
+  <app-setting-personal *ngIf="receivedMessage === 'Personal'"></app-setting-personal>
+  <app-setting-experience *ngIf="receivedMessage === 'Experiences'"></app-setting-experience>
 </div>

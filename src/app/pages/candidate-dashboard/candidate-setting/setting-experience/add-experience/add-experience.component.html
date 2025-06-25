@@ -1,0 +1,70 @@
+<div class="backdrop" id="educationBackdrop"></div>
+<dialog open id="educationDialog" class="dialog-box">
+  <div class="popup-overlay">
+    <div class="popup-container">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h2 class="modal-title">Add Education</h2>
+        <button (click)="closeEducationPopUp()" type="button" class="close-button">×</button>
+      </div>
+
+      <form>
+        <!-- Institution Name -->
+        <div class="form-group">
+          <label>Institution Name</label>
+          <input type="text" placeholder="Enter institution name" />
+        </div>
+
+        <!-- Education Level -->
+        <div class="form-group">
+          <label>Education Level</label>
+          <select>
+            <option disabled selected>Select level</option>
+            <option value="highschool">High School</option>
+            <option value="bachelor">Bachelor's</option>
+            <option value="master">Master's</option>
+            <option value="phd">PhD</option>
+          </select>
+        </div>
+
+        <!-- Field of Study -->
+        <div class="form-group">
+          <label>Field of Study</label>
+          <input type="text" placeholder="Enter field of study" />
+        </div>
+
+        <!-- Start Date -->
+        <div class="form-group">
+          <label>Start Date</label>
+          <input type="date" />
+        </div>
+
+        <!-- End Date -->
+        <div class="form-group">
+          <label>End Date</label>
+          <input type="date" />
+        </div>
+
+        <!-- Is Current -->
+        <div class="form-group">
+          <label>
+            <input type="checkbox" />
+            I am currently studying here
+          </label>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group">
+          <label>Description</label>
+          <textarea rows="4" placeholder="Enter description..."></textarea>
+        </div>
+
+        <!-- Button Group -->
+        <div class="button-group">
+          <button (click)="closeEducationPopUp()" type="button" class="btn-cancel">Cancel</button>
+          <button type="submit" class="btn-submit">Add Education</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</dialog>
