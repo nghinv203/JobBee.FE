@@ -1,0 +1,6 @@
+{
+  "outputDirectory": "dist/job-bee.fe",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

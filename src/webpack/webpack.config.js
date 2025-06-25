@@ -7,6 +7,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
 const environment = require('./environment');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = (config, options, targetOptions) => {
   // Webpack Cache Configuration
@@ -71,6 +72,15 @@ module.exports = (config, options, targetOptions) => {
       __SERVER_API_URL__: JSON.stringify(environment.__SERVER_API_URL__ || ''),
     })
   );
+
+  // index.html
+  // config.plugins.push(
+  //   new HtmlWebpackPlugin({
+  //     template: path.resolve(__dirname, '../../src/index.html'),
+  //     inject: true,
+  //     scriptLoading: 'blocking'
+  //   })
+  // );
 
   // i18n JSON Merging (Custom Implementation)
   config.plugins.push({
