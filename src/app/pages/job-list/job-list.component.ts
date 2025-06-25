@@ -2,12 +2,12 @@ import {Component, OnInit} from '@angular/core';
 import {TranslatePipe} from '@ngx-translate/core';
 import {BreadcrumbComponent} from '../../shared/reuseComponents/breadcrumb/breadcrumb.component';
 import {JobSearchComponent} from './job-search/job-search.component';
-import {JobListService} from "../../core/services/job-list/job-list.service";
+import {JobsService} from "../../core/services/jobs/jobs.service";
 import {IJob} from "../entities/job/job.model";
 import {IJobSearch} from './job-list.model';
 
 @Component({
-  selector: 'app-job-list',
+  selector: 'app-jobs',
   imports: [
     TranslatePipe,
     BreadcrumbComponent,
@@ -24,7 +24,7 @@ export class JobListComponent implements OnInit{
     keyword: ''
   };
 
-  constructor(private jobListService: JobListService) {
+  constructor(private jobListService: JobsService) {
   }
 
   ngOnInit(): void {

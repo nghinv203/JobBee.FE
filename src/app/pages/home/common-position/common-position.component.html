@@ -3,10 +3,10 @@
     <h2>{{ 'global.commonPosition.title' | translate }}</h2>
   </div>
   <div class="common-position">
-    @for(position of testData; track position.id) {
+    @for(position of commonPosition; track position) {
       <div class="position">
-        <div class="text-bold">{{position.name}}</div>
-        <div class="text-thin">{{position.amount | number}}</div>
+        <div class="text-bold">{{position.title}}</div>
+        <div class="text-thin">{{position.applicationsCount | number}}</div>
       </div>
     }
   </div>
