@@ -15,4 +15,8 @@ export class SettingPersonalComponent {
     this.isAddResume = true;
     console.log('OpenAddResume');
   }
+
+  handlePopUp(isOpen: boolean) {
+    this.isAddResume = isOpen;
+  }
 }

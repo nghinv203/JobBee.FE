@@ -6,7 +6,7 @@
       <!-- Modal Header -->
       <div class="modal-header">
         <h2 class="modal-title">Add Cv/Resume</h2>
-        <button type="button" class="close-button">×</button>
+        <button (click)="closePopUp()" type="button" class="close-button">×</button>
       </div>
 
       <form>
@@ -15,7 +15,6 @@
           <label>Cv/Resume Name</label>
           <input
             type="text"
-            formControlName="resumeName"
             placeholder="Enter resume name">
         </div>
 
@@ -32,14 +31,13 @@
               type="file"
               #fileInput
               class="file-input"
-              accept=".pdf"
-              formControlName="resumeFile">
+              accept=".pdf">
           </div>
         </div>
 
         <!-- Button Group -->
         <div class="button-group">
-          <button type="button" class="btn-cancel">Cancel</button>
+          <button (click)="closePopUp()" type="button" class="btn-cancel">Cancel</button>
           <button type="submit" class="btn-submit">Add Cv/Resume</button>
         </div>
       </form>

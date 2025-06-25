@@ -1,5 +1,5 @@
 @if(isAddResume){
-  <app-add-resume></app-add-resume>
+  <app-add-resume (isOpenMessage) = handlePopUp($event)></app-add-resume>
 }
 
 <div class="content">
