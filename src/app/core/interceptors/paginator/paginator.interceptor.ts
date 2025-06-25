@@ -22,11 +22,11 @@ export const paginatorInterceptor: HttpInterceptorFn = (req, next) => {
     } else if (req.method === 'POST') {
       const body: RequestBody = req.body || {};
       const params = body.params || {};
-
+      console.log(body)
       const modifiedBody = {
         ...params,
-        page: body.page ?? 1,
-        pageSize: body.pageSize ?? 20
+        page: params['page'] ?? body.page ?? 1,
+        pageSize: params['pageSize'] ?? body.pageSize ?? 20
       };
 
       return next(req.clone({ body: modifiedBody }));

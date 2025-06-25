@@ -2,13 +2,13 @@
   <div class="company box-shadow">
     <div class="d-flex align-items-center">
       <div class="company-image">
-        <img [src]="company.image" alt="">
+        <img width="68px" height="68px" [src]="company.companyLogo" alt="">
       </div>
       <div class="company-info">
-        <div>{{ company.name }}</div>
+        <div>{{ company.companyName }}</div>
         <div class="location">
           <img src="assets/images/fi_map-pin.svg">
-          {{ company.location }}
+          {{ company.headquartersCity }}
         </div>
       </div>
     </div>

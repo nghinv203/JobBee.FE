@@ -29,6 +29,7 @@ export interface IJob {
   is_featured?: boolean;
   views_count?: number;
   applications_count?: number;
+  company_logo?: string;
   posted_at?: string;
   updated_at?: string;
   expires_at?: string | null;
