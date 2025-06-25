@@ -2,4 +2,6 @@
   <app-setting-topbar (sendMessage)="handleMessage($event)"></app-setting-topbar>
   <app-setting-personal *ngIf="receivedMessage === 'Personal'"></app-setting-personal>
   <app-setting-experience *ngIf="receivedMessage === 'Experiences'"></app-setting-experience>
+  <app-setting-education *ngIf="receivedMessage === 'Educations'"></app-setting-education>
+  <app-setting-account *ngIf="receivedMessage === 'Account'"></app-setting-account>
 </div>

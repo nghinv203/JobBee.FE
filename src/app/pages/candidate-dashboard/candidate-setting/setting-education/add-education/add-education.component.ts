@@ -1,13 +1,13 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-add-experience',
+  selector: 'app-add-education',
   standalone: true,
   imports: [],
-  templateUrl: './add-experience.component.html',
-  styleUrl: './add-experience.component.scss'
+  templateUrl: './add-education.component.html',
+  styleUrl: './add-education.component.scss'
 })
-export class AddExperienceComponent {
+export class AddEducationComponent {
   @Output() isOpenMessage = new EventEmitter<boolean>();
 
   isOpen: boolean = true;
