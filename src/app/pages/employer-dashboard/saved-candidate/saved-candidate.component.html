@@ -1,3 +1,6 @@
+@if (isProfile) {
+  <app-candidate-profile (isProfile)="isOpenProfile($event)" ></app-candidate-profile>
+}
 <div class="container">
   <div class="header">
     <h1>Saved Candidates</h1>
@@ -15,8 +18,12 @@
         <div class="candidate-role">Technical Support Specialist</div>
       </div>
       <div class="candidate-actions">
-        <div class="bookmark"></div>
-        <button class="view-profile-btn">View Profile</button>
+        <button class="bookmark-btn">
+          <svg class="bookmark-icon" viewBox="0 0 24 24">
+            <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+          </svg>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">View Profile</button>
         <button class="more-actions"></button>
       </div>
     </div>
@@ -28,8 +35,12 @@
         <div class="candidate-role">Product Designer</div>
       </div>
       <div class="candidate-actions">
-        <div class="bookmark"></div>
-        <button class="view-profile-btn">View Profile</button>
+        <button class="bookmark-btn">
+          <svg class="bookmark-icon" viewBox="0 0 24 24">
+            <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+          </svg>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">View Profile</button>
         <button class="more-actions"></button>
       </div>
     </div>
@@ -41,8 +52,12 @@
         <div class="candidate-role">Marketing Manager</div>
       </div>
       <div class="candidate-actions">
-        <div class="bookmark"></div>
-        <button class="view-profile-btn">View Profile</button>
+        <button class="bookmark-btn">
+          <svg class="bookmark-icon" viewBox="0 0 24 24">
+            <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+          </svg>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">View Profile</button>
         <button class="more-actions"></button>
       </div>
     </div>
@@ -54,8 +69,12 @@
         <div class="candidate-role">Junior Graphic Designer</div>
       </div>
       <div class="candidate-actions">
-        <div class="bookmark"></div>
-        <button class="view-profile-btn">View Profile</button>
+        <button class="bookmark-btn">
+          <svg class="bookmark-icon" viewBox="0 0 24 24">
+            <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+          </svg>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">View Profile</button>
         <button class="more-actions"></button>
       </div>
     </div>
@@ -67,8 +86,12 @@
         <div class="candidate-role">Visual Designer</div>
       </div>
       <div class="candidate-actions">
-        <div class="bookmark"></div>
-        <button class="view-profile-btn">View Profile</button>
+        <button class="bookmark-btn">
+          <svg class="bookmark-icon" viewBox="0 0 24 24">
+            <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+          </svg>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">View Profile</button>
         <button class="more-actions"></button>
       </div>
     </div>
@@ -80,8 +103,12 @@
         <div class="candidate-role">Senior UX Designer</div>
       </div>
       <div class="candidate-actions">
-        <div class="bookmark"></div>
-        <button class="view-profile-btn">View Profile</button>
+        <button class="bookmark-btn">
+          <svg class="bookmark-icon" viewBox="0 0 24 24">
+            <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+          </svg>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">View Profile</button>
         <button class="more-actions"></button>
       </div>
     </div>
@@ -93,8 +120,12 @@
         <div class="candidate-role">Interaction Designer</div>
       </div>
       <div class="candidate-actions">
-        <div class="bookmark"></div>
-        <button class="view-profile-btn">View Profile</button>
+        <button class="bookmark-btn">
+          <svg class="bookmark-icon" viewBox="0 0 24 24">
+            <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+          </svg>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">View Profile</button>
         <button class="more-actions"></button>
       </div>
     </div>
@@ -106,8 +137,12 @@
         <div class="candidate-role">Networking Engineer</div>
       </div>
       <div class="candidate-actions">
-        <div class="bookmark"></div>
-        <button class="view-profile-btn">View Profile</button>
+        <button class="bookmark-btn">
+          <svg class="bookmark-icon" viewBox="0 0 24 24">
+            <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+          </svg>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">View Profile</button>
         <button class="more-actions"></button>
       </div>
     </div>
@@ -119,8 +154,12 @@
         <div class="candidate-role">Software Engineer</div>
       </div>
       <div class="candidate-actions">
-        <div class="bookmark"></div>
-        <button class="view-profile-btn">View Profile</button>
+        <button class="bookmark-btn">
+          <svg class="bookmark-icon" viewBox="0 0 24 24">
+            <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+          </svg>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">View Profile</button>
         <button class="more-actions"></button>
       </div>
     </div>

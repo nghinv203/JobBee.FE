@@ -1,0 +1,145 @@
+<div class="container">
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a>Employer</a>
+    <span class="breadcrumb-separator">/</span>
+    <a (click)="emitMessage()" >My Jobs</a>
+    <span class="breadcrumb-separator">/</span>
+    <span class="active">Applications</span>
+  </nav>
+
+  <!-- Header -->
+  <div class="header">
+    <h1 class="page-title">Job Applications</h1>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Applications Section -->
+    <div class="applications-section">
+      <div class="section-header">
+        <h2 class="section-title">All Application (213)</h2>
+        <div class="dropdown">
+          <button class="dropdown-toggle" onclick="toggleDropdown('dropdown1')">
+            <i class="fas fa-ellipsis-h"></i>
+          </button>
+          <div class="dropdown-menu" id="dropdown1">
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-edit"></i>
+              Edit Column
+            </a>
+            <a href="#" class="dropdown-item danger">
+              <i class="fas fa-trash"></i>
+              Delete
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="applications-list">
+        <!-- Applicant 1 -->
+        <div class="applicant-card">
+          <div class="avatar">RR</div>
+          <div class="applicant-info">
+            <h3 class="applicant-name">Ronald Richards</h3>
+            <div class="applicant-role">UI/UX Designer</div>
+            <ul class="applicant-details">
+              <li>• 7 Years Experience</li>
+              <li>• Education: Master Degree</li>
+              <li>• Applied: Jan 23, 2022</li>
+            </ul>
+            <a href="#" class="download-cv">
+              <i class="fas fa-video"></i>
+              View Video Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- Applicant 2 -->
+        <div class="applicant-card">
+          <div class="avatar">TW</div>
+          <div class="applicant-info">
+            <h3 class="applicant-name">Theresa Webb</h3>
+            <div class="applicant-role">Product Designer</div>
+            <ul class="applicant-details">
+              <li>• 7 Years Experience</li>
+              <li>• Education: High School Degree</li>
+              <li>• Applied: Jan 23, 2022</li>
+            </ul>
+            <a href="#" class="download-cv">
+              <i class="fas fa-video"></i>
+              View Video Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- Applicant 3 -->
+        <div class="applicant-card">
+          <div class="avatar">DL</div>
+          <div class="applicant-info">
+            <h3 class="applicant-name">Devon Lane</h3>
+            <div class="applicant-role">User Experience Designer</div>
+            <ul class="applicant-details">
+              <li>• 7 Years Experience</li>
+              <li>• Education: Master Degree</li>
+              <li>• Applied: Jan 23, 2022</li>
+            </ul>
+            <a href="#" class="download-cv">
+              <i class="fas fa-video"></i>
+              View Video Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- Applicant 4 -->
+        <div class="applicant-card">
+          <div class="avatar">KM</div>
+          <div class="applicant-info">
+            <h3 class="applicant-name">Kathryn Murphy</h3>
+            <div class="applicant-role">UI/UX Designer</div>
+            <ul class="applicant-details">
+              <li>• 5 Years Experience</li>
+              <li>• Education: Bachelor Degree</li>
+              <li>• Applied: Jan 23, 2022</li>
+            </ul>
+            <a href="#" class="download-cv">
+              <i class="fas fa-video"></i>
+              View Video Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sort Widget -->
+      <div class="sort-widget">
+        <h3 class="widget-title">Sort Application</h3>
+        <div class="sort-options">
+          <div class="radio-option">
+            <input type="radio" id="newest" name="sort" value="newest" checked>
+            <label for="newest">Newest</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="oldest" name="sort" value="oldest">
+            <label for="oldest">Oldest</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Create Job Widget -->
+      <div class="create-widget">
+        <div class="create-icon">
+          <i class="fas fa-plus"></i>
+        </div>
+        <h3 class="create-title">Create Job</h3>
+        <p class="create-subtitle">Post a job and hire top talent</p>
+        <button class="btn btn-primary">
+          <i class="fas fa-plus"></i>
+          Create Job
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
