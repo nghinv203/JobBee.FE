@@ -1,1 +1,306 @@
-<p>candidate-list works!</p>
+<app-header></app-header>
+
+@if (isProfile) {
+<app-candidate-detail (isProfile)="isOpenProfile($event)" ></app-candidate-detail>
+}
+
+<app-candidate-search></app-candidate-search>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<div class="main-container">
+  <div class="sidebar">
+    <div class="logo-section">
+      <button class="logo-btn">
+        <i class="fas fa-filter"></i>
+        Bộ lọc
+      </button>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-title">Bán kính</div>
+      <div class="radius-info">32 miles</div>
+      <div class="range-slider">
+        <div class="range-fill"></div>
+        <div class="range-thumb"></div>
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-title">Cấp độ ứng viên</div>
+      <div class="filter-options">
+        <div class="filter-option">
+          <input type="radio" id="mid" name="level" checked>
+          <label for="mid">Mới vào nghề</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="senior" name="level">
+          <label for="senior">Trung cấp</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="expert" name="level">
+          <label for="expert">Chuyên gia</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-title">Kinh nghiệm</div>
+      <div class="filter-options">
+        <div class="filter-option">
+          <input type="radio" id="fresh" name="experience">
+          <label for="fresh">Người mới</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="1-2" name="experience">
+          <label for="1-2">1 - 2 năm</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="2-4" name="experience">
+          <label for="2-4">2 - 4 năm</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="4-8" name="experience" checked>
+          <label for="4-8">4 - 8 năm</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="6-9" name="experience">
+          <label for="6-9">6 - 9 năm</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="8-10" name="experience">
+          <label for="8-10">8 - 10 năm</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="10-15" name="experience">
+          <label for="10-15">10 - 15 năm</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="15+" name="experience">
+          <label for="15+">15+ năm</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-title">Trình độ học vấn</div>
+      <div class="filter-options">
+        <div class="filter-option">
+          <input type="checkbox" id="all-edu">
+          <label for="all-edu">Tất cả</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="trung-hoc">
+          <label for="trung-hoc">Trung học</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="trung-cap">
+          <label for="trung-cap">Trung cấp</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="dai-hoc" checked>
+          <label for="dai-hoc">Đại học</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="thac-si">
+          <label for="thac-si">Thạc sĩ</label>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox" id="cu-nhan">
+          <label for="cu-nhan">Cử nhân</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-title">Giới tính</div>
+      <div class="filter-options">
+        <div class="filter-option">
+          <input type="radio" id="nam" name="gender" checked>
+          <label for="nam">Nam</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="nu" name="gender">
+          <label for="nu">Nữ</label>
+        </div>
+        <div class="filter-option">
+          <input type="radio" id="khac" name="gender">
+          <label for="khac">Khác</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="header-controls">
+      <select class="header-select">
+        <option>Mới nhất</option>
+      </select>
+    </div>
+    <div class="candidate-card">
+      <div class="avatar">CF</div>
+      <div class="candidate-info">
+        <div class="candidate-name">Cody Fisher</div>
+        <div class="candidate-title">Marketing Officer</div>
+        <div class="candidate-details">
+          <span><i class="fas fa-map-marker-alt location-icon"></i>New York</span>
+          <span><i class="fas fa-briefcase experience-icon"></i>3 Years experience</span>
+        </div>
+      </div>
+      <div class="candidate-actions">
+        <button class="bookmark-btn">
+          <i class="far fa-bookmark"></i>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">
+          Xem Hồ Sơ
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="candidate-card">
+      <div class="avatar">DS</div>
+      <div class="candidate-info">
+        <div class="candidate-name">Darrell Steward</div>
+        <div class="candidate-title">Interaction Designer</div>
+        <div class="candidate-details">
+          <span><i class="fas fa-map-marker-alt location-icon"></i>New York</span>
+          <span><i class="fas fa-briefcase experience-icon"></i>3 Years experience</span>
+        </div>
+      </div>
+      <div class="candidate-actions">
+        <button class="bookmark-btn active">
+          <i class="fas fa-bookmark"></i>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">
+          Xem Hồ Sơ
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="candidate-card">
+      <div class="avatar">GH</div>
+      <div class="candidate-info">
+        <div class="candidate-name">Guy Hawkins</div>
+        <div class="candidate-title">Junior Graphic Designer</div>
+        <div class="candidate-details">
+          <span><i class="fas fa-map-marker-alt location-icon"></i>New York</span>
+          <span><i class="fas fa-briefcase experience-icon"></i>3 Years experience</span>
+        </div>
+      </div>
+      <div class="candidate-actions">
+        <button class="bookmark-btn active">
+          <i class="fas fa-bookmark"></i>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">
+          Xem Hồ Sơ
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="candidate-card">
+      <div class="avatar">JC</div>
+      <div class="candidate-info">
+        <div class="candidate-name">Jane Cooper</div>
+        <div class="candidate-title">Senior UX Designer</div>
+        <div class="candidate-details">
+          <span><i class="fas fa-map-marker-alt location-icon"></i>New York</span>
+          <span><i class="fas fa-briefcase experience-icon"></i>3 Years experience</span>
+        </div>
+      </div>
+      <div class="candidate-actions">
+        <button class="bookmark-btn">
+          <i class="far fa-bookmark"></i>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">
+          Xem Hồ Sơ
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="candidate-card">
+      <div class="avatar">TW</div>
+      <div class="candidate-info">
+        <div class="candidate-name">Theresa Webb</div>
+        <div class="candidate-title">Front End Developer</div>
+        <div class="candidate-details">
+          <span><i class="fas fa-map-marker-alt location-icon"></i>New York</span>
+          <span><i class="fas fa-briefcase experience-icon"></i>3 Years experience</span>
+        </div>
+      </div>
+      <div class="candidate-actions">
+        <button class="bookmark-btn">
+          <i class="far fa-bookmark"></i>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">
+          Xem Hồ Sơ
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="candidate-card">
+      <div class="avatar">KM</div>
+      <div class="candidate-info">
+        <div class="candidate-name">Kathryn Murphy</div>
+        <div class="candidate-title">Technical Support Specialist</div>
+        <div class="candidate-details">
+          <span><i class="fas fa-map-marker-alt location-icon"></i>New York</span>
+          <span><i class="fas fa-briefcase experience-icon"></i>3 Years experience</span>
+        </div>
+      </div>
+      <div class="candidate-actions">
+        <button class="bookmark-btn active">
+          <i class="fas fa-bookmark"></i>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">
+          Xem Hồ Sơ
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="candidate-card">
+      <div class="avatar">MM</div>
+      <div class="candidate-info">
+        <div class="candidate-name">Marvin McKinney</div>
+        <div class="candidate-title">UI/UX Designer</div>
+        <div class="candidate-details">
+          <span><i class="fas fa-map-marker-alt location-icon"></i>New York</span>
+          <span><i class="fas fa-briefcase experience-icon"></i>3 Years experience</span>
+        </div>
+      </div>
+      <div class="candidate-actions">
+        <button class="bookmark-btn">
+          <i class="far fa-bookmark"></i>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">
+          Xem Hồ Sơ
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="candidate-card">
+      <div class="avatar">JW</div>
+      <div class="candidate-info">
+        <div class="candidate-name">Jenny Wilson</div>
+        <div class="candidate-title">Marketing Manager</div>
+        <div class="candidate-details">
+          <span><i class="fas fa-map-marker-alt location-icon"></i>New York</span>
+          <span><i class="fas fa-briefcase experience-icon"></i>3 Years experience</span>
+        </div>
+      </div>
+      <div class="candidate-actions">
+        <button class="bookmark-btn">
+          <i class="far fa-bookmark"></i>
+        </button>
+        <button (click)="OpenProfile()" class="view-profile-btn">
+          Xem Hồ Sơ
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
