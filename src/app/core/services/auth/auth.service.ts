@@ -16,6 +16,6 @@ export class AuthService {
   }
 
   register(params: any): Observable<IResponse> {
-    return this.http.post<IResponse>(`http://localhost:5000/api/users/register`, params);
+    return this.http.post<IResponse>(`${this.baseUrl}/register`, params);
   }
 }
