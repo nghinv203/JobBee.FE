@@ -1,1 +1,71 @@
-<p>setting-account works!</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="container">
+  <!-- Privacy Settings Section -->
+  <div class="section">
+    <div class="privacy-controls">
+      <div class="privacy-item">
+        <div class="privacy-label">Is Available to Hire</div>
+        <label class="toggle-switch">
+          <input type="checkbox">
+          <span class="slider"></span>
+        </label>
+        <div class="toggle-status">NO &nbsp;&nbsp;&nbsp;&nbsp; Your profile is private now</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Change Password Section -->
+  <div class="section">
+    <h2 class="section-title">Change Password</h2>
+    <div class="password-row">
+      <div class="form-group">
+        <label class="form-label">Current Password</label>
+        <div class="input-group">
+          <input type="password" class="form-input" placeholder="Password" id="current-password">
+          <button type="button" class="toggle-password" onclick="togglePassword('current-password')">
+            <i class="fas fa-eye" id="current-password-icon"></i>
+          </button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">New Password</label>
+        <div class="input-group">
+          <input type="password" class="form-input" placeholder="Password" id="new-password">
+          <button type="button" class="toggle-password" onclick="togglePassword('new-password')">
+            <i class="fas fa-eye" id="new-password-icon"></i>
+          </button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Confirm Password</label>
+        <div class="input-group">
+          <input type="password" class="form-input" placeholder="Password" id="confirm-password">
+          <button type="button" class="toggle-password" onclick="togglePassword('confirm-password')">
+            <i class="fas fa-eye" id="confirm-password-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary">
+      <i class="fas fa-save"></i>
+      Save Changes
+    </button>
+  </div>
+
+  <!-- Delete Account Section -->
+  <div class="section">
+    <h2 class="section-title">Delete Your Account</h2>
+    <div class="delete-section">
+      <p class="delete-warning">
+        If you delete your Jobpilot account, you will no longer be able to get information
+        about the matched jobs, following employers, and job alert, shortlisted jobs and
+        more. You will be abandoned from all the services of Jobpilot.com.
+      </p>
+      <button class="btn btn-danger">
+        <i class="fas fa-trash-alt"></i>
+        Close Account
+      </button>
+    </div>
+  </div>
+</div>
