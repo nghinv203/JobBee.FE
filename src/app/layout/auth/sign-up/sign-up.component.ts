@@ -6,9 +6,11 @@ import {NzCheckboxComponent} from 'ng-zorro-antd/checkbox';
 import {NzInputDirective} from 'ng-zorro-antd/input';
 import {NzButtonComponent} from 'ng-zorro-antd/button';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
-import {RouterLink} from '@angular/router';
+import {Router, RouterLink} from '@angular/router';
 import {AuthService} from '../../../core/services/auth/auth.service';
 import {IRegisterUser} from '../user.model';
+import {LoadingComponent} from '../../../shared/reuseComponents/loading/loading.component';
+import {finalize} from 'rxjs';
 
 @Component({
   selector: 'app-sign-up',
@@ -22,7 +24,8 @@ import {IRegisterUser} from '../user.model';
     NzButtonComponent,
     FormsModule,
     RouterLink,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LoadingComponent
   ],
   standalone: true,
   templateUrl: './sign-up.component.html',
@@ -31,8 +34,11 @@ import {IRegisterUser} from '../user.model';
 export class SignUpComponent {
   signUpForm!: FormGroup;
   registerUser!: IRegisterUser;
+  isLoading: boolean = false;
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService) {
+  constructor(private formBuilder: FormBuilder,
+              private authService: AuthService,
+              private router: Router) {
     this.signUpForm = this.formBuilder.group({
       role: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
@@ -52,8 +58,20 @@ export class SignUpComponent {
       passwordConfirm: this.signUpForm.get('cfPassword')?.value,
       isCandidate: this.signUpForm.get('role')?.value === 'candidate'
     };
-    this.authService.register(this.registerUser).subscribe(res => {
-      console.log(res)
-    });
+    this.isLoading = true;
+    this.authService.register(this.registerUser)
+      .pipe(
+        finalize(() => this.isLoading = false)
+      )
+      .subscribe({
+        next: (res) => {
+          if(res && res.status === 201) {
+            this.router.navigate(['/auth/sign-in']);
+          }
+        },
+        error: (err) => {
+          console.error(err);
+        }
+      });
   }
 }
