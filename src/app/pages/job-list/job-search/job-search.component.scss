@@ -1,4 +1,90 @@
 .top {
   background: var(--gray-background);
   padding: 32px 0;
+
+  @media (max-width: 768px) {
+    padding: 24px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (max-width: 768px) {
+      padding: 0 16px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 0 12px;
+    }
+  }
+
+  .breadcrumb-cs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 16px;
+      gap: 8px;
+    }
+
+    .breadcrumb-title {
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: var(--text-primary, #333);
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .search-bar {
+    width: 100%;
+
+    // Ensure the search component is responsive
+    ::ng-deep app-search {
+      width: 100%;
+
+      // Override any fixed widths in the search component
+      .search-container,
+      .ant-input-group,
+      .ant-select,
+      .ant-input {
+        width: 100% !important;
+        max-width: 100%;
+      }
+
+      // Stack search elements on mobile if needed
+      @media (max-width: 768px) {
+        .search-filters {
+          flex-direction: column;
+          gap: 12px;
+
+          .ant-select,
+          .ant-input {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
 }

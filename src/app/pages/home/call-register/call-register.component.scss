@@ -1,6 +1,17 @@
 .container {
+  display: flex;
   gap: 24px;
   padding: 100px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 50px 16px;
+    gap: 20px;
+  }
 
   .register {
     display: flex;
@@ -9,19 +20,114 @@
     align-items: flex-start;
     gap: 26px;
     border-radius: 12px;
+    flex: 1;
+    min-width: 0; // Prevents flex items from overflowing
+
+    @media (max-width: 768px) {
+      padding: 30px 20px;
+      gap: 20px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 24px 16px;
+      gap: 16px;
+    }
+
+    .register-content {
+      h4 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        line-height: 1.3;
+
+        @media (max-width: 768px) {
+          font-size: 1.25rem;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 1.125rem;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        opacity: 0.8;
+
+        @media (max-width: 768px) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .register-btn {
+      font-weight: bold;
+      color: var(--primary);
+      background: transparent;
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+
+      @media (min-width: 769px) {
+        width: auto;
+      }
+
+      &:hover {
+        background: var(--primary);
+        color: white;
+
+        svg path {
+          stroke: white;
+        }
+      }
+
+      .btn-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        span {
+          white-space: nowrap;
+
+          @media (max-width: 480px) {
+            font-size: 0.9rem;
+          }
+        }
+
+        svg {
+          flex-shrink: 0;
+        }
+      }
+    }
   }
 
   .primary-bg {
     background: var(--primary);
     color: var(--white);
+
+    .register-btn {
+      background: var(--white);
+      border-color: var(--white);
+      color: var(--primary);
+
+      &:hover {
+        background: transparent;
+        color: var(--white);
+        border-color: var(--white);
+
+        svg path {
+          stroke: white;
+        }
+      }
+    }
   }
 
   .normal-bg {
     background: var(--gray-background);
-  }
-
-  button {
-    font-weight: bold;
-    color: var(--primary);
+    color: var(--text-primary, #333);
   }
 }
