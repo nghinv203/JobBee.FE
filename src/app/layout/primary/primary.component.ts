@@ -15,17 +15,17 @@ import {HeaderComponent} from '../main/header/header.component';
 export class PrimaryComponent {
   isHeaderHidden = false;
   private lastScrollTop = 0;
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const currentScroll = document.documentElement.scrollTop;
-
-    if (currentScroll > this.lastScrollTop && currentScroll > 100) {
-      // scroll down
-      this.isHeaderHidden = true;
-    } else {
-      // scroll up
-      this.isHeaderHidden = false;
-    }
-    this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-  }
+  // @HostListener('window:scroll', [])
+  // onWindowScroll() {
+  //   const currentScroll = document.documentElement.scrollTop;
+  //
+  //   if (currentScroll > this.lastScrollTop && currentScroll > 100) {
+  //     // scroll down
+  //     this.isHeaderHidden = true;
+  //   } else {
+  //     // scroll up
+  //     this.isHeaderHidden = false;
+  //   }
+  //   this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  // }
 }
