@@ -8,6 +8,7 @@ import {NgIf} from '@angular/common';
 import {MyJobComponent} from './my-job/my-job.component';
 import {SavedCandidateComponent} from './saved-candidate/saved-candidate.component';
 import {EmployerSettingComponent} from './employer-setting/employer-setting.component';
+import {PlanBillingComponent} from './plan-billing/plan-billing.component';
 
 @Component({
   selector: 'app-employer-dashboard',
@@ -20,7 +21,8 @@ import {EmployerSettingComponent} from './employer-setting/employer-setting.comp
     NgIf,
     MyJobComponent,
     SavedCandidateComponent,
-    EmployerSettingComponent],
+    EmployerSettingComponent,
+    PlanBillingComponent],
   templateUrl: './employer-dashboard.component.html',
   styleUrl: './employer-dashboard.component.scss'
 })

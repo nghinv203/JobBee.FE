@@ -20,16 +20,6 @@
     <div *ngIf="message === 'founding-info'" class="progress-item">
       <div class="progress-header">
         <span class="progress-label">Profile Setup</span>
-        <span class="progress-status">25% Completed</span>
-      </div>
-      <div class="progress-bar-container">
-        <div class="progress-bar progress-25"></div>
-      </div>
-    </div>
-
-    <div *ngIf="message === 'social-info'" class="progress-item">
-      <div class="progress-header">
-        <span class="progress-label">Profile Setup</span>
         <span class="progress-status">50% Completed</span>
       </div>
       <div class="progress-bar-container">
@@ -37,15 +27,25 @@
       </div>
     </div>
 
-    <div *ngIf="message === 'contact-info'" class="progress-item">
-      <div class="progress-header">
-        <span class="progress-label">Profile Setup</span>
-        <span class="progress-status">75% Completed</span>
-      </div>
-      <div class="progress-bar-container">
-        <div class="progress-bar progress-75"></div>
-      </div>
-    </div>
+<!--    <div *ngIf="message === 'social-info'" class="progress-item">-->
+<!--      <div class="progress-header">-->
+<!--        <span class="progress-label">Profile Setup</span>-->
+<!--        <span class="progress-status">50% Completed</span>-->
+<!--      </div>-->
+<!--      <div class="progress-bar-container">-->
+<!--        <div class="progress-bar progress-50"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div *ngIf="message === 'contact-info'" class="progress-item">-->
+<!--      <div class="progress-header">-->
+<!--        <span class="progress-label">Profile Setup</span>-->
+<!--        <span class="progress-status">75% Completed</span>-->
+<!--      </div>-->
+<!--      <div class="progress-bar-container">-->
+<!--        <div class="progress-bar progress-75"></div>-->
+<!--      </div>-->
+<!--    </div>-->
 
     <div *ngIf="message === 'complete-setup'" class="progress-item">
       <div class="progress-header">
@@ -69,14 +69,14 @@
     <div class="tab-icon icon-green"><i class="fas fa-seedling"></i></div>
     Founding Info
   </a>
-  <a class="tab" [ngClass]="{ 'active': message === 'social-info' }">
-    <div class="tab-icon icon-purple"><i class="fas fa-share-alt"></i></div>
-    Social Media
-  </a>
-  <a class="tab" [ngClass]="{ 'active': message === 'contact-info' }">
-    <div class="tab-icon icon-orange"><i class="fas fa-phone-alt"></i></div>
-    Contact
-  </a>
+<!--  <a class="tab" [ngClass]="{ 'active': message === 'social-info' }">-->
+<!--    <div class="tab-icon icon-purple"><i class="fas fa-share-alt"></i></div>-->
+<!--    Social Media-->
+<!--  </a>-->
+<!--  <a class="tab" [ngClass]="{ 'active': message === 'contact-info' }">-->
+<!--    <div class="tab-icon icon-orange"><i class="fas fa-phone-alt"></i></div>-->
+<!--    Contact-->
+<!--  </a>-->
   <a class="tab" [ngClass]="{ 'active': message === 'complete-setup' }">
     <div class="tab-icon icon-success"><i class="fas fa-circle-check"></i></div>
     Complete

@@ -8,6 +8,8 @@ import {primaryRoutes} from './layout/primary/primary.routes';
 import {CandidateDashboardComponent} from './pages/candidate-dashboard/candidate-dashboard.component';
 import {EmployerSetupComponent} from './pages/employer-setup/employer-setup.component';
 import {EmployerDashboardComponent} from './pages/employer-dashboard/employer-dashboard.component';
+import {CandidateListComponent} from './pages/candidate-list/candidate-list.component';
+import {EmployerListComponent} from './pages/employer-list/employer-list.component';
 
 export const routes: Routes = [
   {
@@ -37,5 +39,13 @@ export const routes: Routes = [
   {
     path: 'employer-dashboard',
     component: EmployerDashboardComponent,
+  },
+  {
+    path: 'candidate-list',
+    component: CandidateListComponent,
+  },
+  {
+    path: 'employer-list',
+    component: EmployerListComponent,
   }
 ];

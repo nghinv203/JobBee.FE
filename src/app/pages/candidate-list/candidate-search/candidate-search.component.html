@@ -1,0 +1,11 @@
+<div class="top">
+  <div class="container">
+    <div class="breadcrumb-cs d-flex justify-content-between align-items-center">
+      <div>{{'breadcrumb.findJob' | translate}}</div>
+      <app-breadcrumb></app-breadcrumb>
+    </div>
+    <div class="search-bar">
+      <app-search [searchConfigs]="searchBarConfig" (searchChange)="handleSearch($event)"></app-search>
+    </div>
+  </div>
+</div>
