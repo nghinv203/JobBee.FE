@@ -1,6 +1,29 @@
-.search {
-  position: sticky;
-  top: 153px;
-  width: 100%;
-  z-index: 10;
+.job-list {
+  .search {
+    position: sticky;
+    top: 153px;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .jobs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list {
+
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  :host {
+    display: inline-block;
+    width: fit-content;
+  }
 }

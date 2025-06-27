@@ -1,8 +1,31 @@
-<div>
-  <div>
+<div class="job-cell" appFeatureJob [isFeature]="data.is_featured">
+  <div class="d-flex align-items-center">
     <div class="image">
-      <img src="" alt="">
+      <img [src]="data.company_logo" alt="">
     </div>
-    <div class=""></div>
+    <div class="ms-3">
+      <div
+        class="employer"
+        nz-tooltip
+        [nzTooltipTitle]="data.employer_name"
+      >
+        {{ data.employer_name | truncate: 15 }}
+      </div>
+      <div>
+        <img src="assets/images/fi_map-pin.svg" alt="">
+        <span class="ms-2">{{ data.location_city }}</span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="title"
+      nz-tooltip
+      [nzTooltipTitle]="data.title"
+    >{{ data.title | truncate: 26 }}</div>
+    <div class="contract-info">
+      <span>{{ data.job_type }} • </span>
+      <span>{{ data.min_salary | shortNumber }} - {{ data.max_salary | shortNumber }} VND</span>
+    </div>
   </div>
 </div>
