@@ -5,13 +5,18 @@ import {JobSearchComponent} from './job-search/job-search.component';
 import {JobsService} from "../../core/services/jobs/jobs.service";
 import {IJob} from "../entities/job/job.model";
 import {IJobSearch} from './job-list.model';
+import {JobComponent} from '../entities/job/job/job.component';
+import {finalize} from 'rxjs';
+import {LoadingComponent} from '../../shared/reuseComponents/loading/loading.component';
 
 @Component({
   selector: 'app-jobs',
   imports: [
     TranslatePipe,
     BreadcrumbComponent,
-    JobSearchComponent
+    JobSearchComponent,
+    JobComponent,
+    LoadingComponent
   ],
   standalone: true,
   templateUrl: './job-list.component.html',
@@ -23,13 +28,17 @@ export class JobListComponent implements OnInit{
   searchParams: IJobSearch = {
     keyword: ''
   };
+  isLoading: boolean = false;
 
   constructor(private jobListService: JobsService) {
   }
 
   ngOnInit(): void {
-    this.jobListService.getJobs(this.searchParams).subscribe(res => {
-      this.jobs = res.data ?? [];
+    this.isLoading = true;
+    this.jobListService.getJobs(this.searchParams)
+      .pipe(finalize(() => this.isLoading = false))
+      .subscribe(res => {
+      this.jobs = (res.data as any).items ?? [];
     });
   }
 

@@ -28,13 +28,15 @@
     <div class="me-4">
       <img src="assets/images/fi_bookmark.svg" alt="">
     </div>
-    <div>
-      <app-button
-        [style]="'display:flex;justify-content:center;color: var(--primary);background-color: var(--primary-background);width:190px;align-content:center;border: unset;border-radius:3px;'"
-                  [content]="'global.applyNow'"
+    <div class="apply">
+      <button
+        class="align-items-center"
+        style="display:flex;justify-content:center;color: var(--primary);background-color: var(--primary-background);width:190px;align-content:center;border: unset;border-radius:3px;"
+        nz-button
       >
+        {{ 'global.applyNow' | translate }}
         <img id="icon" src="assets/images/fi_arrow-right.svg" alt="" style="margin-left: 12px">
-      </app-button>
+      </button>
     </div>
   </div>
 </div>

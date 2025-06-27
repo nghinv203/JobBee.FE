@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ButtonComponent} from '../../../shared/reuseComponents/button/button.component';
 import {TranslatePipe} from '@ngx-translate/core';
 import {IJob, JobType} from '../../entities/job/job.model';
-import {JobLongComponent} from '../../entities/job/job-long/job-long.component';
+import {JobComponent} from '../../entities/job/job/job.component';
 import {NzButtonComponent} from "ng-zorro-antd/button";
 import {RouterLink} from "@angular/router";
 import {IJobSearch} from '../../job-list/job-list.model';
@@ -13,7 +13,7 @@ import {JobsService} from '../../../core/services/jobs/jobs.service';
     imports: [
         ButtonComponent,
         TranslatePipe,
-        JobLongComponent,
+        JobComponent,
         NzButtonComponent,
         RouterLink
     ],

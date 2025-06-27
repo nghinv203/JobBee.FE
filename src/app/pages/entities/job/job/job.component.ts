@@ -5,9 +5,12 @@ import {TranslatePipe} from '@ngx-translate/core';
 import {AsyncPipe, CurrencyPipe} from '@angular/common';
 import {DueDatePipe} from '../../../../shared/pipes/dueDate/due-date.pipe';
 import {FeatureJobDirective} from '../feature-job.directive';
+import {JobCellComponent} from './job-cell/job-cell.component';
+import {NzButtonComponent} from 'ng-zorro-antd/button';
+import {JobItemComponent} from './job-item/job-item.component';
 
 @Component({
-  selector: 'app-job-long',
+  selector: 'app-job',
   imports: [
     ButtonComponent,
     TranslatePipe,
@@ -16,11 +19,15 @@ import {FeatureJobDirective} from '../feature-job.directive';
     TranslatePipe,
     FeatureJobDirective,
     AsyncPipe,
+    JobCellComponent,
+    NzButtonComponent,
+    JobItemComponent,
   ],
   standalone: true,
-  templateUrl: './job-long.component.html',
-  styleUrl: './job-long.component.scss'
+  templateUrl: './job.component.html',
+  styleUrl: './job.component.scss'
 })
-export class JobLongComponent {
+export class JobComponent {
+  @Input() isGrid: boolean = false;
   @Input() data!: IJob;
 }
