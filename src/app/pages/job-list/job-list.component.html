@@ -1,13 +1,17 @@
-<div class="position-relative">
+<div class="position-relative job-list">
   <div>
     <div class="search">
       <app-job-search (searchChange)="handleSearch($event)"></app-job-search>
     </div>
     <div class="container p-3">
       <div></div>
-      @for(job of jobs; track job) {
-        <app-job [data]="job"></app-job>
-      }
+      <div class="jobs-container">
+        <div class="grid w-100">
+          @for(job of jobs; track job) {
+            <app-job [data]="job"></app-job>
+          }
+        </div>
+      </div>
     </div>
   </div>
 </div>

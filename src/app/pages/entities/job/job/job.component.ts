@@ -28,6 +28,6 @@ import {JobItemComponent} from './job-item/job-item.component';
   styleUrl: './job.component.scss'
 })
 export class JobComponent {
-  @Input() isGrid: boolean = false;
+  @Input() isGrid: boolean = true;
   @Input() data!: IJob;
 }
