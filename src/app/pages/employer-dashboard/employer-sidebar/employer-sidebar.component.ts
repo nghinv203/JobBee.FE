@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {NgClass} from '@angular/common';
+import {AuthService} from '../../../shared/services/auth.service';
 
 @Component({
   selector: 'app-employer-sidebar',
@@ -11,6 +12,10 @@ import {NgClass} from '@angular/common';
   styleUrl: './employer-sidebar.component.scss'
 })
 export class EmployerSidebarComponent {
+  constructor(public authService: AuthService) {
+
+  }
+
   @Output() sendMessage = new EventEmitter<string>();
 
   message: string = 'Overview';
@@ -43,5 +48,10 @@ export class EmployerSidebarComponent {
   emitMessagePlansBilling() {
     this.message = 'PlansBilling';
     this.sendMessage.emit(this.message);
+  }
+
+  logOut() {
+    this.authService.logout();
+    location.href = "";
   }
 }
