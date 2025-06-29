@@ -5,6 +5,7 @@ import {IResponse} from '../../../shared/models/response';
 import {IJob} from '../../../pages/entities/job/job.model';
 import {AppEnvironmentService} from '../../../app.environment.service';
 import {ICommonPosition} from '../../../pages/home/common-position/common-position.model';
+import {IJobDetail} from '../../../shared/models/common';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +24,9 @@ export class JobsService {
 
   getCommonJobs(params: any) {
     return this.http.get<IResponse<ICommonPosition[]>>(`${this.baseUrl}/common-jobs`, { params });
+  }
+
+  getJobDetail(jobId: string) {
+    return this.http.get<IResponse<IJobDetail>>(`${this.baseUrl}/${jobId}`);
   }
 }
