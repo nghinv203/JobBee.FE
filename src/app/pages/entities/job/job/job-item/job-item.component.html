@@ -1,4 +1,4 @@
-<div class="job d-flex justify-content-between align-items-center" appFeatureJob [isFeature]="data.is_featured">
+<div class="job d-flex justify-content-between align-items-center" appFeatureJob [isFeature]="data.is_featured" (click)="jobId.emit(data.id)">
   <div class="d-flex align-items-center">
     <div class="job-img me-4">
       <img [src]="data.company_logo" [alt]="data.title">

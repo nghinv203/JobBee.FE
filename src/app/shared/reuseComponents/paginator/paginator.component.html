@@ -1,0 +1,20 @@
+<div class="paginator">
+  <div class="prev" (click)="prevPage()" [class.disabled]="currentPage === 1">
+    <i class="fa-solid fa-arrow-left"></i>
+  </div>
+
+  <div class="page">
+    @for(page of pages; track page) {
+      <div
+        class="item"
+        [class.active-item]="page === currentPage"
+        (click)="goToPage(page)">
+        {{ padZero(page) }}
+      </div>
+    }
+  </div>
+
+  <div class="next" (click)="nextPage()" [class.disabled]="currentPage === totalPages">
+    <i class="fa-solid fa-arrow-right"></i>
+  </div>
+</div>

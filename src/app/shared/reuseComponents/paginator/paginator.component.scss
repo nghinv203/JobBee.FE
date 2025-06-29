@@ -1,0 +1,29 @@
+.paginator {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  .page {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 4px;
+
+    .item {
+      padding: 14px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background-color 0.4s ease;
+      font-weight: 500;
+
+      &:hover {
+        background-color: var(--gray-background);
+        color: var(--black);
+      }
+    }
+
+    .active-item {
+      color: var(--white);
+      background-color: var(--primary)
+    }
+  }
+}

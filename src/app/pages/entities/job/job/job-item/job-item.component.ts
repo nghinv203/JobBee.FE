@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {IJob} from '../../job.model';
 import {AsyncPipe, CurrencyPipe} from '@angular/common';
 import {DueDatePipe} from '../../../../../shared/pipes/dueDate/due-date.pipe';
@@ -22,4 +22,5 @@ import {TranslatePipe} from '@ngx-translate/core';
 })
 export class JobItemComponent {
   @Input() data!: IJob;
+  @Output() jobId = new EventEmitter<string>();
 }

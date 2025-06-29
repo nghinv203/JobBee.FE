@@ -1,5 +1,5 @@
 @if(!isGrid) {
-  <app-job-item [data]="data"></app-job-item>
+  <app-job-item (jobId)="handleViewJobDetail($event)" [data]="data"></app-job-item>
 } @else {
-  <app-job-cell [data]="data"></app-job-cell>
+  <app-job-cell (jobId)="handleViewJobDetail($event)" [data]="data"></app-job-cell>
 }

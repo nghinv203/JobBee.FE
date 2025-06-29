@@ -4,15 +4,34 @@
       <app-job-search (searchChange)="handleSearch($event)"></app-job-search>
     </div>
     <div class="container p-3">
-      <div></div>
+      <div class="d-flex align-items-center justify-content-end pt-3 pb-3">
+        <div class="view-list d-flex align-items-center">
+          <div
+            [class.active]="isGrid"
+            class="view active" (click)="handleSwitchView(true)">
+            <img src="assets/images/grid%201.svg">
+          </div>
+          <div
+            [class.active]="!isGrid"
+            class="view" (click)="handleSwitchView(false)">
+            <img src="assets/images/list.svg">
+          </div>
+        </div>
+      </div>
       <div class="jobs-container">
-        <div class="grid w-100">
+        <div
+          [class.grid]="isGrid"
+          class="grid w-100">
           @for(job of jobs; track job) {
-            <app-job [data]="job"></app-job>
+            <app-job [data]="job" [isGrid]="isGrid"></app-job>
           }
         </div>
       </div>
+      <div class="d-flex flex-column align-items-center">
+        <app-paginator [totalPages]="totalPages" (page)="handlePaging($event)"></app-paginator>
+      </div>
     </div>
+
   </div>
 </div>
 @if(isLoading) {

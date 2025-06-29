@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {TranslatePipe} from '@ngx-translate/core';
 import {IJob} from '../../job.model';
 import {FeatureJobDirective} from '../../feature-job.directive';
@@ -21,4 +21,5 @@ import {NzTooltipDirective} from 'ng-zorro-antd/tooltip';
 })
 export class JobCellComponent {
   @Input() data!: IJob;
+  @Output() jobId = new EventEmitter<string>();
 }
