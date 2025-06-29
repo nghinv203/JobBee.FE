@@ -8,6 +8,7 @@ import {IJobSearch} from './job-list.model';
 import {JobComponent} from '../entities/job/job/job.component';
 import {finalize} from 'rxjs';
 import {LoadingComponent} from '../../shared/reuseComponents/loading/loading.component';
+import {PaginatorComponent} from '../../shared/reuseComponents/paginator/paginator.component';
 
 @Component({
   selector: 'app-jobs',
@@ -16,7 +17,8 @@ import {LoadingComponent} from '../../shared/reuseComponents/loading/loading.com
     BreadcrumbComponent,
     JobSearchComponent,
     JobComponent,
-    LoadingComponent
+    LoadingComponent,
+    PaginatorComponent
   ],
   standalone: true,
   templateUrl: './job-list.component.html',
@@ -25,10 +27,12 @@ import {LoadingComponent} from '../../shared/reuseComponents/loading/loading.com
 export class JobListComponent implements OnInit{
 
   jobs: IJob[] = [];
-  searchParams: IJobSearch = {
+  searchParams: any = {
     keyword: ''
   };
   isLoading: boolean = false;
+  isGrid = true;
+  totalPages = 0;
 
   constructor(private jobListService: JobsService) {
   }
@@ -39,10 +43,26 @@ export class JobListComponent implements OnInit{
       .pipe(finalize(() => this.isLoading = false))
       .subscribe(res => {
       this.jobs = (res.data as any).items ?? [];
-    });
+        this.totalPages = Math.ceil(this.jobs.length / 20);
+      });
   }
 
   handleSearch(event: any) {
-    console.log(event);
+    this.isLoading = true;
+    this.jobListService.getJobs(event)
+      .pipe(finalize(() => this.isLoading = false))
+      .subscribe(res => {
+        this.jobs = (res.data as any).items ?? [];
+        this.totalPages = Math.ceil(this.jobs.length / 20);
+      });
+  }
+
+  handleSwitchView(isGrid: boolean) {
+    this.isGrid = isGrid;
+  }
+
+  handlePaging(page: number) {
+    this.searchParams.page = page;
+    this.handleSearch(this.searchParams)
   }
 }

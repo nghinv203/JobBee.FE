@@ -1,4 +1,4 @@
-<div class="job-cell" appFeatureJob [isFeature]="data.is_featured">
+<div class="job-cell" appFeatureJob [isFeature]="data.is_featured" (click)="jobId.emit(data.id)">
   <div class="d-flex align-items-center">
     <div class="image">
       <img [src]="data.company_logo" alt="">
