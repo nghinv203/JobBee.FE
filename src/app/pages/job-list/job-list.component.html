@@ -21,8 +21,8 @@
       <div class="jobs-container">
         <div
           [class.grid]="isGrid"
-          class="grid w-100">
-          @for(job of jobs; track job) {
+          class="w-100">
+          @for(job of jobs; track job.id) {
             <app-job [data]="job" [isGrid]="isGrid"></app-job>
           }
         </div>

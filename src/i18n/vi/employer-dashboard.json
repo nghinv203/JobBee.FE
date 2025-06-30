@@ -1,346 +1,348 @@
 {
-  "dashboard": {
-    "greeting": "Xin chào, Instagram",
-    "subtitle": "Đây là hoạt động và ứng dụng hàng ngày của bạn",
-    "stats": {
-      "openJobs": "Việc làm đang mở",
-      "savedCandidates": "Ứng viên đã lưu"
-    },
-    "recentJobs": {
-      "title": "Công việc vừa đăng",
-      "viewAll": "Xem tất cả →",
-      "tableHeader": {
-        "jobs": "Công việc",
-        "status": "Trạng thái",
-        "applications": "Đơn ứng tuyển"
-      }
-    },
-    "status": {
-      "active": "Đang hoạt động",
-      "expired": "Hết hạn"
-    }
-  },
-  "postJob": {
-    "title": "Đăng tuyển dụng",
-    "form": {
-      "jobTitle": "Chức danh công việc",
-      "jobTitlePlaceholder": "Thêm chức danh, vai trò, số lượng tuyển...",
-      "tags": "Từ khóa",
-      "tagsPlaceholder": "Từ khóa công việc, thẻ tag, v.v.",
-      "jobRole": "Vai trò công việc",
-      "select": "Chọn...",
-      "roles": {
-        "designer": "Thiết kế",
-        "developer": "Lập trình viên",
-        "manager": "Quản lý",
-        "analyst": "Phân tích viên"
+  "employer": {
+    "dashboard": {
+      "greeting": "Xin chào, Instagram",
+      "subtitle": "Đây là hoạt động và ứng dụng hàng ngày của bạn",
+      "stats": {
+        "openJobs": "Việc làm đang mở",
+        "savedCandidates": "Ứng viên đã lưu"
       },
-      "salarySection": "Lương",
-      "minSalary": "Lương tối thiểu",
-      "minSalaryPlaceholder": "Mức lương tối thiểu...",
-      "maxSalary": "Lương tối đa",
-      "maxSalaryPlaceholder": "Mức lương tối đa...",
-      "salaryType": "Hình thức trả lương",
-      "salaryTypes": {
-        "hourly": "Theo giờ",
-        "monthly": "Hàng tháng",
-        "yearly": "Hàng năm"
-      },
-      "advanceInfo": "Thông tin nâng cao",
-      "education": "Trình độ học vấn",
-      "educations": {
-        "highSchool": "Trung học",
-        "bachelor": "Cử nhân",
-        "master": "Thạc sĩ",
-        "phd": "Tiến sĩ"
-      },
-      "experience": "Kinh nghiệm",
-      "experiences": {
-        "entry": "Mới vào nghề",
-        "mid": "Trung cấp",
-        "senior": "Cao cấp"
-      },
-      "jobType": "Loại công việc",
-      "jobTypes": {
-        "fullTime": "Toàn thời gian",
-        "partTime": "Bán thời gian",
-        "contract": "Hợp đồng",
-        "internship": "Thực tập"
-      },
-      "vacancies": "Số lượng tuyển",
-      "vacancyOptions": {
-        "1": "1",
-        "2-5": "2-5",
-        "5-10": "5-10",
-        "10+": "10+"
-      },
-      "expirationDate": "Ngày hết hạn",
-      "jobLevel": "Cấp độ công việc",
-      "jobLevels": {
-        "entry": "Mới vào nghề",
-        "mid": "Trung cấp",
-        "senior": "Cao cấp",
-        "executive": "Quản lý cấp cao"
-      },
-      "applyOn": "Nộp đơn qua:",
-      "applyMethods": {
-        "jobaplied": {
-          "title": "Trên Jobaplied",
-          "description": "Ứng viên sẽ nộp đơn trực tiếp thông qua quy trình của Jobaplied"
-        },
-        "external": {
-          "title": "Nền tảng bên ngoài",
-          "description": "Ứng viên sẽ được chuyển hướng sang website của bạn để nộp đơn"
-        },
-        "email": {
-          "title": "Qua Email",
-          "description": "Ứng viên có thể gửi đơn ứng tuyển qua địa chỉ email của bạn"
+      "recentJobs": {
+        "title": "Công việc vừa đăng",
+        "viewAll": "Xem tất cả →",
+        "tableHeader": {
+          "jobs": "Công việc",
+          "status": "Trạng thái",
+          "applications": "Đơn ứng tuyển"
         }
       },
-      "descriptionSection": "Mô tả & Trách nhiệm",
-      "description": "Mô tả",
-      "descriptionPlaceholder": "Thêm mô tả công việc...",
-      "responsibilities": "Trách nhiệm",
-      "responsibilitiesPlaceholder": "Thêm các trách nhiệm của công việc...",
-      "submit": "Đăng tin tuyển dụng"
-    }
-  },
-  "jobSection": {
-    "title": "Công việc của tôi",
-    "tableHeader": {
-      "job": "Công việc",
-      "status": "Trạng thái",
-      "applications": "Đơn ứng tuyển",
-      "actions": "Hành động"
-    },
-    "jobs": {
-      "remaining1": "Còn lại",
-      "remaining2": "ngày",
-      "applications": "đơn ứng tuyển",
-      "status": "Đang hoạt động"
-    },
-    "actions": {
-      "viewApplications": "Xem đơn ứng tuyển",
-      "promoteJob": "Quảng bá công việc",
-      "viewDetail": "Xem chi tiết",
-      "expire": "Hết hạn"
-    },
-    "pagination": {
-      "prev": "Trước",
-      "next": "Tiếp"
-    }
-  },
-  "breadcrumb": {
-    "employer": "Nhà tuyển dụng",
-    "myJobs": "Việc làm của tôi",
-    "applications": "Hồ sơ ứng tuyển"
-  },
-  "header": {
-    "pageTitle": "Hồ sơ ứng tuyển"
-  },
-  "applicationsSection": {
-    "title": "Tất cả hồ sơ ({{count}})",
-    "dropdown": {
-      "edit": "Chỉnh sửa cột",
-      "delete": "Xoá"
-    },
-    "videoResume": "Xem video CV"
-  },
-  "sidebar": {
-    "sort": {
-      "title": "Sắp xếp hồ sơ",
-      "newest": "Mới nhất",
-      "oldest": "Cũ nhất"
-    },
-    "createJob": {
-      "title": "Tạo công việc",
-      "subtitle": "Đăng công việc và tuyển dụng nhân tài",
-      "button": "Tạo công việc"
-    }
-  },
-  "savedCandidates": {
-    "title": "Ứng viên đã lưu",
-    "infoText": "Tất cả ứng viên sẽ hiển thị đến ngày {{date}}",
-    "button": {
-      "viewProfile": "Xem hồ sơ"
-    }
-  },
-  "popup": {
-    "close": "Đóng",
-    "profile": {
-      "viewVideoResume": "Xem video CV"
-    },
-    "sections": {
-      "biographyTitle": "Tiểu sử",
-      "coverLetterTitle": "Thư xin việc",
-      "socialTitle": "Theo dõi tôi trên mạng xã hội"
-    },
-    "info": {
-      "age": "Tuổi",
-      "dob": "Ngày sinh",
-      "country": "Quốc gia",
-      "maritalStatus": "Tình trạng hôn nhân",
-      "gender": "Giới tính",
-      "experience": "Kinh nghiệm",
-      "qualification": "Trình độ học vấn"
-    },
-    "contact": {
-      "title": "Thông tin liên hệ",
-      "website": "Trang web",
-      "location": "Địa chỉ",
-      "phone": "Số điện thoại",
-      "secondaryPhone": "Số điện thoại phụ",
-      "email": "Địa chỉ Email"
-    }
-  },
-  "subscription": {
-    "header": {
-      "title": "Mua Gói Cao Cấp Để Đăng Tin Tuyển Dụng",
-      "description": "Donec eu dui ut dolor commodo ornare. Sed arcu libero, malesuada quis justo sit amet, varius tempus neque. Quisque ultrices mi sed lorem commodo, vel tempus lectus ultrices."
-    },
-    "plans": {
-      "basic": {
-        "title": "Cơ Bản",
-        "description": "Gói tiết kiệm dành cho nhà tuyển dụng mới bắt đầu. Đăng một số lượng giới hạn tin tuyển dụng.",
-        "price": "$19",
-        "period": "/Tháng",
-        "features": [
-          "Đăng 1 tin tuyển dụng",
-          "Tin khẩn cấp & nổi bật",
-          "Làm nổi bật tin bằng màu sắc",
-          "Truy cập & lưu 5 ứng viên",
-          "Hiển thị hồ sơ trong 10 ngày",
-          "Hỗ trợ khẩn cấp 24/7"
-        ],
-        "button": "Chọn Gói"
-      },
-      "standard": {
-        "title": "Tiêu Chuẩn",
-        "description": "Gói phổ biến nhất với nhiều ưu đãi. Đăng số lượng tin tuyển dụng nhiều hơn và nhận hỗ trợ ưu tiên.",
-        "price": "$39",
-        "period": "/Tháng",
-        "features": [
-          "3 tin tuyển dụng hoạt động",
-          "Tin khẩn cấp & nổi bật",
-          "Làm nổi bật tin bằng màu sắc",
-          "Truy cập & lưu 10 ứng viên",
-          "Hiển thị hồ sơ trong 20 ngày",
-          "Hỗ trợ khẩn cấp 24/7"
-        ],
-        "button": "Chọn Gói"
-      },
-      "professional": {
-        "title": "Chuyên Nghiệp",
-        "description": "Gói cao cấp dành cho doanh nghiệp. Đăng không giới hạn tin tuyển dụng, quảng bá tin hiệu quả.",
-        "price": "$59",
-        "period": "/Tháng",
-        "features": [
-          "6 tin tuyển dụng hoạt động",
-          "Tin khẩn cấp & nổi bật",
-          "Làm nổi bật tin bằng màu sắc",
-          "Truy cập & lưu 20 ứng viên",
-          "Hiển thị hồ sơ trong 30 ngày",
-          "Hỗ trợ khẩn cấp 24/7"
-        ],
-        "button": "Chọn Gói"
+      "status": {
+        "active": "Đang hoạt động",
+        "expired": "Hết hạn"
       }
-    }
-  },
-  "sidebarEmployer": {
-    "header": "BẢNG ĐIỀU KHIỂN NHÀ TUYỂN DỤNG",
-    "nav": {
-      "overview": "Tổng Quan",
-      "postAJob": "Đăng Tin Tuyển Dụng",
-      "myJobs": "Công Việc Của Tôi",
-      "savedCandidate": "Ứng Viên Đã Lưu",
-      "plansBilling": "Gói Dịch Vụ & Thanh Toán",
-      "settings": "Cài Đặt"
     },
-    "footer": {
-      "logout": "Đăng Xuất"
-    }
-  },
-  "settings": {
-    "title": "Cài Đặt",
-    "tabs": {
-      "company": "Thông Tin Công Ty",
-      "founding": "Thông Tin Thành Lập",
-      "social": "Hồ Sơ Mạng Xã Hội",
-      "account": "Cài Đặt Tài Khoản"
-    }
-  },
-  "companyInfo": {
-    "title": "Logo & Ảnh Banner",
-    "logoUpload": {
-      "title": "Tải tài liệu lên",
-      "browse": "Chọn ảnh",
-      "dragHere": "hoặc thả vào đây",
-      "hint": "Ảnh có độ phân giải lớn hơn 400 pixel\nsẽ hiển thị tốt nhất. Dung lượng tối đa 5 MB."
+    "postJob": {
+      "title": "Đăng tuyển dụng",
+      "form": {
+        "jobTitle": "Chức danh công việc",
+        "jobTitlePlaceholder": "Thêm chức danh, vai trò, số lượng tuyển...",
+        "tags": "Từ khóa",
+        "tagsPlaceholder": "Từ khóa công việc, thẻ tag, v.v.",
+        "jobRole": "Vai trò công việc",
+        "select": "Chọn...",
+        "roles": {
+          "designer": "Thiết kế",
+          "developer": "Lập trình viên",
+          "manager": "Quản lý",
+          "analyst": "Phân tích viên"
+        },
+        "salarySection": "Lương",
+        "minSalary": "Lương tối thiểu",
+        "minSalaryPlaceholder": "Mức lương tối thiểu...",
+        "maxSalary": "Lương tối đa",
+        "maxSalaryPlaceholder": "Mức lương tối đa...",
+        "salaryType": "Hình thức trả lương",
+        "salaryTypes": {
+          "hourly": "Theo giờ",
+          "monthly": "Hàng tháng",
+          "yearly": "Hàng năm"
+        },
+        "advanceInfo": "Thông tin nâng cao",
+        "education": "Trình độ học vấn",
+        "educations": {
+          "highSchool": "Trung học",
+          "bachelor": "Cử nhân",
+          "master": "Thạc sĩ",
+          "phd": "Tiến sĩ"
+        },
+        "experience": "Kinh nghiệm",
+        "experiences": {
+          "entry": "Mới vào nghề",
+          "mid": "Trung cấp",
+          "senior": "Cao cấp"
+        },
+        "jobType": "Loại công việc",
+        "jobTypes": {
+          "fullTime": "Toàn thời gian",
+          "partTime": "Bán thời gian",
+          "contract": "Hợp đồng",
+          "internship": "Thực tập"
+        },
+        "vacancies": "Số lượng tuyển",
+        "vacancyOptions": {
+          "1": "1",
+          "2-5": "2-5",
+          "5-10": "5-10",
+          "10+": "10+"
+        },
+        "expirationDate": "Ngày hết hạn",
+        "jobLevel": "Cấp độ công việc",
+        "jobLevels": {
+          "entry": "Mới vào nghề",
+          "mid": "Trung cấp",
+          "senior": "Cao cấp",
+          "executive": "Quản lý cấp cao"
+        },
+        "applyOn": "Nộp đơn qua:",
+        "applyMethods": {
+          "jobaplied": {
+            "title": "Trên Jobaplied",
+            "description": "Ứng viên sẽ nộp đơn trực tiếp thông qua quy trình của Jobaplied"
+          },
+          "external": {
+            "title": "Nền tảng bên ngoài",
+            "description": "Ứng viên sẽ được chuyển hướng sang website của bạn để nộp đơn"
+          },
+          "email": {
+            "title": "Qua Email",
+            "description": "Ứng viên có thể gửi đơn ứng tuyển qua địa chỉ email của bạn"
+          }
+        },
+        "descriptionSection": "Mô tả & Trách nhiệm",
+        "description": "Mô tả",
+        "descriptionPlaceholder": "Thêm mô tả công việc...",
+        "responsibilities": "Trách nhiệm",
+        "responsibilitiesPlaceholder": "Thêm các trách nhiệm của công việc...",
+        "submit": "Đăng tin tuyển dụng"
+      }
     },
-    "bannerUpload": {
-      "title": "Ảnh Banner",
-      "browse": "Chọn ảnh",
-      "dragHere": "hoặc thả vào đây",
-      "hint": "Kích thước chuẩn của ảnh banner là 1520×400. Hỗ trợ định dạng JPEG, PNG. Dung lượng tối đa 5 MB."
+    "jobSection": {
+      "title": "Công việc của tôi",
+      "tableHeader": {
+        "job": "Công việc",
+        "status": "Trạng thái",
+        "applications": "Đơn ứng tuyển",
+        "actions": "Hành động"
+      },
+      "jobs": {
+        "remaining1": "Còn lại",
+        "remaining2": "ngày",
+        "applications": "đơn ứng tuyển",
+        "status": "Đang hoạt động"
+      },
+      "actions": {
+        "viewApplications": "Xem đơn ứng tuyển",
+        "promoteJob": "Quảng bá công việc",
+        "viewDetail": "Xem chi tiết",
+        "expire": "Hết hạn"
+      },
+      "pagination": {
+        "prev": "Trước",
+        "next": "Tiếp"
+      }
     },
-    "form": {
-      "companyName": "Tên công ty",
-      "aboutUs": "Về Chúng Tôi",
-      "placeholder": "Viết vài dòng giới thiệu về công ty bạn. Hãy để ứng viên biết bạn là ai...",
-      "saveButton": "Lưu Thay Đổi"
+    "breadcrumb": {
+      "employer": "Nhà tuyển dụng",
+      "myJobs": "Việc làm của tôi",
+      "applications": "Hồ sơ ứng tuyển"
     },
-    "toolbar": {
-      "bold": "In đậm",
-      "italic": "In nghiêng",
-      "underline": "Gạch chân",
-      "strike": "Gạch ngang",
-      "link": "Chèn liên kết",
-      "bullets": "Danh sách chấm",
-      "numbers": "Danh sách số"
-    }
-  },
-  "foundingForm": {
-    "industryTypes": "Ngành nghề",
-    "teamSize": "Quy mô nhân sự",
-    "select": "Chọn...",
-    "establishmentYear": "Năm thành lập",
-    "companyWebsite": "Trang web công ty",
-    "websitePlaceholder": "Địa chỉ website...",
-    "saveButton": "Lưu Thay Đổi",
-    "datePlaceholder": "dd/mm/yyyy"
-  },
-  "socialLinksForm": {
-    "socialLinkLabel": "Liên kết mạng xã hội {{index}}",
-    "platformSelectPlaceholder": "Chọn nền tảng...",
-    "urlPlaceholder": "Liên kết hồ sơ...",
-    "addButton": "Thêm liên kết mới",
-    "removeButton": "Xóa",
-    "saveButton": "Lưu thay đổi"
-  },
-  "account": {
-    "contactInfoTitle": "Thông Tin Liên Hệ",
-    "cityLabel": "Thành phố",
-    "districtLabel": "Quận/Huyện",
-    "communeLabel": "Phường/Xã",
-    "citySelectPlaceholder": "Chọn Thành phố...",
-    "districtSelectPlaceholder": "Chọn Quận/Huyện...",
-    "communeSelectPlaceholder": "Chọn Phường/Xã...",
-    "locationLabel": "Vị Trí Bản Đồ",
-    "phoneLabel": "Số điện thoại",
-    "phonePlaceholder": "Số điện thoại...",
-    "emailLabel": "Email",
-    "emailPlaceholder": "Địa chỉ email",
-    "saveChanges": "Lưu thay đổi",
+    "header": {
+      "pageTitle": "Hồ sơ ứng tuyển"
+    },
+    "applicationsSection": {
+      "title": "Tất cả hồ sơ ({{count}})",
+      "dropdown": {
+        "edit": "Chỉnh sửa cột",
+        "delete": "Xoá"
+      },
+      "videoResume": "Xem video CV"
+    },
+    "sidebar": {
+      "sort": {
+        "title": "Sắp xếp hồ sơ",
+        "newest": "Mới nhất",
+        "oldest": "Cũ nhất"
+      },
+      "createJob": {
+        "title": "Tạo công việc",
+        "subtitle": "Đăng công việc và tuyển dụng nhân tài",
+        "button": "Tạo công việc"
+      }
+    },
+    "savedCandidates": {
+      "title": "Ứng viên đã lưu",
+      "infoText": "Tất cả ứng viên sẽ hiển thị đến ngày {{date}}",
+      "button": {
+        "viewProfile": "Xem hồ sơ"
+      }
+    },
+    "popup": {
+      "close": "Đóng",
+      "profile": {
+        "viewVideoResume": "Xem video CV"
+      },
+      "sections": {
+        "biographyTitle": "Tiểu sử",
+        "coverLetterTitle": "Thư xin việc",
+        "socialTitle": "Theo dõi tôi trên mạng xã hội"
+      },
+      "info": {
+        "age": "Tuổi",
+        "dob": "Ngày sinh",
+        "country": "Quốc gia",
+        "maritalStatus": "Tình trạng hôn nhân",
+        "gender": "Giới tính",
+        "experience": "Kinh nghiệm",
+        "qualification": "Trình độ học vấn"
+      },
+      "contact": {
+        "title": "Thông tin liên hệ",
+        "website": "Trang web",
+        "location": "Địa chỉ",
+        "phone": "Số điện thoại",
+        "secondaryPhone": "Số điện thoại phụ",
+        "email": "Địa chỉ Email"
+      }
+    },
+    "subscription": {
+      "header": {
+        "title": "Mua Gói Cao Cấp Để Đăng Tin Tuyển Dụng",
+        "description": "Donec eu dui ut dolor commodo ornare. Sed arcu libero, malesuada quis justo sit amet, varius tempus neque. Quisque ultrices mi sed lorem commodo, vel tempus lectus ultrices."
+      },
+      "plans": {
+        "basic": {
+          "title": "Cơ Bản",
+          "description": "Gói tiết kiệm dành cho nhà tuyển dụng mới bắt đầu. Đăng một số lượng giới hạn tin tuyển dụng.",
+          "price": "$19",
+          "period": "/Tháng",
+          "features": [
+            "Đăng 1 tin tuyển dụng",
+            "Tin khẩn cấp & nổi bật",
+            "Làm nổi bật tin bằng màu sắc",
+            "Truy cập & lưu 5 ứng viên",
+            "Hiển thị hồ sơ trong 10 ngày",
+            "Hỗ trợ khẩn cấp 24/7"
+          ],
+          "button": "Chọn Gói"
+        },
+        "standard": {
+          "title": "Tiêu Chuẩn",
+          "description": "Gói phổ biến nhất với nhiều ưu đãi. Đăng số lượng tin tuyển dụng nhiều hơn và nhận hỗ trợ ưu tiên.",
+          "price": "$39",
+          "period": "/Tháng",
+          "features": [
+            "3 tin tuyển dụng hoạt động",
+            "Tin khẩn cấp & nổi bật",
+            "Làm nổi bật tin bằng màu sắc",
+            "Truy cập & lưu 10 ứng viên",
+            "Hiển thị hồ sơ trong 20 ngày",
+            "Hỗ trợ khẩn cấp 24/7"
+          ],
+          "button": "Chọn Gói"
+        },
+        "professional": {
+          "title": "Chuyên Nghiệp",
+          "description": "Gói cao cấp dành cho doanh nghiệp. Đăng không giới hạn tin tuyển dụng, quảng bá tin hiệu quả.",
+          "price": "$59",
+          "period": "/Tháng",
+          "features": [
+            "6 tin tuyển dụng hoạt động",
+            "Tin khẩn cấp & nổi bật",
+            "Làm nổi bật tin bằng màu sắc",
+            "Truy cập & lưu 20 ứng viên",
+            "Hiển thị hồ sơ trong 30 ngày",
+            "Hỗ trợ khẩn cấp 24/7"
+          ],
+          "button": "Chọn Gói"
+        }
+      }
+    },
+    "sidebarEmployer": {
+      "header": "BẢNG ĐIỀU KHIỂN NHÀ TUYỂN DỤNG",
+      "nav": {
+        "overview": "Tổng Quan",
+        "postAJob": "Đăng Tin Tuyển Dụng",
+        "myJobs": "Công Việc Của Tôi",
+        "savedCandidate": "Ứng Viên Đã Lưu",
+        "plansBilling": "Gói Dịch Vụ & Thanh Toán",
+        "settings": "Cài Đặt"
+      },
+      "footer": {
+        "logout": "Đăng Xuất"
+      }
+    },
+    "settings": {
+      "title": "Cài Đặt",
+      "tabs": {
+        "company": "Thông Tin Công Ty",
+        "founding": "Thông Tin Thành Lập",
+        "social": "Hồ Sơ Mạng Xã Hội",
+        "account": "Cài Đặt Tài Khoản"
+      }
+    },
+    "companyInfo": {
+      "title": "Logo & Ảnh Banner",
+      "logoUpload": {
+        "title": "Tải tài liệu lên",
+        "browse": "Chọn ảnh",
+        "dragHere": "hoặc thả vào đây",
+        "hint": "Ảnh có độ phân giải lớn hơn 400 pixel\nsẽ hiển thị tốt nhất. Dung lượng tối đa 5 MB."
+      },
+      "bannerUpload": {
+        "title": "Ảnh Banner",
+        "browse": "Chọn ảnh",
+        "dragHere": "hoặc thả vào đây",
+        "hint": "Kích thước chuẩn của ảnh banner là 1520×400. Hỗ trợ định dạng JPEG, PNG. Dung lượng tối đa 5 MB."
+      },
+      "form": {
+        "companyName": "Tên công ty",
+        "aboutUs": "Về Chúng Tôi",
+        "placeholder": "Viết vài dòng giới thiệu về công ty bạn. Hãy để ứng viên biết bạn là ai...",
+        "saveButton": "Lưu Thay Đổi"
+      },
+      "toolbar": {
+        "bold": "In đậm",
+        "italic": "In nghiêng",
+        "underline": "Gạch chân",
+        "strike": "Gạch ngang",
+        "link": "Chèn liên kết",
+        "bullets": "Danh sách chấm",
+        "numbers": "Danh sách số"
+      }
+    },
+    "foundingForm": {
+      "industryTypes": "Ngành nghề",
+      "teamSize": "Quy mô nhân sự",
+      "select": "Chọn...",
+      "establishmentYear": "Năm thành lập",
+      "companyWebsite": "Trang web công ty",
+      "websitePlaceholder": "Địa chỉ website...",
+      "saveButton": "Lưu Thay Đổi",
+      "datePlaceholder": "dd/mm/yyyy"
+    },
+    "socialLinksForm": {
+      "socialLinkLabel": "Liên kết mạng xã hội {{index}}",
+      "platformSelectPlaceholder": "Chọn nền tảng...",
+      "urlPlaceholder": "Liên kết hồ sơ...",
+      "addButton": "Thêm liên kết mới",
+      "removeButton": "Xóa",
+      "saveButton": "Lưu thay đổi"
+    },
+    "account": {
+      "contactInfoTitle": "Thông Tin Liên Hệ",
+      "cityLabel": "Thành phố",
+      "districtLabel": "Quận/Huyện",
+      "communeLabel": "Phường/Xã",
+      "citySelectPlaceholder": "Chọn Thành phố...",
+      "districtSelectPlaceholder": "Chọn Quận/Huyện...",
+      "communeSelectPlaceholder": "Chọn Phường/Xã...",
+      "locationLabel": "Vị Trí Bản Đồ",
+      "phoneLabel": "Số điện thoại",
+      "phonePlaceholder": "Số điện thoại...",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Địa chỉ email",
+      "saveChanges": "Lưu thay đổi",
 
-    "changePasswordTitle": "Đổi Mật Khẩu",
-    "currentPasswordLabel": "Mật khẩu hiện tại",
-    "newPasswordLabel": "Mật khẩu mới",
-    "confirmPasswordLabel": "Xác nhận mật khẩu",
-    "passwordPlaceholder": "Mật khẩu",
-    "changePasswordButton": "Đổi mật khẩu",
+      "changePasswordTitle": "Đổi Mật Khẩu",
+      "currentPasswordLabel": "Mật khẩu hiện tại",
+      "newPasswordLabel": "Mật khẩu mới",
+      "confirmPasswordLabel": "Xác nhận mật khẩu",
+      "passwordPlaceholder": "Mật khẩu",
+      "changePasswordButton": "Đổi mật khẩu",
 
-    "deleteAccountTitle": "Xóa Công Ty Của Bạn",
-    "deleteWarning": "Nếu bạn xóa tài khoản JobBee, bạn sẽ không thể nhận thông tin về việc làm phù hợp, theo dõi nhà tuyển dụng, cảnh báo việc làm, danh sách việc làm đã lưu và nhiều hơn nữa. Bạn sẽ không thể sử dụng các dịch vụ của Jobpilot.com.",
-    "deleteAccountButton": "Đóng tài khoản"
+      "deleteAccountTitle": "Xóa Công Ty Của Bạn",
+      "deleteWarning": "Nếu bạn xóa tài khoản JobBee, bạn sẽ không thể nhận thông tin về việc làm phù hợp, theo dõi nhà tuyển dụng, cảnh báo việc làm, danh sách việc làm đã lưu và nhiều hơn nữa. Bạn sẽ không thể sử dụng các dịch vụ của Jobpilot.com.",
+      "deleteAccountButton": "Đóng tài khoản"
+    }
   }
 }

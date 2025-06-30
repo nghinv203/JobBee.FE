@@ -1,27 +1,128 @@
-<div>
-  <div></div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<div class="breadcrumb">
   <div class="container">
-    <div class="d-flex justify-content-between align-items-center">
-      <div>
-        <div>
-          <img src="" alt="">
+    <span><a>Trang chủ</a> / <a>Job List</a> / <strong>Job Detail</strong></span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="main-content">
+    <div class="job-header">
+      <div class="company-logo">
+        <img [src]="job.employer.companyLogo" alt="">
+      </div>
+      <div class="job-info">
+        <h1>{{ job.title }}</h1>
+        <div class="job-badges">
+          <span class="badge badge-remote">{{ job.jobType }}</span>
         </div>
-        <div>
-          <div>
-            Senior UI/UX Design
-          </div>
-          <div>
-            <span><img src="" alt=""></span>
-            <span><img src="" alt=""></span>
-            <span><img src="" alt=""></span>
-          </div>
+        <div class="job-meta">
+          <span
+            nz-tooltip
+            [nzTooltipTitle]="job.employer.websiteUrl"
+          ><i class="fas fa-globe"></i> {{ job.employer.websiteUrl | truncate: 15 }}</span>
+          <span><i class="fas fa-phone"></i> {{ job.employer.contactPhone | truncate: 8 }}</span>
+          <span><i class="fas fa-envelope"></i> {{ job.employer.contactEmail | truncate: 15 }}</span>
         </div>
       </div>
-      <div>
-        <button>Save</button>
-        <button>Apply now</button>
+      <button class="apply-btn">Ứng tuyển ngay</button>
+    </div>
+
+    <div class="section">
+      <h2>Mô tả công việc</h2>
+      <div [innerHTML]="job.description"></div>
+    </div>
+
+    <div class="section">
+      <h2>Trách nhiệm</h2>
+      <ul [innerHTML]="job.responsibility">
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Chia sẻ công việc này:</h2>
+      <div class="social-links">
+        <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#" class="social-btn pinterest"><i class="fab fa-pinterest"></i> Pinterest</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="sidebar-card">
+      <h3>Tổng quan công việc</h3>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+          <div class="label">Ngày đăng</div>
+          <div class="value">{{ job.postedAt | date }}</div>
+        </div>
+        <div class="info-item">
+          <div class="icon"><i class="fas fa-clock"></i></div>
+          <div class="label">Hạn nộp</div>
+          <div class="value">{{ job.applicationDeadline | date }}</div>
+        </div>
+        <div class="info-item">
+          <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="label">Địa điểm</div>
+          <div class="value">{{ job.locationCity }}</div>
+        </div>
+        <div class="info-item">
+          <div class="icon"><i class="fas fa-briefcase"></i></div>
+          <div class="label">Loại công việc</div>
+          <div class="value">{{ job.jobType }}</div>
+        </div>
+        <div class="info-item">
+          <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+          <div class="label">Lương</div>
+          <div class="value">{{ job.minSalary | shortNumber }} - {{ job.maxSalary | shortNumber }} / VND</div>
+        </div>
+        <div class="info-item">
+          <div class="icon"><i class="fas fa-user-tie"></i></div>
+          <div class="label">Kinh nghiệm</div>
+          <div class="value">{{ job.experience }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="company-info">
+        <div class="company-header" (click)="viewCompanyDetail(job.employer.employerId)">
+          <div class="logo">
+            <img [src]="job.employer.companyLogo" alt="">
+          </div>
+          <div>
+            <h3>
+              {{ job.employer.companyName }}
+            </h3>
+            <div style="color: #1976d2; font-size: 12px;">Gửi tin nhắn riêng</div>
+          </div>
+        </div>
+        <div class="company-details">
+          <div><strong>Quy mô công ty:</strong> {{ job.employer.companySize }}</div>
+          <div><strong>Ngành nghề:</strong> {{ job.employer.industry }}</div>
+          <div><strong>Số điện thoại:</strong> {{ job.employer.contactPhone }}</div>
+          <div><strong>Email:</strong> {{ job.employer.contactEmail }}</div>
+          <div><strong>Website:</strong> <a [href]="job.employer.websiteUrl" target="_blank" rel="noopener noreferrer" >{{ job.employer.websiteUrl | truncate: 35 }}</a></div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div>{{ job | json }}</div>
+
+<div class="related-jobs mb-2">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <h2>Công việc liên quan</h2>
+    <div class="grid mb-2">
+      @for(job of jobs; track job) {
+        <app-job [data]="job" [isGrid]="true"></app-job>
+      }
+    </div>
+  </div>
+</div>
+@if(isLoading) {
+  <app-loading></app-loading>
+}
+<app-footer></app-footer>

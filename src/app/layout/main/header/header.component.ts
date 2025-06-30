@@ -67,7 +67,6 @@ export class HeaderComponent implements OnInit{
 
   navigateToDashboard() {
     const role = this.authService.getRole();
-
     if (role === 'candidate') {
       this.router.navigate(['/candidate-dashboard']);
     } else if (role === 'employer') {

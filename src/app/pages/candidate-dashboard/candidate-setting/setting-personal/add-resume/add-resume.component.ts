@@ -19,4 +19,8 @@ export class AddResumeComponent {
     this.isOpen = false;
     this.isOpenMessage.emit(this.isOpen);
   }
+
+  onFileSelected(event: any) {
+    console.log()
+  }
 }
