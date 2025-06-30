@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {AuthService} from '../../../../shared/services/auth.service';
 import Swal from 'sweetalert2';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-setting-account',
   imports: [
-    FormsModule
+    FormsModule,
+    TranslatePipe
   ],
   templateUrl: './setting-account.component.html',
   standalone: true,

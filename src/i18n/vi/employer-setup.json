@@ -1,0 +1,28 @@
+{
+  "employer": {
+    "filter": "Lọc",
+    "distanceLabel": "Bán kính vị trí: 32 mét",
+    "organizationType": "Loại hình tổ chức",
+    "organizationOptions": {
+      "government": "Chính phủ",
+      "govOwned": "Có vốn chính phủ",
+      "ngo": "Tổ chức phi chính phủ",
+      "private": "Công ty tư nhân",
+      "international": "Các cơ quan quốc tế",
+      "other": "Khác"
+    },
+    "sortOptions": {
+      "latest": "Mới nhất",
+      "bestMatch": "Phù hợp nhất",
+      "highestSalary": "Lương cao nhất"
+    },
+    "jobList": {
+      "openPositions": "Vị Trí Đang Tuyển",
+      "newJobs": "{{count}} - việc làm mới"
+    },
+    "pagination": {
+      "prev": "Trước",
+      "next": "Tiếp"
+    }
+  }
+}

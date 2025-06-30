@@ -1,12 +1,14 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {NgClass} from '@angular/common';
 import {AuthService} from '../../../shared/services/auth.service';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-candidate-sidebar',
   standalone: true,
   imports: [
-    NgClass
+    NgClass,
+    TranslatePipe
   ],
   templateUrl: './candidate-sidebar.component.html',
   styleUrl: './candidate-sidebar.component.scss'

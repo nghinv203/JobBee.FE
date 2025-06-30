@@ -1,9 +1,12 @@
 import {Component, EventEmitter, Output} from '@angular/core';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-candidate-profile',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslatePipe
+  ],
   templateUrl: './candidate-profile.component.html',
   styleUrl: './candidate-profile.component.scss'
 })

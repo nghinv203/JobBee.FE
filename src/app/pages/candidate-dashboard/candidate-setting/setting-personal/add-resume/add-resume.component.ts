@@ -1,9 +1,12 @@
 import {Component, EventEmitter, Output} from '@angular/core';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-add-resume',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslatePipe
+  ],
   templateUrl: './add-resume.component.html',
   styleUrl: './add-resume.component.scss'
 })

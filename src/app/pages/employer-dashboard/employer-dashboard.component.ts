@@ -11,7 +11,7 @@ import {EmployerSettingComponent} from './employer-setting/employer-setting.comp
 import {PlanBillingComponent} from './plan-billing/plan-billing.component';
 
 @Component({
-  selector: 'app-employer-dashboard',
+  selector: 'app-employer-dashboard.json',
   standalone: true,
   imports: [EmployerSidebarComponent,
     HeaderComponent,

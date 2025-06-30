@@ -1,0 +1,247 @@
+{
+  "dashboard": {
+    "greeting": "Xin chào",
+    "subtitle": "Đây là các hoạt động và thông báo việc làm hàng ngày của bạn",
+    "stats": {
+      "appliedJobs": "Việc đã ứng tuyển",
+      "favoriteJobs": "Việc yêu thích",
+      "jobAlerts": "Thông báo việc làm"
+    },
+    "profileAlert": {
+      "title": "Hồ sơ của bạn chưa được hoàn tất.",
+      "description": "Hoàn thiện hồ sơ và tạo CV của riêng bạn",
+      "button": "Chỉnh sửa hồ sơ →"
+    },
+    "recentlyApplied": {
+      "title": "Đã ứng tuyển gần đây",
+      "viewAll": "Xem tất cả →",
+      "table": {
+        "job": "Công việc",
+        "date": "Ngày ứng tuyển",
+        "status": "Trạng thái",
+        "action": "Hành động",
+        "active": "✓ Đang hoạt động",
+        "viewDetails": "Xem chi tiết"
+      },
+      "jobTypes": {
+        "remote": "Từ xa",
+        "fullTime": "Toàn thời gian",
+        "temporary": "Tạm thời",
+        "contract": "Hợp đồng"
+      }
+    }
+  },
+  "sidebar": {
+    "title": "BẢNG ĐIỀU KHIỂN ỨNG VIÊN",
+    "nav": {
+      "overview": "Tổng quan",
+      "appliedJobs": "Việc đã ứng tuyển",
+      "favoriteJobs": "Việc yêu thích",
+      "jobAlert": "Thông báo việc làm",
+      "settings": "Cài đặt"
+    },
+    "badgeCount": "09",
+    "logout": {
+      "label": "Đăng xuất"
+    }
+  },
+  "appliedJobs": {
+    "title": "Việc đã ứng tuyển",
+    "table": {
+      "job": "Công việc",
+      "date": "Ngày ứng tuyển",
+      "status": "Trạng thái",
+      "action": "Hành động",
+      "active": "✓ Đang hoạt động",
+      "viewDetails": "Xem chi tiết"
+    },
+    "jobTypes": {
+      "remote": "Từ xa",
+      "fullTime": "Toàn thời gian",
+      "temporary": "Tạm thời",
+      "contract": "Hợp đồng"
+    },
+    "pagination": {
+      "previous": "Trước",
+      "next": "Tiếp"
+    }
+  },
+  "favouriteJobs": {
+    "title": "Việc yêu thích",
+    "table": {
+      "job": "Công việc"
+    },
+    "jobItems": {
+      "location": "Washington",
+      "salary": "$50k-80k/tháng",
+      "jobType": "Toàn thời gian",
+      "jobExpired": "Việc đã hết hạn",
+      "deadlineExpired": "Đã hết hạn nộp",
+      "daysRemaining1": "Còn lại",
+      "daysRemaining2": "ngày",
+      "applyNow": "Ứng tuyển ngay →"
+    },
+    "buttons": {
+      "bookmark": "Đánh dấu"
+    },
+    "pagination": {
+      "previous": "Trước",
+      "next": "Tiếp"
+    }
+  },
+  "jobAlert": {
+    "title": "Thông báo việc làm",
+    "table": {
+      "job": "Công việc"
+    },
+    "jobItems": {
+      "location": "Washington",
+      "salary": "$50k-80k/tháng",
+      "jobType": "Toàn thời gian",
+      "jobExpired": "Việc đã hết hạn",
+      "deadlineExpired": "Đã hết hạn nộp",
+      "daysRemaining1": "Còn lại",
+      "daysRemaining2": "ngày",
+      "applyNow": "Ứng tuyển ngay →"
+    },
+    "pagination": {
+      "previous": "Trước",
+      "next": "Tiếp"
+    }
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "tabs": {
+      "personal": "Cá nhân",
+      "profile": "Hồ sơ",
+      "educations": "Học vấn",
+      "account": "Cài đặt tài khoản"
+    }
+  },
+  "accountSettings": {
+    "privacy": {
+      "isAvailable": "Sẵn sàng nhận việc",
+      "statusPrivate": "KHÔNG    Hồ sơ của bạn hiện đang ở chế độ riêng tư"
+    },
+    "changePassword": {
+      "title": "Đổi mật khẩu",
+      "current": "Mật khẩu hiện tại",
+      "new": "Mật khẩu mới",
+      "confirm": "Xác nhận mật khẩu",
+      "placeholderCurrent": "Mật khẩu hiện tại",
+      "placeholderNew": "Mật khẩu mới",
+      "placeholderConfirm": "Xác nhận mật khẩu",
+      "saveChanges": "Lưu thay đổi"
+    },
+    "deleteAccount": {
+      "title": "Xóa tài khoản của bạn",
+      "warning": "Nếu bạn xóa tài khoản Jobpilot, bạn sẽ không còn nhận được thông tin về các công việc phù hợp, nhà tuyển dụng đang theo dõi, thông báo việc làm, công việc đã lưu và nhiều hơn nữa. Bạn sẽ bị ngắt khỏi mọi dịch vụ của JobBee.com.",
+      "button": "Đóng tài khoản"
+    }
+  },
+  "profile": {
+    "basicInfo": {
+      "title": "Thông tin cơ bản",
+      "profilePicture": "Ảnh đại diện",
+      "uploadText": "Chọn ảnh hoặc kéo vào đây",
+      "uploadSubtext": "Ảnh lớn hơn 400 pixel sẽ hiển thị tốt nhất. Kích thước tối đa 5 MB.",
+      "firstName": "Tên",
+      "lastName": "Họ",
+      "dob": "Ngày sinh",
+      "gender": "Giới tính",
+      "genderOptions": {
+        "select": "Chọn...",
+        "male": "Nam",
+        "female": "Nữ",
+        "other": "Khác",
+        "preferNotToSay": "Không muốn tiết lộ"
+      },
+      "saveButton": "Lưu thay đổi"
+    },
+    "cvSection": {
+      "title": "CV/Sơ yếu lý lịch của bạn",
+      "addCv": {
+        "title": "Thêm CV/Sơ yếu lý lịch",
+        "desc": "Chọn hoặc kéo thả tệp tại đây. chỉ hỗ trợ pdf"
+      },
+      "fileNames": {
+        "professional": "CV chuyên nghiệp",
+        "productDesigner": "Nhà thiết kế sản phẩm",
+        "visualDesigner": "Nhà thiết kế giao diện"
+      },
+      "size": "MB",
+      "delete": "Xóa"
+    }
+  },
+  "modal": {
+    "addCvTitle": "Thêm CV/Sơ yếu lý lịch",
+    "resumeNameLabel": "Tên CV/Sơ yếu lý lịch",
+    "resumeNamePlaceholder": "Nhập tên CV",
+    "uploadLabel": "Tải lên CV/Sơ yếu lý lịch của bạn",
+    "uploadText": "Chọn tệp hoặc kéo vào đây",
+    "uploadSubtext": "Dung lượng tối đa 12 MB",
+    "cancelButton": "Hủy",
+    "submitButton": "Thêm CV/Sơ yếu lý lịch",
+    "closeTooltip": "Đóng"
+  },
+  "profileDetail": {
+    "basicInfo": "Thông Tin Cơ Bản",
+    "firstName": "Họ",
+    "firstNamePlaceholder": "Nhập họ của bạn",
+    "lastName": "Tên",
+    "lastNamePlaceholder": "Nhập tên của bạn",
+    "dateOfBirth": "Ngày Sinh",
+    "gender": "Giới Tính",
+    "genderPlaceholder": "Chọn giới tính...",
+    "genderMale": "Nam",
+    "genderFemale": "Nữ",
+    "genderOther": "Khác",
+    "genderPreferNot": "Không muốn tiết lộ",
+    "headline": "Tiêu Đề",
+    "headlinePlaceholder": "Tiêu đề hoặc chức danh của bạn",
+    "summary": "Tóm Tắt",
+    "summaryPlaceholder": "Giới thiệu ngắn gọn về bản thân...",
+    "experience": "Số Năm Kinh Nghiệm",
+    "experiencePlaceholder": "ví dụ: 3",
+    "currentSalary": "Mức Lương Hiện Tại ($)",
+    "currentSalaryPlaceholder": "ví dụ: 50000",
+    "expectedSalary": "Mức Lương Mong Muốn ($)",
+    "expectedSalaryPlaceholder": "ví dụ: 60000",
+
+    "contactInfo": "Thông Tin Liên Hệ",
+    "phoneNumber": "Số Điện Thoại",
+    "phoneNumberPlaceholder": "ví dụ: +84 123 456 789",
+    "address": "Địa Chỉ",
+    "addressPlaceholder": "Địa chỉ đường",
+    "country": "Quốc Gia",
+    "countryPlaceholder": "Chọn quốc gia...",
+    "state": "Tỉnh/Thành Phố",
+    "statePlaceholder": "Chọn tỉnh/thành phố...",
+    "city": "Thành Phố",
+    "cityPlaceholder": "Chọn thành phố...",
+    "postalCode": "Mã Bưu Chính",
+    "postalCodePlaceholder": "Mã bưu chính",
+
+    "saveChanges": "Lưu Thay Đổi"
+  },
+  "education": {
+    "title": "Hồ Sơ Học Vấn",
+    "count": "({{count}})",
+    "addButton": "Thêm Học Vấn",
+    "tableHeader": {
+      "education": "CHUYÊN NGÀNH",
+      "period": "THỜI GIAN",
+      "status": "TRẠNG THÁI",
+      "action": "THAO TÁC"
+    },
+    "item": {
+      "degree": "Bằng Cử Nhân",
+      "major": "Khoa Học Máy Tính",
+      "institution": "Đại Học FPT",
+      "typeCompleted": "Đã hoàn thành",
+      "period": "2020 - 2024",
+      "statusActive": "Đang học",
+      "delete": "Xóa"
+    }
+  }
+}

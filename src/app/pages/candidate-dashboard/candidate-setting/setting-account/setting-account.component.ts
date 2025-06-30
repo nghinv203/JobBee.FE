@@ -3,13 +3,15 @@ import {FormsModule} from '@angular/forms';
 import {NgClass} from '@angular/common';
 import {AuthService} from '../../../../shared/services/auth.service';
 import Swal from 'sweetalert2';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-setting-account',
   standalone: true,
   imports: [
     FormsModule,
-    NgClass
+    NgClass,
+    TranslatePipe
   ],
   templateUrl: './setting-account.component.html',
   styleUrl: './setting-account.component.scss'

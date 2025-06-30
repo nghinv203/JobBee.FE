@@ -8,6 +8,7 @@ import {IJobSearch} from './job-list.model';
 import {JobComponent} from '../entities/job/job/job.component';
 import {finalize} from 'rxjs';
 import {LoadingComponent} from '../../shared/reuseComponents/loading/loading.component';
+import {JobDetailComponent} from './job-detail/job-detail.component';
 
 @Component({
   selector: 'app-jobs',
@@ -16,7 +17,8 @@ import {LoadingComponent} from '../../shared/reuseComponents/loading/loading.com
     BreadcrumbComponent,
     JobSearchComponent,
     JobComponent,
-    LoadingComponent
+    LoadingComponent,
+    JobDetailComponent
   ],
   standalone: true,
   templateUrl: './job-list.component.html',

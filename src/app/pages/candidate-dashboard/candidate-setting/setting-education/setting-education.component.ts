@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import {AddEducationComponent} from './add-education/add-education.component';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-setting-education',
   standalone: true,
   imports: [
-    AddEducationComponent
+    AddEducationComponent,
+    TranslatePipe
   ],
   templateUrl: './setting-education.component.html',
   styleUrl: './setting-education.component.scss'

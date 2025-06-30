@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-dashboard-content',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslatePipe
+  ],
   templateUrl: './dashboard-content.component.html',
   styleUrl: './dashboard-content.component.scss'
 })

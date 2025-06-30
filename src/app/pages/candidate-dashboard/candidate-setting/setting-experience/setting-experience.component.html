@@ -1,77 +1,77 @@
 <div class="content">
 
   <!-- BASIC INFORMATION -->
-  <h2 class="section-title">Basic Information</h2>
+  <h2 class="section-title">{{ 'profileDetail.basicInfo' | translate }}</h2>
   <div class="form-grid">
     <div class="form-group">
-      <label class="form-label">First Name</label>
-      <input type="text" class="form-input" placeholder="Enter your first name">
+      <label class="form-label">{{ 'profileDetail.firstName' | translate }}</label>
+      <input type="text" class="form-input" placeholder="{{ 'profileDetail.firstNamePlaceholder' | translate }}">
     </div>
 
     <div class="form-group">
-      <label class="form-label">Last Name</label>
-      <input type="text" class="form-input" placeholder="Enter your last name">
+      <label class="form-label">{{ 'profileDetail.lastName' | translate }}</label>
+      <input type="text" class="form-input" placeholder="{{ 'profileDetail.lastNamePlaceholder' | translate }}">
     </div>
 
     <div class="form-group">
-      <label class="form-label">Date of Birth</label>
+      <label class="form-label">{{ 'profileDetail.dateOfBirth' | translate }}</label>
       <input type="date" class="form-input">
     </div>
 
     <div class="form-group">
-      <label class="form-label">Gender</label>
+      <label class="form-label">{{ 'profileDetail.gender' | translate }}</label>
       <select class="form-select">
-        <option>Select gender...</option>
-        <option>Male</option>
-        <option>Female</option>
-        <option>Other</option>
-        <option>Prefer not to say</option>
+        <option>{{ 'profileDetail.genderPlaceholder' | translate }}</option>
+        <option>{{ 'profileDetail.genderMale' | translate }}</option>
+        <option>{{ 'profileDetail.genderFemale' | translate }}</option>
+        <option>{{ 'profileDetail.genderOther' | translate }}</option>
+        <option>{{ 'profileDetail.genderPreferNot' | translate }}</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label class="form-label">Headline</label>
-      <input type="text" class="form-input" placeholder="Your title/headline">
+      <label class="form-label">{{ 'profileDetail.headline' | translate }}</label>
+      <input type="text" class="form-input" placeholder="{{ 'profileDetail.headlinePlaceholder' | translate }}">
     </div>
 
     <div class="form-group">
-      <label class="form-label">Summary</label>
-      <textarea class="form-input" rows="3" placeholder="Tell us a bit about yourself..."></textarea>
+      <label class="form-label">{{ 'profileDetail.summary' | translate }}</label>
+      <textarea class="form-input" rows="3" placeholder="{{ 'profileDetail.summaryPlaceholder' | translate }}"></textarea>
     </div>
 
     <div class="form-group">
-      <label class="form-label">Years of Experience</label>
-      <input type="number" class="form-input" placeholder="e.g. 3">
+      <label class="form-label">{{ 'profileDetail.experience' | translate }}</label>
+      <input type="number" class="form-input" placeholder="{{ 'profileDetail.experiencePlaceholder' | translate }}">
     </div>
 
     <div class="form-group">
-      <label class="form-label">Current Salary ($)</label>
-      <input type="number" class="form-input" placeholder="e.g. 50000">
+      <label class="form-label">{{ 'profileDetail.currentSalary' | translate }}</label>
+      <input type="number" class="form-input" placeholder="{{ 'profileDetail.currentSalaryPlaceholder' | translate }}">
     </div>
 
     <div class="form-group">
-      <label class="form-label">Salary Expectation ($)</label>
-      <input type="number" class="form-input" placeholder="e.g. 60000">
+      <label class="form-label">{{ 'profileDetail.expectedSalary' | translate }}</label>
+      <input type="number" class="form-input" placeholder="{{ 'profileDetail.expectedSalaryPlaceholder' | translate }}">
     </div>
   </div>
 
   <!-- CONTACT INFORMATION -->
-  <h2 class="section-title">Contact Information</h2>
+  <h2 class="section-title">{{ 'profileDetail.contactInfo' | translate }}</h2>
   <div class="form-grid">
     <div class="form-group">
-      <label class="form-label">Phone Number</label>
-      <input type="tel" class="form-input" placeholder="e.g. +1 123 456 7890">
+      <label class="form-label">{{ 'profileDetail.phoneNumber' | translate }}</label>
+      <input type="tel" class="form-input" placeholder="{{ 'profileDetail.phoneNumberPlaceholder' | translate }}">
     </div>
 
     <div class="form-group">
-      <label class="form-label">Address</label>
-      <input type="text" class="form-input" placeholder="Street address">
+      <label class="form-label">{{ 'profileDetail.address' | translate }}</label>
+      <input type="text" class="form-input" placeholder="{{ 'profileDetail.addressPlaceholder' | translate }}">
     </div>
 
     <div class="form-group">
-      <label class="form-label">Country</label>
+      <label class="form-label">{{ 'profileDetail.country' | translate }}</label>
       <select class="form-select" id="country">
-        <option>Select a country...</option>
+        <option>{{ 'profileDetail.countryPlaceholder' | translate }}</option>
         <option value="us">United States</option>
         <option value="vn">Vietnam</option>
         <option value="jp">Japan</option>
@@ -80,27 +80,27 @@
     </div>
 
     <div class="form-group">
-      <label class="form-label">State/Province</label>
+      <label class="form-label">{{ 'profileDetail.state' | translate }}</label>
       <select class="form-select" id="state">
-        <option>Select a state...</option>
+        <option>{{ 'profileDetail.statePlaceholder' | translate }}</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label class="form-label">City</label>
+      <label class="form-label">{{ 'profileDetail.city' | translate }}</label>
       <select class="form-select" id="city">
-        <option>Select a city...</option>
+        <option>{{ 'profileDetail.cityPlaceholder' | translate }}</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label class="form-label">Postal Code</label>
-      <input type="text" class="form-input" placeholder="Postal Code">
+      <label class="form-label">{{ 'profileDetail.postalCode' | translate }}</label>
+      <input type="text" class="form-input" placeholder="{{ 'profileDetail.postalCodePlaceholder' | translate }}">
     </div>
   </div>
 
   <!-- BUTTON -->
   <div style="margin-top: 2rem;">
-    <button class="save-button">Save Changes</button>
+    <button class="save-button">{{ 'profileDetail.saveChanges' | translate }}</button>
   </div>
 </div>

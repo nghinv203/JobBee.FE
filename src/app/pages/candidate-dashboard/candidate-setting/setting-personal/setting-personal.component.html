@@ -3,53 +3,53 @@
 }
 
 <div class="content">
-  <h2 class="section-title">Basic Information</h2>
+  <h2 class="section-title">{{ 'profile.basicInfo.title' | translate }}</h2>
 
   <div class="form-grid">
     <div class="profile-picture">
-      <label class="form-label">Profile Picture</label>
+      <label class="form-label">{{ 'profile.basicInfo.profilePicture' | translate }}</label>
       <div class="upload-area">
         <svg class="upload-icon" viewBox="0 0 24 24">
           <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
         </svg>
-        <div class="upload-text">Browse photo or drop here</div>
-        <div class="upload-subtext">A photo larger than 400 pixels work best. Max photo size 5 MB.</div>
+        <div class="upload-text">{{ 'profile.basicInfo.uploadText' | translate }}</div>
+        <div class="upload-subtext">{{ 'profile.basicInfo.uploadSubtext' | translate }}</div>
       </div>
     </div>
 
     <div class="form-group">
-      <label class="form-label">First Name</label>
+      <label class="form-label">{{ 'profile.basicInfo.firstName' | translate }}</label>
       <input type="text" class="form-input" placeholder="Enter your first name">
     </div>
 
     <div class="form-group">
-      <label class="form-label">Last Name</label>
+      <label class="form-label">{{ 'profile.basicInfo.lastName' | translate }}</label>
       <input type="text" class="form-input" placeholder="Enter your last name">
     </div>
 
     <div class="form-group">
-      <label class="form-label">Date of Birth</label>
+      <label class="form-label">{{ 'profile.basicInfo.dob' | translate }}</label>
       <input type="date" class="form-input">
     </div>
 
     <div class="form-group">
-      <label class="form-label">Gender</label>
+      <label class="form-label">{{ 'profile.basicInfo.gender' | translate }}</label>
       <select class="form-select">
-        <option>Select...</option>
-        <option>Male</option>
-        <option>Female</option>
-        <option>Other</option>
-        <option>Prefer not to say</option>
+        <option>{{ 'profile.basicInfo.genderOptions.select' | translate }}</option>
+        <option>{{ 'profile.basicInfo.genderOptions.male' | translate }}</option>
+        <option>{{ 'profile.basicInfo.genderOptions.female' | translate }}</option>
+        <option>{{ 'profile.basicInfo.genderOptions.other' | translate }}</option>
+        <option>{{ 'profile.basicInfo.genderOptions.preferNotToSay' | translate }}</option>
       </select>
     </div>
   </div>
 
-  <button class="save-button">Save Changes</button>
+  <button class="save-button">{{ 'profile.basicInfo.saveButton' | translate }}</button>
 </div>
 
 
 <div class="cv-section">
-  <h2 class="section-title">Your Cv/Resume</h2>
+  <h2 class="section-title">{{ 'profile.cvSection.title' | translate }}</h2>
 
   <div class="cv-grid">
     <div class="cv-item">
@@ -123,8 +123,8 @@
           <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
         </svg>
       </div>
-      <h3>Add Cv/Resume</h3>
-      <p>Browse file or drop here. only pdf</p>
+      <h3>{{ 'profile.cvSection.addCv.title' | translate }}</h3>
+      <p>{{ 'profile.cvSection.addCv.desc' | translate }}</p>
     </div>
   </div>
 </div>

@@ -1,6 +1,8 @@
 <div class="popup-overlay">
   <div class="popup">
-    <button class="close-btn" (click)="emitMessage()">×</button>
+    <button class="close-btn" (click)="emitMessage()">
+      ×
+    </button>
 
     <div class="popup-left">
       <div class="profile-header">
@@ -11,21 +13,25 @@
           <div class="action-buttons">
             <button class="btn btn-primary">
               <i class="fas fa-video"></i>
-              View Video Resume
+              {{ 'popup.profile.viewVideoResume' | translate }}
             </button>
           </div>
         </div>
       </div>
 
       <div class="section">
-        <div class="section-title">Biography</div>
+        <div class="section-title">
+          {{ 'popup.sections.biographyTitle' | translate }}
+        </div>
         <div class="biography-text">
           I've been passionate about graphic design and digital art from an early age with a keen interest in Website and Mobile Application User Interfaces. I can create high-quality and aesthetically pleasing designs in print or web for use in marketing and business branding. Please see the portfolio link to see samples of my work and feel free to discuss your designing needs. I mostly use Adobe Photoshop, Illustrator, XD and Figma. *Wireframe User Experience and Interface (UI/UX) Design - for all kinds of Professional and Personal websites. *Mobile Application User Experience and Interface Design - for all kinds of iOS/Android and Digital Mobile Applications. *Wireframe Designs.
         </div>
       </div>
 
       <div class="section">
-        <div class="section-title">Cover Letter</div>
+        <div class="section-title">
+          {{ 'popup.sections.coverLetterTitle' | translate }}
+        </div>
         <div class="cover-letter">
           <p><strong>Dear Sir,</strong></p>
 
@@ -39,7 +45,9 @@
       </div>
 
       <div class="section">
-        <div class="section-title">Follow me Social Media</div>
+        <div class="section-title">
+          {{ 'popup.sections.socialTitle' | translate }}
+        </div>
         <div class="social-links">
           <a href="#" class="social-link social-facebook">f</a>
           <a href="#" class="social-link social-twitter">🐦</a>
@@ -53,65 +61,67 @@
 
     <div class="popup-right">
       <div class="info-item">
-        <div class="info-label">Age</div>
+        <div class="info-label">{{ 'popup.info.age' | translate }}</div>
         <div class="info-value">24 Years</div>
       </div>
 
       <div class="info-item">
-        <div class="info-label">Date of Birth</div>
+        <div class="info-label">{{ 'popup.info.dob' | translate }}</div>
         <div class="info-value">14 June, 2021</div>
       </div>
 
       <div class="info-item">
-        <div class="info-label">Country</div>
+        <div class="info-label">{{ 'popup.info.country' | translate }}</div>
         <div class="info-value">Bangladesh</div>
       </div>
 
       <div class="info-item">
-        <div class="info-label">Marital Status</div>
+        <div class="info-label">{{ 'popup.info.maritalStatus' | translate }}</div>
         <div class="info-value">Single</div>
       </div>
 
       <div class="info-item">
-        <div class="info-label">Gender</div>
+        <div class="info-label">{{ 'popup.info.gender' | translate }}</div>
         <div class="info-value">Male</div>
       </div>
 
       <div class="info-item">
-        <div class="info-label">Experience</div>
+        <div class="info-label">{{ 'popup.info.experience' | translate }}</div>
         <div class="info-value">7 Years</div>
       </div>
 
       <div class="info-item">
-        <div class="info-label">Qualification</div>
+        <div class="info-label">{{ 'popup.info.qualification' | translate }}</div>
         <div class="info-value">Master Degree</div>
       </div>
 
       <div class="contact-info">
-        <div class="contact-title">Contact Information</div>
+        <div class="contact-title">
+          {{ 'popup.contact.title' | translate }}
+        </div>
 
         <div class="info-item">
-          <div class="info-label">Website</div>
+          <div class="info-label">{{ 'popup.contact.website' | translate }}</div>
           <div class="info-value">www.esther-howard.com</div>
         </div>
 
         <div class="info-item">
-          <div class="info-label">Location</div>
+          <div class="info-label">{{ 'popup.contact.location' | translate }}</div>
           <div class="info-value">Beverly Hills, California 90210</div>
         </div>
 
         <div class="info-item">
-          <div class="info-label">Phone Number</div>
+          <div class="info-label">{{ 'popup.contact.phone' | translate }}</div>
           <div class="info-value">+1-200-555-0141</div>
         </div>
 
         <div class="info-item">
-          <div class="info-label">Secondary Phone</div>
+          <div class="info-label">{{ 'popup.contact.secondaryPhone' | translate }}</div>
           <div class="info-value">+1-200-555-0199</div>
         </div>
 
         <div class="info-item">
-          <div class="info-label">Email Address</div>
+          <div class="info-label">{{ 'popup.contact.email' | translate }}</div>
           <div class="info-value">esther.howard.com</div>
         </div>
       </div>

@@ -1,0 +1,28 @@
+{
+  "employer": {
+    "filter": "Filter",
+    "distanceLabel": "Location radius: 32 meters",
+    "organizationType": "Organization Type",
+    "organizationOptions": {
+      "government": "Government",
+      "govOwned": "Government-owned",
+      "ngo": "Non-governmental organization",
+      "private": "Private company",
+      "international": "International agencies",
+      "other": "Other"
+    },
+    "sortOptions": {
+      "latest": "Latest",
+      "bestMatch": "Best match",
+      "highestSalary": "Highest salary"
+    },
+    "jobList": {
+      "openPositions": "Open Positions",
+      "newJobs": "{{count}} new jobs"
+    },
+    "pagination": {
+      "prev": "Previous",
+      "next": "Next"
+    }
+  }
+}

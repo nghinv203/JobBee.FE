@@ -3,9 +3,9 @@
     <!-- First row: Organization Type, Industry Types, Team Size -->
     <div class="form-row">
       <div class="form-group">
-        <label for="industry-types">Industry Types</label>
+        <label for="industry-types">{{ 'foundingForm.industryTypes' | translate }}</label>
         <select id="industry-types" name="industry-types">
-          <option value="">Select...</option>
+          <option value="">{{ 'foundingForm.select' | translate }}</option>
           <option value="technology">Technology</option>
           <option value="healthcare">Healthcare</option>
           <option value="finance">Finance</option>
@@ -20,9 +20,9 @@
       </div>
 
       <div class="form-group">
-        <label for="team-size">Team Size</label>
+        <label for="team-size">{{ 'foundingForm.teamSize' | translate }}</label>
         <select id="team-size" name="team-size">
-          <option value="">Select...</option>
+          <option value="">{{ 'foundingForm.select' | translate }}</option>
           <option value="1-10">1-10 employees</option>
           <option value="11-50">11-50 employees</option>
           <option value="51-200">51-200 employees</option>
@@ -36,24 +36,23 @@
     <!-- Second row: Year of Establishment, Company Website -->
     <div class="form-row two-columns">
       <div class="form-group">
-        <label for="establishment-year">Year of Establishment</label>
+        <label for="establishment-year">{{ 'foundingForm.establishmentYear' | translate }}</label>
         <div class="date-input">
-          <input type="date" id="establishment-year" name="establishment-year" placeholder="dd/mm/yyyy">
+          <input type="date" id="establishment-year" name="establishment-year" placeholder="{{ 'foundingForm.datePlaceholder' | translate }}">
         </div>
       </div>
 
       <div class="form-group">
-        <label for="company-website">Company Website</label>
+        <label for="company-website">{{ 'foundingForm.companyWebsite' | translate }}</label>
         <div class="website-input">
-          <input type="url" id="company-website" name="company-website" placeholder="Website url...">
+          <input type="url" id="company-website" name="company-website" placeholder="{{ 'foundingForm.websitePlaceholder' | translate }}">
         </div>
       </div>
     </div>
 
-
     <!-- Buttons -->
     <div class="button-container">
-      <button type="button" class="btn btn-primary">Save Changes</button>
+      <button type="button" class="btn btn-primary">{{ 'foundingForm.saveButton' | translate }}</button>
     </div>
   </form>
 </div>
