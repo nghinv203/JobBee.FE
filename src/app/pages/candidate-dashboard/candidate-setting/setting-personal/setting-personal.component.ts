@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import {AddResumeComponent} from './add-resume/add-resume.component';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-setting-personal',
   standalone: true,
-  imports: [AddResumeComponent],
+  imports: [AddResumeComponent, TranslatePipe],
   templateUrl: './setting-personal.component.html',
   styleUrl: './setting-personal.component.scss'
 })

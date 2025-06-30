@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import {FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {NgForOf} from '@angular/common';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-setting-social',
   imports: [
     ReactiveFormsModule,
-    NgForOf
+    NgForOf,
+    TranslatePipe
   ],
   templateUrl: './setting-social.component.html',
   standalone: true,

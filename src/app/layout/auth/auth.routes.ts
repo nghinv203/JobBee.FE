@@ -4,6 +4,7 @@ import {SignUpComponent} from './sign-up/sign-up.component';
 import {ForgetPasswordComponent} from './forget-password/forget-password.component';
 import {EmailVerificationComponent} from './email-verification/email-verification.component';
 import {ResetPasswordComponent} from './reset-password/reset-password.component';
+import {ResetPasswordEmailComponent} from './forget-password/reset-password-email/reset-password-email.component';
 
 export const authRoutes: Routes = [
   {
@@ -25,5 +26,9 @@ export const authRoutes: Routes = [
   {
     path: 'reset-password',
     component: ResetPasswordComponent
+  },
+  {
+    path: 'reset-password-email',
+    component: ResetPasswordEmailComponent
   }
 ];

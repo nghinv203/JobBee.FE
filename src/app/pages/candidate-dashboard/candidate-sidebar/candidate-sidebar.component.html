@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 <div class="sidebar">
   <div class="sidebar-header">
-    <h3>CANDIDATE DASHBOARD</h3>
+    <h3>{{ 'sidebar.title' | translate }}</h3>
   </div>
 
   <nav class="sidebar-nav">
@@ -9,28 +9,28 @@
       <li class="nav-item" [ngClass]="{ 'active': message === 'Overview' }">
         <a (click)="emitMessageOverview()" class="nav-link">
           <i class="fas fa-chart-line"></i>
-          <span>Overview</span>
+          <span>{{ 'sidebar.nav.overview' | translate }}</span>
         </a>
       </li>
 
       <li class="nav-item" [ngClass]="{ 'active': message === 'Applied' }">
         <a (click)="emitMessageApplied()" class="nav-link">
           <i class="fas fa-briefcase"></i>
-          <span>Applied Jobs</span>
+          <span>{{ 'sidebar.nav.appliedJobs' | translate }}</span>
         </a>
       </li>
 
       <li class="nav-item" [ngClass]="{ 'active': message === 'Favourite' }">
         <a (click)="emitMessageFavourite()" class="nav-link">
           <i class="fas fa-star"></i>
-          <span>Favorite Jobs</span>
+          <span>{{ 'sidebar.nav.favoriteJobs' | translate }}</span>
         </a>
       </li>
 
       <li class="nav-item" [ngClass]="{ 'active': message === 'Alert' }">
         <a (click)="emitMessageAlert()" class="nav-link">
           <i class="fas fa-bell"></i>
-          <span>Job Alert</span>
+          <span>{{ 'sidebar.nav.jobAlert' | translate }}</span>
           <span class="badge">09</span>
         </a>
       </li>
@@ -38,16 +38,16 @@
       <li class="nav-item" [ngClass]="{ 'active': message === 'Setting' }">
         <a (click)="emitMessageSetting()" class="nav-link">
           <i class="fas fa-cog"></i>
-          <span>Settings</span>
+          <span>{{ 'sidebar.nav.settings' | translate }}</span>
         </a>
       </li>
     </ul>
   </nav>
 
   <div class="sidebar-footer">
-    <a href="#" class="logout-link">
+    <a (click)="logOut()" class="logout-link">
       <i class="fas fa-sign-out-alt"></i>
-      <span>Log-out</span>
+      <span>{{ 'sidebar.logout.label' | translate }}</span>
     </a>
   </div>
 

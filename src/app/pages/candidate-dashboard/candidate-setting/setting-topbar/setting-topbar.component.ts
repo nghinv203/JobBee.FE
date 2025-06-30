@@ -1,11 +1,13 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {NgClass} from '@angular/common';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-setting-topbar',
   standalone: true,
   imports: [
-    NgClass
+    NgClass,
+    TranslatePipe
   ],
   templateUrl: './setting-topbar.component.html',
   styleUrl: './setting-topbar.component.scss'

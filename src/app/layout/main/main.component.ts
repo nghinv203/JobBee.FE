@@ -30,4 +30,7 @@ export class MainComponent {
   //   }
   //   this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   // }
+
+
+
 }

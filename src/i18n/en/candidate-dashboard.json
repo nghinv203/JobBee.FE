@@ -1,0 +1,248 @@
+{
+  "dashboard": {
+    "greeting": "Hello",
+    "subtitle": "Here is your daily activities and job alerts",
+    "stats": {
+      "appliedJobs": "Applied Jobs",
+      "favoriteJobs": "Favorite Jobs",
+      "jobAlerts": "Job Alerts"
+    },
+    "profileAlert": {
+      "title": "Your profile editing is not completed.",
+      "description": "Complete your profile editing & build your custom Resume",
+      "button": "Edit Profile →"
+    },
+    "recentlyApplied": {
+      "title": "Recently Applied",
+      "viewAll": "View all →",
+      "table": {
+        "job": "Job",
+        "date": "Date Applied",
+        "status": "Status",
+        "action": "Action",
+        "active": "✓ Active",
+        "viewDetails": "View Details"
+      },
+      "jobTypes": {
+        "remote": "Remote",
+        "fullTime": "Full Time",
+        "temporary": "Temporary",
+        "contract": "Contract Base"
+      }
+    }
+  },
+  "sidebar": {
+    "title": "CANDIDATE DASHBOARD",
+    "nav": {
+      "overview": "Overview",
+      "appliedJobs": "Applied Jobs",
+      "favoriteJobs": "Favorite Jobs",
+      "jobAlert": "Job Alert",
+      "settings": "Settings"
+    },
+    "badgeCount": "09",
+    "logout": {
+      "label": "Log-out"
+    }
+  },
+  "appliedJobs": {
+    "title": "Applied Jobs",
+    "table": {
+      "job": "Job",
+      "date": "Date Applied",
+      "status": "Status",
+      "action": "Action",
+      "active": "✓ Active",
+      "viewDetails": "View Details"
+    },
+    "jobTypes": {
+      "remote": "Remote",
+      "fullTime": "Full Time",
+      "temporary": "Temporary",
+      "contract": "Contract Base"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "favouriteJobs": {
+    "title": "Favourite Jobs",
+    "table": {
+      "job": "Job"
+    },
+    "jobItems": {
+      "location": "Washington",
+      "salary": "$50k-80k/month",
+      "jobType": "Full Time",
+      "jobExpired": "Job Expire",
+      "deadlineExpired": "Deadline Expired",
+      "daysRemaining1": "",
+      "daysRemaining2": "Days Remaining",
+      "applyNow": "Apply Now →"
+    },
+    "buttons": {
+      "bookmark": "Bookmark"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "jobAlert": {
+    "title": "Job Alert",
+    "table": {
+      "job": "Job"
+    },
+    "jobItems": {
+      "location": "Washington",
+      "salary": "$50k-80k/month",
+      "jobType": "Full Time",
+      "jobExpired": "Job Expire",
+      "deadlineExpired": "Deadline Expired",
+      "daysRemaining1": "",
+      "daysRemaining2": "Days Remaining",
+      "applyNow": "Apply Now →"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "settings": {
+    "title": "Setting",
+    "tabs": {
+      "personal": "Personal",
+      "profile": "Profile",
+      "educations": "Educations",
+      "account": "Account Setting"
+    }
+  },
+  "accountSettings": {
+    "privacy": {
+      "isAvailable": "Is Available to Hire",
+      "statusPrivate": "NO    Your profile is private now"
+    },
+    "changePassword": {
+      "title": "Change Password",
+      "current": "Current Password",
+      "new": "New Password",
+      "confirm": "Confirm Password",
+      "placeholderCurrent": "Current Password",
+      "placeholderNew": "New Password",
+      "placeholderConfirm": "Confirm Password",
+      "saveChanges": "Save Changes"
+    },
+    "deleteAccount": {
+      "title": "Delete Your Account",
+      "warning": "If you delete your Jobpilot account, you will no longer be able to get information about the matched jobs, following employers, and job alert, shortlisted jobs and more. You will be abandoned from all the services of Jobpilot.com.",
+      "button": "Close Account"
+    }
+  },
+  "profile": {
+    "basicInfo": {
+      "title": "Basic Information",
+      "profilePicture": "Profile Picture",
+      "uploadText": "Browse photo or drop here",
+      "uploadSubtext": "A photo larger than 400 pixels work best. Max photo size 5 MB.",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "dob": "Date of Birth",
+      "gender": "Gender",
+      "genderOptions": {
+        "select": "Select...",
+        "male": "Male",
+        "female": "Female",
+        "other": "Other",
+        "preferNotToSay": "Prefer not to say"
+      },
+      "saveButton": "Save Changes"
+    },
+    "cvSection": {
+      "title": "Your Cv/Resume",
+      "addCv": {
+        "title": "Add Cv/Resume",
+        "desc": "Browse file or drop here. only pdf"
+      },
+      "fileNames": {
+        "professional": "Professional Resume",
+        "productDesigner": "Product Designer",
+        "visualDesigner": "Visual Designer"
+      },
+      "size": "MB",
+      "delete": "Delete"
+    }
+  },
+  "modal": {
+    "addCvTitle": "Add Cv/Resume",
+    "resumeNameLabel": "Cv/Resume Name",
+    "resumeNamePlaceholder": "Enter resume name",
+    "uploadLabel": "Upload your Cv/Resume",
+    "uploadText": "Browse File or drop here",
+    "uploadSubtext": "Max file size 12 MB",
+    "cancelButton": "Cancel",
+    "submitButton": "Add Cv/Resume",
+    "closeTooltip": "Close"
+  },
+  "profileDetail": {
+    "basicInfo": "Basic Information",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "Enter your first name",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Enter your last name",
+    "dateOfBirth": "Date of Birth",
+    "gender": "Gender",
+    "genderPlaceholder": "Select gender...",
+    "genderMale": "Male",
+    "genderFemale": "Female",
+    "genderOther": "Other",
+    "genderPreferNot": "Prefer not to say",
+    "headline": "Headline",
+    "headlinePlaceholder": "Your title/headline",
+    "summary": "Summary",
+    "summaryPlaceholder": "Tell us a bit about yourself...",
+    "experience": "Years of Experience",
+    "experiencePlaceholder": "e.g. 3",
+    "currentSalary": "Current Salary ($)",
+    "currentSalaryPlaceholder": "e.g. 50000",
+    "expectedSalary": "Salary Expectation ($)",
+    "expectedSalaryPlaceholder": "e.g. 60000",
+
+    "contactInfo": "Contact Information",
+    "phoneNumber": "Phone Number",
+    "phoneNumberPlaceholder": "e.g. +1 123 456 7890",
+    "address": "Address",
+    "addressPlaceholder": "Street address",
+    "country": "Country",
+    "countryPlaceholder": "Select a country...",
+    "state": "State/Province",
+    "statePlaceholder": "Select a state...",
+    "city": "City",
+    "cityPlaceholder": "Select a city...",
+    "postalCode": "Postal Code",
+    "postalCodePlaceholder": "Postal Code",
+
+    "saveChanges": "Save Changes"
+  },
+  "education": {
+    "title": "Education Records",
+    "count": "({{count}})",
+    "addButton": "Add Education",
+    "tableHeader": {
+      "education": "EDUCATION",
+      "period": "PERIOD",
+      "status": "STATUS",
+      "action": "ACTION"
+    },
+    "item": {
+      "degree": "Bachelor's Degree",
+      "major": "Computer Science",
+      "institution": "FPT University",
+      "typeCompleted": "Complete",
+      "period": "2020 - 2024",
+      "statusActive": "Active",
+      "delete": "Delete"
+    }
+  }
+}
+

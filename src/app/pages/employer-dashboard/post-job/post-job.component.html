@@ -1,41 +1,41 @@
 <div class="container">
   <div class="header">
-    <h1>Post a job</h1>
+    <h1>{{ 'postJob.title' | translate }}</h1>
   </div>
 
   <div class="form-content">
     <form id="jobForm">
       <!-- Job Title -->
       <div class="form-group">
-        <label for="jobTitle">Job Title</label>
-        <input type="text" id="jobTitle" placeholder="Add job title, role, vacancies etc.">
+        <label for="jobTitle">{{ 'postJob.form.jobTitle' | translate }}</label>
+        <input type="text" id="jobTitle" placeholder="{{ 'postJob.form.jobTitlePlaceholder' | translate }}">
       </div>
 
       <!-- Tags and Job Role -->
       <div class="form-row">
         <div>
-          <label for="tags">Tags</label>
-          <input type="text" id="tags" placeholder="Job keyword, tags etc.">
+          <label for="tags">{{ 'postJob.form.tags' | translate }}</label>
+          <input type="text" id="tags" placeholder="{{ 'postJob.form.tagsPlaceholder' | translate }}">
         </div>
         <div>
-          <label for="jobRole">Job Role</label>
+          <label for="jobRole">{{ 'postJob.form.jobRole' | translate }}</label>
           <select id="jobRole">
-            <option value="">Select...</option>
-            <option value="designer">Designer</option>
-            <option value="developer">Developer</option>
-            <option value="manager">Manager</option>
-            <option value="analyst">Analyst</option>
+            <option value="">{{ 'postJob.form.select' | translate }}</option>
+            <option value="designer">{{ 'postJob.form.roles.designer' | translate }}</option>
+            <option value="developer">{{ 'postJob.form.roles.developer' | translate }}</option>
+            <option value="manager">{{ 'postJob.form.roles.manager' | translate }}</option>
+            <option value="analyst">{{ 'postJob.form.roles.analyst' | translate }}</option>
           </select>
         </div>
       </div>
 
       <!-- Salary Section -->
       <div class="form-group">
-        <h3 class="section-title">Salary</h3>
+        <h3 class="section-title">{{ 'postJob.form.salarySection' | translate }}</h3>
         <div class="salary-row">
           <div>
-            <label for="minSalary">Min Salary</label>
-            <input type="number" id="minSalary" placeholder="Minimum salary...">
+            <label for="minSalary">{{ 'postJob.form.minSalary' | translate }}</label>
+            <input type="number" id="minSalary" placeholder="{{ 'postJob.form.minSalaryPlaceholder' | translate }}">
           </div>
           <div>
             <select class="currency-select">
@@ -45,8 +45,8 @@
             </select>
           </div>
           <div>
-            <label for="maxSalary">Max Salary</label>
-            <input type="number" id="maxSalary" placeholder="Maximum salary...">
+            <label for="maxSalary">{{ 'postJob.form.maxSalary' | translate }}</label>
+            <input type="number" id="maxSalary" placeholder="{{ 'postJob.form.maxSalaryPlaceholder' | translate }}">
           </div>
           <div>
             <select class="currency-select">
@@ -56,12 +56,12 @@
             </select>
           </div>
           <div>
-            <label for="salaryType">Salary Type</label>
+            <label for="salaryType">{{ 'postJob.form.salaryType' | translate }}</label>
             <select id="salaryType">
-              <option value="">Select...</option>
-              <option value="hourly">Hourly</option>
-              <option value="monthly">Monthly</option>
-              <option value="yearly">Yearly</option>
+              <option value="">{{ 'postJob.form.select' | translate }}</option>
+              <option value="hourly">{{ 'postJob.form.salaryTypes.hourly' | translate }}</option>
+              <option value="monthly">{{ 'postJob.form.salaryTypes.monthly' | translate }}</option>
+              <option value="yearly">{{ 'postJob.form.salaryTypes.yearly' | translate }}</option>
             </select>
           </div>
         </div>
@@ -69,37 +69,37 @@
 
       <!-- Advanced Information -->
       <div class="form-group">
-        <h3 class="section-title">Advance Information</h3>
+        <h3 class="section-title">{{ 'postJob.form.advanceInfo' | translate }}</h3>
 
         <!-- Education, Experience, Job Type -->
         <div class="form-row three-col">
           <div>
-            <label for="education">Education</label>
+            <label for="education">{{ 'postJob.form.education' | translate }}</label>
             <select id="education">
-              <option value="">Select...</option>
-              <option value="high-school">High School</option>
-              <option value="bachelor">Bachelor's Degree</option>
-              <option value="master">Master's Degree</option>
-              <option value="phd">PhD</option>
+              <option value="">{{ 'postJob.form.select' | translate }}</option>
+              <option value="high-school">{{ 'postJob.form.educations.highSchool' | translate }}</option>
+              <option value="bachelor">{{ 'postJob.form.educations.bachelor' | translate }}</option>
+              <option value="master">{{ 'postJob.form.educations.master' | translate }}</option>
+              <option value="phd">{{ 'postJob.form.educations.phd' | translate }}</option>
             </select>
           </div>
           <div>
-            <label for="experience">Experience</label>
+            <label for="experience">{{ 'postJob.form.experience' | translate }}</label>
             <select id="experience">
-              <option value="">Select...</option>
-              <option value="entry">Entry Level</option>
-              <option value="mid">Mid Level</option>
-              <option value="senior">Senior Level</option>
+              <option value="">{{ 'postJob.form.select' | translate }}</option>
+              <option value="entry">{{ 'postJob.form.experiences.entry' | translate }}</option>
+              <option value="mid">{{ 'postJob.form.experiences.mid' | translate }}</option>
+              <option value="senior">{{ 'postJob.form.experiences.senior' | translate }}</option>
             </select>
           </div>
           <div>
-            <label for="jobType">Job Type</label>
+            <label for="jobType">{{ 'postJob.form.jobType' | translate }}</label>
             <select id="jobType">
-              <option value="">Select...</option>
-              <option value="full-time">Full Time</option>
-              <option value="part-time">Part Time</option>
-              <option value="contract">Contract</option>
-              <option value="internship">Internship</option>
+              <option value="">{{ 'postJob.form.select' | translate }}</option>
+              <option value="full-time">{{ 'postJob.form.jobTypes.fullTime' | translate }}</option>
+              <option value="part-time">{{ 'postJob.form.jobTypes.partTime' | translate }}</option>
+              <option value="contract">{{ 'postJob.form.jobTypes.contract' | translate }}</option>
+              <option value="internship">{{ 'postJob.form.jobTypes.internship' | translate }}</option>
             </select>
           </div>
         </div>
@@ -107,27 +107,27 @@
         <!-- Vacancies, Expiration Date, Job Level -->
         <div class="form-row three-col">
           <div>
-            <label for="vacancies">Vacancies</label>
+            <label for="vacancies">{{ 'postJob.form.vacancies' | translate }}</label>
             <select id="vacancies">
-              <option value="">Select...</option>
-              <option value="1">1</option>
-              <option value="2-5">2-5</option>
-              <option value="5-10">5-10</option>
-              <option value="10+">10+</option>
+              <option value="">{{ 'postJob.form.select' | translate }}</option>
+              <option value="1">{{ 'postJob.form.vacancyOptions.1' | translate }}</option>
+              <option value="2-5">{{ 'postJob.form.vacancyOptions.2-5' | translate }}</option>
+              <option value="5-10">{{ 'postJob.form.vacancyOptions.5-10' | translate }}</option>
+              <option value="10+">{{ 'postJob.form.vacancyOptions.10+' | translate }}</option>
             </select>
           </div>
           <div>
-            <label for="expirationDate">Expiration Date</label>
+            <label for="expirationDate">{{ 'postJob.form.expirationDate' | translate }}</label>
             <input type="date" id="expirationDate" placeholder="DD/MM/YYYY">
           </div>
           <div>
-            <label for="jobLevel">Job Level</label>
+            <label for="jobLevel">{{ 'postJob.form.jobLevel' | translate }}</label>
             <select id="jobLevel">
-              <option value="">Select...</option>
-              <option value="entry">Entry Level</option>
-              <option value="mid">Mid Level</option>
-              <option value="senior">Senior Level</option>
-              <option value="executive">Executive</option>
+              <option value="">{{ 'postJob.form.select' | translate }}</option>
+              <option value="entry">{{ 'postJob.form.jobLevels.entry' | translate }}</option>
+              <option value="mid">{{ 'postJob.form.jobLevels.mid' | translate }}</option>
+              <option value="senior">{{ 'postJob.form.jobLevels.senior' | translate }}</option>
+              <option value="executive">{{ 'postJob.form.jobLevels.executive' | translate }}</option>
             </select>
           </div>
         </div>
@@ -135,32 +135,32 @@
 
       <!-- Apply Job On -->
       <div class="form-group">
-        <h3 class="section-title">Apply Job on:</h3>
+        <h3 class="section-title">{{ 'postJob.form.applyOn' | translate }}</h3>
         <div class="radio-group">
           <div class="radio-option selected" onclick="selectRadio(this, 'jobaplied')">
             <input type="radio" name="applyMethod" value="jobaplied" checked>
-            <div class="radio-title">On Jobaplied</div>
-            <div class="radio-description">Candidates will apply via using jobaplied on our application flow</div>
+            <div class="radio-title">{{ 'postJob.form.applyMethods.jobaplied.title' | translate }}</div>
+            <div class="radio-description">{{ 'postJob.form.applyMethods.jobaplied.description' | translate }}</div>
           </div>
           <div class="radio-option" onclick="selectRadio(this, 'external')">
             <input type="radio" name="applyMethod" value="external">
-            <div class="radio-title">External Platform</div>
-            <div class="radio-description">Candidates apply via your website, all applications will redirect to your website</div>
+            <div class="radio-title">{{ 'postJob.form.applyMethods.external.title' | translate }}</div>
+            <div class="radio-description">{{ 'postJob.form.applyMethods.external.description' | translate }}</div>
           </div>
           <div class="radio-option" onclick="selectRadio(this, 'email')">
             <input type="radio" name="applyMethod" value="email">
-            <div class="radio-title">On Your Email</div>
-            <div class="radio-description">Candidates apply via your email. Candidates can send application on your email</div>
+            <div class="radio-title">{{ 'postJob.form.applyMethods.email.title' | translate }}</div>
+            <div class="radio-description">{{ 'postJob.form.applyMethods.email.description' | translate }}</div>
           </div>
         </div>
       </div>
 
       <!-- Description & Responsibility -->
       <div class="form-group">
-        <h3 class="section-title">Description & Responsibility</h3>
+        <h3 class="section-title">{{ 'postJob.form.descriptionSection' | translate }}</h3>
 
         <div style="margin-bottom: 16px;">
-          <label for="description">Description</label>
+          <label for="description">{{ 'postJob.form.description' | translate }}</label>
           <div class="text-editor">
             <div class="editor-toolbar">
               <button type="button" class="editor-btn" onclick="formatText('bold')"><strong>B</strong></button>
@@ -171,12 +171,12 @@
               <button type="button" class="editor-btn" onclick="formatText('unorderedList')">• ≡</button>
               <button type="button" class="editor-btn" onclick="formatText('orderedList')">1. ≡</button>
             </div>
-            <textarea id="description" class="editor-textarea" placeholder="Add your job description..."></textarea>
+            <textarea id="description" class="editor-textarea" placeholder="{{ 'postJob.form.descriptionPlaceholder' | translate }}"></textarea>
           </div>
         </div>
 
         <div>
-          <label for="responsibilities">Responsibilities</label>
+          <label for="responsibilities">{{ 'postJob.form.responsibilities' | translate }}</label>
           <div class="text-editor">
             <div class="editor-toolbar">
               <button type="button" class="editor-btn" onclick="formatText('bold')"><strong>B</strong></button>
@@ -187,14 +187,14 @@
               <button type="button" class="editor-btn" onclick="formatText('unorderedList')">• ≡</button>
               <button type="button" class="editor-btn" onclick="formatText('orderedList')">1. ≡</button>
             </div>
-            <textarea id="responsibilities" class="editor-textarea" placeholder="Add your job responsibilities..."></textarea>
+            <textarea id="responsibilities" class="editor-textarea" placeholder="{{ 'postJob.form.responsibilitiesPlaceholder' | translate }}"></textarea>
           </div>
         </div>
       </div>
 
       <!-- Submit Button -->
       <button type="submit" class="submit-btn">
-        Post Job
+        {{ 'postJob.form.submit' | translate }}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="5" y1="12" x2="19" y2="12"></line>
           <polyline points="12,5 19,12 12,19"></polyline>

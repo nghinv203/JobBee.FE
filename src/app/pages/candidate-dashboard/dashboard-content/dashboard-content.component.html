@@ -3,8 +3,8 @@
 <div class="dashboard-content">
   <!-- Header -->
   <div class="dashboard-header">
-    <h1>Hello, Esther Howard</h1>
-    <p>Here is your daily activities and job alerts</p>
+    <h1>{{ 'dashboard.greeting' | translate }}, Esther Howard</h1>
+    <p>{{ 'dashboard.subtitle' | translate }}</p>
   </div>
 
   <!-- Stats Cards -->
@@ -12,7 +12,7 @@
     <div class="stat-card">
       <div class="stat-content">
         <div class="stat-number">589</div>
-        <div class="stat-label">Applied Jobs</div>
+        <div class="stat-label">{{ 'dashboard.stats.appliedJobs' | translate }}</div>
       </div>
       <div class="stat-icon blue-icon">
         <i class="fas fa-briefcase"></i> <!-- Applied Jobs -->
@@ -22,7 +22,7 @@
     <div class="stat-card">
       <div class="stat-content">
         <div class="stat-number">238</div>
-        <div class="stat-label">Favorite Jobs</div>
+        <div class="stat-label">{{ 'dashboard.stats.favoriteJobs' | translate }}</div>
       </div>
       <div class="stat-icon orange-icon">
         <i class="fas fa-bookmark"></i> <!-- Favorite Jobs -->
@@ -32,7 +32,7 @@
     <div class="stat-card">
       <div class="stat-content">
         <div class="stat-number">574</div>
-        <div class="stat-label">Job Alerts</div>
+        <div class="stat-label">{{ 'dashboard.stats.jobAlerts' | translate }}</div>
       </div>
       <div class="stat-icon green-icon">
         <i class="fas fa-bell"></i> <!-- Job Alerts -->
@@ -48,28 +48,28 @@
         <img src="https://via.placeholder.com/50x50/666666/ffffff?text=EH" alt="Profile">
       </div>
       <div class="alert-text">
-        <h3>Your profile editing is not completed.</h3>
-        <p>Complete your profile editing & build your custom Resume</p>
+        <h3>{{ 'dashboard.profileAlert.title' | translate }}</h3>
+        <p>{{ 'dashboard.profileAlert.description' | translate }}</p>
       </div>
     </div>
     <button class="edit-profile-btn">
-      Edit Profile →
+      {{ 'dashboard.profileAlert.button' | translate }}
     </button>
   </div>
 
   <!-- Recently Applied Section -->
   <div class="recently-applied">
     <div class="section-header">
-      <h2>Recently Applied</h2>
-      <a href="#" class="view-all-link">View all →</a>
+      <h2>{{ 'dashboard.recentlyApplied.title' | translate }}</h2>
+      <a href="#" class="view-all-link">{{ 'dashboard.recentlyApplied.viewAll' | translate }}</a>
     </div>
 
     <div class="applications-table">
       <div class="table-header">
-        <div class="col-job">Job</div>
-        <div class="col-date">Date Applied</div>
-        <div class="col-status">Status</div>
-        <div class="col-action">Action</div>
+        <div class="col-job">{{ 'dashboard.recentlyApplied.table.job' | translate }}</div>
+        <div class="col-date">{{ 'dashboard.recentlyApplied.table.date' | translate }}</div>
+        <div class="col-status">{{ 'dashboard.recentlyApplied.table.status' | translate }}</div>
+        <div class="col-action">{{ 'dashboard.recentlyApplied.table.action' | translate }}</div>
       </div>
 
       <div class="application-row">
@@ -85,10 +85,10 @@
         </div>
         <div class="col-date">Feb 2, 2019 19:28</div>
         <div class="col-status">
-          <span class="status-badge active">✓ Active</span>
+          <span class="status-badge active">{{ 'dashboard.recentlyApplied.table.active' | translate }}</span>
         </div>
         <div class="col-action">
-          <button class="view-details-btn">View Details</button>
+          <button class="view-details-btn">{{ 'dashboard.recentlyApplied.table.viewDetails' | translate }}</button>
         </div>
       </div>
 
@@ -105,10 +105,10 @@
         </div>
         <div class="col-date">Dec 7, 2019 23:26</div>
         <div class="col-status">
-          <span class="status-badge active">✓ Active</span>
+          <span class="status-badge active">{{ 'dashboard.recentlyApplied.table.active' | translate }}</span>
         </div>
         <div class="col-action">
-          <button class="view-details-btn">View Details</button>
+          <button class="view-details-btn">{{ 'dashboard.recentlyApplied.table.viewDetails' | translate }}</button>
         </div>
       </div>
 
@@ -125,10 +125,10 @@
         </div>
         <div class="col-date">Feb 2, 2019 19:28</div>
         <div class="col-status">
-          <span class="status-badge active">✓ Active</span>
+          <span class="status-badge active">{{ 'dashboard.recentlyApplied.table.active' | translate }}</span>
         </div>
         <div class="col-action">
-          <button class="view-details-btn">View Details</button>
+          <button class="view-details-btn">{{ 'dashboard.recentlyApplied.table.viewDetails' | translate }}</button>
         </div>
       </div>
 
@@ -145,10 +145,10 @@
         </div>
         <div class="col-date">Dec 7, 2019 23:26</div>
         <div class="col-status">
-          <span class="status-badge active">✓ Active</span>
+          <span class="status-badge active">{{ 'dashboard.recentlyApplied.table.active' | translate }}</span>
         </div>
         <div class="col-action">
-          <button class="view-details-btn primary">View Details</button>
+          <button class="view-details-btn primary">{{ 'dashboard.recentlyApplied.table.viewDetails' | translate }}</button>
         </div>
       </div>
     </div>

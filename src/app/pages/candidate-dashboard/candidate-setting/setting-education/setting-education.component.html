@@ -5,19 +5,19 @@
 <div class="container">
   <div class="header">
     <div class="header-left">
-      <h1>Education Records <span class="count">(1)</span></h1>
+      <h1>{{ 'education.title' | translate }}<span class="count">(1)</span></h1>
     </div>
     <button (click)="openAddExperience()" class="add-btn">
       <span class="add-icon">+</span>
-      Add Education
+      {{ 'education.addButton' | translate }}
     </button>
   </div>
 
   <div class="table-header">
-    <div>EDUCATION</div>
-    <div>PERIOD</div>
-    <div>STATUS</div>
-    <div>ACTION</div>
+    <div>{{ 'education.tableHeader.education' | translate }}</div>
+    <div>{{ 'education.tableHeader.period' | translate }}</div>
+    <div>{{ 'education.tableHeader.status' | translate }}</div>
+    <div>{{ 'education.tableHeader.action' | translate }}</div>
   </div>
 
   <div class="education-list" id="educationList">
@@ -25,7 +25,7 @@
       <div class="education-info">
         <div class="education-icon"></div>
         <div class="education-details">
-          <h3>Computer Science <span class="education-type type-completed">Complete</span></h3>
+          <h3>Computer Science <span class="education-type type-completed">{{ 'education.item.typeCompleted' | translate }}</span></h3>
           <div class="education-meta">
                                 <span class="institution">
                                     <svg class="location-icon" fill="currentColor" viewBox="0 0 20 20">
@@ -45,9 +45,9 @@
       <div class="date-period">2020 - 2024</div>
       <div class="status active">
         <div class="status-icon"></div>
-        Active
+        {{ 'education.item.statusActive' | translate }}
       </div>
-      <button class="btn btn-danger">Delete</button>
+      <button class="btn btn-danger">{{ 'education.item.delete' | translate }}</button>
     </div>
   </div>
 </div>

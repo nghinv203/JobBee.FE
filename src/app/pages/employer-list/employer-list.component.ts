@@ -3,6 +3,7 @@ import {EmployerSearchComponent} from './employer-search/employer-search.compone
 import {HeaderComponent} from '../../layout/main/header/header.component';
 import {FooterComponent} from '../../layout/main/footer/footer.component';
 import {EmployerDetailComponent} from './employer-detail/employer-detail.component';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-employer-list',
@@ -10,7 +11,7 @@ import {EmployerDetailComponent} from './employer-detail/employer-detail.compone
   imports: [EmployerSearchComponent,
     HeaderComponent,
     FooterComponent,
-    EmployerDetailComponent],
+    EmployerDetailComponent, TranslatePipe],
   templateUrl: './employer-list.component.html',
   styleUrl: './employer-list.component.scss'
 })

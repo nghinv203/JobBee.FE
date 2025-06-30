@@ -1,16 +1,16 @@
 <div class="container">
   <!-- Breadcrumb -->
   <nav class="breadcrumb">
-    <a>Employer</a>
+    <a>{{ 'breadcrumb.employer' | translate }}</a>
     <span class="breadcrumb-separator">/</span>
-    <a (click)="emitMessage()" >My Jobs</a>
+    <a (click)="emitMessage()">{{ 'breadcrumb.myJobs' | translate }}</a>
     <span class="breadcrumb-separator">/</span>
-    <span class="active">Applications</span>
+    <span class="active">{{ 'breadcrumb.applications' | translate }}</span>
   </nav>
 
   <!-- Header -->
   <div class="header">
-    <h1 class="page-title">Job Applications</h1>
+    <h1 class="page-title">{{ 'header.pageTitle' | translate }}</h1>
   </div>
 
   <!-- Main Content -->
@@ -18,7 +18,7 @@
     <!-- Applications Section -->
     <div class="applications-section">
       <div class="section-header">
-        <h2 class="section-title">All Application (213)</h2>
+        <h2 class="section-title">{{ 'applicationsSection.title' | translate:{ count: 213 } }}</h2>
         <div class="dropdown">
           <button class="dropdown-toggle" onclick="toggleDropdown('dropdown1')">
             <i class="fas fa-ellipsis-h"></i>
@@ -26,11 +26,11 @@
           <div class="dropdown-menu" id="dropdown1">
             <a href="#" class="dropdown-item">
               <i class="fas fa-edit"></i>
-              Edit Column
+              {{ 'applicationsSection.dropdown.edit' | translate }}
             </a>
             <a href="#" class="dropdown-item danger">
               <i class="fas fa-trash"></i>
-              Delete
+              {{ 'applicationsSection.dropdown.delete' | translate }}
             </a>
           </div>
         </div>
@@ -50,7 +50,7 @@
             </ul>
             <a href="#" class="download-cv">
               <i class="fas fa-video"></i>
-              View Video Resume
+              {{ 'applicationsSection.videoResume' | translate }}
             </a>
           </div>
         </div>
@@ -68,7 +68,7 @@
             </ul>
             <a href="#" class="download-cv">
               <i class="fas fa-video"></i>
-              View Video Resume
+              {{ 'applicationsSection.videoResume' | translate }}
             </a>
           </div>
         </div>
@@ -86,7 +86,7 @@
             </ul>
             <a href="#" class="download-cv">
               <i class="fas fa-video"></i>
-              View Video Resume
+              {{ 'applicationsSection.videoResume' | translate }}
             </a>
           </div>
         </div>
@@ -104,7 +104,7 @@
             </ul>
             <a href="#" class="download-cv">
               <i class="fas fa-video"></i>
-              View Video Resume
+              {{ 'applicationsSection.videoResume' | translate }}
             </a>
           </div>
         </div>
@@ -115,15 +115,15 @@
     <div class="sidebar">
       <!-- Sort Widget -->
       <div class="sort-widget">
-        <h3 class="widget-title">Sort Application</h3>
+        <h3 class="widget-title">{{ 'sidebar.sort.title' | translate }}</h3>
         <div class="sort-options">
           <div class="radio-option">
             <input type="radio" id="newest" name="sort" value="newest" checked>
-            <label for="newest">Newest</label>
+            <label for="newest">{{ 'sidebar.sort.newest' | translate }}</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="oldest" name="sort" value="oldest">
-            <label for="oldest">Oldest</label>
+            <label for="oldest">{{ 'sidebar.sort.oldest' | translate }}</label>
           </div>
         </div>
       </div>
@@ -133,11 +133,11 @@
         <div class="create-icon">
           <i class="fas fa-plus"></i>
         </div>
-        <h3 class="create-title">Create Job</h3>
-        <p class="create-subtitle">Post a job and hire top talent</p>
+        <h3 class="create-title">{{ 'sidebar.createJob.title' | translate }}</h3>
+        <p class="create-subtitle">{{ 'sidebar.createJob.subtitle' | translate }}</p>
         <button class="btn btn-primary">
           <i class="fas fa-plus"></i>
-          Create Job
+          {{ 'sidebar.createJob.button' | translate }}
         </button>
       </div>
     </div>

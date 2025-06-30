@@ -5,146 +5,147 @@
 }
 
 @if(!isDetail){
-<app-employer-search></app-employer-search>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-<div class="container">
-  <!-- Sidebar Filters -->
-  <div class="sidebar">
-    <div class="filter-header">
-      <i class="fas fa-filter"></i> Lọc
-    </div>
+  <app-employer-search></app-employer-search>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <div class="filter-section">
-      <div class="filter-title">Bán kính vị trí: 32 mét</div>
-      <div class="range-container">
-        <input type="range" class="range-input" min="0" max="100" value="32">
+  <div class="container">
+    <!-- Sidebar Filters -->
+    <div class="sidebar">
+      <div class="filter-header">
+        <i class="fas fa-filter"></i> {{ 'employer.filter' | translate }}
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-title">{{ 'employer.distanceLabel' | translate }}</div>
+        <div class="range-container">
+          <input type="range" class="range-input" min="0" max="100" value="32">
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-title">{{ 'employer.organizationType' | translate }}</div>
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox"> {{ 'employer.organizationOptions.government' | translate }}
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox"> {{ 'employer.organizationOptions.govOwned' | translate }}
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox"> {{ 'employer.organizationOptions.ngo' | translate }}
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox"> {{ 'employer.organizationOptions.private' | translate }}
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox"> {{ 'employer.organizationOptions.international' | translate }}
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox"> {{ 'employer.organizationOptions.other' | translate }}
+          </label>
+        </div>
       </div>
     </div>
 
-    <div class="filter-section">
-      <div class="filter-title">Loại hình tổ chức</div>
-      <div class="checkbox-group">
-        <label class="checkbox-item">
-          <input type="checkbox"> Chính phủ
-        </label>
-        <label class="checkbox-item">
-          <input type="checkbox"> Có vốn chính phủ
-        </label>
-        <label class="checkbox-item">
-          <input type="checkbox"> Tổ chức phi chính phủ
-        </label>
-        <label class="checkbox-item">
-          <input type="checkbox"> Công ty tư nhân
-        </label>
-        <label class="checkbox-item">
-          <input type="checkbox"> Các cơ quan quốc tế
-        </label>
-        <label class="checkbox-item">
-          <input type="checkbox"> Khác
-        </label>
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="top-controls">
+        <div class="sort-controls">
+          <select class="sort-select">
+            <option>{{ 'employer.sortOptions.latest' | translate }}</option>
+            <option>{{ 'employer.sortOptions.bestMatch' | translate }}</option>
+            <option>{{ 'employer.sortOptions.highestSalary' | translate }}</option>
+          </select>
+        </div>
       </div>
+
+      <div class="job-list">
+        <div class="job-card">
+          <div class="company-logo dribbble">
+            <span style="font-size: 14px;">●</span>
+          </div>
+          <div class="job-info">
+            <div class="company-name">Dribbble</div>
+            <div class="job-details">
+              <div class="location"><i class="fas fa-map-marker-alt"></i> United States</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> {{ 'employer.jobList.newJobs' | translate:{ count: 3 } }}</div>
+            </div>
+          </div>
+          <button (click)="viewDetail()" class="apply-btn">{{ 'employer.jobList.openPositions' | translate }}</button>
+        </div>
+
+        <div class="job-card">
+          <div class="company-logo udemy">U</div>
+          <div class="job-info">
+            <div class="company-name">Udemy</div>
+            <div class="job-details">
+              <div class="location"><i class="fas fa-map-marker-alt"></i> China</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> {{ 'employer.jobList.newJobs' | translate:{ count: 3 } }}</div>
+            </div>
+          </div>
+          <button (click)="viewDetail()" class="apply-btn">{{ 'employer.jobList.openPositions' | translate }}</button>
+        </div>
+
+        <div class="job-card">
+          <div class="company-logo figma">
+            <span style="font-size: 14px;">◐</span>
+          </div>
+          <div class="job-info">
+            <div class="company-name">Figma</div>
+            <div class="job-details">
+              <div class="location"><i class="fas fa-map-marker-alt"></i> United States</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> {{ 'employer.jobList.newJobs' | translate:{ count: 3 } }}</div>
+            </div>
+          </div>
+          <button (click)="viewDetail()" class="apply-btn">{{ 'employer.jobList.openPositions' | translate }}</button>
+        </div>
+
+        <div class="job-card">
+          <div class="company-logo google">G</div>
+          <div class="job-info">
+            <div class="company-name">Google</div>
+            <div class="job-details">
+              <div class="location"><i class="fas fa-map-marker-alt"></i> Australia</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> {{ 'employer.jobList.newJobs' | translate:{ count: 3 } }}</div>
+            </div>
+          </div>
+          <button (click)="viewDetail()" class="apply-btn">{{ 'employer.jobList.openPositions' | translate }}</button>
+        </div>
+
+        <div class="job-card">
+          <div class="company-logo microsoft">⊞</div>
+          <div class="job-info">
+            <div class="company-name">Microsoft</div>
+            <div class="job-details">
+              <div class="location"><i class="fas fa-map-marker-alt"></i> Australia</div>
+              <div class="experience"><i class="fas fa-briefcase"></i> {{ 'employer.jobList.newJobs' | translate:{ count: 3 } }}</div>
+            </div>
+          </div>
+          <button (click)="viewDetail()" class="apply-btn">{{ 'employer.jobList.openPositions' | translate }}</button>
+        </div>
+      </div>
+
+      <nav class="pagination" id="pagination">
+        <button class="pagination-arrow" id="prevBtn">
+          <svg class="arrow-icon" viewBox="0 0 24 24">
+            <path d="m15 18-6-6 6-6"/>
+          </svg>
+        </button>
+
+        <a href="#" class="pagination-item active" data-page="1">01</a>
+        <a href="#" class="pagination-item" data-page="2">02</a>
+        <a href="#" class="pagination-item" data-page="3">03</a>
+        <a href="#" class="pagination-item" data-page="4">04</a>
+        <a href="#" class="pagination-item" data-page="5">05</a>
+
+        <button class="pagination-arrow" id="nextBtn">
+          <svg class="arrow-icon" viewBox="0 0 24 24">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+        </button>
+      </nav>
     </div>
   </div>
-
-  <!-- Main Content -->
-  <div class="main-content">
-    <div class="top-controls">
-      <div class="sort-controls">
-        <select class="sort-select">
-          <option>Mới nhất</option>
-          <option>Phù hợp nhất</option>
-          <option>Lương cao nhất</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="job-list">
-      <div class="job-card">
-        <div class="company-logo dribbble">
-          <span style="font-size: 14px;">●</span>
-        </div>
-        <div class="job-info">
-          <div class="company-name">Dribbble</div>
-          <div class="job-details">
-            <div class="location"><i class="fas fa-map-marker-alt"></i> United States</div>
-            <div class="experience"><i class="fas fa-briefcase"></i> 3 - việc làm mới</div>
-          </div>
-        </div>
-        <button (click)="viewDetail()" class="apply-btn">Vị Trí Đang Tuyển</button>
-      </div>
-
-      <div class="job-card">
-        <div class="company-logo udemy">U</div>
-        <div class="job-info">
-          <div class="company-name">Udemy</div>
-          <div class="job-details">
-            <div class="location"><i class="fas fa-map-marker-alt"></i> China</div>
-            <div class="experience"><i class="fas fa-briefcase"></i> 3 - việc làm mới</div>
-          </div>
-        </div>
-        <button (click)="viewDetail()" class="apply-btn">Vị Trí Đang Tuyển</button>
-      </div>
-
-      <div class="job-card">
-        <div class="company-logo figma">
-          <span style="font-size: 14px;">◐</span>
-        </div>
-        <div class="job-info">
-          <div class="company-name">Figma</div>
-          <div class="job-details">
-            <div class="location"><i class="fas fa-map-marker-alt"></i> United States</div>
-            <div class="experience"><i class="fas fa-briefcase"></i> 3 - việc làm mới</div>
-          </div>
-        </div>
-        <button (click)="viewDetail()" class="apply-btn">Vị Trí Đang Tuyển</button>
-      </div>
-
-      <div class="job-card">
-        <div class="company-logo google">G</div>
-        <div class="job-info">
-          <div class="company-name">Google</div>
-          <div class="job-details">
-            <div class="location"><i class="fas fa-map-marker-alt"></i> Australia</div>
-            <div class="experience"><i class="fas fa-briefcase"></i> 3 - việc làm mới</div>
-          </div>
-        </div>
-        <button (click)="viewDetail()" class="apply-btn">Vị Trí Đang Tuyển</button>
-      </div>
-
-      <div class="job-card">
-        <div class="company-logo microsoft">⊞</div>
-        <div class="job-info">
-          <div class="company-name">Microsoft</div>
-          <div class="job-details">
-            <div class="location"><i class="fas fa-map-marker-alt"></i> Australia</div>
-            <div class="experience"><i class="fas fa-briefcase"></i> 3 - việc làm mới</div>
-          </div>
-        </div>
-        <button (click)="viewDetail()" class="apply-btn">Vị Trí Đang Tuyển</button>
-      </div>
-    </div>
-
-    <nav class="pagination" id="pagination">
-      <button class="pagination-arrow" id="prevBtn">
-        <svg class="arrow-icon" viewBox="0 0 24 24">
-          <path d="m15 18-6-6 6-6"/>
-        </svg>
-      </button>
-
-      <a href="#" class="pagination-item active" data-page="1">01</a>
-      <a href="#" class="pagination-item" data-page="2">02</a>
-      <a href="#" class="pagination-item" data-page="3">03</a>
-      <a href="#" class="pagination-item" data-page="4">04</a>
-      <a href="#" class="pagination-item" data-page="5">05</a>
-
-      <button class="pagination-arrow" id="nextBtn">
-        <svg class="arrow-icon" viewBox="0 0 24 24">
-          <path d="m9 18 6-6-6-6"/>
-        </svg>
-      </button>
-    </nav>
-  </div>
-</div>
 }
 
 <app-footer></app-footer>

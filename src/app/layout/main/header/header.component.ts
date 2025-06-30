@@ -7,6 +7,9 @@ import {NzButtonComponent} from 'ng-zorro-antd/button';
 import {ActivatedRoute, Route, Router, RouterLink} from '@angular/router';
 import {NzInputDirective} from 'ng-zorro-antd/input';
 import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import {NzIconDirective} from 'ng-zorro-antd/icon';
+import {AuthService} from '../../../shared/services/auth.service';
+import {NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -18,6 +21,8 @@ import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
     RouterLink,
     NzInputDirective,
     ReactiveFormsModule,
+    NzIconDirective,
+    NgIf,
   ],
   templateUrl: './header.component.html',
   standalone: true,
@@ -31,7 +36,8 @@ export class HeaderComponent implements OnInit{
   constructor(private translateService: TranslateService,
               private fb: FormBuilder,
               private router: Router,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              public authService: AuthService) {
     const browserLanguage = localStorage.getItem('language') || 'vi';
     if(browserLanguage === 'vi') {
       this.selectedItems = options[0]
@@ -57,5 +63,15 @@ export class HeaderComponent implements OnInit{
   handleChangeLanguage(event: any): void {
     this.translateService.use(`${event.value}`);
     localStorage.setItem('language', event.value);
+  }
+
+  navigateToDashboard() {
+    const role = this.authService.getRole();
+
+    if (role === 'candidate') {
+      this.router.navigate(['/candidate-dashboard']);
+    } else if (role === 'employer') {
+      this.router.navigate(['/employer-dashboard']);
+    }
   }
 }

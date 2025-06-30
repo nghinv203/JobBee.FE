@@ -1,14 +1,14 @@
 <div class="container">
   <div class="header">
-    <h1>Hello, Instagram</h1>
-    <p>Here is your daily activities and applications</p>
+    <h1>{{ 'dashboard.greeting' | translate }}</h1>
+    <p>{{ 'dashboard.subtitle' | translate }}</p>
   </div>
 
   <div class="stats">
     <div class="stat-card">
       <div class="stat-info">
         <h2>589</h2>
-        <p>Open Jobs</p>
+        <p>{{ 'dashboard.stats.openJobs' | translate }}</p>
       </div>
       <div class="stat-icon blue">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
@@ -21,7 +21,7 @@
     <div class="stat-card">
       <div class="stat-info">
         <h2>2,517</h2>
-        <p>Saved Candidates</p>
+        <p>{{ 'dashboard.stats.savedCandidates' | translate }}</p>
       </div>
       <div class="stat-icon yellow">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
@@ -33,14 +33,14 @@
 
   <div class="jobs-section">
     <div class="jobs-header">
-      <h3>Recently Posted Jobs</h3>
-      <a href="#" class="view-all">View all →</a>
+      <h3>{{ 'dashboard.recentJobs.title' | translate }}</h3>
+      <a href="#" class="view-all">{{ 'dashboard.recentJobs.viewAll' | translate }}</a>
     </div>
 
     <div class="table-header">
-      <span>Jobs</span>
-      <span>Status</span>
-      <span>Applications</span>
+      <span>{{ 'dashboard.recentJobs.tableHeader.jobs' | translate }}</span>
+      <span>{{ 'dashboard.recentJobs.tableHeader.status' | translate }}</span>
+      <span>{{ 'dashboard.recentJobs.tableHeader.applications' | translate }}</span>
     </div>
 
     <div class="job-row">
@@ -52,14 +52,14 @@
         <div class="status-icon">
           <i class="fas fa-circle-check"></i>
         </div>
-        <span>Active</span>
+        <span>{{ 'dashboard.status.active' | translate }}</span>
       </div>
       <div class="applications">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2">
           <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
           <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
         </svg>
-        798 Applications
+        798 {{ 'dashboard.recentJobs.tableHeader.applications' | translate }}
       </div>
     </div>
 
@@ -72,14 +72,14 @@
         <div class="status-icon">
           <i class="fas fa-circle-check"></i>
         </div>
-        <span>Active</span>
+        <span>{{ 'dashboard.status.active' | translate }}</span>
       </div>
       <div class="applications">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2">
           <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
           <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
         </svg>
-        185 Applications
+        185 {{ 'dashboard.recentJobs.tableHeader.applications' | translate }}
       </div>
     </div>
 
@@ -92,14 +92,14 @@
         <div class="status-icon">
           <i class="fas fa-circle-check"></i>
         </div>
-        <span>Active</span>
+        <span>{{ 'dashboard.status.active' | translate }}</span>
       </div>
       <div class="applications">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2">
           <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
           <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
         </svg>
-        583 Applications
+        583 {{ 'dashboard.recentJobs.tableHeader.applications' | translate }}
       </div>
     </div>
 
@@ -112,14 +112,14 @@
         <div class="status-icon expired">
           <i class="fas fa-circle-xmark"></i>
         </div>
-        <span>Expired</span>
+        <span>{{ 'dashboard.status.expired' | translate }}</span>
       </div>
       <div class="applications">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2">
           <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
           <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
         </svg>
-        740 Applications
+        740 {{ 'dashboard.recentJobs.tableHeader.applications' | translate }}
       </div>
     </div>
   </div>

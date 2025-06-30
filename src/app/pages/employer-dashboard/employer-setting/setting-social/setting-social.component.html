@@ -3,30 +3,39 @@
     <form [formGroup]="socialLinksForm" (ngSubmit)="onSubmit()">
       <div formArrayName="socialLinks" *ngFor="let link of socialLinks.controls; let i = index">
         <div [formGroupName]="i" class="social-link-item">
-          <label class="social-link-label">Social Link {{ i + 1 }}</label>
+          <label class="social-link-label">{{ 'socialLinksForm.socialLinkLabel' | translate:{ index: i + 1 } }}</label>
           <div class="social-link-row">
             <div class="social-platform-select">
               <select formControlName="platform">
+                <option disabled selected hidden>{{ 'socialLinksForm.platformSelectPlaceholder' | translate }}</option>
                 <option *ngFor="let p of platforms" [value]="p.value">
                   {{ p.icon }} {{ p.label }}
                 </option>
               </select>
             </div>
             <div class="url-input">
-              <input type="url" formControlName="url" placeholder="Profile link/url..."/>
+              <input
+                type="url"
+                formControlName="url"
+                [placeholder]="'socialLinksForm.urlPlaceholder' | translate"
+              />
             </div>
-            <button type="button" class="remove-btn" (click)="removeSocialLink(i)">✕</button>
+            <button type="button" class="remove-btn" (click)="removeSocialLink(i)">
+              ✕
+            </button>
           </div>
         </div>
       </div>
 
       <button type="button" class="add-social-btn" (click)="addNewSocialLink()">
         <div class="add-icon">+</div>
-        Add New Social Link
+        {{ 'socialLinksForm.addButton' | translate }}
       </button>
 
       <div class="button-container">
-        <button type="submit" class="btn btn-primary">Save Change</button>
+        <button type="submit" class="btn btn-primary">
+          {{ 'socialLinksForm.saveButton' | translate }}
+        </button>
       </div>
     </form>
   </div>
