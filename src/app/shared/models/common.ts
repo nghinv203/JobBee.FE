@@ -14,6 +14,7 @@ export interface IJobDetail {
 }
 
 export interface IEmployerDetail {
+  employerId: string;
   companyLogo: string;
   companyName: string;
   industry: string;
