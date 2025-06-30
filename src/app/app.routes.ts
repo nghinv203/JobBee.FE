@@ -10,6 +10,7 @@ import {EmployerSetupComponent} from './pages/employer-setup/employer-setup.comp
 import {EmployerDashboardComponent} from './pages/employer-dashboard/employer-dashboard.component';
 import {CandidateListComponent} from './pages/candidate-list/candidate-list.component';
 import {EmployerListComponent} from './pages/employer-list/employer-list.component';
+import {ErrorComponent} from './layout/error/error.component';
 
 export const routes: Routes = [
   {
@@ -27,6 +28,10 @@ export const routes: Routes = [
     path: 'jobs',
     component: PrimaryComponent,
     children: primaryRoutes
+  },
+  {
+    path: 'error',
+    component: ErrorComponent
   },
   {
     path: 'candidate-dashboard',

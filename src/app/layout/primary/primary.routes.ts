@@ -16,5 +16,5 @@ export const primaryRoutes: Routes = [
   {
     path: 'single-employer/:id',
     component: EmployerDetailComponent
-  }
+  },
 ];

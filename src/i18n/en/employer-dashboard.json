@@ -1,346 +1,348 @@
 {
-  "dashboard": {
-    "greeting": "Hello, Instagram",
-    "subtitle": "Here is your daily activities and applications",
-    "stats": {
-      "openJobs": "Open Jobs",
-      "savedCandidates": "Saved Candidates"
-    },
-    "recentJobs": {
-      "title": "Recently Posted Jobs",
-      "viewAll": "View all →",
-      "tableHeader": {
-        "jobs": "Jobs",
-        "status": "Status",
-        "applications": "Applications"
-      }
-    },
-    "status": {
-      "active": "Active",
-      "expired": "Expired"
-    }
-  },
-  "postJob": {
-    "title": "Post a job",
-    "form": {
-      "jobTitle": "Job Title",
-      "jobTitlePlaceholder": "Add job title, role, vacancies etc.",
-      "tags": "Tags",
-      "tagsPlaceholder": "Job keyword, tags etc.",
-      "jobRole": "Job Role",
-      "select": "Select...",
-      "roles": {
-        "designer": "Designer",
-        "developer": "Developer",
-        "manager": "Manager",
-        "analyst": "Analyst"
+  "employer-db": {
+    "dashboard": {
+      "greeting": "Hello, Instagram",
+      "subtitle": "Here is your daily activities and applications",
+      "stats": {
+        "openJobs": "Open Jobs",
+        "savedCandidates": "Saved Candidates"
       },
-      "salarySection": "Salary",
-      "minSalary": "Min Salary",
-      "minSalaryPlaceholder": "Minimum salary...",
-      "maxSalary": "Max Salary",
-      "maxSalaryPlaceholder": "Maximum salary...",
-      "salaryType": "Salary Type",
-      "salaryTypes": {
-        "hourly": "Hourly",
-        "monthly": "Monthly",
-        "yearly": "Yearly"
-      },
-      "advanceInfo": "Advance Information",
-      "education": "Education",
-      "educations": {
-        "highSchool": "High School",
-        "bachelor": "Bachelor's Degree",
-        "master": "Master's Degree",
-        "phd": "PhD"
-      },
-      "experience": "Experience",
-      "experiences": {
-        "entry": "Entry Level",
-        "mid": "Mid Level",
-        "senior": "Senior Level"
-      },
-      "jobType": "Job Type",
-      "jobTypes": {
-        "fullTime": "Full Time",
-        "partTime": "Part Time",
-        "contract": "Contract",
-        "internship": "Internship"
-      },
-      "vacancies": "Vacancies",
-      "vacancyOptions": {
-        "1": "1",
-        "2-5": "2-5",
-        "5-10": "5-10",
-        "10+": "10+"
-      },
-      "expirationDate": "Expiration Date",
-      "jobLevel": "Job Level",
-      "jobLevels": {
-        "entry": "Entry Level",
-        "mid": "Mid Level",
-        "senior": "Senior Level",
-        "executive": "Executive"
-      },
-      "applyOn": "Apply Job on:",
-      "applyMethods": {
-        "jobaplied": {
-          "title": "On Jobaplied",
-          "description": "Candidates will apply via using jobaplied on our application flow"
-        },
-        "external": {
-          "title": "External Platform",
-          "description": "Candidates apply via your website, all applications will redirect to your website"
-        },
-        "email": {
-          "title": "On Your Email",
-          "description": "Candidates apply via your email. Candidates can send application on your email"
+      "recentJobs": {
+        "title": "Recently Posted Jobs",
+        "viewAll": "View all →",
+        "tableHeader": {
+          "jobs": "Jobs",
+          "status": "Status",
+          "applications": "Applications"
         }
       },
-      "descriptionSection": "Description & Responsibility",
-      "description": "Description",
-      "descriptionPlaceholder": "Add your job description...",
-      "responsibilities": "Responsibilities",
-      "responsibilitiesPlaceholder": "Add your job responsibilities...",
-      "submit": "Post Job"
-    }
-  },
-  "jobSection": {
-    "title": "My Jobs",
-    "tableHeader": {
-      "job": "Jobs",
-      "status": "Status",
-      "applications": "Applications",
-      "actions": "Actions"
-    },
-    "jobs": {
-      "remaining1": "",
-      "remaining2": "days remaining",
-      "applications": "Applications",
-      "status": "Active"
-    },
-    "actions": {
-      "viewApplications": "View Applications",
-      "promoteJob": "Promote Job",
-      "viewDetail": "View Detail",
-      "expire": "Expire"
-    },
-    "pagination": {
-      "prev": "Previous",
-      "next": "Next"
-    }
-  },
-  "breadcrumb": {
-    "employer": "Employer",
-    "myJobs": "My Jobs",
-    "applications": "Applications"
-  },
-  "header": {
-    "pageTitle": "Job Applications"
-  },
-  "applicationsSection": {
-    "title": "All Application ({{count}})",
-    "dropdown": {
-      "edit": "Edit Column",
-      "delete": "Delete"
-    },
-    "videoResume": "View Video Resume"
-  },
-  "sidebar": {
-    "sort": {
-      "title": "Sort Application",
-      "newest": "Newest",
-      "oldest": "Oldest"
-    },
-    "createJob": {
-      "title": "Create Job",
-      "subtitle": "Post a job and hire top talent",
-      "button": "Create Job"
-    }
-  },
-  "savedCandidates": {
-    "title": "Saved Candidates",
-    "infoText": "All of the candidates are visible until {{date}}",
-    "button": {
-      "viewProfile": "View Profile"
-    }
-  },
-  "popup": {
-    "close": "Close",
-    "profile": {
-      "viewVideoResume": "View Video Resume"
-    },
-    "sections": {
-      "biographyTitle": "Biography",
-      "coverLetterTitle": "Cover Letter",
-      "socialTitle": "Follow me Social Media"
-    },
-    "info": {
-      "age": "Age",
-      "dob": "Date of Birth",
-      "country": "Country",
-      "maritalStatus": "Marital Status",
-      "gender": "Gender",
-      "experience": "Experience",
-      "qualification": "Qualification"
-    },
-    "contact": {
-      "title": "Contact Information",
-      "website": "Website",
-      "location": "Location",
-      "phone": "Phone Number",
-      "secondaryPhone": "Secondary Phone",
-      "email": "Email Address"
-    }
-  },
-  "subscription": {
-    "header": {
-      "title": "Buy Premium Subscription to Post a Job",
-      "description": "Donec eu dui ut dolor commodo ornare. Sed arcu libero, malesuada quis justo sit amet, varius tempus neque. Quisque ultrices mi sed lorem commodo, vel tempus lectus ultrices."
-    },
-    "plans": {
-      "basic": {
-        "title": "Basic",
-        "description": "A budget-friendly plan for new employers. Post a limited number of job listings.",
-        "price": "$19",
-        "period": "/Monthly",
-        "features": [
-          "Post 1 Job",
-          "Urgents & Featured Jobs",
-          "Highlights Job with Colors",
-          "Access & Saved 5 Candidates",
-          "10 Days Resume Visibility",
-          "24/7 Critical Support"
-        ],
-        "button": "Choose Plan"
-      },
-      "standard": {
-        "title": "Standard",
-        "description": "The most popular plan with great benefits. Post more jobs and receive priority support.",
-        "price": "$39",
-        "period": "/Monthly",
-        "features": [
-          "3 Active Jobs",
-          "Urgents & Featured Jobs",
-          "Highlights Job with Colors",
-          "Access & Saved 10 Candidates",
-          "20 Days Resume Visibility",
-          "24/7 Critical Support"
-        ],
-        "button": "Choose Plan"
-      },
-      "professional": {
-        "title": "Professional",
-        "description": "The top-tier plan for enterprises. Unlimited job postings and premium visibility.",
-        "price": "$59",
-        "period": "/Monthly",
-        "features": [
-          "6 Active Jobs",
-          "Urgents & Featured Jobs",
-          "Highlights Job with Colors",
-          "Access & Saved 20 Candidates",
-          "30 Days Resume Visibility",
-          "24/7 Critical Support"
-        ],
-        "button": "Choose Plan"
+      "status": {
+        "active": "Active",
+        "expired": "Expired"
       }
-    }
-  },
-  "sidebarEmployer": {
-    "header": "EMPLOYER DASHBOARD",
-    "nav": {
-      "overview": "Overview",
-      "postAJob": "Post a Job",
+    },
+    "postJob": {
+      "title": "Post a job",
+      "form": {
+        "jobTitle": "Job Title",
+        "jobTitlePlaceholder": "Add job title, role, vacancies etc.",
+        "tags": "Tags",
+        "tagsPlaceholder": "Job keyword, tags etc.",
+        "jobRole": "Job Role",
+        "select": "Select...",
+        "roles": {
+          "designer": "Designer",
+          "developer": "Developer",
+          "manager": "Manager",
+          "analyst": "Analyst"
+        },
+        "salarySection": "Salary",
+        "minSalary": "Min Salary",
+        "minSalaryPlaceholder": "Minimum salary...",
+        "maxSalary": "Max Salary",
+        "maxSalaryPlaceholder": "Maximum salary...",
+        "salaryType": "Salary Type",
+        "salaryTypes": {
+          "hourly": "Hourly",
+          "monthly": "Monthly",
+          "yearly": "Yearly"
+        },
+        "advanceInfo": "Advance Information",
+        "education": "Education",
+        "educations": {
+          "highSchool": "High School",
+          "bachelor": "Bachelor's Degree",
+          "master": "Master's Degree",
+          "phd": "PhD"
+        },
+        "experience": "Experience",
+        "experiences": {
+          "entry": "Entry Level",
+          "mid": "Mid Level",
+          "senior": "Senior Level"
+        },
+        "jobType": "Job Type",
+        "jobTypes": {
+          "fullTime": "Full Time",
+          "partTime": "Part Time",
+          "contract": "Contract",
+          "internship": "Internship"
+        },
+        "vacancies": "Vacancies",
+        "vacancyOptions": {
+          "1": "1",
+          "2-5": "2-5",
+          "5-10": "5-10",
+          "10+": "10+"
+        },
+        "expirationDate": "Expiration Date",
+        "jobLevel": "Job Level",
+        "jobLevels": {
+          "entry": "Entry Level",
+          "mid": "Mid Level",
+          "senior": "Senior Level",
+          "executive": "Executive"
+        },
+        "applyOn": "Apply Job on:",
+        "applyMethods": {
+          "jobaplied": {
+            "title": "On Jobaplied",
+            "description": "Candidates will apply via using jobaplied on our application flow"
+          },
+          "external": {
+            "title": "External Platform",
+            "description": "Candidates apply via your website, all applications will redirect to your website"
+          },
+          "email": {
+            "title": "On Your Email",
+            "description": "Candidates apply via your email. Candidates can send application on your email"
+          }
+        },
+        "descriptionSection": "Description & Responsibility",
+        "description": "Description",
+        "descriptionPlaceholder": "Add your job description...",
+        "responsibilities": "Responsibilities",
+        "responsibilitiesPlaceholder": "Add your job responsibilities...",
+        "submit": "Post Job"
+      }
+    },
+    "jobSection": {
+      "title": "My Jobs",
+      "tableHeader": {
+        "job": "Jobs",
+        "status": "Status",
+        "applications": "Applications",
+        "actions": "Actions"
+      },
+      "jobs": {
+        "remaining1": "",
+        "remaining2": "days remaining",
+        "applications": "Applications",
+        "status": "Active"
+      },
+      "actions": {
+        "viewApplications": "View Applications",
+        "promoteJob": "Promote Job",
+        "viewDetail": "View Detail",
+        "expire": "Expire"
+      },
+      "pagination": {
+        "prev": "Previous",
+        "next": "Next"
+      }
+    },
+    "breadcrumb": {
+      "employer": "Employer",
       "myJobs": "My Jobs",
-      "savedCandidate": "Saved Candidate",
-      "plansBilling": "Plans & Billing",
-      "settings": "Settings"
+      "applications": "Applications"
     },
-    "footer": {
-      "logout": "Log-out"
-    }
-  },
-  "settings": {
-    "title": "Setting",
-    "tabs": {
-      "company": "Company Info",
-      "founding": "Founding Info",
-      "social": "Social Media Profile",
-      "account": "Account Setting"
-    }
-  },
-  "companyInfo": {
-    "title": "Logo & Banner Image",
-    "logoUpload": {
-      "title": "Upload document",
-      "browse": "Browse photo",
-      "dragHere": "or drag here",
-      "hint": "A photo larger than 400 pixels\nwork best. Max photo size 5 MB."
+    "header": {
+      "pageTitle": "Job Applications"
     },
-    "bannerUpload": {
-      "title": "Banner Image",
-      "browse": "Browse photo",
-      "dragHere": "or drag here",
-      "hint": "Banner images optimal dimensions 1520×400. Supported\nformat JPEG, PNG. Max photo size 5 MB."
+    "applicationsSection": {
+      "title": "All Application ({{count}})",
+      "dropdown": {
+        "edit": "Edit Column",
+        "delete": "Delete"
+      },
+      "videoResume": "View Video Resume"
     },
-    "form": {
-      "companyName": "Company name",
-      "aboutUs": "About Us",
-      "placeholder": "Write down about your company here. Let the candidate know who we are...",
-      "saveButton": "Save Changes"
+    "sidebar": {
+      "sort": {
+        "title": "Sort Application",
+        "newest": "Newest",
+        "oldest": "Oldest"
+      },
+      "createJob": {
+        "title": "Create Job",
+        "subtitle": "Post a job and hire top talent",
+        "button": "Create Job"
+      }
     },
-    "toolbar": {
-      "bold": "Bold",
-      "italic": "Italic",
-      "underline": "Underline",
-      "strike": "Strikethrough",
-      "link": "Insert Link",
-      "bullets": "Bullet List",
-      "numbers": "Numbered List"
-    }
-  },
-  "foundingForm": {
-    "industryTypes": "Industry Types",
-    "teamSize": "Team Size",
-    "select": "Select...",
-    "establishmentYear": "Year of Establishment",
-    "companyWebsite": "Company Website",
-    "websitePlaceholder": "Website   url...",
-    "saveButton": "Save Changes",
-    "datePlaceholder": "dd/mm/yyyy"
-  },
-  "socialLinksForm": {
-    "socialLinkLabel": "Social Link {{index}}",
-    "platformSelectPlaceholder": "Select platform...",
-    "urlPlaceholder": "Profile link/url...",
-    "addButton": "Add New Social Link",
-    "removeButton": "Remove",
-    "saveButton": "Save Change"
-  },
-  "account": {
-    "contactInfoTitle": "Contact Information",
-    "cityLabel": "City",
-    "districtLabel": "District",
-    "communeLabel": "Commune",
-    "citySelectPlaceholder": "Select city...",
-    "districtSelectPlaceholder": "Select district...",
-    "communeSelectPlaceholder": "Select commune...",
-    "locationLabel": "Map Location",
-    "phoneLabel": "Phone",
-    "phonePlaceholder": "Phone number...",
-    "emailLabel": "Email",
-    "emailPlaceholder": "Email address",
-    "saveChanges": "Save Changes",
+    "savedCandidates": {
+      "title": "Saved Candidates",
+      "infoText": "All of the candidates are visible until {{date}}",
+      "button": {
+        "viewProfile": "View Profile"
+      }
+    },
+    "popup": {
+      "close": "Close",
+      "profile": {
+        "viewVideoResume": "View Video Resume"
+      },
+      "sections": {
+        "biographyTitle": "Biography",
+        "coverLetterTitle": "Cover Letter",
+        "socialTitle": "Follow me Social Media"
+      },
+      "info": {
+        "age": "Age",
+        "dob": "Date of Birth",
+        "country": "Country",
+        "maritalStatus": "Marital Status",
+        "gender": "Gender",
+        "experience": "Experience",
+        "qualification": "Qualification"
+      },
+      "contact": {
+        "title": "Contact Information",
+        "website": "Website",
+        "location": "Location",
+        "phone": "Phone Number",
+        "secondaryPhone": "Secondary Phone",
+        "email": "Email Address"
+      }
+    },
+    "subscription": {
+      "header": {
+        "title": "Buy Premium Subscription to Post a Job",
+        "description": "Donec eu dui ut dolor commodo ornare. Sed arcu libero, malesuada quis justo sit amet, varius tempus neque. Quisque ultrices mi sed lorem commodo, vel tempus lectus ultrices."
+      },
+      "plans": {
+        "basic": {
+          "title": "Basic",
+          "description": "A budget-friendly plan for new employers. Post a limited number of job listings.",
+          "price": "150000",
+          "period": "/Monthly",
+          "features": [
+            "Post 1 Job",
+            "Urgents & Featured Jobs",
+            "Highlights Job with Colors",
+            "Access & Saved 5 Candidates",
+            "10 Days Resume Visibility",
+            "24/7 Critical Support"
+          ],
+          "button": "Choose Plan"
+        },
+        "standard": {
+          "title": "Standard",
+          "description": "The most popular plan with great benefits. Post more jobs and receive priority support.",
+          "price": "200000",
+          "period": "/Monthly",
+          "features": [
+            "3 Active Jobs",
+            "Urgents & Featured Jobs",
+            "Highlights Job with Colors",
+            "Access & Saved 10 Candidates",
+            "20 Days Resume Visibility",
+            "24/7 Critical Support"
+          ],
+          "button": "Choose Plan"
+        },
+        "professional": {
+          "title": "Professional",
+          "description": "The top-tier plan for enterprises. Unlimited job postings and premium visibility.",
+          "price": "500000",
+          "period": "/Monthly",
+          "features": [
+            "6 Active Jobs",
+            "Urgents & Featured Jobs",
+            "Highlights Job with Colors",
+            "Access & Saved 20 Candidates",
+            "30 Days Resume Visibility",
+            "24/7 Critical Support"
+          ],
+          "button": "Choose Plan"
+        }
+      }
+    },
+    "sidebarEmployer": {
+      "header": "EMPLOYER DASHBOARD",
+      "nav": {
+        "overview": "Overview",
+        "postAJob": "Post a Job",
+        "myJobs": "My Jobs",
+        "savedCandidate": "Saved Candidate",
+        "plansBilling": "Plans & Billing",
+        "settings": "Settings"
+      },
+      "footer": {
+        "logout": "Log-out"
+      }
+    },
+    "settings": {
+      "title": "Setting",
+      "tabs": {
+        "company": "Company Info",
+        "founding": "Founding Info",
+        "social": "Social Media Profile",
+        "account": "Account Setting"
+      }
+    },
+    "companyInfo": {
+      "title": "Logo & Banner Image",
+      "logoUpload": {
+        "title": "Upload document",
+        "browse": "Browse photo",
+        "dragHere": "or drag here",
+        "hint": "A photo larger than 400 pixels\nwork best. Max photo size 5 MB."
+      },
+      "bannerUpload": {
+        "title": "Banner Image",
+        "browse": "Browse photo",
+        "dragHere": "or drag here",
+        "hint": "Banner images optimal dimensions 1520×400. Supported\nformat JPEG, PNG. Max photo size 5 MB."
+      },
+      "form": {
+        "companyName": "Company name",
+        "aboutUs": "About Us",
+        "placeholder": "Write down about your company here. Let the candidate know who we are...",
+        "saveButton": "Save Changes"
+      },
+      "toolbar": {
+        "bold": "Bold",
+        "italic": "Italic",
+        "underline": "Underline",
+        "strike": "Strikethrough",
+        "link": "Insert Link",
+        "bullets": "Bullet List",
+        "numbers": "Numbered List"
+      }
+    },
+    "foundingForm": {
+      "industryTypes": "Industry Types",
+      "teamSize": "Team Size",
+      "select": "Select...",
+      "establishmentYear": "Year of Establishment",
+      "companyWebsite": "Company Website",
+      "websitePlaceholder": "Website   url...",
+      "saveButton": "Save Changes",
+      "datePlaceholder": "dd/mm/yyyy"
+    },
+    "socialLinksForm": {
+      "socialLinkLabel": "Social Link {{index}}",
+      "platformSelectPlaceholder": "Select platform...",
+      "urlPlaceholder": "Profile link/url...",
+      "addButton": "Add New Social Link",
+      "removeButton": "Remove",
+      "saveButton": "Save Change"
+    },
+    "account": {
+      "contactInfoTitle": "Contact Information",
+      "cityLabel": "City",
+      "districtLabel": "District",
+      "communeLabel": "Commune",
+      "citySelectPlaceholder": "Select city...",
+      "districtSelectPlaceholder": "Select district...",
+      "communeSelectPlaceholder": "Select commune...",
+      "locationLabel": "Map Location",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "Phone number...",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Email address",
+      "saveChanges": "Save Changes",
 
-    "changePasswordTitle": "Change Password",
-    "currentPasswordLabel": "Current Password",
-    "newPasswordLabel": "New Password",
-    "confirmPasswordLabel": "Confirm Password",
-    "passwordPlaceholder": "Password",
-    "changePasswordButton": "Change Password",
+      "changePasswordTitle": "Change Password",
+      "currentPasswordLabel": "Current Password",
+      "newPasswordLabel": "New Password",
+      "confirmPasswordLabel": "Confirm Password",
+      "passwordPlaceholder": "Password",
+      "changePasswordButton": "Change Password",
 
-    "deleteAccountTitle": "Delete Your Company",
-    "deleteWarning": "If you delete your JobBee account, you will no longer be able to get information about the matched jobs, following employers, and job alert, shortlisted jobs and more. You will be abandoned from all the services of Jobpilot.com",
-    "deleteAccountButton": "Close Account"
+      "deleteAccountTitle": "Delete Your Company",
+      "deleteWarning": "If you delete your JobBee account, you will no longer be able to get information about the matched jobs, following employers, and job alert, shortlisted jobs and more. You will be abandoned from all the services of Jobpilot.com",
+      "deleteAccountButton": "Close Account"
+    }
   }
 }
