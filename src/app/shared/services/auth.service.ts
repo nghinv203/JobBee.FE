@@ -13,7 +13,6 @@ export class AuthService {
 
   constructor(private http: HttpClient, private env: AppEnvironmentService) {
     this.apiUrl = env.HOST_OS;
-    alert(this.apiUrl);
   }
 
   login(credentials: { username: string; password: string }): Observable<any> {
