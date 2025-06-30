@@ -1,28 +1,42 @@
 {
-  "employer": {
-    "filter": "Lọc",
-    "distanceLabel": "Bán kính vị trí: 32 mét",
-    "organizationType": "Loại hình tổ chức",
-    "organizationOptions": {
-      "government": "Chính phủ",
-      "govOwned": "Có vốn chính phủ",
-      "ngo": "Tổ chức phi chính phủ",
-      "private": "Công ty tư nhân",
-      "international": "Các cơ quan quốc tế",
-      "other": "Khác"
-    },
-    "sortOptions": {
-      "latest": "Mới nhất",
-      "bestMatch": "Phù hợp nhất",
-      "highestSalary": "Lương cao nhất"
-    },
-    "jobList": {
-      "openPositions": "Vị Trí Đang Tuyển",
-      "newJobs": "{{count}} - việc làm mới"
-    },
-    "pagination": {
-      "prev": "Trước",
-      "next": "Tiếp"
+  "form": {
+    "companyName": "Tên công ty",
+    "aboutUs": "Về chúng tôi",
+    "aboutUsPlaceholder": "Viết về công ty của bạn ở đây. Giúp ứng viên hiểu rõ chúng ta là ai...",
+    "industryTypes": "Ngành nghề",
+    "teamSize": "Quy mô công ty",
+    "select": "Chọn...",
+    "establishmentYear": "Năm thành lập",
+    "companyWebsite": "Website công ty",
+    "socialLink": "Liên kết mạng xã hội",
+    "socialLinkPlaceholder": "Đường dẫn hồ sơ / URL...",
+    "city": "Tỉnh/Thành phố",
+    "district": "Quận/Huyện",
+    "commune": "Xã/Phường",
+    "mapLocation": "Vị trí bản đồ",
+    "contactPerson": "Người liên hệ",
+    "phone": "Số điện thoại",
+    "email": "Email",
+    "saveNext": "Lưu & Tiếp tục"
+  },
+  "upload": {
+    "sectionTitle": "Tải lên Logo & Ảnh Banner",
+    "uploadDocument": "Tải tài liệu",
+    "uploadImage": "Ảnh Banner",
+    "browseOrDrag": "<strong>Chọn ảnh</strong> hoặc kéo thả vào đây",
+    "logoHint": "Ảnh lớn hơn 400 pixel sẽ hiển thị tốt nhất.\nHỗ trợ định dạng JPEG, PNG. Dung lượng tối đa 5 MB.",
+    "bannerHint": "Kích thước tối ưu của ảnh banner là 1520×400.\nHỗ trợ định dạng JPEG, PNG. Dung lượng tối đa 5 MB."
+  },
+  "buttons": {
+    "previous": "Trở lại",
+    "saveNext": "Lưu & Tiếp tục"
+  },
+  "completion": {
+    "title": "🎉 Chúc mừng! Hồ sơ của bạn đã hoàn tất 100%",
+    "description": "Chào mừng đến với JobBee! Tài khoản nhà tuyển dụng của bạn đã được tạo thành công. Bây giờ bạn có thể bắt đầu đăng tuyển dụng, quản lý đơn ứng tuyển và kết nối với các ứng viên hàng đầu. Hãy xây dựng hồ sơ công ty thật ấn tượng để thu hút những ứng viên tốt nhất!",
+    "buttons": {
+      "viewDashboard": "Xem Bảng Điều Khiển",
+      "postJob": "Đăng Tuyển"
     }
   }
 }

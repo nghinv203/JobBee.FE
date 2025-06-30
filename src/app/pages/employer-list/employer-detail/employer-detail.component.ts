@@ -1,9 +1,12 @@
 import {Component, EventEmitter, Output} from '@angular/core';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-employer-detail',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslatePipe
+  ],
   templateUrl: './employer-detail.component.html',
   styleUrl: './employer-detail.component.scss'
 })

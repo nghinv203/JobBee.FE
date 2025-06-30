@@ -1,9 +1,12 @@
 import {Component, EventEmitter, Output} from '@angular/core';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-founding-info',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslatePipe
+  ],
   templateUrl: './founding-info.component.html',
   styleUrl: './founding-info.component.scss'
 })

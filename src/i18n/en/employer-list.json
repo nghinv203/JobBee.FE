@@ -1,0 +1,49 @@
+{
+  "employer": {
+    "filter": "Filter",
+    "distanceLabel": "Location Radius: 32 meters",
+    "organizationType": "Organization Type",
+    "organizationOptions": {
+      "government": "Government",
+      "govOwned": "Government-owned",
+      "ngo": "Non-governmental organization",
+      "private": "Private company",
+      "international": "International organization",
+      "other": "Other"
+    },
+    "sortOptions": {
+      "latest": "Latest",
+      "bestMatch": "Best Match",
+      "highestSalary": "Highest Salary"
+    },
+    "jobList": {
+      "newJobs": "{{count}} new jobs",
+      "openPositions": "Open Positions"
+    }
+  },
+  "employerDetail": {
+    "breadcrumb": {
+      "home": "Home",
+      "search": "Find Employer",
+      "current": "Employer"
+    },
+    "company": {
+      "description": "Description",
+      "location": "California, United States (US)",
+      "benefits": "Employee Benefits",
+      "requirements": "Job Requirements"
+    },
+    "contact": {
+      "title": "Contact Information",
+      "website": "Website",
+      "phone": "Phone",
+      "email": "Email"
+    },
+    "share": {
+      "title": "Share This Profile"
+    },
+    "jobListings": {
+      "title": "Open Positions"
+    }
+  }
+}

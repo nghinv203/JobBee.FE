@@ -2,10 +2,13 @@
 
 <div class="breadcrumb">
   <div class="container">
-    <span><a>Trang chủ</a> / <a (click)="handleEmit()" >Tìm nhà tuyển dụng</a> / <strong>Nhà tuyển dụng</strong></span>
+    <span>
+      <a>{{ 'employerDetail.breadcrumb.home' | translate }}</a> /
+      <a (click)="handleEmit()">{{ 'employerDetail.breadcrumb.search' | translate }}</a> /
+      <strong>{{ 'employerDetail.breadcrumb.current' | translate }}</strong>
+    </span>
   </div>
 </div>
-
 
 <div class="header-pattern"></div>
 
@@ -17,19 +20,19 @@
     </div>
     <div class="company-info">
       <h1 class="company-name">Twitter</h1>
-      <p class="company-location">California, United States (US)</p>
+      <p class="company-location">{{ 'employerDetail.company.location' | translate }}</p>
     </div>
   </div>
 
   <div class="main-content">
     <!-- Left Content -->
     <div class="left-content">
-      <h2 class="section-title">Mô tả</h2>
+      <h2 class="section-title">{{ 'employerDetail.company.description' | translate }}</h2>
       <div class="company-description">
-        <p>From its start as the newest technology, Report has a particular emphasis out there to be successful. If customers, we have satisfied new customers. We promote business objectives you want to achieve without affecting the cost-effective strategy. The development of consumer basis that consumers achieve is a strong basis. Data analytics can integrate the company's strategic measures to achieve the objectives or company plans. In particular, consumers can establish the best achievement based on their financial situations and strategy in order to help us achieve our new marketing objectives, and thus are strategic in their use in achieving results. We have the specific project activities.</p>
+        <p><!-- Keep the actual company description static or also localize if needed --></p>
       </div>
 
-      <h2 class="section-title">Phúc lợi của nhân viên</h2>
+      <h2 class="section-title">{{ 'employerDetail.company.benefits' | translate }}</h2>
       <ul class="requirements-list">
         <li>Phúc lợi miễn phí bảo hiểm viên bảo hiểm ngoài ra và khác nhau với mọi người cấp bên.</li>
         <li>Đặc biệt được nhận hỗ trợ</li>
@@ -38,9 +41,9 @@
         <li>1 hoặc những thuộc hỗ trợ gặp tương tác tốt ở trong tổ chức tốt.</li>
       </ul>
 
-      <h2 class="section-title">Yêu cầu công việc</h2>
+      <h2 class="section-title">{{ 'employerDetail.company.requirements' | translate }}</h2>
       <ul class="benefits-list">
-        <li>Tham gia không có gượng có tín danh gây quyền của khách hàng. Tham dự trưng mua sản lượng tạo thuộc phần và mở thêm công và trưng một việc phải dẫn loại để có trước chính tạp trưng để cho tâm khó khảo quà có không có thuộc.</li>
+        <li>Tham gia không có gượng có tín danh gây quyền của khách hàng...</li>
       </ul>
 
       <div class="social-links">
@@ -54,14 +57,14 @@
     <!-- Right Sidebar -->
     <div class="right-sidebar">
       <div class="info-card">
-        <h3 class="section-title">Thông tin liên hệ</h3>
+        <h3 class="section-title">{{ 'employerDetail.contact.title' | translate }}</h3>
 
         <div class="info-item">
           <div class="info-icon">
             <i class="fas fa-globe"></i>
           </div>
           <div class="info-text">
-            <div class="info-label">Website</div>
+            <div class="info-label">{{ 'employerDetail.contact.website' | translate }}</div>
             <div class="info-value">www.withouthere.com</div>
           </div>
         </div>
@@ -71,7 +74,7 @@
             <i class="fas fa-phone"></i>
           </div>
           <div class="info-text">
-            <div class="info-label">Số điện thoại</div>
+            <div class="info-label">{{ 'employerDetail.contact.phone' | translate }}</div>
             <div class="info-value">+1-202-555-0146</div>
           </div>
         </div>
@@ -81,14 +84,14 @@
             <i class="fas fa-envelope"></i>
           </div>
           <div class="info-text">
-            <div class="info-label">Email</div>
+            <div class="info-label">{{ 'employerDetail.contact.email' | translate }}</div>
             <div class="info-value">contact.hr.com</div>
           </div>
         </div>
       </div>
 
       <div class="info-card">
-        <h3 class="section-title">Chia sẻ thông tin để lại</h3>
+        <h3 class="section-title">{{ 'employerDetail.share.title' | translate }}</h3>
         <div class="social-links">
           <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
@@ -101,7 +104,7 @@
   <!-- Job Listings -->
   <div class="job-listings">
     <div class="job-listings-header">
-      <h2 class="section-title">Vị trí đang tuyển (05)</h2>
+      <h2 class="section-title">{{ 'employerDetail.jobListings.title' | translate }}</h2>
     </div>
 
     <div class="jobs-grid">
@@ -185,5 +188,6 @@
         </div>
       </div>
     </div>
+
   </div>
 </div>
