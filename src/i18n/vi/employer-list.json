@@ -1,0 +1,49 @@
+{
+  "employer": {
+    "filter": "Lọc",
+    "distanceLabel": "Bán kính vị trí: 32 mét",
+    "organizationType": "Loại hình tổ chức",
+    "organizationOptions": {
+      "government": "Chính phủ",
+      "govOwned": "Có vốn chính phủ",
+      "ngo": "Tổ chức phi chính phủ",
+      "private": "Công ty tư nhân",
+      "international": "Các cơ quan quốc tế",
+      "other": "Khác"
+    },
+    "sortOptions": {
+      "latest": "Mới nhất",
+      "bestMatch": "Phù hợp nhất",
+      "highestSalary": "Lương cao nhất"
+    },
+    "jobList": {
+      "newJobs": "{{count}} - việc làm mới",
+      "openPositions": "Vị Trí Đang Tuyển"
+    }
+  },
+  "employerDetail": {
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "search": "Tìm nhà tuyển dụng",
+      "current": "Nhà tuyển dụng"
+    },
+    "company": {
+      "description": "Mô tả",
+      "location": "California, Hoa Kỳ (US)",
+      "benefits": "Phúc lợi của nhân viên",
+      "requirements": "Yêu cầu công việc"
+    },
+    "contact": {
+      "title": "Thông tin liên hệ",
+      "website": "Website",
+      "phone": "Số điện thoại",
+      "email": "Email"
+    },
+    "share": {
+      "title": "Chia sẻ thông tin để lại"
+    },
+    "jobListings": {
+      "title": "Vị trí đang tuyển"
+    }
+  }
+}

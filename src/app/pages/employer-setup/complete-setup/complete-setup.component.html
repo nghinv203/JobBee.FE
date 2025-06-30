@@ -4,23 +4,19 @@
   </div>
 
   <h1 class="title">
-    <span class="celebration-emoji">🎉</span>
-    Congratulations, Your profile is 100% complete!
+    {{ 'completion.title' | translate }}
   </h1>
 
   <p class="description">
-    Welcome to JobBee! Your employer account has been successfully created.
-    You can now start posting job opportunities, managing applications, and connecting with top talent.
-    Let’s build your company profile to attract the best candidates!
+    {{ 'completion.description' | translate }}
   </p>
-
 
   <div class="button-container">
     <button class="btn btn-secondary" onclick="viewDashboard()">
-      View Dashboard
+      {{ 'completion.buttons.viewDashboard' | translate }}
     </button>
     <button class="btn btn-primary" onclick="postJob()">
-      Post Job
+      {{ 'completion.buttons.postJob' | translate }}
     </button>
   </div>
 </div>

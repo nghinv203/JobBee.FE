@@ -1,15 +1,15 @@
 <div class="info-company">
   <div class="form-section">
     <div class="form-group">
-      <label for="company-name">Company name</label>
+      <label for="company-name">{{ 'form.companyName' | translate }}</label>
       <input type="text" id="company-name" name="company-name">
     </div>
 
     <div class="form-group">
-      <label for="about-us">About Us</label>
+      <label for="about-us">{{ 'form.aboutUs' | translate }}</label>
       <div class="textarea-container">
         <textarea id="about-us" name="about-us"
-                  placeholder="Write down about your company here. Let the candidate know who we are..."></textarea>
+                  [placeholder]="'form.aboutUsPlaceholder' | translate"></textarea>
         <div class="editor-toolbar">
           <button class="editor-btn" type="button"><strong>B</strong></button>
           <button class="editor-btn" type="button"><em>I</em></button>
@@ -22,12 +22,12 @@
       </div>
     </div>
 
-    <!--    founding info-->
+    <!-- founding info -->
     <div class="form-row">
       <div class="form-group">
-        <label for="industry-types">Industry Types</label>
+        <label for="industry-types">{{ 'form.industryTypes' | translate }}</label>
         <select id="industry-types" name="industry-types">
-          <option value="">Select...</option>
+          <option value="">{{ 'form.select' | translate }}</option>
           <option value="technology">Technology</option>
           <option value="healthcare">Healthcare</option>
           <option value="finance">Finance</option>
@@ -42,67 +42,65 @@
       </div>
 
       <div class="form-group">
-        <label for="team-size">Team Size</label>
+        <label for="team-size">{{ 'form.teamSize' | translate }}</label>
         <select id="team-size" name="team-size">
-          <option value="">Select...</option>
-          <option value="1-10">1-10 employees</option>
-          <option value="11-50">11-50 employees</option>
-          <option value="51-200">51-200 employees</option>
-          <option value="201-500">201-500 employees</option>
-          <option value="501-1000">501-1000 employees</option>
-          <option value="1000+">1000+ employees</option>
+          <option value="">{{ 'form.select' | translate }}</option>
+          <option value="1-10">{{ 'form.teamSizeOptions.1_10' | translate }}</option>
+          <option value="11-50">{{ 'form.teamSizeOptions.11_50' | translate }}</option>
+          <option value="51-200">{{ 'form.teamSizeOptions.51_200' | translate }}</option>
+          <option value="201-500">{{ 'form.teamSizeOptions.201_500' | translate }}</option>
+          <option value="501-1000">{{ 'form.teamSizeOptions.501_1000' | translate }}</option>
+          <option value="1000+">{{ 'form.teamSizeOptions.1000+' | translate }}</option>
         </select>
       </div>
     </div>
 
-    <!-- Second row: Year of Establishment, Company Website -->
+    <!-- Year of Establishment, Company Website -->
     <div class="form-row">
       <div class="form-group">
-        <label for="establishment-year">Year of Establishment</label>
+        <label for="establishment-year">{{ 'form.establishmentYear' | translate }}</label>
         <div class="date-input">
           <input type="date" id="establishment-year" name="establishment-year" placeholder="dd/mm/yyyy">
         </div>
       </div>
 
       <div class="form-group">
-        <label for="company-website">Company Website</label>
+        <label for="company-website">{{ 'form.companyWebsite' | translate }}</label>
         <div class="website-input">
-          <input type="url" id="company-website" name="company-website" placeholder="Website url...">
+          <input type="url" id="company-website" name="company-website" [placeholder]="'form.companyWebsite' | translate">
         </div>
       </div>
     </div>
 
-    <!--    Social Media-->
+    <!-- Social Media -->
     <div id="socialLinksContainer">
-      <!-- Social Link 1 - Facebook -->
       <div class="social-link-item">
-        <label class="social-link-label">Social Link</label>
+        <label class="social-link-label">{{ 'form.socialLink' | translate }}</label>
         <div class="social-link-row">
           <div class="social-platform-select">
             <select data-platform="facebook">
-              <option value="facebook" data-icon="📘">Facebook</option>
-              <option value="twitter" data-icon="🐦">Twitter</option>
-              <option value="instagram" data-icon="📷">Instagram</option>
-              <option value="youtube" data-icon="📺">YouTube</option>
-              <option value="linkedin" data-icon="💼">LinkedIn</option>
-              <option value="tiktok" data-icon="🎵">TikTok</option>
-              <option value="snapchat" data-icon="👻">Snapchat</option>
-              <option value="pinterest" data-icon="📌">Pinterest</option>
+              <option value="facebook">📘 Facebook</option>
+              <option value="twitter">🐦 Twitter</option>
+              <option value="instagram">📷 Instagram</option>
+              <option value="youtube">📺 YouTube</option>
+              <option value="linkedin">💼 LinkedIn</option>
+              <option value="tiktok">🎵 TikTok</option>
+              <option value="snapchat">👻 Snapchat</option>
+              <option value="pinterest">📌 Pinterest</option>
             </select>
           </div>
           <div class="url-input">
-            <input type="url" placeholder="Profile link/url..." name="social-url-1">
+            <input type="url" [placeholder]="'form.socialLinkPlaceholder' | translate" name="social-url-1">
           </div>
         </div>
       </div>
 
-      <!--    Contact-->
-
+      <!-- Contact -->
       <div class="form-row three-columns">
         <div class="form-group">
-          <label for="city">City</label>
+          <label for="city">{{ 'form.city' | translate }}</label>
           <select id="city" name="industry-types">
-            <option value="">Select...</option>
+            <option value="">{{ 'form.select' | translate }}</option>
             <option value="technology">Technology</option>
             <option value="healthcare">Healthcare</option>
             <option value="finance">Finance</option>
@@ -117,9 +115,9 @@
         </div>
 
         <div class="form-group">
-          <label for="district">District</label>
+          <label for="district">{{ 'form.district' | translate }}</label>
           <select id="district" name="team-size">
-            <option value="">Select...</option>
+            <option value="">{{ 'form.select' | translate }}</option>
             <option value="1-10">1-10 employees</option>
             <option value="11-50">11-50 employees</option>
             <option value="51-200">51-200 employees</option>
@@ -130,9 +128,9 @@
         </div>
 
         <div class="form-group">
-          <label for="Commune">Commune</label>
+          <label for="Commune">{{ 'form.commune' | translate }}</label>
           <select id="Commune" name="industry-types">
-            <option value="">Select...</option>
+            <option value="">{{ 'form.select' | translate }}</option>
             <option value="technology">Technology</option>
             <option value="healthcare">Healthcare</option>
             <option value="finance">Finance</option>
@@ -149,40 +147,42 @@
 
       <div class="form-content">
         <div class="form-group">
-          <label class="form-label">Map Location</label>
+          <label class="form-label">{{ 'form.mapLocation' | translate }}</label>
           <div class="phone-container">
-            <input type="text" class="phone-input" placeholder="Map Location ...">
+            <input type="text" class="phone-input" [placeholder]="'form.mapLocation' | translate">
           </div>
         </div>
 
         <div class="form-group">
-          <label class="form-label">Contact Person</label>
+          <label class="form-label">{{ 'form.contactPerson' | translate }}</label>
           <div class="phone-container">
-            <input type="text" class="phone-input" placeholder="Contact Person ...">
+            <input type="text" class="phone-input" [placeholder]="'form.contactPerson' | translate">
           </div>
         </div>
 
         <div class="form-group">
-          <label class="form-label">Phone</label>
+          <label class="form-label">{{ 'form.phone' | translate }}</label>
           <div class="phone-container">
             <div class="country-code">
               <div class="flag"></div>
               +89
             </div>
-            <input type="tel" class="phone-input" placeholder="Phone number...">
+            <input type="tel" class="phone-input" [placeholder]="'form.phone' | translate">
           </div>
         </div>
 
         <div class="form-group">
-          <label class="form-label">Email</label>
+          <label class="form-label">{{ 'form.email' | translate }}</label>
           <div class="email-container">
-            <input type="email" class="email-input" placeholder="Email address">
+            <input type="email" class="email-input" [placeholder]="'form.email' | translate">
           </div>
         </div>
 
         <!-- Buttons -->
         <div class="button-container">
-          <button (click)="emitMessage()" type="button" class="btn btn-primary">Save & Next</button>
+          <button (click)="emitMessage()" type="button" class="btn btn-primary">
+            {{ 'form.saveNext' | translate }}
+          </button>
         </div>
       </div>
     </div>

@@ -1,9 +1,14 @@
 import {Component, EventEmitter, Output} from '@angular/core';
+import {TranslatePipe} from '@ngx-translate/core';
+import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-company-info',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslatePipe,
+    NgForOf
+  ],
   templateUrl: './company-info.component.html',
   styleUrl: './company-info.component.scss'
 })

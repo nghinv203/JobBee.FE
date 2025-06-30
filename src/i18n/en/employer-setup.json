@@ -1,28 +1,42 @@
 {
-  "employer": {
-    "filter": "Filter",
-    "distanceLabel": "Location radius: 32 meters",
-    "organizationType": "Organization Type",
-    "organizationOptions": {
-      "government": "Government",
-      "govOwned": "Government-owned",
-      "ngo": "Non-governmental organization",
-      "private": "Private company",
-      "international": "International agencies",
-      "other": "Other"
-    },
-    "sortOptions": {
-      "latest": "Latest",
-      "bestMatch": "Best match",
-      "highestSalary": "Highest salary"
-    },
-    "jobList": {
-      "openPositions": "Open Positions",
-      "newJobs": "{{count}} new jobs"
-    },
-    "pagination": {
-      "prev": "Previous",
-      "next": "Next"
+  "form": {
+    "companyName": "Company name",
+    "aboutUs": "About Us",
+    "aboutUsPlaceholder": "Write down about your company here. Let the candidate know who we are...",
+    "industryTypes": "Industry Types",
+    "teamSize": "Team Size",
+    "select": "Select...",
+    "establishmentYear": "Year of Establishment",
+    "companyWebsite": "Company Website",
+    "socialLink": "Social Link",
+    "socialLinkPlaceholder": "Profile link/url...",
+    "city": "City",
+    "district": "District",
+    "commune": "Commune",
+    "mapLocation": "Map Location",
+    "contactPerson": "Contact Person",
+    "phone": "Phone",
+    "email": "Email",
+    "saveNext": "Save & Next"
+  },
+  "upload": {
+    "sectionTitle": "Logo & Banner Image",
+    "uploadDocument": "Upload document",
+    "uploadImage": "Banner Image",
+    "browseOrDrag": "<strong>Browse photo</strong> or drag here",
+    "logoHint": "A photo larger than 400 pixels\nwork best. Max photo size 5 MB.",
+    "bannerHint": "Banner images optimal dimensions 1520×400. Supported\nformat JPEG, PNG. Max photo size 5 MB."
+  },
+  "buttons": {
+    "previous": "Previous",
+    "saveNext": "Save & Next"
+  },
+  "completion": {
+    "title": "🎉 Congratulations, Your profile is 100% complete!",
+    "description": "Welcome to JobBee! Your employer account has been successfully created. You can now start posting job opportunities, managing applications, and connecting with top talent. Let’s build your company profile to attract the best candidates!",
+    "buttons": {
+      "viewDashboard": "View Dashboard",
+      "postJob": "Post Job"
     }
   }
 }

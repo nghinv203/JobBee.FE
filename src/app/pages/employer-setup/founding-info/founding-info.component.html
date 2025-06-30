@@ -1,33 +1,27 @@
 <div class="container">
   <form id="companyForm">
     <div class="upload-section">
-      <h2 class="section-title">Logo & Banner Image</h2>
+      <h2 class="section-title">{{ 'upload.sectionTitle' | translate }}</h2>
       <div class="upload-grid">
         <div class="upload-item">
-          <h3>Upload document</h3>
+          <h3>{{ 'upload.uploadDocument' | translate }}</h3>
           <div class="upload-box" onclick="document.getElementById('logo-upload').click()">
             <div class="upload-icon">📤</div>
-            <div class="upload-text">
-              <strong>Browse photo</strong> or drag here
-            </div>
+            <div class="upload-text" [innerHTML]="'upload.browseOrDrag' | translate"></div>
             <div class="upload-hint">
-              A photo larger than 400 pixels<br>
-              work best. Max photo size 5 MB.
+              {{ 'upload.logoHint' | translate }}
             </div>
           </div>
           <input type="file" id="logo-upload" style="display: none;" accept="image/*">
         </div>
 
         <div class="upload-item">
-          <h3>Banner Image</h3>
+          <h3>{{ 'upload.uploadImage' | translate }}</h3>
           <div class="upload-box" onclick="document.getElementById('banner-upload').click()">
             <div class="upload-icon">📤</div>
-            <div class="upload-text">
-              <strong>Browse photo</strong> or drag here
-            </div>
+            <div class="upload-text" [innerHTML]="'upload.browseOrDrag' | translate"></div>
             <div class="upload-hint">
-              Banner images optimal dimensions 1520×400. Supported<br>
-              format JPEG, PNG. Max photo size 5 MB.
+              {{ 'upload.bannerHint' | translate }}
             </div>
           </div>
           <input type="file" id="banner-upload" style="display: none;" accept="image/*">
@@ -37,8 +31,12 @@
 
     <!-- Buttons -->
     <div class="button-container">
-      <button (click)="emitMessagePrevious()" type="button" class="btn btn-secondary">Previous</button>
-      <button (click)="emitMessageNext()" type="button" class="btn btn-primary">Save & Next</button>
+      <button (click)="emitMessagePrevious()" type="button" class="btn btn-secondary">
+        {{ 'buttons.previous' | translate }}
+      </button>
+      <button (click)="emitMessageNext()" type="button" class="btn btn-primary">
+        {{ 'buttons.saveNext' | translate }}
+      </button>
     </div>
   </form>
 </div>
