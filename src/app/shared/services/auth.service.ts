@@ -17,7 +17,7 @@ export class AuthService {
   }
 
   login(credentials: { username: string; password: string }): Observable<any> {
-    return this.http.post(`http://localhost:5000/api/users/login`, credentials, {
+    return this.http.post( `${this.apiUrl}/users/login`, credentials, {
       responseType: 'text' as 'json'
     }).pipe(
       tap((token: any) => {
@@ -30,7 +30,7 @@ export class AuthService {
 
   forgetPassword(email: string): Observable<any> {
     const payload = { email };
-    return this.http.put('http://localhost:5000/api/users/forget', payload);
+    return this.http.put(`${this.apiUrl}/users/forget`, payload);
   }
 
   resetPassword(data: {
@@ -39,7 +39,7 @@ export class AuthService {
     password: string;
     confirmPassword: string;
   }): Observable<any> {
-    return this.http.put('http://localhost:5000/api/users/reset', data);
+    return this.http.put(`${this.apiUrl}/users/reset`, data);
   }
 
   changePassword(data: {
@@ -48,7 +48,7 @@ export class AuthService {
     password: string;
     confirmPassword: string;
   }): Observable<any> {
-    return this.http.put('http://localhost:5000/api/users/change-password', data);
+    return this.http.put(`${this.apiUrl}/users/change-password`, data);
   }
 
 
