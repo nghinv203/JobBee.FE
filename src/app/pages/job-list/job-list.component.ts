@@ -43,8 +43,7 @@ export class JobListComponent implements OnInit{
       .pipe(finalize(() => this.isLoading = false))
       .subscribe(res => {
       this.jobs = (res.data as any).items ?? [];
-      alert((res.data as any).items.length)
-        this.totalPages = Math.ceil(this.jobs.length / 20);
+      this.totalPages = Math.ceil(this.jobs.length / 20);
       });
   }
 
