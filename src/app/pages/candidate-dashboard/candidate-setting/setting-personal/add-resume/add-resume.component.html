@@ -9,35 +9,39 @@
         <button (click)="closePopUp()" type="button" class="close-button">×</button>
       </div>
 
-      <form>
-        <!-- CV/Resume Name Field -->
+      <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+        <!-- Resume Name -->
         <div class="form-group">
           <label>{{ 'modal.resumeNameLabel' | translate }}</label>
           <input
             type="text"
+            formControlName="resumeName"
             placeholder="{{ 'modal.resumeNamePlaceholder' | translate }}">
         </div>
 
-        <!-- File Upload Section -->
+        <!-- Upload File -->
         <div class="form-group">
           <label>{{ 'modal.uploadLabel' | translate }}</label>
           <div class="upload-area">
-
-            <div class="upload-icon" >📄</div>
-            <div class="upload-text" >{{ 'modal.uploadText' | translate }}</div>
+            <div class="upload-icon">📄</div>
+            <div class="upload-text">{{ 'modal.uploadText' | translate }}</div>
             <div class="upload-subtext">{{ 'modal.uploadSubtext' | translate }}</div>
 
             <input
               type="file"
               (change)="onFileSelected($event)"
-              class="file-input">
+              class="file-input" />
           </div>
         </div>
 
-        <!-- Button Group -->
+        <!-- Buttons -->
         <div class="button-group">
-          <button (click)="closePopUp()" type="button" class="btn-cancel">{{ 'modal.cancelButton' | translate }}</button>
-          <button type="submit" class="btn-submit">{{ 'modal.submitButton' | translate }}</button>
+          <button type="button" (click)="closePopUp()" class="btn-cancel">
+            {{ 'modal.cancelButton' | translate }}
+          </button>
+          <button type="submit" class="btn-submit">
+            {{ 'modal.submitButton' | translate }}
+          </button>
         </div>
       </form>
     </div>
