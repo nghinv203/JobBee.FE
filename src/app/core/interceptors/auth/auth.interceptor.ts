@@ -7,7 +7,6 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const authService = inject(AuthService);
   const authToken = authService.getToken();
 
-  // list api do not need token
   const publicEndpoints = ['/api/login', '/api/register'];
 
   const isPublicEndpoint = publicEndpoints.some(endpoint => req.url.includes(endpoint));
