@@ -13,6 +13,7 @@ import {IJob} from '../entities/job/job.model';
 import {FooterComponent} from '../../layout/main/footer/footer.component';
 import {LoadingComponent} from '../../shared/reuseComponents/loading/loading.component';
 import {ApplyJobComponent} from './apply-job/apply-job.component';
+import {CandidatesService} from '../../core/services/candidates/candidates.service';
 
 @Component({
   selector: 'app-single-job',
@@ -39,13 +40,16 @@ export class SingleJobComponent implements OnInit{
   isLoading = true;
   jobs!: IJob[];
   isOpenApply = false;
+  jobId: string | null = '';
 
-  constructor(private route: ActivatedRoute, private jobService: JobsService) {
+  constructor(private route: ActivatedRoute,
+              private jobService: JobsService) {
   }
 
   ngOnInit() {
     this.isLoading = true;
     const id = this.route.snapshot.paramMap.get('id');
+    this.jobId = id;
     this.jobService.getJobDetail(id!)
       .pipe(finalize(() => this.isLoading = false))
       .subscribe(res => {

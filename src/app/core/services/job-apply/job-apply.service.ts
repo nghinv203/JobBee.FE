@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {AppEnvironmentService} from '../../../app.environment.service';
 import {Observable} from 'rxjs';
+import {IResponse} from '../../../shared/models/response';
 
 export interface JobApplicationRequest {
   jobId: string;
@@ -21,7 +22,7 @@ export class JobApplyService {
     this.baseUrl = `${this.env.HOST_OS}/jobApplications`;
   }
 
-  submitApplication(application: JobApplicationRequest): Observable<any> {
-    return this.http.post<any>(`${this.baseUrl}/create`,application);
+  submitApplication(application: JobApplicationRequest): Observable<IResponse> {
+    return this.http.post<IResponse>(`${this.baseUrl}/create`,application);
   }
 }

@@ -22,4 +22,9 @@ export class CandidatesService {
   getCandidateId(userId: string): Observable<IResponse> {
     return this.http.get<IResponse>(`${this.baseUrl}/candidate/get-by-user/${userId}`);
   }
+
+  getCandidateIdByUser(userId: string): Observable<IResponse<string>> {
+    return this.http.get<IResponse<string>>(`${this.baseUrl}/candidate/get-by-user/${userId}`);
+  }
+
 }
