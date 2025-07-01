@@ -1,5 +1,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
+@if(isOpenApply){
+  <app-apply-job (isOpenMessage) = handlePopUp($event)></app-apply-job>
+}
+
 <div class="breadcrumb">
   <div class="container">
     <span><a>Trang chủ</a> / <a>Job List</a> / <strong>Job Detail</strong></span>
@@ -26,7 +30,8 @@
           <span><i class="fas fa-envelope"></i> {{ job.employer.contactEmail | truncate: 15 }}</span>
         </div>
       </div>
-      <button class="apply-btn">Ứng tuyển ngay</button>
+      <i class="fas fa-bookmark bookmark-icon"></i>
+      <button (click)="onOpenApply()" class="apply-btn">Ứng tuyển ngay</button>
     </div>
 
     <div class="section">

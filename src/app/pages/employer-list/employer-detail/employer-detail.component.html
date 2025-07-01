@@ -1,11 +1,11 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <div class="breadcrumb">
   <div class="container">
     <span>
       <a>{{ 'employerDetail.breadcrumb.home' | translate }}</a> /
-      <a (click)="handleEmit()">{{ 'employerDetail.breadcrumb.search' | translate }}</a> /
-      <strong>{{ 'employerDetail.breadcrumb.current' | translate }}</strong>
+<a (click)="handleEmit()">{{ 'employerDetail.breadcrumb.search' | translate }}</a> /
+<strong>{{ employer.companyName }}</strong>
     </span>
   </div>
 </div>
@@ -14,14 +14,14 @@
 
 <div class="container">
   <!-- Company Header -->
-  <div class="company-header">
-    <div class="company-logo">
-      <i class="fab fa-twitter"></i>
-    </div>
-    <div class="company-info">
-      <h1 class="company-name">Twitter</h1>
-      <p class="company-location">{{ 'employerDetail.company.location' | translate }}</p>
-    </div>
+  <div class="company-logo">
+    <img [src]="employer.companyLogo" alt="Logo" />
+  </div>
+  <div class="company-info">
+    <h1 class="company-name">{{ employer.companyName }}</h1>
+    <p class="company-location">
+      {{ employer.headquartersAddress }}, {{ employer.headquartersCity }}, {{ employer.headquartersState }}
+    </p>
   </div>
 
   <div class="main-content">
@@ -29,21 +29,14 @@
     <div class="left-content">
       <h2 class="section-title">{{ 'employerDetail.company.description' | translate }}</h2>
       <div class="company-description">
-        <p><!-- Keep the actual company description static or also localize if needed --></p>
+        <p>{{ employer.companyDescription }}</p>
       </div>
 
       <h2 class="section-title">{{ 'employerDetail.company.benefits' | translate }}</h2>
       <ul class="requirements-list">
-        <li>Phúc lợi miễn phí bảo hiểm viên bảo hiểm ngoài ra và khác nhau với mọi người cấp bên.</li>
-        <li>Đặc biệt được nhận hỗ trợ</li>
-        <li>Từ chỗ có quảng việc khá được thịnh nhận ngoài việc hưởng lợi ích khi.</li>
-        <li>Hưng gánh hưởng khi mọi tung kí ở 15 phần.</li>
-        <li>1 hoặc những thuộc hỗ trợ gặp tương tác tốt ở trong tổ chức tốt.</li>
-      </ul>
-
-      <h2 class="section-title">{{ 'employerDetail.company.requirements' | translate }}</h2>
-      <ul class="benefits-list">
-        <li>Tham gia không có gượng có tín danh gây quyền của khách hàng...</li>
+        <p>Founded in : {{ employer.foundedYear }}</p>
+        <p>Industry: {{ employer.industryName }}</p>
+        <p>Size: {{ employer.sizeRange }}</p>
       </ul>
 
       <div class="social-links">
@@ -65,7 +58,9 @@
           </div>
           <div class="info-text">
             <div class="info-label">{{ 'employerDetail.contact.website' | translate }}</div>
-            <div class="info-value">www.withouthere.com</div>
+            <div class="info-value">
+              <a [href]="employer.websiteUrl" target="_blank">{{ employer.websiteUrl }}</a>
+            </div>
           </div>
         </div>
 
@@ -75,7 +70,7 @@
           </div>
           <div class="info-text">
             <div class="info-label">{{ 'employerDetail.contact.phone' | translate }}</div>
-            <div class="info-value">+1-202-555-0146</div>
+            <div class="info-value">{{ employer.contactPhone }}</div>
           </div>
         </div>
 
@@ -85,7 +80,7 @@
           </div>
           <div class="info-text">
             <div class="info-label">{{ 'employerDetail.contact.email' | translate }}</div>
-            <div class="info-value">contact.hr.com</div>
+            <div class="info-value">{{ employer.contactEmail }}</div>
           </div>
         </div>
       </div>

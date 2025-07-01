@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {TranslatePipe} from '@ngx-translate/core';
 
@@ -12,6 +12,7 @@ import {TranslatePipe} from '@ngx-translate/core';
   styleUrl: './employer-detail.component.scss'
 })
 export class EmployerDetailComponent implements OnInit{
+  @Input() employer!: any;
   @Output() sendMessage = new EventEmitter<boolean>();
 
   constructor(private route: ActivatedRoute) {

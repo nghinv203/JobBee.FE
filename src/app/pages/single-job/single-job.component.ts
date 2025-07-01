@@ -12,6 +12,7 @@ import {JobComponent} from '../entities/job/job/job.component';
 import {IJob} from '../entities/job/job.model';
 import {FooterComponent} from '../../layout/main/footer/footer.component';
 import {LoadingComponent} from '../../shared/reuseComponents/loading/loading.component';
+import {ApplyJobComponent} from './apply-job/apply-job.component';
 
 @Component({
   selector: 'app-single-job',
@@ -25,7 +26,8 @@ import {LoadingComponent} from '../../shared/reuseComponents/loading/loading.com
     JobListComponent,
     JobComponent,
     FooterComponent,
-    LoadingComponent
+    LoadingComponent,
+    ApplyJobComponent
   ],
   standalone: true,
   templateUrl: './single-job.component.html',
@@ -36,6 +38,7 @@ export class SingleJobComponent implements OnInit{
   job!: IJobDetail;
   isLoading = true;
   jobs!: IJob[];
+  isOpenApply = false;
 
   constructor(private route: ActivatedRoute, private jobService: JobsService) {
   }
@@ -60,4 +63,11 @@ export class SingleJobComponent implements OnInit{
     window.open(`/single-employer/${id}`, '_blank', 'noopener,noreferrer');
   }
 
+  onOpenApply() {
+    this.isOpenApply = true;
+  }
+
+  handlePopUp(isOpen: boolean) {
+    this.isOpenApply = isOpen;
+  }
 }

@@ -1,0 +1,44 @@
+<!-- HTML Template -->
+<div (click)="closePopUp()" class="backdrop" id="backdrop"></div>
+<dialog open id="dialogBox" class="dialog-box">
+  <div class="popup-overlay">
+    <div class="popup-container">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h2 class="modal-title">Select CV and Cover Letter</h2>
+        <button (click)="closePopUp()" type="button" class="close-button">×</button>
+      </div>
+
+      <form (submit)="submitForm()">
+        <!-- CV Dropdown -->
+        <div class="form-group">
+          <label>Select CV</label>
+          <select (change)="onCvSelected($event)" class="cv-dropdown">
+            <option value="">Choose a CV...</option>
+            <option *ngFor="let resume of resumes" [value]="resume.id">
+              {{ resume.fileName }}
+            </option>
+          </select>
+        </div>
+
+        <!-- Cover Letter -->
+        <div class="form-group">
+          <label>Cover Letter</label>
+          <textarea
+            (input)="onCoverLetterChange($event)"
+            placeholder="Write your cover letter here..."
+            class="cover-letter-textarea"
+            rows="8">
+          </textarea>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-group">
+          <button type="button" class="btn-cancel" (click)="closePopUp()">Cancel</button>
+          <button type="submit" class="btn-submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</dialog>
+

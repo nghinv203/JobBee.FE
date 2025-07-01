@@ -1,0 +1,24 @@
+import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {AppEnvironmentService} from '../../../app.environment.service';
+import {Observable} from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class SaveJobService {
+  private baseUrl!: string;
+  constructor(private http: HttpClient, private env: AppEnvironmentService) {
+    this.baseUrl = `${this.env.HOST_OS}/savedJobs`;
+  }
+
+  saveJob(candidateId: string, jobId: string): Observable<any> {
+    const url = `${this.baseUrl}/create`;
+    const body = {
+      candidateId,
+      jobId
+    };
+    return this.http.post(url, body);
+  }
+
+}

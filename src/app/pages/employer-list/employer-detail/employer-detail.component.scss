@@ -47,6 +47,12 @@ body {
   color: white;
   font-size: 32px;
   flex-shrink: 0;
+
+  overflow: hidden;
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .company-info {
