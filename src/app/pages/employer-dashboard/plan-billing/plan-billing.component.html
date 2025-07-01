@@ -2,8 +2,8 @@
   <!-- Header Section -->
   <div class="header">
     <div class="header-content">
-      <h1>{{ 'subscription.header.title' | translate }}</h1>
-      <p>{{ 'subscription.header.description' | translate }}</p>
+      <h1>{{ 'employer-db.subscription.header.title' | translate }}</h1>
+      <p>{{ 'employer-db.subscription.header.description' | translate }}</p>
     </div>
     <div class="header-illustration">
       <!-- SVG illustration remains unchanged -->
@@ -15,129 +15,118 @@
     <div class="pricing-grid">
       <!-- Basic Plan -->
       <div class="pricing-card">
-        <h3 class="plan-title">{{ 'subscription.plans.basic.title' | translate }}</h3>
-        <p class="plan-description">{{ 'subscription.plans.basic.description' | translate }}</p>
+        <h3 class="plan-title">{{ 'employer-db.subscription.plans.basic.title' | translate }}</h3>
+        <p class="plan-description">{{ 'employer-db.subscription.plans.basic.description' | translate }}</p>
 
-        <div class="price">{{ 'subscription.plans.basic.price' | translate }}</div>
-        <div class="price-period">{{ 'subscription.plans.basic.period' | translate }}</div>
+        <div class="price">{{ 'employer-db.subscription.plans.basic.price' | translate | currency: 'VND' }}</div>
+        <div class="price-period">{{ 'employer-db.subscription.plans.basic.period' | translate }}</div>
 
         <div class="features-list">
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.0' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.0' | translate }}</span>
           </div>
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.1' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.1' | translate }}</span>
           </div>
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.2' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.2' | translate }}</span>
           </div>
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.3' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.3' | translate }}</span>
           </div>
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.4' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.4' | translate }}</span>
           </div>
-          <div class="feature-item">
-            <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.5' | translate }}</span>
-          </div>
-
         </div>
 
-        <button class="choose-btn secondary">
-          {{ 'subscription.plans.basic.button' | translate }}
+        <button class="choose-btn secondary" (click)="handleBasicSubcription()">
+          {{ 'employer-db.subscription.plans.basic.button' | translate }}
           <i class="fas fa-arrow-right"></i>
         </button>
       </div>
 
       <!-- Standard Plan -->
       <div class="pricing-card recommended">
-        <h3 class="plan-title">{{ 'subscription.plans.standard.title' | translate }}</h3>
-        <p class="plan-description">{{ 'subscription.plans.standard.description' | translate }}</p>
+        <h3 class="plan-title">{{ 'employer-db.subscription.plans.standard.title' | translate }}</h3>
+        <p class="plan-description">{{ 'employer-db.subscription.plans.standard.description' | translate }}</p>
 
-        <div class="price">{{ 'subscription.plans.standard.price' | translate }}</div>
-        <div class="price-period">{{ 'subscription.plans.standard.period' | translate }}</div>
+        <div class="price">{{ 'employer-db.subscription.plans.standard.price' | translate | currency: 'VND' }}</div>
+        <div class="price-period">{{ 'employer-db.subscription.plans.standard.period' | translate }}</div>
 
         <div class="features-list">
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.0' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.0' | translate }}</span>
           </div>
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.1' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.1' | translate }}</span>
           </div>
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.2' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.2' | translate }}</span>
           </div>
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.3' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.3' | translate }}</span>
           </div>
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.4' | translate }}</span>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.5' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.4' | translate }}</span>
           </div>
 
         </div>
 
-        <button class="choose-btn primary">
-          {{ 'subscription.plans.standard.button' | translate }}
+        <button class="choose-btn primary" (click)="handleStandardSubcription()">
+          {{ 'employer-db.subscription.plans.standard.button' | translate }}
           <i class="fas fa-arrow-right"></i>
         </button>
       </div>
 
       <!-- Professional Plan -->
       <div class="pricing-card">
-        <h3 class="plan-title">{{ 'subscription.plans.professional.title' | translate }}</h3>
-        <p class="plan-description">{{ 'subscription.plans.professional.description' | translate }}</p>
+        <h3 class="plan-title">{{ 'employer-db.subscription.plans.professional.title' | translate }}</h3>
+        <p class="plan-description">{{ 'employer-db.subscription.plans.professional.description' | translate }}</p>
 
-        <div class="price">{{ 'subscription.plans.professional.price' | translate }}</div>
-        <div class="price-period">{{ 'subscription.plans.professional.period' | translate }}</div>
+        <div class="price">{{ 'employer-db.subscription.plans.professional.price' | translate | currency: 'VND' }}</div>
+        <div class="price-period">{{ 'employer-db.subscription.plans.professional.period' | translate }}</div>
 
         <div class="features-list">
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.0' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.0' | translate }}</span>
           </div>
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.1' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.1' | translate }}</span>
           </div>
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.2' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.2' | translate }}</span>
           </div>
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.3' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.3' | translate }}</span>
           </div>
           <div class="feature-item">
             <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.4' | translate }}</span>
+            <span>{{ 'employer-db.subscription.plans.basic.features.4' | translate }}</span>
           </div>
-          <div class="feature-item">
-            <i class="fas fa-check"></i>
-            <span>{{ 'subscription.plans.basic.features.5' | translate }}</span>
-          </div>
-
         </div>
 
-        <button class="choose-btn secondary">
-          {{ 'subscription.plans.professional.button' | translate }}
+        <button class="choose-btn secondary" (click)="handleAdvandSubcription()">
+          {{ 'employer-db.subscription.plans.professional.button' | translate }}
           <i class="fas fa-arrow-right"></i>
         </button>
       </div>
     </div>
   </div>
 </div>
+@if(isLoading) {
+  <app-loading></app-loading>
+}

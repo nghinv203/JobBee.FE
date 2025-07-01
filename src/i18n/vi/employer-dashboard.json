@@ -1,5 +1,5 @@
 {
-  "employer": {
+  "employer-db": {
     "dashboard": {
       "greeting": "Xin chào, Instagram",
       "subtitle": "Đây là hoạt động và ứng dụng hàng ngày của bạn",
@@ -203,14 +203,13 @@
         "basic": {
           "title": "Cơ Bản",
           "description": "Gói tiết kiệm dành cho nhà tuyển dụng mới bắt đầu. Đăng một số lượng giới hạn tin tuyển dụng.",
-          "price": "$19",
+          "price": "150000",
           "period": "/Tháng",
           "features": [
-            "Đăng 1 tin tuyển dụng",
+            "Đăng 3 tin tuyển dụng",
             "Tin khẩn cấp & nổi bật",
             "Làm nổi bật tin bằng màu sắc",
-            "Truy cập & lưu 5 ứng viên",
-            "Hiển thị hồ sơ trong 10 ngày",
+            "Hiển thị hồ sơ trong 30 ngày",
             "Hỗ trợ khẩn cấp 24/7"
           ],
           "button": "Chọn Gói"
@@ -218,14 +217,13 @@
         "standard": {
           "title": "Tiêu Chuẩn",
           "description": "Gói phổ biến nhất với nhiều ưu đãi. Đăng số lượng tin tuyển dụng nhiều hơn và nhận hỗ trợ ưu tiên.",
-          "price": "$39",
+          "price": "200000",
           "period": "/Tháng",
           "features": [
-            "3 tin tuyển dụng hoạt động",
+            "5 tin tuyển dụng hoạt động",
             "Tin khẩn cấp & nổi bật",
             "Làm nổi bật tin bằng màu sắc",
-            "Truy cập & lưu 10 ứng viên",
-            "Hiển thị hồ sơ trong 20 ngày",
+            "Hiển thị hồ sơ trong 30 ngày",
             "Hỗ trợ khẩn cấp 24/7"
           ],
           "button": "Chọn Gói"
@@ -233,13 +231,12 @@
         "professional": {
           "title": "Chuyên Nghiệp",
           "description": "Gói cao cấp dành cho doanh nghiệp. Đăng không giới hạn tin tuyển dụng, quảng bá tin hiệu quả.",
-          "price": "$59",
+          "price": "500000",
           "period": "/Tháng",
           "features": [
-            "6 tin tuyển dụng hoạt động",
+            "12 tin tuyển dụng hoạt động",
             "Tin khẩn cấp & nổi bật",
             "Làm nổi bật tin bằng màu sắc",
-            "Truy cập & lưu 20 ứng viên",
             "Hiển thị hồ sơ trong 30 ngày",
             "Hỗ trợ khẩn cấp 24/7"
           ],
