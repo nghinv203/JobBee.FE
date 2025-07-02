@@ -5,8 +5,8 @@ import {CandidatesService} from '../../../../core/services/candidates/candidates
 import {AuthService} from '../../../../shared/services/auth.service';
 import {FormsModule} from '@angular/forms';
 import Swal from 'sweetalert2';
-import {LocationService} from '../../../../shared/services/location.service';
 import {NgForOf} from '@angular/common';
+import {LocationService} from '../../../../core/services/location/location.service';
 
 @Component({
   selector: 'app-setting-experience',
