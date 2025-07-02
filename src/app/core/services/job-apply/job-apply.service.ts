@@ -25,4 +25,19 @@ export class JobApplyService {
   submitApplication(application: JobApplicationRequest): Observable<IResponse> {
     return this.http.post<IResponse>(`${this.baseUrl}/create`,application);
   }
+
+  getApplicationsByCandidateId(candidateId: string, pageIndex: number, pageSize: number): Observable<IResponse> {
+    const url = `${this.baseUrl}/by-candidate-id`;
+    console.log('Calling:', url, 'with', { candidateId, pageIndex, pageSize });
+    return this.http.get<IResponse>(url, {
+      params: {
+        candidateId,
+        pageIndex: pageIndex.toString(),
+        pageSize: pageSize.toString()
+      }
+    });
+  }
+
+
+
 }
