@@ -7,7 +7,7 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const authService = inject(AuthService);
   const authToken = authService.getToken();
 
-  const publicEndpoints = ['/api/login', '/api/register'];
+  const publicEndpoints = ['/api/login', '/api/register', '/location'];
 
   const isPublicEndpoint = publicEndpoints.some(endpoint => req.url.includes(endpoint));
 

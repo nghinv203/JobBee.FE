@@ -4,7 +4,7 @@ import {BreadcrumbComponent} from '../../../shared/reuseComponents/breadcrumb/br
 import {SearchComponent} from '../../../shared/reuseComponents/search/search.component';
 import {TranslatePipe} from '@ngx-translate/core';
 import {IJobSearch} from '../../job-list/job-list.model';
-import {LocationService} from '../../../shared/services/location.service';
+import {LocationService} from '../../../core/services/location/location.service';
 
 @Component({
   selector: 'app-employer-search',

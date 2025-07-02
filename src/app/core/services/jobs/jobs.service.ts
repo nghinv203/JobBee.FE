@@ -29,4 +29,8 @@ export class JobsService {
   getJobDetail(jobId: string) {
     return this.http.get<IResponse<IJobDetail>>(`${this.baseUrl}/${jobId}`);
   }
+
+  postJob(job: any): Observable<IResponse> {
+    return this.http.post<IResponse>(`${this.baseUrl}`, job);
+  }
 }

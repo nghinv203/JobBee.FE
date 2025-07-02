@@ -1,67 +1,94 @@
 <div class="container">
   <div class="header">
-    <h1>{{ 'postJob.title' | translate }}</h1>
+    <h1>{{ 'employer-db.postJob.title' | translate }}</h1>
   </div>
 
   <div class="form-content">
-    <form id="jobForm">
+    <form id="jobForm" [formGroup]="jobForm" (ngSubmit)="handleCreateJob()">
       <!-- Job Title -->
       <div class="form-group">
-        <label for="jobTitle">{{ 'postJob.form.jobTitle' | translate }}</label>
-        <input type="text" id="jobTitle" placeholder="{{ 'postJob.form.jobTitlePlaceholder' | translate }}">
+        <label for="jobTitle">{{ 'employer-db.postJob.form.jobTitle' | translate }}</label>
+        <input formControlName="title" type="text" id="jobTitle" placeholder="{{ 'employer-db.postJob.form.jobTitlePlaceholder' | translate }}">
+        @if(jobForm.get('title')?.touched && jobForm.get('title')?.invalid && jobForm.get('title')?.hasError('required')) {
+          <span class="error-msg">{{'employer-db.postJob.form.errorMsg' | translate}}</span>
+        }
       </div>
 
       <!-- Tags and Job Role -->
       <div class="form-row">
         <div>
-          <label for="tags">{{ 'postJob.form.tags' | translate }}</label>
-          <input type="text" id="tags" placeholder="{{ 'postJob.form.tagsPlaceholder' | translate }}">
+          <label for="jobCategory">{{ 'employer-db.postJob.form.jobRole' | translate }}</label>
+          <select id="jobCategory" formControlName="jobCategory">
+            <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
+            @for(category of categories; track category) {
+              <option [value]="category.id">{{ category.categoryName }}</option>
+            }
+          </select>
         </div>
         <div>
-          <label for="jobRole">{{ 'postJob.form.jobRole' | translate }}</label>
-          <select id="jobRole">
-            <option value="">{{ 'postJob.form.select' | translate }}</option>
-            <option value="designer">{{ 'postJob.form.roles.designer' | translate }}</option>
-            <option value="developer">{{ 'postJob.form.roles.developer' | translate }}</option>
-            <option value="manager">{{ 'postJob.form.roles.manager' | translate }}</option>
-            <option value="analyst">{{ 'postJob.form.roles.analyst' | translate }}</option>
+          <label for="isRemote">{{ 'employer-db.postJob.form.isRemote' | translate }}</label>
+          <select id="isRemote" formControlName="isRemote">
+            <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
+            <option value="true">{{ 'employer-db.postJob.form.yes' | translate }}</option>
+            <option value="true">{{ 'employer-db.postJob.form.no' | translate }}</option>
+          </select>
+        </div>
+        <div>
+          <label for="allowsWorkFromHome">{{ 'employer-db.postJob.form.allowsWorkFromHome' | translate }}</label>
+          <select id="allowsWorkFromHome" formControlName="allowsWorkFromHome">
+            <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
+            <option value="true">{{ 'employer-db.postJob.form.yes' | translate }}</option>
+            <option value="true">{{ 'employer-db.postJob.form.no' | translate }}</option>
+          </select>
+        </div>
+        <div>
+          <label for="isSalaryNegotiable">{{ 'employer-db.postJob.form.isSalaryNegotiable' | translate }}</label>
+          <select id="isSalaryNegotiable" formControlName="isSalaryNegotiable">
+            <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
+            <option value="true">{{ 'employer-db.postJob.form.yes' | translate }}</option>
+            <option value="true">{{ 'employer-db.postJob.form.no' | translate }}</option>
+          </select>
+        </div>
+        <div>
+          <label for="isFeature">{{ 'employer-db.postJob.form.isFeature' | translate }}</label>
+          <select id="isFeature" formControlName="isFeature">
+            <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
+            <option value="true">{{ 'employer-db.postJob.form.yes' | translate }}</option>
+            <option value="true">{{ 'employer-db.postJob.form.no' | translate }}</option>
           </select>
         </div>
       </div>
 
       <!-- Salary Section -->
       <div class="form-group">
-        <h3 class="section-title">{{ 'postJob.form.salarySection' | translate }}</h3>
+        <h3 class="section-title">{{ 'employer-db.postJob.form.salarySection' | translate }}</h3>
         <div class="salary-row">
           <div>
-            <label for="minSalary">{{ 'postJob.form.minSalary' | translate }}</label>
-            <input type="number" id="minSalary" placeholder="{{ 'postJob.form.minSalaryPlaceholder' | translate }}">
+            <label for="minSalary">{{ 'employer-db.postJob.form.minSalary' | translate }}</label>
+            <input formControlName="minSalary" type="number" id="minSalary" placeholder="{{ 'employer-db.postJob.form.minSalaryPlaceholder' | translate }}">
+            @if(jobForm.get('minSalary')?.touched && jobForm.get('minSalary')?.invalid && jobForm.get('minSalary')?.hasError('required')) {
+              <span class="error-msg">{{'employer-db.postJob.form.errorMsg' | translate}}</span>
+            }
           </div>
           <div>
-            <select class="currency-select">
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-              <option value="GBP">GBP</option>
+            <label for="maxSalary">{{ 'employer-db.postJob.form.maxSalary' | translate }}</label>
+            <input formControlName="maxSalary" type="number" id="maxSalary" placeholder="{{ 'employer-db.postJob.form.maxSalaryPlaceholder' | translate }}">
+            @if(jobForm.get('maxSalary')?.touched && jobForm.get('maxSalary')?.invalid && jobForm.get('maxSalary')?.hasError('required')) {
+              <span class="error-msg">{{'employer-db.postJob.form.errorMsg' | translate}}</span>
+            }
+          </div>
+          <div>
+            <select class="currency-select" formControlName="currency">
+              <option [selected]="true" [disabled]="true" value="VND">VND</option>
             </select>
           </div>
           <div>
-            <label for="maxSalary">{{ 'postJob.form.maxSalary' | translate }}</label>
-            <input type="number" id="maxSalary" placeholder="{{ 'postJob.form.maxSalaryPlaceholder' | translate }}">
-          </div>
-          <div>
-            <select class="currency-select">
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-              <option value="GBP">GBP</option>
-            </select>
-          </div>
-          <div>
-            <label for="salaryType">{{ 'postJob.form.salaryType' | translate }}</label>
-            <select id="salaryType">
-              <option value="">{{ 'postJob.form.select' | translate }}</option>
-              <option value="hourly">{{ 'postJob.form.salaryTypes.hourly' | translate }}</option>
-              <option value="monthly">{{ 'postJob.form.salaryTypes.monthly' | translate }}</option>
-              <option value="yearly">{{ 'postJob.form.salaryTypes.yearly' | translate }}</option>
+            <label for="salaryType">{{ 'employer-db.postJob.form.salaryType' | translate }}</label>
+            <select formControlName="salaryPeriod" id="salaryType">
+              <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
+              <option value="hourly">{{ 'employer-db.postJob.form.salaryTypes.hourly' | translate }}</option>
+              <option value="monthly">{{ 'employer-db.postJob.form.salaryTypes.monthly' | translate }}</option>
+              <option value="yearly">{{ 'employer-db.postJob.form.salaryTypes.yearly' | translate }}</option>
             </select>
           </div>
         </div>
@@ -69,132 +96,120 @@
 
       <!-- Advanced Information -->
       <div class="form-group">
-        <h3 class="section-title">{{ 'postJob.form.advanceInfo' | translate }}</h3>
+        <h3 class="section-title">{{ 'employer-db.postJob.form.advanceInfo' | translate }}</h3>
 
         <!-- Education, Experience, Job Type -->
         <div class="form-row three-col">
           <div>
-            <label for="education">{{ 'postJob.form.education' | translate }}</label>
-            <select id="education">
-              <option value="">{{ 'postJob.form.select' | translate }}</option>
-              <option value="high-school">{{ 'postJob.form.educations.highSchool' | translate }}</option>
-              <option value="bachelor">{{ 'postJob.form.educations.bachelor' | translate }}</option>
-              <option value="master">{{ 'postJob.form.educations.master' | translate }}</option>
-              <option value="phd">{{ 'postJob.form.educations.phd' | translate }}</option>
+            <label for="education">{{ 'employer-db.postJob.form.education' | translate }}</label>
+            <select formControlName="minEducationId" id="education">
+              <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
+              <option value="high-school">{{ 'employer-db.postJob.form.educations.highSchool' | translate }}</option>
+              <option value="bachelor">{{ 'employer-db.postJob.form.educations.bachelor' | translate }}</option>
+              <option value="master">{{ 'employer-db.postJob.form.educations.master' | translate }}</option>
+              <option value="phd">{{ 'employer-db.postJob.form.educations.phd' | translate }}</option>
             </select>
+            @if(jobForm.get('minEducationId')?.touched && jobForm.get('minEducationId')?.invalid && jobForm.get('minEducationId')?.hasError('required')) {
+              <span class="error-msg">{{'employer-db.postJob.form.errorMsg' | translate}}</span>
+            }
           </div>
           <div>
-            <label for="experience">{{ 'postJob.form.experience' | translate }}</label>
-            <select id="experience">
-              <option value="">{{ 'postJob.form.select' | translate }}</option>
-              <option value="entry">{{ 'postJob.form.experiences.entry' | translate }}</option>
-              <option value="mid">{{ 'postJob.form.experiences.mid' | translate }}</option>
-              <option value="senior">{{ 'postJob.form.experiences.senior' | translate }}</option>
+            <label for="experience">{{ 'employer-db.postJob.form.experience' | translate }}</label>
+            <select formControlName="experienceLevelId" id="experience">
+              <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
+              <option value="entry">{{ 'employer-db.postJob.form.experiences.entry' | translate }}</option>
+              <option value="mid">{{ 'employer-db.postJob.form.experiences.mid' | translate }}</option>
+              <option value="senior">{{ 'employer-db.postJob.form.experiences.senior' | translate }}</option>
             </select>
+            @if(jobForm.get('experienceLevelId')?.touched && jobForm.get('experienceLevelId')?.invalid && jobForm.get('experienceLevelId')?.hasError('required')) {
+              <span class="error-msg">{{'employer-db.postJob.form.errorMsg' | translate}}</span>
+            }
           </div>
           <div>
-            <label for="jobType">{{ 'postJob.form.jobType' | translate }}</label>
-            <select id="jobType">
-              <option value="">{{ 'postJob.form.select' | translate }}</option>
-              <option value="full-time">{{ 'postJob.form.jobTypes.fullTime' | translate }}</option>
-              <option value="part-time">{{ 'postJob.form.jobTypes.partTime' | translate }}</option>
-              <option value="contract">{{ 'postJob.form.jobTypes.contract' | translate }}</option>
-              <option value="internship">{{ 'postJob.form.jobTypes.internship' | translate }}</option>
+            <label for="jobType">{{ 'employer-db.postJob.form.jobType' | translate }}</label>
+            <select formControlName="jobType" id="jobType">
+              <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
+              <option value="full-time">{{ 'employer-db.postJob.form.jobTypes.fullTime' | translate }}</option>
+              <option value="part-time">{{ 'employer-db.postJob.form.jobTypes.partTime' | translate }}</option>
+              <option value="contract">{{ 'employer-db.postJob.form.jobTypes.contract' | translate }}</option>
+              <option value="internship">{{ 'employer-db.postJob.form.jobTypes.internship' | translate }}</option>
             </select>
+            @if(jobForm.get('jobType')?.touched && jobForm.get('jobType')?.invalid && jobForm.get('jobType')?.hasError('required')) {
+              <span class="error-msg">{{'employer-db.postJob.form.errorMsg' | translate}}</span>
+            }
           </div>
         </div>
 
         <!-- Vacancies, Expiration Date, Job Level -->
         <div class="form-row three-col">
           <div>
-            <label for="vacancies">{{ 'postJob.form.vacancies' | translate }}</label>
-            <select id="vacancies">
-              <option value="">{{ 'postJob.form.select' | translate }}</option>
-              <option value="1">{{ 'postJob.form.vacancyOptions.1' | translate }}</option>
-              <option value="2-5">{{ 'postJob.form.vacancyOptions.2-5' | translate }}</option>
-              <option value="5-10">{{ 'postJob.form.vacancyOptions.5-10' | translate }}</option>
-              <option value="10+">{{ 'postJob.form.vacancyOptions.10+' | translate }}</option>
-            </select>
-          </div>
-          <div>
-            <label for="expirationDate">{{ 'postJob.form.expirationDate' | translate }}</label>
-            <input type="date" id="expirationDate" placeholder="DD/MM/YYYY">
-          </div>
-          <div>
-            <label for="jobLevel">{{ 'postJob.form.jobLevel' | translate }}</label>
-            <select id="jobLevel">
-              <option value="">{{ 'postJob.form.select' | translate }}</option>
-              <option value="entry">{{ 'postJob.form.jobLevels.entry' | translate }}</option>
-              <option value="mid">{{ 'postJob.form.jobLevels.mid' | translate }}</option>
-              <option value="senior">{{ 'postJob.form.jobLevels.senior' | translate }}</option>
-              <option value="executive">{{ 'postJob.form.jobLevels.executive' | translate }}</option>
-            </select>
+            <label for="expirationDate">{{ 'employer-db.postJob.form.expirationDate' | translate }}</label>
+            <input formControlName="applicationDeadline" type="date" id="expirationDate" placeholder="DD/MM/YYYY">
+            @if(jobForm.get('applicationDeadline')?.touched && jobForm.get('applicationDeadline')?.invalid && jobForm.get('applicationDeadline')?.hasError('required')) {
+              <span class="error-msg">{{'employer-db.postJob.form.errorMsg' | translate}}</span>
+            }
           </div>
         </div>
-      </div>
 
-      <!-- Apply Job On -->
-      <div class="form-group">
-        <h3 class="section-title">{{ 'postJob.form.applyOn' | translate }}</h3>
-        <div class="radio-group">
-          <div class="radio-option selected" onclick="selectRadio(this, 'jobaplied')">
-            <input type="radio" name="applyMethod" value="jobaplied" checked>
-            <div class="radio-title">{{ 'postJob.form.applyMethods.jobaplied.title' | translate }}</div>
-            <div class="radio-description">{{ 'postJob.form.applyMethods.jobaplied.description' | translate }}</div>
+        <div class="form-row three-col">
+          <div>
+            <label for="locationCity">{{ 'employer-db.postJob.form.location.city' | translate }}</label>
+            <select formControlName="locationCity" id="locationCity">
+              <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
+              @for(city of cities; track city) {
+                <option [value]="city.id">{{ city.name }}</option>
+              }
+            </select>
           </div>
-          <div class="radio-option" onclick="selectRadio(this, 'external')">
-            <input type="radio" name="applyMethod" value="external">
-            <div class="radio-title">{{ 'postJob.form.applyMethods.external.title' | translate }}</div>
-            <div class="radio-description">{{ 'postJob.form.applyMethods.external.description' | translate }}</div>
+          <div>
+            <label for="locationDistrict">{{ 'employer-db.postJob.form.location.district' | translate }}</label>
+            <select formControlName="locationState" id="locationDistrict">
+              <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
+              @for(district of districts; track district) {
+                <option [value]="district.id">{{ district.name }}</option>
+              }
+            </select>
           </div>
-          <div class="radio-option" onclick="selectRadio(this, 'email')">
-            <input type="radio" name="applyMethod" value="email">
-            <div class="radio-title">{{ 'postJob.form.applyMethods.email.title' | translate }}</div>
-            <div class="radio-description">{{ 'postJob.form.applyMethods.email.description' | translate }}</div>
+          <div>
+            <label for="locationCountry">{{ 'employer-db.postJob.form.location.commune' | translate }}</label>
+            <select formControlName="locationCountry" id="locationCountry">
+              <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
+              @for(commune of communes; track commune) {
+                <option [value]="commune.id">{{ commune.name }}</option>
+              }
+            </select>
           </div>
         </div>
       </div>
 
       <!-- Description & Responsibility -->
       <div class="form-group">
-        <h3 class="section-title">{{ 'postJob.form.descriptionSection' | translate }}</h3>
-
+        <h3 class="section-title">{{ 'employer-db.postJob.form.descriptionSection' | translate }}</h3>
         <div style="margin-bottom: 16px;">
-          <label for="description">{{ 'postJob.form.description' | translate }}</label>
-          <div class="text-editor">
-            <div class="editor-toolbar">
-              <button type="button" class="editor-btn" onclick="formatText('bold')"><strong>B</strong></button>
-              <button type="button" class="editor-btn" onclick="formatText('italic')"><em>I</em></button>
-              <button type="button" class="editor-btn" onclick="formatText('underline')"><u>U</u></button>
-              <button type="button" class="editor-btn" onclick="formatText('strikethrough')"><s>S</s></button>
-              <button type="button" class="editor-btn" onclick="formatText('link')">🔗</button>
-              <button type="button" class="editor-btn" onclick="formatText('unorderedList')">• ≡</button>
-              <button type="button" class="editor-btn" onclick="formatText('orderedList')">1. ≡</button>
-            </div>
-            <textarea id="description" class="editor-textarea" placeholder="{{ 'postJob.form.descriptionPlaceholder' | translate }}"></textarea>
+          <label for="description">{{ 'employer-db.postJob.form.description' | translate }}</label>
+          <div>
+            <editor formControlName="description" apiKey="haqhid7sxjdyva63kxn2e1bs75pcuozl8oie2jsf9uxs083z" [init]="init" id="description" class="editor-textarea" ></editor>
           </div>
         </div>
 
         <div>
-          <label for="responsibilities">{{ 'postJob.form.responsibilities' | translate }}</label>
-          <div class="text-editor">
-            <div class="editor-toolbar">
-              <button type="button" class="editor-btn" onclick="formatText('bold')"><strong>B</strong></button>
-              <button type="button" class="editor-btn" onclick="formatText('italic')"><em>I</em></button>
-              <button type="button" class="editor-btn" onclick="formatText('underline')"><u>U</u></button>
-              <button type="button" class="editor-btn" onclick="formatText('strikethrough')"><s>S</s></button>
-              <button type="button" class="editor-btn" onclick="formatText('link')">🔗</button>
-              <button type="button" class="editor-btn" onclick="formatText('unorderedList')">• ≡</button>
-              <button type="button" class="editor-btn" onclick="formatText('orderedList')">1. ≡</button>
-            </div>
-            <textarea id="responsibilities" class="editor-textarea" placeholder="{{ 'postJob.form.responsibilitiesPlaceholder' | translate }}"></textarea>
+          <label for="responsibilities">{{ 'employer-db.postJob.form.responsibilities' | translate }}</label>
+          <div>
+            <editor formControlName="responsibilities" [init]="init" id="responsibilities" class="editor-textarea" ></editor>
+          </div>
+        </div>
+
+        <div>
+          <label for="requirement">{{ 'employer-db.postJob.form.responsibilities' | translate }}</label>
+          <div>
+            <editor formControlName="requirements" [init]="init" id="requirement" class="editor-textarea" ></editor>
           </div>
         </div>
       </div>
 
       <!-- Submit Button -->
       <button type="submit" class="submit-btn">
-        {{ 'postJob.form.submit' | translate }}
+        {{ 'employer-db.postJob.form.submit' | translate }}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="5" y1="12" x2="19" y2="12"></line>
           <polyline points="12,5 19,12 12,19"></polyline>

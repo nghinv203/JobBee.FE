@@ -28,8 +28,14 @@
         "jobTitlePlaceholder": "Thêm chức danh, vai trò, số lượng tuyển...",
         "tags": "Từ khóa",
         "tagsPlaceholder": "Từ khóa công việc, thẻ tag, v.v.",
-        "jobRole": "Vai trò công việc",
+        "jobRole": "Loại danh mục",
+        "isRemote": "Làm từ xa",
+        "allowsWorkFromHome": "Làm tại nhà",
+        "isSalaryNegotiable": "Có thể thỏa thuận lương",
+        "isFeature": "Đẩy việc",
         "select": "Chọn...",
+        "yes": "Có",
+        "no": "Không",
         "roles": {
           "designer": "Thiết kế",
           "developer": "Lập trình viên",
@@ -98,6 +104,12 @@
             "description": "Ứng viên có thể gửi đơn ứng tuyển qua địa chỉ email của bạn"
           }
         },
+        "location": {
+          "city": "Tỉnh/Thành Phố",
+          "district": "Quận/Huyện",
+          "commune": "Xã/Phường"
+        },
+        "errorMsg": "Trường này là bắt buộc",
         "descriptionSection": "Mô tả & Trách nhiệm",
         "description": "Mô tả",
         "descriptionPlaceholder": "Thêm mô tả công việc...",

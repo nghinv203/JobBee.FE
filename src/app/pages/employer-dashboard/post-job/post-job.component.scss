@@ -43,7 +43,7 @@ body {
 
 .form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
   margin-bottom: 24px;
 }
@@ -95,13 +95,12 @@ select {
   background-position: right 12px center;
   background-repeat: no-repeat;
   background-size: 16px;
-  padding-right: 40px;
   appearance: none;
 }
 
 .salary-row {
   display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr;
+  grid-template-columns: 1fr 1fr 80px 1fr;
   gap: 12px;
   align-items: end;
 }
@@ -229,6 +228,12 @@ select {
 
 .submit-btn:active {
   transform: translateY(1px);
+}
+
+.error-msg {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
 }
 
 @media (max-width: 768px) {

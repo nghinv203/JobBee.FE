@@ -17,4 +17,10 @@ export class JobCategoryService {
   getCategoryPopular(params: any): Observable<IResponse<IPopularJob[]>> {
     return this.http.get<IResponse<IPopularJob[]>>(`${this.baseUrl}/popular`, { params })
   }
+
+  getAllCategory(): Observable<IResponse> {
+    return this.http.get<IResponse>(`${this.baseUrl}/list`);
+  }
+
+
 }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {AppEnvironmentService} from '../../../app.environment.service';
 import {Observable} from 'rxjs';
+import {IResponse} from '../../../shared/models/response';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,10 @@ export class EmployerListService {
         pageSize: pageSize.toString()
       }
     });
+  }
+
+  getEmployerId(userId: string): Observable<IResponse> {
+    return this.http.get<IResponse>(`${this.baseUrl}/employer-by-userId/${userId}`)
   }
 
 }

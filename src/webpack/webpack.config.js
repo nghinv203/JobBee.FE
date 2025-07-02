@@ -115,6 +115,5 @@ module.exports = (config, options, targetOptions) => {
     // Add custom Webpack configurations here, e.g.:
     // resolve: { alias: { '@': path.resolve(__dirname, '../src') } }
   });
-
   return config;
 };

@@ -29,7 +29,13 @@
         "tags": "Tags",
         "tagsPlaceholder": "Job keyword, tags etc.",
         "jobRole": "Job Role",
+        "isRemote": "Is Remote",
+        "allowsWorkFromHome": "Allows Work From Home",
+        "isSalaryNegotiable": "Is Salary Negotiable",
+        "isFeature": "Is Promote",
         "select": "Select...",
+        "yes": "Yes",
+        "no": "No",
         "roles": {
           "designer": "Designer",
           "developer": "Developer",
@@ -98,6 +104,12 @@
             "description": "Candidates apply via your email. Candidates can send application on your email"
           }
         },
+        "location": {
+          "city": "City",
+          "district": "District",
+          "commune": "Commune"
+        },
+        "errorMsg": "This field is required",
         "descriptionSection": "Description & Responsibility",
         "description": "Description",
         "descriptionPlaceholder": "Add your job description...",
