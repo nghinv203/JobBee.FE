@@ -1,5 +1,5 @@
-@if(isAddResume){
-  <app-add-resume (isOpenMessage) = handlePopUp($event)></app-add-resume>
+@if (isAddResume) {
+  <app-add-resume (isOpenMessage)=handlePopUp($event)></app-add-resume>
 }
 
 <div class="content">
@@ -9,42 +9,60 @@
     <div class="profile-picture">
       <label class="form-label">{{ 'profile.basicInfo.profilePicture' | translate }}</label>
       <div class="upload-area">
-        <svg class="upload-icon" viewBox="0 0 24 24">
-          <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
-        </svg>
-        <div class="upload-text">{{ 'profile.basicInfo.uploadText' | translate }}</div>
-        <div class="upload-subtext">{{ 'profile.basicInfo.uploadSubtext' | translate }}</div>
+        <input type="file" accept="image/*" (change)="onPictureSelected($event)" hidden #fileInput>
+
+        <!-- ✅ Image display -->
+        <img
+          *ngIf="profilePictureUrl"
+          [src]="profilePictureUrl"
+          (click)="fileInput.click()"
+          alt="Profile Picture"
+          class="profile-img"
+        />
+
+        <!-- ✅ Fallback upload content -->
+        <div class="upload-content" *ngIf="!profilePictureUrl" (click)="fileInput.click()">
+          <svg class="upload-icon" viewBox="0 0 24 24">
+            <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
+          </svg>
+          <div class="upload-text">{{ 'profile.basicInfo.uploadText' | translate }}</div>
+          <div class="upload-subtext">{{ 'profile.basicInfo.uploadSubtext' | translate }}</div>
+        </div>
       </div>
     </div>
 
+
     <div class="form-group">
       <label class="form-label">{{ 'profile.basicInfo.firstName' | translate }}</label>
-      <input type="text" class="form-input" placeholder="Enter your first name">
+      <input type="text" class="form-input" [(ngModel)]="firstName" name="firstName"
+             placeholder="Enter your first name">
     </div>
 
     <div class="form-group">
       <label class="form-label">{{ 'profile.basicInfo.lastName' | translate }}</label>
-      <input type="text" class="form-input" placeholder="Enter your last name">
+      <input type="text" class="form-input" [(ngModel)]="lastName" name="lastName" placeholder="Enter your last name">
     </div>
 
     <div class="form-group">
       <label class="form-label">{{ 'profile.basicInfo.dob' | translate }}</label>
-      <input type="date" class="form-input">
+      <input type="date" class="form-input" [(ngModel)]="dob" name="dob">
     </div>
 
     <div class="form-group">
       <label class="form-label">{{ 'profile.basicInfo.gender' | translate }}</label>
-      <select class="form-select">
-        <option>{{ 'profile.basicInfo.genderOptions.select' | translate }}</option>
-        <option>{{ 'profile.basicInfo.genderOptions.male' | translate }}</option>
-        <option>{{ 'profile.basicInfo.genderOptions.female' | translate }}</option>
-        <option>{{ 'profile.basicInfo.genderOptions.other' | translate }}</option>
-        <option>{{ 'profile.basicInfo.genderOptions.preferNotToSay' | translate }}</option>
+      <select [(ngModel)]="gender" class="form-select" name="gender">
+        <option value="">{{ 'profile.basicInfo.genderOptions.select' | translate }}</option>
+        <option value="Male">{{ 'profile.basicInfo.genderOptions.male' | translate }}</option>
+        <option value="Female">{{ 'profile.basicInfo.genderOptions.female' | translate }}</option>
+        <option value="Other">{{ 'profile.basicInfo.genderOptions.other' | translate }}</option>
+        <option value="PreferNotToSay">{{ 'profile.basicInfo.genderOptions.preferNotToSay' | translate }}</option>
       </select>
     </div>
-  </div>
 
-  <button class="save-button">{{ 'profile.basicInfo.saveButton' | translate }}</button>
+    <button class="save-button" (click)="saveBasicInfo()">
+      {{ 'profile.basicInfo.saveButton' | translate }}
+    </button>
+  </div>
 </div>
 
 
@@ -52,17 +70,18 @@
   <h2 class="section-title">{{ 'profile.cvSection.title' | translate }}</h2>
 
   <div class="cv-grid">
-    <div class="cv-item">
+    <div *ngFor="let resume of resumes" class="cv-item">
       <div class="cv-header">
         <div class="cv-info">
           <div class="cv-icon">
             <svg viewBox="0 0 24 24">
-              <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+              <path
+                d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
             </svg>
           </div>
           <div class="cv-details">
-            <h3>Professional Resume</h3>
-            <p>3.5 MB</p>
+            <h3>{{ resume.fileName }}</h3>
+            <p>{{ getReadableSize(resume.fileSize) }}</p>
           </div>
         </div>
         <button class="cv-action delete">
@@ -70,50 +89,6 @@
             <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
           </svg>
         </button>
-      </div>
-    </div>
-
-    <div class="cv-item">
-      <div class="cv-header">
-        <div class="cv-info">
-          <div class="cv-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-            </svg>
-          </div>
-          <div class="cv-details">
-            <h3>Product Designer</h3>
-            <p>4.7 MB</p>
-          </div>
-        </div>
-        <button class="cv-action delete">
-          <svg viewBox="0 0 24 24">
-            <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
-          </svg>
-        </button>
-
-      </div>
-    </div>
-
-    <div class="cv-item">
-      <div class="cv-header">
-        <div class="cv-info">
-          <div class="cv-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-            </svg>
-          </div>
-          <div class="cv-details">
-            <h3>Visual Designer</h3>
-            <p>1.3 MB</p>
-          </div>
-        </div>
-        <button class="cv-action delete">
-          <svg viewBox="0 0 24 24">
-            <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
-          </svg>
-        </button>
-
       </div>
     </div>
 
@@ -128,3 +103,4 @@
     </div>
   </div>
 </div>
+

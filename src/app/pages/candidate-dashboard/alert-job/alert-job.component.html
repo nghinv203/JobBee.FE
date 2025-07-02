@@ -3,7 +3,7 @@
   <!-- Recently Applied Section -->
   <div class="recently-applied">
     <div class="section-header">
-      <h2>{{ 'jobAlert.title' | translate }} (589)</h2>
+      <h2>{{ 'jobAlert.title' | translate }} ({{ totalCount }})</h2>
     </div>
 
     <div class="applications-table">
@@ -11,102 +11,69 @@
         <div class="col-job">{{ 'jobAlert.table.job' | translate }}</div>
       </div>
 
-      <div class="job-item">
-        <div class="company-logo google-logo">G</div>
-        <div class="job-details">
-          <div class="job-title">Technical Support Specialist</div>
-          <div class="job-meta">
-            <p><i class="fas fa-map-marker-alt"></i> Washington &nbsp;&nbsp;&nbsp;
-              <i class="fas fa-money-bill-wave"></i> $50k-80k/month</p>
-            <div class="job-type">Full Time</div>
-            <div class="salary-highlight">{{ 'jobAlert.jobItems.jobExpired' | translate }}</div>
-          </div>
+      <div *ngFor="let job of jobAlerts" class="job-item">
+        <div class="company-logo">
+          <img *ngIf="job.companyLogo" [src]="job.companyLogo" alt="{{ job.companyName }}" width="40" height="40">
+          <span *ngIf="!job.companyLogo">{{ job.companyName?.charAt(0) || '🏢' }}</span>
         </div>
-        <div class="job-actions">
-          <div class="status-expired">{{ 'jobAlert.jobItems.deadlineExpired' | translate }}</div>
-        </div>
-      </div>
 
-      <!-- UI/UX Designer - YouTube -->
-      <div class="job-item">
-        <div class="company-logo youtube-logo">⯈</div>
         <div class="job-details">
-          <div class="job-title">UI/UX Designer</div>
+          <div class="job-title">{{ job.title }}</div>
           <div class="job-meta">
-            <p><i class="fas fa-map-marker-alt"></i> Washington &nbsp;&nbsp;&nbsp;
-              <i class="fas fa-money-bill-wave"></i> $50k-80k/month</p>
-            <div class="job-type">Full Time</div>
-            <div class="meta-item">
+            <p>
+              <i class="fas fa-map-marker-alt"></i>
+              {{ job.locationCity }}, {{ job.locationState }} &nbsp;&nbsp;&nbsp;
+              <i class="fas fa-money-bill-wave"></i>
+              {{ job.minSalary | number }} - {{ job.maxSalary | number }} {{ job.currency }}/{{ job.salaryPeriod }}
+            </p>
+            <div class="job-type">{{ job.typeName }}</div>
+
+            <div class="meta-item" *ngIf="getDaysRemaining(job.applicationDeadline) > 0">
               <svg class="time-icon" viewBox="0 0 24 24">
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
               </svg>
-              {{ 'jobAlert.jobItems.daysRemaining1' | translate }} 4 {{ 'jobAlert.jobItems.daysRemaining2' | translate }}
+              {{ 'jobAlert.jobItems.daysRemaining1' | translate }} {{ getDaysRemaining(job.applicationDeadline) }} {{ 'jobAlert.jobItems.daysRemaining2' | translate }}
+            </div>
+
+            <div class="salary-highlight" *ngIf="getDaysRemaining(job.applicationDeadline) === 0">
+              {{ 'jobAlert.jobItems.jobExpired' | translate }}
             </div>
           </div>
         </div>
-        <div class="job-actions">
-          <button class="apply-btn">{{ 'jobAlert.jobItems.applyNow' | translate }}</button>
-        </div>
-      </div>
 
-      <!-- Junior Graphic Designer - Facebook -->
-      <div class="job-item">
-        <div class="company-logo facebook-logo">f</div>
-        <div class="job-details">
-          <div class="job-title">Junior Graphic Designer</div>
-          <div class="job-meta">
-            <p><i class="fas fa-map-marker-alt"></i> Washington &nbsp;&nbsp;&nbsp;
-              <i class="fas fa-money-bill-wave"></i> $50k-80k/month</p>
-            <div class="job-type">Full Time</div>
-            <div class="meta-item">
-              <svg class="time-icon" viewBox="0 0 24 24">
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-              {{ 'jobAlert.jobItems.daysRemaining1' | translate }} 4 {{ 'jobAlert.jobItems.daysRemaining2' | translate }}
-            </div>
-          </div>
-        </div>
         <div class="job-actions">
-          <button class="apply-btn">{{ 'jobAlert.jobItems.applyNow' | translate }}</button>
-        </div>
-      </div>
+          <button
+            *ngIf="getDaysRemaining(job.applicationDeadline) > 0"
+            class="apply-btn"
+            (click)="handleViewJobDetail(job.id)">
+            {{ 'jobAlert.jobItems.applyNow' | translate }}
+          </button>
 
-      <!-- More job items... -->
-      <div class="job-item">
-        <div class="company-logo google-logo">G</div>
-        <div class="job-details">
-          <div class="job-title">Technical Support Specialist</div>
-          <div class="job-meta">
-            <p><i class="fas fa-map-marker-alt"></i> Washington &nbsp;&nbsp;&nbsp;
-              <i class="fas fa-money-bill-wave"></i> $50k-80k/month</p>
-            <div class="job-type">Full Time</div>
-            <div class="salary-highlight">{{ 'jobAlert.jobItems.jobExpired' | translate }}</div>
+          <div *ngIf="getDaysRemaining(job.applicationDeadline) === 0" class="status-expired">
+            {{ 'jobAlert.jobItems.deadlineExpired' | translate }}
           </div>
-        </div>
-        <div class="job-actions">
-          <div class="status-expired">{{ 'jobAlert.jobItems.deadlineExpired' | translate }}</div>
         </div>
       </div>
     </div>
 
-    <nav class="pagination" id="pagination">
-      <button class="pagination-arrow" id="prevBtn">
+    <!-- Pagination -->
+    <nav class="pagination">
+      <button class="pagination-arrow" (click)="prevPage()">
         <svg class="arrow-icon" viewBox="0 0 24 24">
-          <path d="m15 18-6-6 6-6"/>
+          <path d="m15 18-6-6 6-6" />
         </svg>
       </button>
 
-      <a href="#" class="pagination-item active" data-page="1">01</a>
-      <a href="#" class="pagination-item" data-page="2">02</a>
-      <a href="#" class="pagination-item" data-page="3">03</a>
-      <a href="#" class="pagination-item" data-page="4">04</a>
-      <a href="#" class="pagination-item" data-page="5">05</a>
+      <a *ngFor="let page of pages"
+         class="pagination-item"
+         [class.active]="page === currentPage"
+         (click)="goToPage(page)">
+        {{ page }}
+      </a>
 
-      <button class="pagination-arrow" id="nextBtn">
+      <button class="pagination-arrow" (click)="nextPage()">
         <svg class="arrow-icon" viewBox="0 0 24 24">
-          <path d="m9 18 6-6-6-6"/>
+          <path d="m9 18 6-6-6-6" />
         </svg>
       </button>
     </nav>

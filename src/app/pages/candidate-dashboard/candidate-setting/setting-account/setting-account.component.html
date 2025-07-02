@@ -1,18 +1,33 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <div class="container">
+  <div class="header">
+    <div class="header-left" style="margin-left: 20px; margin-top: 20px">
+      <h1>Account Setting</h1>
+    </div>
+  </div>
+
   <!-- Privacy Settings Section -->
   <div class="section">
     <div class="privacy-controls">
       <div class="privacy-item">
-        <div class="privacy-label">{{ 'accountSettings.privacy.isAvailable' | translate }}</div>
+        <div class="privacy-label">
+          {{ 'accountSettings.privacy.isAvailable' | translate }}
+        </div>
         <label class="toggle-switch">
-          <input type="checkbox">
+          <input
+            type="checkbox"
+            [(ngModel)]="isAvailableForHire"
+            (change)="ngOnInit()"
+            (change)="updateAvailability()"
+            name="isAvailableForHire"
+          />
           <span class="slider"></span>
         </label>
       </div>
     </div>
   </div>
+
 
   <!-- Change Password Section -->
   <form (ngSubmit)="onChangePassword()" #changeForm="ngForm" class="section">

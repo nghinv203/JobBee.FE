@@ -222,6 +222,12 @@
   font-weight: 600;
   font-size: 14px;
   color: white;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .up-logo { background-color: #4caf50; }

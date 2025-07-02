@@ -32,7 +32,7 @@
           <span><i class="fas fa-envelope"></i> {{ job.employer.contactEmail | truncate: 15 }}</span>
         </div>
       </div>
-      <i class="fas fa-bookmark bookmark-icon"></i>
+      <i (click)="onSaveJob()" class="fas fa-bookmark bookmark-icon"></i>
       <button (click)="onOpenApply()" class="apply-btn">Ứng tuyển ngay</button>
     </div>
 

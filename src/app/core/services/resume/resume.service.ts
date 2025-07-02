@@ -36,4 +36,10 @@ export class ResumeService {
       .pipe(map(res => res.data));
   }
 
+  getByCandidateId(candidateId: string): Observable<{ type: string; status: number; data: Resume[] }> {
+    return this.http.get<{ type: string; status: number; data: Resume[] }>(
+      `${this.baseUrl}/by-candidate-id/${candidateId}`
+    );
+  }
+
 }

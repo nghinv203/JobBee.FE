@@ -49,7 +49,7 @@
     "title": "Applied Jobs",
     "table": {
       "job": "Job",
-      "date": "Date Applied",
+      "date": "Application deadline",
       "status": "Status",
       "action": "Action",
       "active": "✓ Active",

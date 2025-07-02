@@ -13,6 +13,9 @@ import {IJob} from '../entities/job/job.model';
 import {FooterComponent} from '../../layout/main/footer/footer.component';
 import {LoadingComponent} from '../../shared/reuseComponents/loading/loading.component';
 import {ApplyJobComponent} from './apply-job/apply-job.component';
+import Swal from 'sweetalert2';
+import {AuthService} from '../../shared/services/auth.service';
+import {SaveJobService} from '../../core/services/save-job/save-job.service';
 import {CandidatesService} from '../../core/services/candidates/candidates.service';
 
 @Component({
@@ -34,7 +37,7 @@ import {CandidatesService} from '../../core/services/candidates/candidates.servi
   templateUrl: './single-job.component.html',
   styleUrl: './single-job.component.scss'
 })
-export class SingleJobComponent implements OnInit{
+export class SingleJobComponent implements OnInit {
 
   job!: IJobDetail;
   isLoading = true;
@@ -43,7 +46,10 @@ export class SingleJobComponent implements OnInit{
   jobId: string | null = '';
 
   constructor(private route: ActivatedRoute,
-              private jobService: JobsService) {
+              private jobService: JobsService,
+              private authService: AuthService,
+              private saveJobService: SaveJobService,
+              private candidateService: CandidatesService) {
   }
 
   ngOnInit() {
@@ -74,4 +80,43 @@ export class SingleJobComponent implements OnInit{
   handlePopUp(isOpen: boolean) {
     this.isOpenApply = isOpen;
   }
+
+  onSaveJob(): void {
+    const userId = this.authService.getUserId();
+    if (!this.jobId || !userId) return;
+    console.log(userId)
+    this.candidateService.getCandidateIdByUser(userId)
+      .subscribe({
+        next: (res) => {
+          const candidateId = res.data.id;
+          console.log(this.jobId)
+          console.log(candidateId);
+          this.saveJobService.saveJob(candidateId, this.jobId!)
+            .subscribe({
+              next: () => {
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Đã lưu!',
+                  text: 'Công việc đã được lưu vào hồ sơ của bạn.',
+                });
+              },
+              error: () => {
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Lỗi...',
+                  text: 'Công việc đã được lưu. Vui lòng thử lại sau.',
+                });
+              }
+            });
+        },
+        error: () => {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Could not retrieve your candidate profile.',
+          });
+        }
+      });
+  }
+
 }
