@@ -37,19 +37,19 @@
               </svg>
               {{ 'favouriteJobs.jobItems.daysRemaining1' | translate }}
               {{ getDaysRemaining(job.applicationDeadline) }}
-              {{ 'favouriteJobs.jobItems.daysRemaining1' | translate }}
+              {{ 'favouriteJobs.jobItems.daysRemaining2' | translate }}
             </div>
           </div>
         </div>
 
         <div class="job-actions">
-          <button class="bookmark-btn">
+          <button (click)="onUnsaveClick(job.id)" class="bookmark-btn">
             <svg class="bookmark-icon" viewBox="0 0 24 24">
               <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
             </svg>
           </button>
 
-          <button *ngIf="job.applicationDeadline >= currentTimestamp" class="apply-btn">
+          <button (click)="handleViewJobDetail(job.id)" *ngIf="job.applicationDeadline >= currentTimestamp" class="apply-btn">
             {{ 'favouriteJobs.jobItems.applyNow' | translate }}
           </button>
 

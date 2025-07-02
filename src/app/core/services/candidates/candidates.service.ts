@@ -27,4 +27,37 @@ export class CandidatesService {
     return this.http.get<IResponse<string>>(`${this.baseUrl}/candidate/get-by-user/${userId}`);
   }
 
+  getCandidateById(id: string) {
+    return this.http.get<any>(`${this.baseUrl}/candidate/${id}`);
+  }
+
+  updateBasicInfo(candidate: {
+    id: string;
+    firstName: string;
+    lastName: string;
+    birthDate: number;
+    gender: string;
+  }) {
+    return this.http.put(`${this.baseUrl}/candidate/update`, {
+      id: candidate.id,
+      firstName: candidate.firstName,
+      lastName: candidate.lastName,
+      birthDate: candidate.birthDate,
+      gender: candidate.gender
+    });
+  }
+
+  uploadProfilePicture(candidateId: string, picture: File) {
+    const formData = new FormData();
+    formData.append('CandidateId', candidateId);
+    formData.append('ProfilePicture', picture);
+
+    return this.http.put(`${this.baseUrl}/candidate/photo`, formData);
+  }
+
+  updateCandidateProfile(payload: any) {
+    return this.http.put(`${this.baseUrl}/candidate/update`, payload);
+  }
+
+
 }

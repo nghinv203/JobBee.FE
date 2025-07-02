@@ -3,6 +3,15 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {IResponse} from '../models/response';
 
+interface Province {
+  id: string;
+  name: string;
+  type: number;
+  typeText: string;
+  slug: string;
+}
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,5 +21,13 @@ export class LocationService {
 
   fetchProvines(): Observable<IResponse> {
     return this.http.get<IResponse>("https://open.oapi.vn/location/provinces?page=0&size=63");
+  }
+
+  fetchDistrictByProvinceId(provinceId: string): Observable<IResponse> {
+    return this.http.get<IResponse>(`https://open.oapi.vn/location/districts/${provinceId}?page=0&size=100`);
+  }
+
+  fetchCommuneByDistrictId(districtId: string): Observable<IResponse> {
+    return this.http.get<IResponse>(`https://open.oapi.vn/location/wards/${districtId}?page=0&size=100`);
   }
 }

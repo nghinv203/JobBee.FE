@@ -5,6 +5,7 @@ import {CandidatesService} from '../../../core/services/candidates/candidates.se
 import {AuthService} from '../../../shared/services/auth.service';
 import {SaveJobService} from '../../../core/services/save-job/save-job.service';
 import {CurrencyPipe, NgForOf, NgIf, NgStyle} from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-favorite-job',
@@ -124,4 +125,30 @@ export class FavoriteJobComponent {
     const diff = expiryDate.getTime() - today.getTime();
     return Math.max(Math.ceil(diff / (1000 * 60 * 60 * 24)), 0);
   }
+
+  onUnsaveClick(jobId: string): void {
+    this.savedJobService.deleteSavedJob(this.candidateId, jobId)
+      .subscribe({
+        next: () => {
+          Swal.fire({
+            icon: 'success',
+            title: 'Đã xoá!',
+            text: 'Công việc đã được xoá khỏi danh sách yêu thích.',
+            timer: 2000,
+            showConfirmButton: false
+          }).then(() => {
+            // Reload trang sau khi Swal đóng
+            window.location.reload();
+          });
+        },
+        error: () => {
+          Swal.fire({
+            icon: 'error',
+            title: 'Lỗi!',
+            text: 'Không thể xoá công việc. Vui lòng thử lại.',
+          });
+        }
+      });
+  }
+
 }

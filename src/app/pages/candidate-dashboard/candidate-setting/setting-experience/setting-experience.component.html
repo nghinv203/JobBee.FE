@@ -5,53 +5,53 @@
   <div class="form-grid">
     <div class="form-group">
       <label class="form-label">{{ 'profileDetail.firstName' | translate }}</label>
-      <input type="text" class="form-input" placeholder="{{ 'profileDetail.firstNamePlaceholder' | translate }}">
+      <input type="text" class="form-input" [(ngModel)]="firstName" placeholder="{{ 'profileDetail.firstNamePlaceholder' | translate }}">
     </div>
 
     <div class="form-group">
       <label class="form-label">{{ 'profileDetail.lastName' | translate }}</label>
-      <input type="text" class="form-input" placeholder="{{ 'profileDetail.lastNamePlaceholder' | translate }}">
+      <input type="text" class="form-input" [(ngModel)]="lastName" placeholder="{{ 'profileDetail.lastNamePlaceholder' | translate }}">
     </div>
 
     <div class="form-group">
       <label class="form-label">{{ 'profileDetail.dateOfBirth' | translate }}</label>
-      <input type="date" class="form-input">
+      <input type="date" [(ngModel)]="birthDate" name="birthDate" class="form-input" />
     </div>
 
     <div class="form-group">
-      <label class="form-label">{{ 'profileDetail.gender' | translate }}</label>
-      <select class="form-select">
-        <option>{{ 'profileDetail.genderPlaceholder' | translate }}</option>
-        <option>{{ 'profileDetail.genderMale' | translate }}</option>
-        <option>{{ 'profileDetail.genderFemale' | translate }}</option>
-        <option>{{ 'profileDetail.genderOther' | translate }}</option>
-        <option>{{ 'profileDetail.genderPreferNot' | translate }}</option>
+      <label class="form-label" >{{ 'profileDetail.gender' | translate }}</label>
+      <select [(ngModel)]="gender" name="gender" class="form-select">
+        <option value="">{{ 'profile.basicInfo.genderOptions.select' | translate }}</option>
+        <option value="Male">{{ 'profile.basicInfo.genderOptions.male' | translate }}</option>
+        <option value="Female">{{ 'profile.basicInfo.genderOptions.female' | translate }}</option>
+        <option value="Other">{{ 'profile.basicInfo.genderOptions.other' | translate }}</option>
+        <option value="PreferNotToSay">{{ 'profile.basicInfo.genderOptions.preferNotToSay' | translate }}</option>
       </select>
     </div>
 
     <div class="form-group">
       <label class="form-label">{{ 'profileDetail.headline' | translate }}</label>
-      <input type="text" class="form-input" placeholder="{{ 'profileDetail.headlinePlaceholder' | translate }}">
+      <input type="text" class="form-input" [(ngModel)]="headline" placeholder="{{ 'profileDetail.headlinePlaceholder' | translate }}">
     </div>
 
     <div class="form-group">
       <label class="form-label">{{ 'profileDetail.summary' | translate }}</label>
-      <textarea class="form-input" rows="3" placeholder="{{ 'profileDetail.summaryPlaceholder' | translate }}"></textarea>
+      <textarea class="form-input" rows="3" [(ngModel)]="summary" placeholder="{{ 'profileDetail.summaryPlaceholder' | translate }}"></textarea>
     </div>
 
     <div class="form-group">
       <label class="form-label">{{ 'profileDetail.experience' | translate }}</label>
-      <input type="number" class="form-input" placeholder="{{ 'profileDetail.experiencePlaceholder' | translate }}">
+      <input type="number" class="form-input" [(ngModel)]="experienceYears" placeholder="{{ 'profileDetail.experiencePlaceholder' | translate }}">
     </div>
 
     <div class="form-group">
       <label class="form-label">{{ 'profileDetail.currentSalary' | translate }}</label>
-      <input type="number" class="form-input" placeholder="{{ 'profileDetail.currentSalaryPlaceholder' | translate }}">
+      <input type="number" class="form-input" [(ngModel)]="currentSalary" placeholder="{{ 'profileDetail.currentSalaryPlaceholder' | translate }}">
     </div>
 
     <div class="form-group">
       <label class="form-label">{{ 'profileDetail.expectedSalary' | translate }}</label>
-      <input type="number" class="form-input" placeholder="{{ 'profileDetail.expectedSalaryPlaceholder' | translate }}">
+      <input type="number" class="form-input" [(ngModel)]="salaryExpectation" placeholder="{{ 'profileDetail.expectedSalaryPlaceholder' | translate }}">
     </div>
   </div>
 
@@ -60,47 +60,58 @@
   <div class="form-grid">
     <div class="form-group">
       <label class="form-label">{{ 'profileDetail.phoneNumber' | translate }}</label>
-      <input type="tel" class="form-input" placeholder="{{ 'profileDetail.phoneNumberPlaceholder' | translate }}">
-    </div>
-
-    <div class="form-group">
-      <label class="form-label">{{ 'profileDetail.address' | translate }}</label>
-      <input type="text" class="form-input" placeholder="{{ 'profileDetail.addressPlaceholder' | translate }}">
-    </div>
-
-    <div class="form-group">
-      <label class="form-label">{{ 'profileDetail.country' | translate }}</label>
-      <select class="form-select" id="country">
-        <option>{{ 'profileDetail.countryPlaceholder' | translate }}</option>
-        <option value="us">United States</option>
-        <option value="vn">Vietnam</option>
-        <option value="jp">Japan</option>
-        <option value="uk">United Kingdom</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label class="form-label">{{ 'profileDetail.state' | translate }}</label>
-      <select class="form-select" id="state">
-        <option>{{ 'profileDetail.statePlaceholder' | translate }}</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label class="form-label">{{ 'profileDetail.city' | translate }}</label>
-      <select class="form-select" id="city">
-        <option>{{ 'profileDetail.cityPlaceholder' | translate }}</option>
-      </select>
+      <input type="tel" class="form-input" [(ngModel)]="phone" placeholder="{{ 'profileDetail.phoneNumberPlaceholder' | translate }}">
     </div>
 
     <div class="form-group">
       <label class="form-label">{{ 'profileDetail.postalCode' | translate }}</label>
-      <input type="text" class="form-input" placeholder="{{ 'profileDetail.postalCodePlaceholder' | translate }}">
+      <input type="text" class="form-input" [(ngModel)]="postalCode" placeholder="{{ 'profileDetail.postalCodePlaceholder' | translate }}">
     </div>
-  </div>
 
-  <!-- BUTTON -->
+    <div class="form-group">
+      <label class="form-label">{{ 'profileDetail.country' | translate }}</label>
+      <select [(ngModel)]="country" class="form-select" id="country">
+        <option>{{ 'profileDetail.countryPlaceholder' | translate }}</option>
+        <option value="vn">Vietnam</option>
+      </select>
+    </div>
+
+    <!-- City / Province -->
+    <div class="form-group">
+      <label class="form-label">{{ 'profileDetail.city' | translate }}</label>
+      <select [(ngModel)]="city" (change)="onCityChange()" class="form-select" name="city">
+        <option value="">{{ 'profileDetail.cityPlaceholder' | translate }}</option>
+        <option *ngFor="let province of provinces" [value]="province.name">
+          {{ province.name }}
+        </option>
+      </select>
+    </div>
+
+    <!-- State / District -->
+    <div class="form-group">
+      <label class="form-label">{{ 'profileDetail.state' | translate }}</label>
+      <select [(ngModel)]="state" (change)="onStateChange()" class="form-select" name="state">
+        <option value="">{{ 'profileDetail.statePlaceholder' | translate }}</option>
+        <option *ngFor="let district of districts" [value]="district.name">
+          {{ district.name }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Address / Ward -->
+    <div class="form-group">
+      <label class="form-label">{{ 'profileDetail.address' | translate }}</label>
+      <select [(ngModel)]="address" class="form-select" name="address">
+        <option value="">{{ 'profileDetail.addressPlaceholder' | translate }}</option>
+        <option *ngFor="let ward of wards" [value]="ward.name">
+          {{ ward.name }}
+        </option>
+      </select>
+    </div>
+
+
+    <!-- BUTTON -->
   <div style="margin-top: 2rem;">
-    <button class="save-button">{{ 'profileDetail.saveChanges' | translate }}</button>
+    <button (click)="saveProfile()" class="save-button">{{ 'profileDetail.saveChanges' | translate }}</button>
   </div>
 </div>

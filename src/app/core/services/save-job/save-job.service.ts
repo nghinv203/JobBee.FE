@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpRequest} from '@angular/common/http';
 import {AppEnvironmentService} from '../../../app.environment.service';
 import {Observable} from 'rxjs';
 import {IResponse} from '../../../shared/models/response';
@@ -33,5 +33,15 @@ export class SaveJobService {
       }
     });
   }
+
+  deleteSavedJob(candidateId: string, jobId: string) {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const body = { candidateId, jobId };
+
+    const req = new HttpRequest('DELETE', `${this.baseUrl}/delete`, body, { headers });
+
+    return this.http.request(req);
+  }
+
 
 }
