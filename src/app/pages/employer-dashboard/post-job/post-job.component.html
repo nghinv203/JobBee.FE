@@ -79,7 +79,7 @@
           </div>
           <div>
             <select class="currency-select" formControlName="currency">
-              <option [selected]="true" [disabled]="true" value="VND">VND</option>
+              <option [selected]="true" value="VND">VND</option>
             </select>
           </div>
           <div>
@@ -104,10 +104,9 @@
             <label for="education">{{ 'employer-db.postJob.form.education' | translate }}</label>
             <select formControlName="minEducationId" id="education">
               <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
-              <option value="high-school">{{ 'employer-db.postJob.form.educations.highSchool' | translate }}</option>
-              <option value="bachelor">{{ 'employer-db.postJob.form.educations.bachelor' | translate }}</option>
-              <option value="master">{{ 'employer-db.postJob.form.educations.master' | translate }}</option>
-              <option value="phd">{{ 'employer-db.postJob.form.educations.phd' | translate }}</option>
+              @for(edu of education; track edu) {
+                <option [value]="edu.id">{{ edu.levelName }}</option>
+              }
             </select>
             @if(jobForm.get('minEducationId')?.touched && jobForm.get('minEducationId')?.invalid && jobForm.get('minEducationId')?.hasError('required')) {
               <span class="error-msg">{{'employer-db.postJob.form.errorMsg' | translate}}</span>
@@ -117,9 +116,9 @@
             <label for="experience">{{ 'employer-db.postJob.form.experience' | translate }}</label>
             <select formControlName="experienceLevelId" id="experience">
               <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
-              <option value="entry">{{ 'employer-db.postJob.form.experiences.entry' | translate }}</option>
-              <option value="mid">{{ 'employer-db.postJob.form.experiences.mid' | translate }}</option>
-              <option value="senior">{{ 'employer-db.postJob.form.experiences.senior' | translate }}</option>
+              @for(exp of experiences; track exp) {
+                <option [value]="exp.id">{{ exp.levelName }}</option>
+              }
             </select>
             @if(jobForm.get('experienceLevelId')?.touched && jobForm.get('experienceLevelId')?.invalid && jobForm.get('experienceLevelId')?.hasError('required')) {
               <span class="error-msg">{{'employer-db.postJob.form.errorMsg' | translate}}</span>
@@ -129,10 +128,9 @@
             <label for="jobType">{{ 'employer-db.postJob.form.jobType' | translate }}</label>
             <select formControlName="jobType" id="jobType">
               <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
-              <option value="full-time">{{ 'employer-db.postJob.form.jobTypes.fullTime' | translate }}</option>
-              <option value="part-time">{{ 'employer-db.postJob.form.jobTypes.partTime' | translate }}</option>
-              <option value="contract">{{ 'employer-db.postJob.form.jobTypes.contract' | translate }}</option>
-              <option value="internship">{{ 'employer-db.postJob.form.jobTypes.internship' | translate }}</option>
+              @for(type of types; track type) {
+                <option [value]="type.id">{{ type.typeName }}</option>
+              }
             </select>
             @if(jobForm.get('jobType')?.touched && jobForm.get('jobType')?.invalid && jobForm.get('jobType')?.hasError('required')) {
               <span class="error-msg">{{'employer-db.postJob.form.errorMsg' | translate}}</span>
@@ -200,7 +198,7 @@
         </div>
 
         <div>
-          <label for="requirement">{{ 'employer-db.postJob.form.responsibilities' | translate }}</label>
+          <label for="requirement">{{ 'employer-db.postJob.form.requirements' | translate }}</label>
           <div>
             <editor formControlName="requirements" [init]="init" id="requirement" class="editor-textarea" ></editor>
           </div>

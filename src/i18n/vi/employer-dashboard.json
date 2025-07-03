@@ -114,6 +114,7 @@
         "description": "Mô tả",
         "descriptionPlaceholder": "Thêm mô tả công việc...",
         "responsibilities": "Trách nhiệm",
+        "requirements": "Yêu cầu",
         "responsibilitiesPlaceholder": "Thêm các trách nhiệm của công việc...",
         "submit": "Đăng tin tuyển dụng"
       }

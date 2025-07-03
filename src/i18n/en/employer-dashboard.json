@@ -114,6 +114,7 @@
         "description": "Description",
         "descriptionPlaceholder": "Add your job description...",
         "responsibilities": "Responsibilities",
+        "requirements": "Requirement",
         "responsibilitiesPlaceholder": "Add your job responsibilities...",
         "submit": "Post Job"
       }
