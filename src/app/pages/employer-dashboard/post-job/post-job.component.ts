@@ -16,6 +16,9 @@ import {AuthService} from '../../../shared/services/auth.service';
 import {JobCategoryService} from '../../../core/services/jobs-category/job-category.service';
 import {JobsService} from '../../../core/services/jobs/jobs.service';
 import {NzNotificationService} from 'ng-zorro-antd/notification';
+import {JobTypeService} from '../../../core/services/job-type/job-type.service';
+import {ExperienceService} from '../../../core/services/experiences/experience.service';
+import {EducationService} from '../../../core/services/educations/education.service';
 
 @Component({
   selector: 'app-post-job',
@@ -30,12 +33,18 @@ export class PostJobComponent implements OnInit{
   districts: any;
   communes: any;
   categories: any;
+  types: any;
+  experiences: any;
+  education: any;
 
   constructor(private fb: FormBuilder,
               private locationService: LocationService,
               private employerService: EmployerListService,
               private categoriesService: JobCategoryService,
               private jobService: JobsService,
+              private jobTypeService: JobTypeService,
+              private experienceService: ExperienceService,
+              private educationService: EducationService,
               private toarst: NzNotificationService,
               private authService: AuthService) {
     this.jobForm = this.fb.group({
@@ -72,6 +81,9 @@ export class PostJobComponent implements OnInit{
     this.handleDistrictChange();
     this.handleGetEmployerId();
     this.handleGetJobCategories();
+    this.handleGetJobType();
+    this.handleGetExperiences();
+    this.handleGetEducation();
   }
 
   handleLoadCities(): void {
@@ -119,18 +131,70 @@ export class PostJobComponent implements OnInit{
       })
   }
 
-  handleCreateJob() {
-    if (this.jobForm.value) {
-      this.jobForm.patchValue({
-        isActive: true,
-        expiresAt: new Date(this.jobForm.get('applicationDeadline')?.value).getTime(),
-        applicationDeadline: new Date(this.jobForm.get('applicationDeadline')?.value).getTime(),
+  handleGetJobType(): void {
+    this.jobTypeService.getJobTypes()
+      .subscribe(res => {
+        this.types = res.data
       })
-      this.jobService.postJob(this.jobForm.value).subscribe(res => {
-        this.toarst.success('Tạo công việc mới thành công', 'Công việc mới đã được tạo');
+  }
+
+  handleGetExperiences(): void {
+    this.experienceService.getExperiences()
+      .subscribe(res => {
+        this.experiences = res.data;
       });
-    }
-    this.toarst.error('Tạo công việc mới thất bại', 'Tạo thất bại hay xem lại');
+  }
+
+  handleGetEducation(): void {
+    this.educationService.getEducations()
+      .subscribe(res => {
+        this.education = res.data;
+      })
+  }
+
+  handleCreateJob() {
+    // if (this.jobForm.invalid) {
+    //   this.toarst.error('Dữ liệu không hợp lệ', 'Vui lòng kiểm tra lại form');
+    //   return;
+    // }
+
+    const raw = this.jobForm.getRawValue();
+
+    // convert id → name
+    const cityName     = this.cities.find((c: any) => c.id === raw.locationCity)?.name;
+    const districtName = this.districts.find((d: any) => d.id === raw.locationState)?.name;
+    const communeName  = this.communes.find((c: any) => c.id === raw.locationCountry)?.name;
+
+    const payload = {
+      employerId:         raw.employerId,           // string UUID
+      title:              raw.title,
+      jobCategoryId:      raw.jobCategoryId,        // string UUID
+      jobTypeId:          raw.jobTypeId,            // string UUID
+      experienceLevelId:  raw.experienceLevelId,    // string UUID
+      minEducationId:     raw.minEducationId,       // string UUID
+      description:        raw.description,
+      responsibilities:   raw.responsibilities,
+      requirements:       raw.requirements,
+      minSalary:          raw.minSalary,            // number
+      maxSalary:          raw.maxSalary,            // number
+      salaryPeriod:       raw.salaryPeriod,         // "Hourly"|"Monthly"|"Yearly"
+      currency:           'VND',
+      isSalaryNegotiable: raw.isSalaryNegotiable === 'true',   // boolean
+      isRemote:           raw.isRemote === 'true',             // boolean
+      allowsWorkFromHome: raw.allowsWorkFromHome === 'true',   // boolean
+      isFeatured:         raw.isFeatured === 'true',           // boolean
+      isActive:           true,
+      applicationDeadline: new Date(raw.applicationDeadline).getTime(),
+      expiresAt:           new Date(raw.applicationDeadline).getTime(),
+      locationCity:        cityName,
+      locationState:       districtName,
+      locationCountry:     communeName
+    };
+
+    this.jobService.postJob(payload).subscribe({
+      next: () => this.toarst.success('Tạo công việc mới thành công', ''),
+      error: () => this.toarst.error('Tạo thất bại, vui lòng thử lại', '')
+    });
   }
 }
 
