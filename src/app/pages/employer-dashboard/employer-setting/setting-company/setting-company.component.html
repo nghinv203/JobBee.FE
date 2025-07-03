@@ -1,31 +1,31 @@
 <div class="info-company">
   <div class="form-section">
     <div class="upload-section">
-      <h2 class="section-title">{{ 'companyInfo.title' | translate }}</h2>
+      <h2 class="section-title">{{ 'employer-db.companyInfo.title' | translate }}</h2>
       <div class="upload-grid">
         <div class="upload-item">
-          <h3>{{ 'companyInfo.logoUpload.title' | translate }}</h3>
+          <h3>{{ 'employer-db.companyInfo.logoUpload.title' | translate }}</h3>
           <div class="upload-box" onclick="document.getElementById('logo-upload').click()">
             <div class="upload-icon">📤</div>
             <div class="upload-text">
-              <strong>{{ 'companyInfo.logoUpload.browse' | translate }}</strong> {{ 'companyInfo.logoUpload.dragHere' | translate }}
+              <strong>{{ 'employer-db.companyInfo.logoUpload.browse' | translate }}</strong> {{ 'employer-db.companyInfo.logoUpload.dragHere' | translate }}
             </div>
             <div class="upload-hint">
-              {{ 'companyInfo.logoUpload.hint' | translate }}
+              {{ 'employer-db.companyInfo.logoUpload.hint' | translate }}
             </div>
           </div>
           <input type="file" id="logo-upload" style="display: none;" accept="image/*">
         </div>
 
         <div class="upload-item">
-          <h3>{{ 'companyInfo.bannerUpload.title' | translate }}</h3>
+          <h3>{{ 'employer-db.companyInfo.bannerUpload.title' | translate }}</h3>
           <div class="upload-box" onclick="document.getElementById('banner-upload').click()">
             <div class="upload-icon">📤</div>
             <div class="upload-text">
-              <strong>{{ 'companyInfo.bannerUpload.browse' | translate }}</strong> {{ 'companyInfo.bannerUpload.dragHere' | translate }}
+              <strong>{{ 'employer-db.companyInfo.bannerUpload.browse' | translate }}</strong> {{ 'employer-db.companyInfo.bannerUpload.dragHere' | translate }}
             </div>
             <div class="upload-hint">
-              {{ 'companyInfo.bannerUpload.hint' | translate }}
+              {{ 'employer-db.companyInfo.bannerUpload.hint' | translate }}
             </div>
           </div>
           <input type="file" id="banner-upload" style="display: none;" accept="image/*">
@@ -34,33 +34,33 @@
     </div>
 
     <div class="form-group">
-      <label for="company-name">{{ 'companyInfo.form.companyName' | translate }}</label>
+      <label for="company-name">{{ 'employer-db.companyInfo.form.companyName' | translate }}</label>
       <input type="text" id="company-name" name="company-name">
     </div>
 
     <div class="form-group">
-      <label for="about-us">{{ 'companyInfo.form.aboutUs' | translate }}</label>
+      <label for="about-us">{{ 'employer-db.companyInfo.form.aboutUs' | translate }}</label>
       <div class="textarea-container">
         <textarea
           id="about-us"
           name="about-us"
-          [placeholder]="'companyInfo.form.placeholder' | translate"
+          [placeholder]="'employer-db.companyInfo.form.placeholder' | translate"
         ></textarea>
         <div class="editor-toolbar">
-          <button class="editor-btn" type="button" title="{{ 'companyInfo.toolbar.bold' | translate }}"><strong>B</strong></button>
-          <button class="editor-btn" type="button" title="{{ 'companyInfo.toolbar.italic' | translate }}"><em>I</em></button>
-          <button class="editor-btn" type="button" title="{{ 'companyInfo.toolbar.underline' | translate }}"><u>U</u></button>
-          <button class="editor-btn" type="button" title="{{ 'companyInfo.toolbar.strike' | translate }}"><s>S</s></button>
-          <button class="editor-btn" type="button" title="{{ 'companyInfo.toolbar.link' | translate }}">🔗</button>
-          <button class="editor-btn" type="button" title="{{ 'companyInfo.toolbar.bullets' | translate }}">• •</button>
-          <button class="editor-btn" type="button" title="{{ 'companyInfo.toolbar.numbers' | translate }}">1. 2.</button>
+          <button class="editor-btn" type="button" title="{{ 'employer-db.companyInfo.toolbar.bold' | translate }}"><strong>B</strong></button>
+          <button class="editor-btn" type="button" title="{{ 'employer-db.companyInfo.toolbar.italic' | translate }}"><em>I</em></button>
+          <button class="editor-btn" type="button" title="{{ 'employer-db.companyInfo.toolbar.underline' | translate }}"><u>U</u></button>
+          <button class="editor-btn" type="button" title="{{ 'employer-db.companyInfo.toolbar.strike' | translate }}"><s>S</s></button>
+          <button class="editor-btn" type="button" title="{{ 'employer-db.companyInfo.toolbar.link' | translate }}">🔗</button>
+          <button class="editor-btn" type="button" title="{{ 'employer-db.companyInfo.toolbar.bullets' | translate }}">• •</button>
+          <button class="editor-btn" type="button" title="{{ 'employer-db.companyInfo.toolbar.numbers' | translate }}">1. 2.</button>
         </div>
       </div>
     </div>
 
     <div class="button-container">
       <button type="button" class="btn btn-primary">
-        {{ 'companyInfo.form.saveButton' | translate }}
+        {{ 'employer-db.companyInfo.form.saveButton' | translate }}
       </button>
     </div>
   </div>

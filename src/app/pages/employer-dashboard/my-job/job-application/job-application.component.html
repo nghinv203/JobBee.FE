@@ -1,16 +1,16 @@
 <div class="container">
   <!-- Breadcrumb -->
   <nav class="breadcrumb">
-    <a>{{ 'breadcrumb.employer' | translate }}</a>
+    <a>{{ 'employer-db.breadcrumb.employer' | translate }}</a>
     <span class="breadcrumb-separator">/</span>
-    <a (click)="emitMessage()">{{ 'breadcrumb.myJobs' | translate }}</a>
+    <a (click)="emitMessage()">{{ 'employer-db.breadcrumb.myJobs' | translate }}</a>
     <span class="breadcrumb-separator">/</span>
-    <span class="active">{{ 'breadcrumb.applications' | translate }}</span>
+    <span class="active">{{ 'employer-db.breadcrumb.applications' | translate }}</span>
   </nav>
 
   <!-- Header -->
   <div class="header">
-    <h1 class="page-title">{{ 'header.pageTitle' | translate }}</h1>
+    <h1 class="page-title">{{ 'employer-db.header.pageTitle' | translate }}</h1>
   </div>
 
   <!-- Main Content -->
@@ -18,7 +18,7 @@
     <!-- Applications Section -->
     <div class="applications-section">
       <div class="section-header">
-        <h2 class="section-title">{{ 'applicationsSection.title' | translate:{ count: 213 } }}</h2>
+        <h2 class="section-title">{{ 'employer-db.applicationsSection.title' | translate }}</h2>
         <div class="dropdown">
           <button class="dropdown-toggle" onclick="toggleDropdown('dropdown1')">
             <i class="fas fa-ellipsis-h"></i>
@@ -26,104 +26,76 @@
           <div class="dropdown-menu" id="dropdown1">
             <a href="#" class="dropdown-item">
               <i class="fas fa-edit"></i>
-              {{ 'applicationsSection.dropdown.edit' | translate }}
+              {{ 'employer-db.applicationsSection.dropdown.edit' | translate }}
             </a>
             <a href="#" class="dropdown-item danger">
               <i class="fas fa-trash"></i>
-              {{ 'applicationsSection.dropdown.delete' | translate }}
+              {{ 'employer-db.applicationsSection.dropdown.delete' | translate }}
             </a>
           </div>
         </div>
       </div>
 
       <div class="applications-list">
-        <!-- Applicant 1 -->
-        <div class="applicant-card">
-          <div class="avatar">RR</div>
-          <div class="applicant-info">
-            <h3 class="applicant-name">Ronald Richards</h3>
-            <div class="applicant-role">UI/UX Designer</div>
-            <ul class="applicant-details">
-              <li>• 7 Years Experience</li>
-              <li>• Education: Master Degree</li>
-              <li>• Applied: Jan 23, 2022</li>
-            </ul>
-            <a href="#" class="download-cv">
-              <i class="fas fa-video"></i>
-              {{ 'applicationsSection.videoResume' | translate }}
-            </a>
+        <div class="applicant-card" *ngFor="let app of applications">
+          <div class="avatar">
+            <img *ngIf="app.profilePicture" [src]="app.profilePicture" class="avatar-img" />
+            <span *ngIf="!app.profilePicture">{{ getInitials(app.userName) }}</span>
           </div>
-        </div>
 
-        <!-- Applicant 2 -->
-        <div class="applicant-card">
-          <div class="avatar">TW</div>
           <div class="applicant-info">
-            <h3 class="applicant-name">Theresa Webb</h3>
-            <div class="applicant-role">Product Designer</div>
-            <ul class="applicant-details">
-              <li>• 7 Years Experience</li>
-              <li>• Education: High School Degree</li>
-              <li>• Applied: Jan 23, 2022</li>
-            </ul>
-            <a href="#" class="download-cv">
-              <i class="fas fa-video"></i>
-              {{ 'applicationsSection.videoResume' | translate }}
-            </a>
-          </div>
-        </div>
+            <h3 class="applicant-name">{{ app.userName }}</h3>
+            <div class="applicant-role">{{ app.headline || ('employer-db.applicationsSection.noHeadline' | translate) }}</div>
 
-        <!-- Applicant 3 -->
-        <div class="applicant-card">
-          <div class="avatar">DL</div>
-          <div class="applicant-info">
-            <h3 class="applicant-name">Devon Lane</h3>
-            <div class="applicant-role">User Experience Designer</div>
             <ul class="applicant-details">
-              <li>• 7 Years Experience</li>
-              <li>• Education: Master Degree</li>
-              <li>• Applied: Jan 23, 2022</li>
+              <li>• {{ app.experienceYears }} Years Experience</li>
+              <li>• Phone: {{ app.phone }} </li>
+              <li>• Applied: {{ app.createdAt | date: 'MMM d, y' }}</li>
             </ul>
-            <a href="#" class="download-cv">
-              <i class="fas fa-video"></i>
-              {{ 'applicationsSection.videoResume' | translate }}
-            </a>
-          </div>
-        </div>
 
-        <!-- Applicant 4 -->
-        <div class="applicant-card">
-          <div class="avatar">KM</div>
-          <div class="applicant-info">
-            <h3 class="applicant-name">Kathryn Murphy</h3>
-            <div class="applicant-role">UI/UX Designer</div>
-            <ul class="applicant-details">
-              <li>• 5 Years Experience</li>
-              <li>• Education: Bachelor Degree</li>
-              <li>• Applied: Jan 23, 2022</li>
-            </ul>
-            <a href="#" class="download-cv">
+<!--            <a href="javascript:void(0)" class="download-cv" (click)="onWatchVideo(app.id)">-->
+<!--              <i class="fas fa-video"></i>-->
+<!--              {{ 'employer-db.applicationsSection.videoResume' | translate }}-->
+<!--            </a>-->
+
+            <!-- Link to trigger modal -->
+            <a href="javascript:void(0)" class="download-cv" (click)="onWatchVideo(app.id)">
               <i class="fas fa-video"></i>
-              {{ 'applicationsSection.videoResume' | translate }}
+              {{ 'employer-db.applicationsSection.videoResume' | translate }}
             </a>
+
+            <!-- Video Modal -->
+            <div class="modal-backdrop" *ngIf="showModal">
+              <div class="modal-content">
+                <button class="close-btn" (click)="closeModal()">×</button>
+                <video width="100%" controls autoplay *ngIf="videoUrl">
+                  <source [src]="videoUrl" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+
           </div>
         </div>
       </div>
+
+
     </div>
 
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sort Widget -->
       <div class="sort-widget">
-        <h3 class="widget-title">{{ 'sidebar.sort.title' | translate }}</h3>
+        <h3 class="widget-title">{{ 'employer-db.sidebar.sort.title' | translate }}</h3>
         <div class="sort-options">
           <div class="radio-option">
             <input type="radio" id="newest" name="sort" value="newest" checked>
-            <label for="newest">{{ 'sidebar.sort.newest' | translate }}</label>
+            <label for="newest">{{ 'employer-db.sidebar.sort.newest' | translate }}</label>
           </div>
           <div class="radio-option">
             <input type="radio" id="oldest" name="sort" value="oldest">
-            <label for="oldest">{{ 'sidebar.sort.oldest' | translate }}</label>
+            <label for="oldest">{{ 'employer-db.sidebar.sort.oldest' | translate }}</label>
           </div>
         </div>
       </div>
@@ -133,11 +105,11 @@
         <div class="create-icon">
           <i class="fas fa-plus"></i>
         </div>
-        <h3 class="create-title">{{ 'sidebar.createJob.title' | translate }}</h3>
-        <p class="create-subtitle">{{ 'sidebar.createJob.subtitle' | translate }}</p>
+        <h3 class="create-title">{{ 'employer-db.sidebar.createJob.title' | translate }}</h3>
+        <p class="create-subtitle">{{ 'employer-db.sidebar.createJob.subtitle' | translate }}</p>
         <button class="btn btn-primary">
           <i class="fas fa-plus"></i>
-          {{ 'sidebar.createJob.button' | translate }}
+          {{ 'employer-db.sidebar.createJob.button' | translate }}
         </button>
       </div>
     </div>

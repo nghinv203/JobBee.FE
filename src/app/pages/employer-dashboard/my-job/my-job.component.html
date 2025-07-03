@@ -1,35 +1,43 @@
 @if (isJobApplication) {
-  <app-job-application (isAppication)="isOpenApplication($event)"></app-job-application>
+  <app-job-application
+    [jobId]="jobId"
+    (isAppication)="isOpenApplication($event)"></app-job-application>
 }
 
 @if (!isJobApplication) {
   <div class="container">
     <div class="jobs-section">
       <div class="jobs-header">
-        <h3>{{ 'jobSection.title' | translate }} (532)</h3>
+        <h3>{{ 'employer-db.applicationsSection.title' | translate }}</h3>
       </div>
 
       <div class="table-header">
-        <span>{{ 'jobSection.tableHeader.job' | translate }}</span>
-        <span>{{ 'jobSection.tableHeader.status' | translate }}</span>
-        <span>{{ 'jobSection.tableHeader.applications' | translate }}</span>
-        <span>{{ 'jobSection.tableHeader.actions' | translate }}</span>
+        <span>{{ 'employer-db.jobSection.tableHeader.job' | translate }}</span>
+        <span>{{ 'employer-db.jobSection.tableHeader.status' | translate }}</span>
+        <span>{{ 'employer-db.jobSection.tableHeader.applications' | translate }}</span>
+        <span>{{ 'employer-db.jobSection.tableHeader.actions' | translate }}</span>
       </div>
 
       <div class="list-job">
-
-        <!-- Repeat for each job -->
-        <div class="job-row">
+        <div class="job-row" *ngFor="let job of jobs">
           <div class="job-info">
-            <h4>Junior Graphic Designer</h4>
-            <div class="job-details">Full Time • {{ 'jobSection.jobs.remaining1' | translate }} 24 {{ 'jobSection.jobs.remaining2' | translate }}</div>
+            <h4>{{ job.title }}</h4>
+            <div class="job-details">
+              {{ job.jobType }} •
+              {{ 'employer-db.jobSection.jobs.remaining1' | translate }}
+              {{ job.daysRemaing }}
+              {{ 'employer-db.jobSection.jobs.remaining2' | translate }}
+            </div>
           </div>
 
           <div class="status">
             <div class="status-icon">
-              <i class="fas fa-circle-check"></i>
+              <i class="fas fa-circle-check" *ngIf="job.isActive; else inactiveIcon"></i>
+              <ng-template #inactiveIcon>
+                <i class="fas fa-circle-xmark"></i>
+              </ng-template>
             </div>
-            <span>{{ 'jobSection.jobs.status' | translate }}</span>
+            <span>{{ 'employer-db.jobSection.jobs.status' | translate }}</span>
           </div>
 
           <div class="applications">
@@ -37,74 +45,32 @@
               <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
               <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
             </svg>
-            583 {{ 'jobSection.jobs.applications' | translate }}
+            {{ job.applicationsCount }} {{ 'employer-db.jobSection.jobs.applications' | translate }}
           </div>
 
           <div class="dropdown-action-wrapper">
             <button class="dropdown-toggle-btn">
-              {{ 'jobSection.tableHeader.actions' | translate }} <i class="fas fa-chevron-down"></i>
+              {{ 'employer-db.jobSection.tableHeader.actions' | translate }} <i class="fas fa-chevron-down"></i>
             </button>
             <ul class="dropdown-menu">
-              <li (click)="OpenJobApplication()">
-                <i class="fas fa-users"></i> {{ 'jobSection.actions.viewApplications' | translate }}
+              <li (click)="OpenJobApplication(job.id)">
+                <i class="fas fa-users"></i> {{ 'employer-db.jobSection.actions.viewApplications' | translate }}
               </li>
               <li>
-                <i class="fas fa-bullhorn"></i> {{ 'jobSection.actions.promoteJob' | translate }}
+                <i class="fas fa-bullhorn"></i> {{ 'employer-db.jobSection.actions.promoteJob' | translate }}
               </li>
               <li>
-                <i class="fas fa-eye"></i> {{ 'jobSection.actions.viewDetail' | translate }}
+                <i class="fas fa-eye"></i> {{ 'employer-db.jobSection.actions.viewDetail' | translate }}
               </li>
               <li>
-                <i class="fas fa-clock"></i> {{ 'jobSection.actions.expire' | translate }}
+                <i class="fas fa-clock"></i> {{ 'employer-db.jobSection.actions.expire' | translate }}
               </li>
             </ul>
           </div>
         </div>
-
-        <!-- Repeat the same translation bindings for other job rows -->
-        <!-- Example: -->
-        <div class="job-row">
-          <div class="job-info">
-            <h4>Senior UX Designer</h4>
-            <div class="job-details">Internship • {{ 'jobSection.jobs.remaining1' | translate }} 8 {{ 'jobSection.jobs.remaining2' | translate }}</div>
-          </div>
-          <div class="status">
-            <div class="status-icon">
-              <i class="fas fa-circle-check"></i>
-            </div>
-            <span>{{ 'jobSection.jobs.status' | translate }}</span>
-          </div>
-          <div class="applications">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2">
-              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-            </svg>
-            185 {{ 'jobSection.jobs.applications' | translate }}
-          </div>
-          <div class="dropdown-action-wrapper">
-            <button class="dropdown-toggle-btn">
-              {{ 'jobSection.tableHeader.actions' | translate }} <i class="fas fa-chevron-down"></i>
-            </button>
-            <ul class="dropdown-menu">
-              <li (click)="OpenJobApplication()">
-                <i class="fas fa-users"></i> {{ 'jobSection.actions.viewApplications' | translate }}
-              </li>
-              <li>
-                <i class="fas fa-bullhorn"></i> {{ 'jobSection.actions.promoteJob' | translate }}
-              </li>
-              <li>
-                <i class="fas fa-eye"></i> {{ 'jobSection.actions.viewDetail' | translate }}
-              </li>
-              <li>
-                <i class="fas fa-clock"></i> {{ 'jobSection.actions.expire' | translate }}
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- ...continue for other jobs in similar fashion... -->
-
       </div>
+
+
     </div>
   </div>
 

@@ -152,7 +152,7 @@
       "pageTitle": "Job Applications"
     },
     "applicationsSection": {
-      "title": "All Application ({{count}})",
+      "title": "All Application",
       "dropdown": {
         "edit": "Edit Column",
         "delete": "Delete"

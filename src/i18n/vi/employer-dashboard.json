@@ -152,7 +152,7 @@
       "pageTitle": "Hồ sơ ứng tuyển"
     },
     "applicationsSection": {
-      "title": "Tất cả hồ sơ ({{count}})",
+      "title": "Tất cả hồ sơ",
       "dropdown": {
         "edit": "Chỉnh sửa cột",
         "delete": "Xoá"

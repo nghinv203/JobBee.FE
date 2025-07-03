@@ -33,4 +33,16 @@ export class JobsService {
   postJob(job: any): Observable<IResponse> {
     return this.http.post<IResponse>(`${this.baseUrl}`, job);
   }
+
+  getPostedJobs(employerId: string, page: number = 1, pageSize: number = 10): Observable<any> {
+    const body = {
+      employerId: employerId,
+      keyword: '',
+      isActive: true,
+      page: page,
+      pageSize: pageSize
+    };
+    return this.http.post(`${this.baseUrl}/posted-jobs`, body);
+  }
+
 }

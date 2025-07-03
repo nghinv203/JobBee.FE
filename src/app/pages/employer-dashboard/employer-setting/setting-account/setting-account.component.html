@@ -1,13 +1,13 @@
 <div class="container">
   <!-- Contact Information Section -->
   <div class="section">
-    <h2 class="section-title">{{ 'account.contactInfoTitle' | translate }}</h2>
+    <h2 class="section-title">{{ 'employer-db.account.contactInfoTitle' | translate }}</h2>
 
     <div class="form-row three-columns">
       <div class="form-group">
-        <label for="city">{{ 'account.cityLabel' | translate }}</label>
+        <label for="city">{{ 'employer-db.account.cityLabel' | translate }}</label>
         <select id="city" name="industry-types">
-          <option value="">{{ 'account.citySelectPlaceholder' | translate }}</option>
+          <option value="">{{ 'employer-db.account.citySelectPlaceholder' | translate }}</option>
           <option value="technology">Technology</option>
           <option value="healthcare">Healthcare</option>
           <option value="finance">Finance</option>
@@ -22,9 +22,9 @@
       </div>
 
       <div class="form-group">
-        <label for="district">{{ 'account.districtLabel' | translate }}</label>
+        <label for="district">{{ 'employer-db.account.districtLabel' | translate }}</label>
         <select id="district" name="team-size">
-          <option value="">{{ 'account.districtSelectPlaceholder' | translate }}</option>
+          <option value="">{{ 'employer-db.account.districtSelectPlaceholder' | translate }}</option>
           <option value="1-10">1-10 employees</option>
           <option value="11-50">11-50 employees</option>
           <option value="51-200">51-200 employees</option>
@@ -35,9 +35,9 @@
       </div>
 
       <div class="form-group">
-        <label for="Commune">{{ 'account.communeLabel' | translate }}</label>
+        <label for="Commune">{{ 'employer-db.account.communeLabel' | translate }}</label>
         <select id="Commune" name="industry-types">
-          <option value="">{{ 'account.communeSelectPlaceholder' | translate }}</option>
+          <option value="">{{ 'employer-db.account.communeSelectPlaceholder' | translate }}</option>
           <option value="technology">Technology</option>
           <option value="healthcare">Healthcare</option>
           <option value="finance">Finance</option>
@@ -53,48 +53,48 @@
     </div>
 
     <div class="form-group">
-      <label for="location">{{ 'account.locationLabel' | translate }}</label>
-      <input type="text" id="location" [placeholder]="'account.locationLabel' | translate">
+      <label for="location">{{ 'employer-db.account.locationLabel' | translate }}</label>
+      <input type="text" id="location" [placeholder]="'employer-db.account.locationLabel' | translate">
     </div>
 
     <div class="form-group">
-      <label for="phone">{{ 'account.phoneLabel' | translate }}</label>
+      <label for="phone">{{ 'employer-db.account.phoneLabel' | translate }}</label>
       <div class="phone-wrapper">
         <div class="country-code">
           <div class="flag"></div>
           +89
         </div>
-        <input type="text" id="phone" [placeholder]="'account.phonePlaceholder' | translate">
+        <input type="text" id="phone" [placeholder]="'employer-db.account.phonePlaceholder' | translate">
       </div>
     </div>
 
     <div class="form-group">
-      <label for="email">{{ 'account.emailLabel' | translate }}</label>
+      <label for="email">{{ 'employer-db.account.emailLabel' | translate }}</label>
       <div class="email-wrapper">
         <span class="email-icon">
           <i class="fas fa-envelope"></i>
         </span>
-        <input type="email" id="email" [placeholder]="'account.emailPlaceholder' | translate">
+        <input type="email" id="email" [placeholder]="'employer-db.account.emailPlaceholder' | translate">
       </div>
     </div>
 
     <button class="btn btn-primary">
-      {{ 'account.saveChanges' | translate }}
+      {{ 'employer-db.account.saveChanges' | translate }}
     </button>
   </div>
 
   <!-- Change Password Section -->
   <form #changePasswordForm="ngForm" (ngSubmit)="onChangePassword()" class="section">
-    <h2 class="section-title">{{ 'account.changePasswordTitle' | translate }}</h2>
+    <h2 class="section-title">{{ 'employer-db.account.changePasswordTitle' | translate }}</h2>
 
     <div class="password-grid">
       <div class="form-group">
-        <label for="current-password">{{ 'account.currentPasswordLabel' | translate }}</label>
+        <label for="current-password">{{ 'employer-db.account.currentPasswordLabel' | translate }}</label>
         <div class="password-wrapper">
           <input
             type="password"
             id="current-password"
-            [placeholder]="'account.passwordPlaceholder' | translate"
+            [placeholder]="'employer-db.account.passwordPlaceholder' | translate"
             [(ngModel)]="oldPassword"
             name="oldPassword"
             required
@@ -106,12 +106,12 @@
       </div>
 
       <div class="form-group">
-        <label for="new-password">{{ 'account.newPasswordLabel' | translate }}</label>
+        <label for="new-password">{{ 'employer-db.account.newPasswordLabel' | translate }}</label>
         <div class="password-wrapper">
           <input
             type="password"
             id="new-password"
-            [placeholder]="'account.passwordPlaceholder' | translate"
+            [placeholder]="'employer-db.account.passwordPlaceholder' | translate"
             [(ngModel)]="password"
             name="password"
             required
@@ -123,12 +123,12 @@
       </div>
 
       <div class="form-group">
-        <label for="confirm-password">{{ 'account.confirmPasswordLabel' | translate }}</label>
+        <label for="confirm-password">{{ 'employer-db.account.confirmPasswordLabel' | translate }}</label>
         <div class="password-wrapper">
           <input
             type="password"
             id="confirm-password"
-            [placeholder]="'account.passwordPlaceholder' | translate"
+            [placeholder]="'employer-db.account.passwordPlaceholder' | translate"
             [(ngModel)]="confirmPassword"
             name="confirmPassword"
             required
@@ -141,23 +141,23 @@
     </div>
 
     <button class="btn btn-primary" type="submit">
-      {{ 'account.changePasswordButton' | translate }}
+      {{ 'employer-db.account.changePasswordButton' | translate }}
     </button>
   </form>
 
   <!-- Delete Account Section -->
   <div class="section delete-section">
-    <h2 class="section-title">{{ 'account.deleteAccountTitle' | translate }}</h2>
+    <h2 class="section-title">{{ 'employer-db.account.deleteAccountTitle' | translate }}</h2>
 
     <div class="delete-warning">
-      {{ 'account.deleteWarning' | translate }}
+      {{ 'employer-db.account.deleteWarning' | translate }}
     </div>
 
     <button class="close-account-btn">
       <span class="close-icon">
         <i class="fas fa-user-slash"></i>
       </span>
-      {{ 'account.deleteAccountButton' | translate }}
+      {{ 'employer-db.account.deleteAccountButton' | translate }}
     </button>
   </div>
 </div>

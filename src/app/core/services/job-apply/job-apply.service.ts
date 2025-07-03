@@ -38,6 +38,8 @@ export class JobApplyService {
     });
   }
 
-
+  getApplicationsByJobId(jobId: string): Observable<IResponse> {
+    return this.http.get<IResponse>(`${this.baseUrl}/by-job-id?JobId=${jobId}`);
+  }
 
 }
