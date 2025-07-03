@@ -18,7 +18,7 @@
       <div class="form-row">
         <div>
           <label for="jobCategory">{{ 'employer-db.postJob.form.jobRole' | translate }}</label>
-          <select id="jobCategory" formControlName="jobCategory">
+          <select id="jobCategory" formControlName="jobCategoryId">
             <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
             @for(category of categories; track category) {
               <option [value]="category.id">{{ category.categoryName }}</option>
@@ -86,9 +86,9 @@
             <label for="salaryType">{{ 'employer-db.postJob.form.salaryType' | translate }}</label>
             <select formControlName="salaryPeriod" id="salaryType">
               <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
-              <option value="hourly">{{ 'employer-db.postJob.form.salaryTypes.hourly' | translate }}</option>
-              <option value="monthly">{{ 'employer-db.postJob.form.salaryTypes.monthly' | translate }}</option>
-              <option value="yearly">{{ 'employer-db.postJob.form.salaryTypes.yearly' | translate }}</option>
+              <option value="Hourly">{{ 'employer-db.postJob.form.salaryTypes.hourly' | translate }}</option>
+              <option value="Monthly">{{ 'employer-db.postJob.form.salaryTypes.monthly' | translate }}</option>
+              <option value="Yearly">{{ 'employer-db.postJob.form.salaryTypes.yearly' | translate }}</option>
             </select>
           </div>
         </div>
@@ -126,7 +126,7 @@
           </div>
           <div>
             <label for="jobType">{{ 'employer-db.postJob.form.jobType' | translate }}</label>
-            <select formControlName="jobType" id="jobType">
+            <select formControlName="jobTypeId" id="jobType">
               <option [selected]="true" [disabled]="true" value="">{{ 'employer-db.postJob.form.select' | translate }}</option>
               @for(type of types; track type) {
                 <option [value]="type.id">{{ type.typeName }}</option>

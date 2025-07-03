@@ -50,8 +50,8 @@ export class PostJobComponent implements OnInit{
     this.jobForm = this.fb.group({
       employerId: [null, Validators.required],
       title: [null, Validators.required],
-      jobCategory: [null, Validators.required],
-      jobType: [null, Validators.required],
+      jobCategoryId: [null, Validators.required],
+      jobTypeId: [null, Validators.required],
       experienceLevelId: [null, Validators.required],
       minEducationId: [null, Validators.required],
       description: [null, Validators.required],
@@ -164,7 +164,7 @@ export class PostJobComponent implements OnInit{
     const cityName     = this.cities.find((c: any) => c.id === raw.locationCity)?.name;
     const districtName = this.districts.find((d: any) => d.id === raw.locationState)?.name;
     const communeName  = this.communes.find((c: any) => c.id === raw.locationCountry)?.name;
-
+    console.log(raw)
     const payload = {
       employerId:         raw.employerId,           // string UUID
       title:              raw.title,
