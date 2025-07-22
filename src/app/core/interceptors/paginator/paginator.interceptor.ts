@@ -13,7 +13,7 @@ export const paginatorInterceptor: HttpInterceptorFn = (req, next) => {
     if (req.method === 'GET') {
       let modifiedParams = req.params;
       if (!modifiedParams.has('page')) {
-        modifiedParams = modifiedParams.set('page', '1');
+        modifiedParams = modifiedParams.set('page', '0');
       }
       if (!modifiedParams.has('pageSize')) {
         modifiedParams = modifiedParams.set('pageSize', '20');
@@ -25,7 +25,7 @@ export const paginatorInterceptor: HttpInterceptorFn = (req, next) => {
       console.log(body)
       const modifiedBody = {
         ...params,
-        page: params['page'] ?? body.page ?? 1,
+        page: params['page'] ?? body.page ?? 0,
         pageSize: params['pageSize'] ?? body.pageSize ?? 20
       };
 

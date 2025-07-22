@@ -35,6 +35,7 @@ export class FeatureJobsComponent implements OnInit{
     const param = {...this.params , page: 1, pageSize: 6}
     this.jobService.getJobs(param).subscribe(res => {
       this.jobs = (res.data as any).items;
+      console.log(this.jobs)
     });
   }
 }
