@@ -43,17 +43,26 @@ export class JobListComponent implements OnInit{
       .pipe(finalize(() => this.isLoading = false))
       .subscribe(res => {
       this.jobs = (res.data as any).items ?? [];
-      this.totalPages = Math.ceil(this.jobs.length / 20);
+      debugger
+      this.totalPages = (res.data as any).totalPages;
       });
   }
 
   handleSearch(event: any) {
+    console.log(event)
     this.isLoading = true;
-    this.jobListService.getJobs(event)
+    const payload = {
+      keyword: event.keyword ?? '',
+      location: event.location?.[0]?.name,
+      page: event.page ?? 0,
+      pageSize: event.pageSize ?? 15
+    }
+    console.log(payload)
+    this.jobListService.getJobs(payload)
       .pipe(finalize(() => this.isLoading = false))
       .subscribe(res => {
         this.jobs = (res.data as any).items ?? [];
-        this.totalPages = Math.ceil(this.jobs.length / 20);
+        this.totalPages = (res.data as any).totalPages;
       });
   }
 
@@ -62,7 +71,7 @@ export class JobListComponent implements OnInit{
   }
 
   handlePaging(page: number) {
-    this.searchParams.page = page;
+    this.searchParams.page = page-1;
     this.handleSearch(this.searchParams)
   }
 }

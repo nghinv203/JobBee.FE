@@ -15,6 +15,7 @@ export class PaginatorComponent  implements OnChanges{
   pages: number[] = [];
 
   ngOnChanges() {
+    debugger
     this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);
   }
 

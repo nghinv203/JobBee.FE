@@ -49,7 +49,7 @@ export class ApplyJobComponent {
 
     this.candidateService.getCandidateIdByUser(this.userId!).subscribe({
       next: (res) => {
-        this.candidateId = res.data.id; // ✅ Extract string here
+        this.candidateId = res.data.id;
 
         console.log(this.candidateId);
 

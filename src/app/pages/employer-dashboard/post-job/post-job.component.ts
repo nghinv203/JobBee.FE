@@ -11,7 +11,6 @@ import {
 import {EditorComponent} from '@tinymce/tinymce-angular';
 import {init} from '../../../shared/common.constanst';
 import {LocationService} from '../../../core/services/location/location.service';
-import {EmployerListService} from '../../../core/services/employer-list/employer-list.service';
 import {AuthService} from '../../../shared/services/auth.service';
 import {JobCategoryService} from '../../../core/services/jobs-category/job-category.service';
 import {JobsService} from '../../../core/services/jobs/jobs.service';
@@ -19,11 +18,13 @@ import {NzNotificationService} from 'ng-zorro-antd/notification';
 import {JobTypeService} from '../../../core/services/job-type/job-type.service';
 import {ExperienceService} from '../../../core/services/experiences/experience.service';
 import {EducationService} from '../../../core/services/educations/education.service';
+import {LoadingComponent} from '../../../shared/reuseComponents/loading/loading.component';
+import {finalize} from 'rxjs';
 
 @Component({
   selector: 'app-post-job',
   standalone: true,
-  imports: [TranslatePipe, EditorComponent, ReactiveFormsModule],
+  imports: [TranslatePipe, EditorComponent, ReactiveFormsModule, LoadingComponent],
   templateUrl: './post-job.component.html',
   styleUrl: './post-job.component.scss',
 })
@@ -39,7 +40,6 @@ export class PostJobComponent implements OnInit{
 
   constructor(private fb: FormBuilder,
               private locationService: LocationService,
-              private employerService: EmployerListService,
               private categoriesService: JobCategoryService,
               private jobService: JobsService,
               private jobTypeService: JobTypeService,
@@ -48,7 +48,6 @@ export class PostJobComponent implements OnInit{
               private toarst: NzNotificationService,
               private authService: AuthService) {
     this.jobForm = this.fb.group({
-      employerId: [null, Validators.required],
       title: [null, Validators.required],
       jobCategoryId: [null, Validators.required],
       jobTypeId: [null, Validators.required],
@@ -60,30 +59,37 @@ export class PostJobComponent implements OnInit{
       minSalary: [null, [Validators.required, Validators.min(0)]],
       maxSalary: [null, [Validators.required, Validators.min(0)]],
       salaryPeriod: [null, Validators.required],
-      currency: [null, Validators.required],
+      currency: ['VND', Validators.required],
       isSalaryNegotiable: [null, Validators.required],
       locationCity: [null, Validators.required],
       locationState: [null, Validators.required],
       locationCountry: [null, Validators.required],
-      isRemote: [null, Validators.required],
+      isRemote: [false, Validators.required],
       allowsWorkFromHome: [null, Validators.required],
       applicationDeadline: [null, [Validators.required, minUnixTimestampOneHourFromNow()]],
-      isFeature: [null, Validators.required],
-      isActive: [null, Validators.required],
+      isFeature: [false, Validators.required],
+      isActive: [true, Validators.required],
       expiresAt: [null, [Validators.required, minUnixTimestampOneHourFromNow()]],
     });
   }
   protected readonly init = init;
 
-  ngOnInit(): void {
-    this.handleLoadCities();
-    this.handleCityChange();
-    this.handleDistrictChange();
-    this.handleGetEmployerId();
-    this.handleGetJobCategories();
-    this.handleGetJobType();
-    this.handleGetExperiences();
-    this.handleGetEducation();
+  loading = true;
+
+  async ngOnInit(): Promise<void> {
+    this.loading = true;
+
+    await Promise.all([
+      this.handleLoadCities(),
+      this.handleCityChange(),
+      this.handleDistrictChange(),
+      this.handleGetJobCategories(),
+      this.handleGetJobType(),
+      this.handleGetExperiences(),
+      this.handleGetEducation()
+    ]);
+
+    this.loading = false;
   }
 
   handleLoadCities(): void {
@@ -111,16 +117,6 @@ export class PostJobComponent implements OnInit{
           .subscribe(res => {
             this.communes = res.data;
           })
-      })
-  }
-
-  handleGetEmployerId(): void {
-    this.employerService.getEmployerId(this.authService.getUserId() ?? '')
-      .subscribe(res => {
-        console.log(res)
-        this.jobForm.patchValue({
-          employerId: res.data
-        });
       })
   }
 
@@ -153,10 +149,21 @@ export class PostJobComponent implements OnInit{
   }
 
   handleCreateJob() {
-    // if (this.jobForm.invalid) {
-    //   this.toarst.error('Dữ liệu không hợp lệ', 'Vui lòng kiểm tra lại form');
-    //   return;
-    // }
+    debugger
+    this.jobForm.patchValue({
+      expiresAt: new Date(this.jobForm.get('applicationDeadline')?.value).getTime() / 1000,
+      applicationDeadline: new Date(this.jobForm.get('applicationDeadline')?.value).getTime() / 1000,
+    });
+    if (this.jobForm.invalid) {
+      Object.keys(this.jobForm.controls).forEach(field => {
+        const control = this.jobForm.get(field);
+        if (control && control.invalid) {
+          console.log(`❌ Field '${field}' is invalid`, control.errors);
+        }
+      });
+      this.toarst.error('Dữ liệu không hợp lệ', 'Vui lòng kiểm tra lại form');
+      return;
+    }
 
     const raw = this.jobForm.getRawValue();
 
@@ -166,7 +173,6 @@ export class PostJobComponent implements OnInit{
     const communeName  = this.communes.find((c: any) => c.id === raw.locationCountry)?.name;
     console.log(raw)
     const payload = {
-      employerId:         raw.employerId,           // string UUID
       title:              raw.title,
       jobCategoryId:      raw.jobCategoryId,        // string UUID
       jobTypeId:          raw.jobTypeId,            // string UUID
@@ -191,10 +197,15 @@ export class PostJobComponent implements OnInit{
       locationCountry:     communeName
     };
 
-    this.jobService.postJob(payload).subscribe({
-      next: () => this.toarst.success('Tạo công việc mới thành công', ''),
-      error: () => this.toarst.error('Tạo thất bại, vui lòng thử lại', '')
-    });
+    this.loading = true;
+    this.jobService.postJob(payload)
+      .pipe(
+        finalize(() => this.loading = false) // chạy cuối cùng dù thành công hay lỗi
+      )
+      .subscribe({
+        next: () => this.toarst.success('Tạo công việc mới thành công', ''),
+        error: () => this.toarst.error('Tạo thất bại, vui lòng thử lại', '')
+      });
   }
 }
 

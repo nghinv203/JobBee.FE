@@ -16,7 +16,7 @@ export const paginatorInterceptor: HttpInterceptorFn = (req, next) => {
         modifiedParams = modifiedParams.set('page', '0');
       }
       if (!modifiedParams.has('pageSize')) {
-        modifiedParams = modifiedParams.set('pageSize', '20');
+        modifiedParams = modifiedParams.set('pageSize', '15');
       }
       return next(req.clone({ params: modifiedParams }));
     } else if (req.method === 'POST') {
@@ -26,7 +26,7 @@ export const paginatorInterceptor: HttpInterceptorFn = (req, next) => {
       const modifiedBody = {
         ...params,
         page: params['page'] ?? body.page ?? 0,
-        pageSize: params['pageSize'] ?? body.pageSize ?? 20
+        pageSize: params['pageSize'] ?? body.pageSize ?? 15
       };
 
       return next(req.clone({ body: modifiedBody }));
